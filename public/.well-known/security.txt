@@ -1,0 +1,4 @@
+Contact: mailto:security@findmyroomy.com
+Expires: 2026-06-17
+Preferred-Languages: en
+Canonical: https://findmyroomy.com/.well-known/security.txt

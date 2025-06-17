@@ -1,5 +1,6 @@
 // sitemap.ts - SEO-optimized sitemap generator
-import { writeFileSync, readFileSync, existsSync } from "fs";
+import { writeFileSync, readFileSync, existsSync, mkdirSync } from "fs";
+
 import { join } from "path";
 
 const baseUrl = "https://findmyroomy.com";

@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build --no-lint",
-    "start": "next start",
-    "export": "next export",
-    "predeploy": "next build",
-    "deploy": "gh-pages -d out"
-  },
+  "dev": "next dev",
+  "build": "next build",
+  "export": "next export",
+  "predeploy": "npm run build && npm run export",
+  "deploy": "gh-pages -d out"
+}
+,
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/style": "^0.8.0",

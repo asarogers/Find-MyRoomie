@@ -3,7 +3,7 @@
 import "aos/dist/aos.css";
 import {
   guarantees,
-} from "./Data.tsx"; 
+} from "./Data"; 
 
 export default function Guarantees(){
     return(

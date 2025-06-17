@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import "aos/dist/aos.css"
 import { motion } from "framer-motion"
-import { features } from "./Data.tsx"
+import { features } from "./Data"
 
 interface FeaturesProps {
   city?: string

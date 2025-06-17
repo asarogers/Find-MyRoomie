@@ -1,7 +1,7 @@
 import React from "react"
 import "aos/dist/aos.css"
 import { motion } from "framer-motion"
-import { steps } from "./Data.tsx"
+import { steps } from "./Data"
 
 interface HowItWorksProps {
   city?: string

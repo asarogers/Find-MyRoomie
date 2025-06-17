@@ -37,7 +37,7 @@ export default function Navbar({ setIsOpen }: NavbarProps) {
                 </li>
               ))}
               <li>
-                <Link href="/blog" className="text-gray-700 hover:text-black font-medium">
+                <Link href="/blogs" className="text-gray-700 hover:text-black font-medium">
                   Blogs
                 </Link>
               </li>

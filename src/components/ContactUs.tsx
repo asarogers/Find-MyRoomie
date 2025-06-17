@@ -2,20 +2,21 @@ import React from "react";
 import { MapPin, Phone, Mail, X, Facebook, Linkedin, Youtube } from "lucide-react";
 import emailjs from "emailjs-com";
 
-export default function ContactUs({ onClose }) {
-  const sendEmail = (e) => {
+export default function ContactUs({ onClose }: { onClose: () => void }) {
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_x9x3x5e",
-        "template_g1qck6c",
-        e.target,
-        "4D_p0Cy6YqcSa4sPU"
-      )
+    emailjs.sendForm(
+      "service_x9x3x5e",
+      "template_g1qck6c",
+      e.target as HTMLFormElement,
+      "4D_p0Cy6YqcSa4sPU"
+    )
+    
       .then(
         () => {
           alert("✅ Message sent successfully!");
-          e.target.reset();
+          (e.target as HTMLFormElement).reset();
           onClose();
         },
         (error) => {
@@ -24,6 +25,7 @@ export default function ContactUs({ onClose }) {
         }
       );
   };
+
 
   return (
     // Always center the modal on screen, even on mobile

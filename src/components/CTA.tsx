@@ -18,8 +18,9 @@ export default function CTA({ city }: CTAProps) {
         </h2>
 
         <p className="text-xl md:text-2xl mb-10 text-gray-600 leading-relaxed">
-          Join 10,000+ verified users who've found their perfect living{locationText}.
+          Join 10,000+ verified users who&rsquo;ve found their perfect living{locationText}.
         </p>
+
 
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
           <a

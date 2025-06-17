@@ -1,49 +1,40 @@
+// app/roommates/[city]/page.tsx
 import React from 'react';
 import { MapPin } from 'lucide-react';
 import CityClientShell from './CityClientShell';
+import cityList from '../../../components/_data/cities.json';
+import { notFound } from 'next/navigation';
 
-const cityData: Record<string, { title?: string; description?: string }> = {
-  'huntsville-al': {
-    title: 'Find Roommates in Huntsville, AL • MyRoomie',
-    description: 'Looking for a roommate in Huntsville, AL? Be the first to hear when matches go live.',
-  },
-};
+export async function generateStaticParams() {
+  return cityList.map(({ slug }) => ({ city: slug }));
+}
 
-export async function generateMetadata({ params }: { params: { city: string } }) {
-  const slug = params.city;
-  const pretty = formatCityName(slug);
-  const meta = cityData[slug];
-
+export async function generateMetadata({ params }: { params: Promise<{ city: string }> }) {
+  const { city: citySlug } = await params;
+  const city = cityList.find((c) => c.slug === citySlug);
+  
+  if (!city) notFound();
+  
   return {
-    title: meta?.title || `Find Roommates in ${pretty} • MyRoomie`,
-    description: meta?.description || `Looking for roommates in ${pretty}? Join MyRoomie to connect with compatible matches.`,
+    title: `Find Roommates in ${city.name} • MyRoomie`,
+    description: `Looking for roommates in ${city.name}? Join MyRoomie to connect with compatible matches.`,
   };
 }
 
-function formatCityName(slug: string) {
-  const parts = slug.split('-');
-  return parts
-    .map((w, i) => (i === parts.length - 1 && w.length === 2 ? w.toUpperCase() : capitalize(w)))
-    .join(' ');
-}
-
-function capitalize(str: string) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-}
-
-export default function CityPage({ params }: { params: { city: string } }) {
-  const pretty = formatCityName(params.city);
-  const meta = cityData[params.city];
-  const description =
-    meta?.description || `Looking for roommates in ${pretty}? Join MyRoomie to connect with compatible matches.`;
+export default async function CityPage({ params }: { params: Promise<{ city: string }> }) {
+  const { city: citySlug } = await params;
+  const city = cityList.find((c) => c.slug === citySlug);
+  
+  if (!city) notFound();
 
   return (
     <CityClientShell>
       <main className="bg-[#FDFBF7] text-gray-900 pt-24 pb-16">
         <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-4 text-center">Find Roommates in {pretty}</h1>
-          <p className="text-center text-lg text-gray-700 mb-8">{description}</p>
-
+          <h1 className="text-4xl font-bold mb-4 text-center">Find Roommates in {city.name}</h1>
+          <p className="text-center text-lg text-gray-700 mb-8">
+            Looking for roommates in {city.name}? Join MyRoomie to connect with compatible matches.
+          </p>
           <div className="text-center mb-12">
             <a
               href="https://forms.gle/qJQXtqEgHb45Y2Y8A"
@@ -54,9 +45,8 @@ export default function CityPage({ params }: { params: { city: string } }) {
               Become a Beta Tester
             </a>
           </div>
-
           <section id="map" className="mb-16">
-            <h2 className="text-2xl font-semibold mb-4">Explore {pretty}</h2>
+            <h2 className="text-2xl font-semibold mb-4">Explore {city.name}</h2>
             <div className="scroll-mt-28 relative max-w-4xl mx-auto">
               <div className="bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl p-8 backdrop-blur-sm border border-white/20 shadow-2xl">
                 <div className="bg-white/80 backdrop-blur rounded-2xl p-6 shadow-lg">

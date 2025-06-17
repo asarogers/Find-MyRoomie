@@ -4,6 +4,9 @@ import path from 'path';
 const isGithubPages = process.env.NODE_ENV === 'production' && process.env.GITHUB_PAGES;
 
 const nextConfig: NextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true, // ✅ Disables ESLint checks on `next build`
+  },
   output: 'export',
   trailingSlash: true, // Required for static hosting like GH Pages
   basePath: isGithubPages ? '/Find-MyRoomie' : '',

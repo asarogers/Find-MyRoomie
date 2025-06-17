@@ -9,9 +9,9 @@ import {
   ArrowLeft,
   Share2,
 } from "lucide-react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import ContactUs from "@/components/ContactUs";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import ContactUs from "../../components/ContactUs";
 import Image from "next/image";
 import { BlogPost } from "./blogData";
 

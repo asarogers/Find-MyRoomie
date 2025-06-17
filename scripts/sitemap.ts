@@ -160,9 +160,6 @@ console.log(`   - Blog posts: ${blogRoutes.length}`);
 console.log(`🎯 Major metros prioritized for better crawling`);
 console.log(`📅 Dynamic lastmod dates for freshness signals`);
 
-// seo-assets.ts - Generate additional SEO assets
-import { writeFileSync, readFileSync, existsSync, mkdirSync } from "fs";
-
 
 // Ensure SEO directory exists
 if (!existsSync("public/seo")) {

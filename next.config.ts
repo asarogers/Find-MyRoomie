@@ -8,7 +8,14 @@ const nextConfig = {
   images: {
     unoptimized: true, // Required for next/image with static export
   },
+  // Add webpack configuration for path aliases
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': './src',
+    }
+    return config
+  }
 };
-
 
 module.exports = nextConfig;

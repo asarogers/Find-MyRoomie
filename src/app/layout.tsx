@@ -42,27 +42,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-       <head>
-        <link rel="canonical" href="https://findmyroomy.com/" />
-        <link rel="icon" href="/vite.svg" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
-          {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "name": "Find MyRoomy",
-            "url": "https://findmyroomy.com/",
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "https://findmyroomy.com/roommates/{search_term_string}",
-              "query-input": "required name=search_term_string"
-            }
-          }
-        ` }} />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

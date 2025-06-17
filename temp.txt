@@ -1,622 +1,944 @@
-// types/aos.d.ts
-declare module 'aos' {
-    interface AosOptions {
-      disable?: boolean | 'mobile';
-      startEvent?: string;
-      initClassName?: string;
-      animatedClassName?: string;
-      useClassNames?: boolean;
-      disableMutationObserver?: boolean;
-      debounceDelay?: number;
-      throttleDelay?: number;
-      offset?: number;
-      delay?: number;
-      duration?: number;
-      easing?: string;
-      once?: boolean;
-      mirror?: boolean;
-      anchorPlacement?: string;
-    }
-  
-    export function init(options?: AosOptions): void;
-    export function refresh(): void;
-    const AOS: {
-        init: typeof init;
-        refresh: typeof refresh;
-      };
-      
-      export default AOS;
-      
-  }
-  /// <reference types="next" />
-/// <reference types="next/image-types/global" />
-
-// NOTE: This file should not be edited
-// see https://nextjs.org/docs/app/api-reference/config/typescript for more information.
-// Type definitions for Next.js cacheLife configs
-
-declare module 'next/cache' {
-  export { unstable_cache } from 'next/dist/server/web/spec-extension/unstable-cache'
-  export {
-    revalidateTag,
-    revalidatePath,
-    unstable_expireTag,
-    unstable_expirePath,
-  } from 'next/dist/server/web/spec-extension/revalidate'
-  export { unstable_noStore } from 'next/dist/server/web/spec-extension/unstable-no-store'
-
-  
-    /**
-     * Cache this `"use cache"` for a timespan defined by the `"default"` profile.
-     * ```
-     *   stale:      300 seconds (5 minutes)
-     *   revalidate: 900 seconds (15 minutes)
-     *   expire:     never
-     * ```
-     * 
-     * This cache may be stale on clients for 5 minutes before checking with the server.
-     * If the server receives a new request after 15 minutes, start revalidating new values in the background.
-     * It lives for the maximum age of the server cache. If this entry has no traffic for a while, it may serve an old value the next request.
-     */
-    export function unstable_cacheLife(profile: "default"): void
-    
-    /**
-     * Cache this `"use cache"` for a timespan defined by the `"seconds"` profile.
-     * ```
-     *   stale:      0 seconds
-     *   revalidate: 1 seconds
-     *   expire:     60 seconds (1 minute)
-     * ```
-     * 
-     * This cache may be stale on clients for 0 seconds before checking with the server.
-     * If the server receives a new request after 1 seconds, start revalidating new values in the background.
-     * If this entry has no traffic for 1 minute it will expire. The next request will recompute it.
-     */
-    export function unstable_cacheLife(profile: "seconds"): void
-    
-    /**
-     * Cache this `"use cache"` for a timespan defined by the `"minutes"` profile.
-     * ```
-     *   stale:      300 seconds (5 minutes)
-     *   revalidate: 60 seconds (1 minute)
-     *   expire:     3600 seconds (1 hour)
-     * ```
-     * 
-     * This cache may be stale on clients for 5 minutes before checking with the server.
-     * If the server receives a new request after 1 minute, start revalidating new values in the background.
-     * If this entry has no traffic for 1 hour it will expire. The next request will recompute it.
-     */
-    export function unstable_cacheLife(profile: "minutes"): void
-    
-    /**
-     * Cache this `"use cache"` for a timespan defined by the `"hours"` profile.
-     * ```
-     *   stale:      300 seconds (5 minutes)
-     *   revalidate: 3600 seconds (1 hour)
-     *   expire:     86400 seconds (1 day)
-     * ```
-     * 
-     * This cache may be stale on clients for 5 minutes before checking with the server.
-     * If the server receives a new request after 1 hour, start revalidating new values in the background.
-     * If this entry has no traffic for 1 day it will expire. The next request will recompute it.
-     */
-    export function unstable_cacheLife(profile: "hours"): void
-    
-    /**
-     * Cache this `"use cache"` for a timespan defined by the `"days"` profile.
-     * ```
-     *   stale:      300 seconds (5 minutes)
-     *   revalidate: 86400 seconds (1 day)
-     *   expire:     604800 seconds (1 week)
-     * ```
-     * 
-     * This cache may be stale on clients for 5 minutes before checking with the server.
-     * If the server receives a new request after 1 day, start revalidating new values in the background.
-     * If this entry has no traffic for 1 week it will expire. The next request will recompute it.
-     */
-    export function unstable_cacheLife(profile: "days"): void
-    
-    /**
-     * Cache this `"use cache"` for a timespan defined by the `"weeks"` profile.
-     * ```
-     *   stale:      300 seconds (5 minutes)
-     *   revalidate: 604800 seconds (1 week)
-     *   expire:     2592000 seconds (30 days)
-     * ```
-     * 
-     * This cache may be stale on clients for 5 minutes before checking with the server.
-     * If the server receives a new request after 1 week, start revalidating new values in the background.
-     * If this entry has no traffic for 30 days it will expire. The next request will recompute it.
-     */
-    export function unstable_cacheLife(profile: "weeks"): void
-    
-    /**
-     * Cache this `"use cache"` for a timespan defined by the `"max"` profile.
-     * ```
-     *   stale:      300 seconds (5 minutes)
-     *   revalidate: 2592000 seconds (30 days)
-     *   expire:     never
-     * ```
-     * 
-     * This cache may be stale on clients for 5 minutes before checking with the server.
-     * If the server receives a new request after 30 days, start revalidating new values in the background.
-     * It lives for the maximum age of the server cache. If this entry has no traffic for a while, it may serve an old value the next request.
-     */
-    export function unstable_cacheLife(profile: "max"): void
-    
-    /**
-     * Cache this `"use cache"` using a custom timespan.
-     * ```
-     *   stale: ... // seconds
-     *   revalidate: ... // seconds
-     *   expire: ... // seconds
-     * ```
-     *
-     * This is similar to Cache-Control: max-age=`stale`,s-max-age=`revalidate`,stale-while-revalidate=`expire-revalidate`
-     *
-     * If a value is left out, the lowest of other cacheLife() calls or the default, is used instead.
-     */
-    export function unstable_cacheLife(profile: {
-      /**
-       * This cache may be stale on clients for ... seconds before checking with the server.
-       */
-      stale?: number,
-      /**
-       * If the server receives a new request after ... seconds, start revalidating new values in the background.
-       */
-      revalidate?: number,
-      /**
-       * If this entry has no traffic for ... seconds it will expire. The next request will recompute it.
-       */
-      expire?: number
-    }): void
-  
-
-  export { cacheTag as unstable_cacheTag } from 'next/dist/server/use-cache/cache-tag'
-}
-// File: /home/asaace00/repo/business/findMyRoomy/nextjs-findmyroomy/src/app/layout.tsx
-import * as entry from '../../../src/app/layout.js'
-import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
-
-type TEntry = typeof import('../../../src/app/layout.js')
-
-type SegmentParams<T extends Object = any> = T extends Record<string, any>
-  ? { [K in keyof T]: T[K] extends string ? string | string[] | undefined : never }
-  : T
-
-// Check that the entry is a valid entry
-checkFields<Diff<{
-  default: Function
-  config?: {}
-  generateStaticParams?: Function
-  revalidate?: RevalidateRange<TEntry> | false
-  dynamic?: 'auto' | 'force-dynamic' | 'error' | 'force-static'
-  dynamicParams?: boolean
-  fetchCache?: 'auto' | 'force-no-store' | 'only-no-store' | 'default-no-store' | 'default-cache' | 'only-cache' | 'force-cache'
-  preferredRegion?: 'auto' | 'global' | 'home' | string | string[]
-  runtime?: 'nodejs' | 'experimental-edge' | 'edge'
-  maxDuration?: number
-  
-  metadata?: any
-  generateMetadata?: Function
-  viewport?: any
-  generateViewport?: Function
-  experimental_ppr?: boolean
-  
-}, TEntry, ''>>()
-
-
-// Check the prop type of the entry function
-checkFields<Diff<LayoutProps, FirstArg<TEntry['default']>, 'default'>>()
-
-// Check the arguments and return type of the generateMetadata function
-if ('generateMetadata' in entry) {
-  checkFields<Diff<LayoutProps, FirstArg<MaybeField<TEntry, 'generateMetadata'>>, 'generateMetadata'>>()
-  checkFields<Diff<ResolvingMetadata, SecondArg<MaybeField<TEntry, 'generateMetadata'>>, 'generateMetadata'>>()
-}
-
-// Check the arguments and return type of the generateViewport function
-if ('generateViewport' in entry) {
-  checkFields<Diff<LayoutProps, FirstArg<MaybeField<TEntry, 'generateViewport'>>, 'generateViewport'>>()
-  checkFields<Diff<ResolvingViewport, SecondArg<MaybeField<TEntry, 'generateViewport'>>, 'generateViewport'>>()
-}
-
-// Check the arguments and return type of the generateStaticParams function
-if ('generateStaticParams' in entry) {
-  checkFields<Diff<{ params: SegmentParams }, FirstArg<MaybeField<TEntry, 'generateStaticParams'>>, 'generateStaticParams'>>()
-  checkFields<Diff<{ __tag__: 'generateStaticParams', __return_type__: any[] | Promise<any[]> }, { __tag__: 'generateStaticParams', __return_type__: ReturnType<MaybeField<TEntry, 'generateStaticParams'>> }>>()
-}
-
-export interface PageProps {
-  params?: Promise<SegmentParams>
-  searchParams?: Promise<any>
-}
-export interface LayoutProps {
-  children?: React.ReactNode
-
-  params?: Promise<SegmentParams>
-}
-
-// =============
-// Utility types
-type RevalidateRange<T> = T extends { revalidate: any } ? NonNegative<T['revalidate']> : never
-
-// If T is unknown or any, it will be an empty {} type. Otherwise, it will be the same as Omit<T, keyof Base>.
-type OmitWithTag<T, K extends keyof any, _M> = Omit<T, K>
-type Diff<Base, T extends Base, Message extends string = ''> = 0 extends (1 & T) ? {} : OmitWithTag<T, keyof Base, Message>
-
-type FirstArg<T extends Function> = T extends (...args: [infer T, any]) => any ? unknown extends T ? any : T : never
-type SecondArg<T extends Function> = T extends (...args: [any, infer T]) => any ? unknown extends T ? any : T : never
-type MaybeField<T, K extends string> = T extends { [k in K]: infer G } ? G extends Function ? G : never : never
-
-
-
-function checkFields<_ extends { [k in keyof any]: never }>() {}
-
-// https://github.com/sindresorhus/type-fest
-type Numeric = number | bigint
-type Zero = 0 | 0n
-type Negative<T extends Numeric> = T extends Zero ? never : `${T}` extends `-${string}` ? T : never
-type NonNegative<T extends Numeric> = T extends Zero ? T : Negative<T> extends never ? T : '__invalid_negative_number__'
-// File: /home/asaace00/repo/business/findMyRoomy/nextjs-findmyroomy/src/app/blogs/[id]/page.tsx
-import * as entry from '../../../../../src/app/blogs/[id]/page.js'
-import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
-
-type TEntry = typeof import('../../../../../src/app/blogs/[id]/page.js')
-
-type SegmentParams<T extends Object = any> = T extends Record<string, any>
-  ? { [K in keyof T]: T[K] extends string ? string | string[] | undefined : never }
-  : T
-
-// Check that the entry is a valid entry
-checkFields<Diff<{
-  default: Function
-  config?: {}
-  generateStaticParams?: Function
-  revalidate?: RevalidateRange<TEntry> | false
-  dynamic?: 'auto' | 'force-dynamic' | 'error' | 'force-static'
-  dynamicParams?: boolean
-  fetchCache?: 'auto' | 'force-no-store' | 'only-no-store' | 'default-no-store' | 'default-cache' | 'only-cache' | 'force-cache'
-  preferredRegion?: 'auto' | 'global' | 'home' | string | string[]
-  runtime?: 'nodejs' | 'experimental-edge' | 'edge'
-  maxDuration?: number
-  
-  metadata?: any
-  generateMetadata?: Function
-  viewport?: any
-  generateViewport?: Function
-  experimental_ppr?: boolean
-  
-}, TEntry, ''>>()
-
-
-// Check the prop type of the entry function
-checkFields<Diff<PageProps, FirstArg<TEntry['default']>, 'default'>>()
-
-// Check the arguments and return type of the generateMetadata function
-if ('generateMetadata' in entry) {
-  checkFields<Diff<PageProps, FirstArg<MaybeField<TEntry, 'generateMetadata'>>, 'generateMetadata'>>()
-  checkFields<Diff<ResolvingMetadata, SecondArg<MaybeField<TEntry, 'generateMetadata'>>, 'generateMetadata'>>()
-}
-
-// Check the arguments and return type of the generateViewport function
-if ('generateViewport' in entry) {
-  checkFields<Diff<PageProps, FirstArg<MaybeField<TEntry, 'generateViewport'>>, 'generateViewport'>>()
-  checkFields<Diff<ResolvingViewport, SecondArg<MaybeField<TEntry, 'generateViewport'>>, 'generateViewport'>>()
-}
-
-// Check the arguments and return type of the generateStaticParams function
-if ('generateStaticParams' in entry) {
-  checkFields<Diff<{ params: SegmentParams }, FirstArg<MaybeField<TEntry, 'generateStaticParams'>>, 'generateStaticParams'>>()
-  checkFields<Diff<{ __tag__: 'generateStaticParams', __return_type__: any[] | Promise<any[]> }, { __tag__: 'generateStaticParams', __return_type__: ReturnType<MaybeField<TEntry, 'generateStaticParams'>> }>>()
-}
-
-export interface PageProps {
-  params?: Promise<SegmentParams>
-  searchParams?: Promise<any>
-}
-export interface LayoutProps {
-  children?: React.ReactNode
-
-  params?: Promise<SegmentParams>
-}
-
-// =============
-// Utility types
-type RevalidateRange<T> = T extends { revalidate: any } ? NonNegative<T['revalidate']> : never
-
-// If T is unknown or any, it will be an empty {} type. Otherwise, it will be the same as Omit<T, keyof Base>.
-type OmitWithTag<T, K extends keyof any, _M> = Omit<T, K>
-type Diff<Base, T extends Base, Message extends string = ''> = 0 extends (1 & T) ? {} : OmitWithTag<T, keyof Base, Message>
-
-type FirstArg<T extends Function> = T extends (...args: [infer T, any]) => any ? unknown extends T ? any : T : never
-type SecondArg<T extends Function> = T extends (...args: [any, infer T]) => any ? unknown extends T ? any : T : never
-type MaybeField<T, K extends string> = T extends { [k in K]: infer G } ? G extends Function ? G : never : never
-
-
-
-function checkFields<_ extends { [k in keyof any]: never }>() {}
-
-// https://github.com/sindresorhus/type-fest
-type Numeric = number | bigint
-type Zero = 0 | 0n
-type Negative<T extends Numeric> = T extends Zero ? never : `${T}` extends `-${string}` ? T : never
-type NonNegative<T extends Numeric> = T extends Zero ? T : Negative<T> extends never ? T : '__invalid_negative_number__'
-// File: /home/asaace00/repo/business/findMyRoomy/nextjs-findmyroomy/src/app/blogs/page.tsx
-import * as entry from '../../../../src/app/blogs/page.js'
-import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
-
-type TEntry = typeof import('../../../../src/app/blogs/page.js')
-
-type SegmentParams<T extends Object = any> = T extends Record<string, any>
-  ? { [K in keyof T]: T[K] extends string ? string | string[] | undefined : never }
-  : T
-
-// Check that the entry is a valid entry
-checkFields<Diff<{
-  default: Function
-  config?: {}
-  generateStaticParams?: Function
-  revalidate?: RevalidateRange<TEntry> | false
-  dynamic?: 'auto' | 'force-dynamic' | 'error' | 'force-static'
-  dynamicParams?: boolean
-  fetchCache?: 'auto' | 'force-no-store' | 'only-no-store' | 'default-no-store' | 'default-cache' | 'only-cache' | 'force-cache'
-  preferredRegion?: 'auto' | 'global' | 'home' | string | string[]
-  runtime?: 'nodejs' | 'experimental-edge' | 'edge'
-  maxDuration?: number
-  
-  metadata?: any
-  generateMetadata?: Function
-  viewport?: any
-  generateViewport?: Function
-  experimental_ppr?: boolean
-  
-}, TEntry, ''>>()
-
-
-// Check the prop type of the entry function
-checkFields<Diff<PageProps, FirstArg<TEntry['default']>, 'default'>>()
-
-// Check the arguments and return type of the generateMetadata function
-if ('generateMetadata' in entry) {
-  checkFields<Diff<PageProps, FirstArg<MaybeField<TEntry, 'generateMetadata'>>, 'generateMetadata'>>()
-  checkFields<Diff<ResolvingMetadata, SecondArg<MaybeField<TEntry, 'generateMetadata'>>, 'generateMetadata'>>()
-}
-
-// Check the arguments and return type of the generateViewport function
-if ('generateViewport' in entry) {
-  checkFields<Diff<PageProps, FirstArg<MaybeField<TEntry, 'generateViewport'>>, 'generateViewport'>>()
-  checkFields<Diff<ResolvingViewport, SecondArg<MaybeField<TEntry, 'generateViewport'>>, 'generateViewport'>>()
-}
-
-// Check the arguments and return type of the generateStaticParams function
-if ('generateStaticParams' in entry) {
-  checkFields<Diff<{ params: SegmentParams }, FirstArg<MaybeField<TEntry, 'generateStaticParams'>>, 'generateStaticParams'>>()
-  checkFields<Diff<{ __tag__: 'generateStaticParams', __return_type__: any[] | Promise<any[]> }, { __tag__: 'generateStaticParams', __return_type__: ReturnType<MaybeField<TEntry, 'generateStaticParams'>> }>>()
-}
-
-export interface PageProps {
-  params?: Promise<SegmentParams>
-  searchParams?: Promise<any>
-}
-export interface LayoutProps {
-  children?: React.ReactNode
-
-  params?: Promise<SegmentParams>
-}
-
-// =============
-// Utility types
-type RevalidateRange<T> = T extends { revalidate: any } ? NonNegative<T['revalidate']> : never
-
-// If T is unknown or any, it will be an empty {} type. Otherwise, it will be the same as Omit<T, keyof Base>.
-type OmitWithTag<T, K extends keyof any, _M> = Omit<T, K>
-type Diff<Base, T extends Base, Message extends string = ''> = 0 extends (1 & T) ? {} : OmitWithTag<T, keyof Base, Message>
-
-type FirstArg<T extends Function> = T extends (...args: [infer T, any]) => any ? unknown extends T ? any : T : never
-type SecondArg<T extends Function> = T extends (...args: [any, infer T]) => any ? unknown extends T ? any : T : never
-type MaybeField<T, K extends string> = T extends { [k in K]: infer G } ? G extends Function ? G : never : never
-
-
-
-function checkFields<_ extends { [k in keyof any]: never }>() {}
-
-// https://github.com/sindresorhus/type-fest
-type Numeric = number | bigint
-type Zero = 0 | 0n
-type Negative<T extends Numeric> = T extends Zero ? never : `${T}` extends `-${string}` ? T : never
-type NonNegative<T extends Numeric> = T extends Zero ? T : Negative<T> extends never ? T : '__invalid_negative_number__'
-// File: /home/asaace00/repo/business/findMyRoomy/nextjs-findmyroomy/src/app/page.tsx
-import * as entry from '../../../src/app/page.js'
-import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
-
-type TEntry = typeof import('../../../src/app/page.js')
-
-type SegmentParams<T extends Object = any> = T extends Record<string, any>
-  ? { [K in keyof T]: T[K] extends string ? string | string[] | undefined : never }
-  : T
-
-// Check that the entry is a valid entry
-checkFields<Diff<{
-  default: Function
-  config?: {}
-  generateStaticParams?: Function
-  revalidate?: RevalidateRange<TEntry> | false
-  dynamic?: 'auto' | 'force-dynamic' | 'error' | 'force-static'
-  dynamicParams?: boolean
-  fetchCache?: 'auto' | 'force-no-store' | 'only-no-store' | 'default-no-store' | 'default-cache' | 'only-cache' | 'force-cache'
-  preferredRegion?: 'auto' | 'global' | 'home' | string | string[]
-  runtime?: 'nodejs' | 'experimental-edge' | 'edge'
-  maxDuration?: number
-  
-  metadata?: any
-  generateMetadata?: Function
-  viewport?: any
-  generateViewport?: Function
-  experimental_ppr?: boolean
-  
-}, TEntry, ''>>()
-
-
-// Check the prop type of the entry function
-checkFields<Diff<PageProps, FirstArg<TEntry['default']>, 'default'>>()
-
-// Check the arguments and return type of the generateMetadata function
-if ('generateMetadata' in entry) {
-  checkFields<Diff<PageProps, FirstArg<MaybeField<TEntry, 'generateMetadata'>>, 'generateMetadata'>>()
-  checkFields<Diff<ResolvingMetadata, SecondArg<MaybeField<TEntry, 'generateMetadata'>>, 'generateMetadata'>>()
-}
-
-// Check the arguments and return type of the generateViewport function
-if ('generateViewport' in entry) {
-  checkFields<Diff<PageProps, FirstArg<MaybeField<TEntry, 'generateViewport'>>, 'generateViewport'>>()
-  checkFields<Diff<ResolvingViewport, SecondArg<MaybeField<TEntry, 'generateViewport'>>, 'generateViewport'>>()
-}
-
-// Check the arguments and return type of the generateStaticParams function
-if ('generateStaticParams' in entry) {
-  checkFields<Diff<{ params: SegmentParams }, FirstArg<MaybeField<TEntry, 'generateStaticParams'>>, 'generateStaticParams'>>()
-  checkFields<Diff<{ __tag__: 'generateStaticParams', __return_type__: any[] | Promise<any[]> }, { __tag__: 'generateStaticParams', __return_type__: ReturnType<MaybeField<TEntry, 'generateStaticParams'>> }>>()
-}
-
-export interface PageProps {
-  params?: Promise<SegmentParams>
-  searchParams?: Promise<any>
-}
-export interface LayoutProps {
-  children?: React.ReactNode
-
-  params?: Promise<SegmentParams>
-}
-
-// =============
-// Utility types
-type RevalidateRange<T> = T extends { revalidate: any } ? NonNegative<T['revalidate']> : never
-
-// If T is unknown or any, it will be an empty {} type. Otherwise, it will be the same as Omit<T, keyof Base>.
-type OmitWithTag<T, K extends keyof any, _M> = Omit<T, K>
-type Diff<Base, T extends Base, Message extends string = ''> = 0 extends (1 & T) ? {} : OmitWithTag<T, keyof Base, Message>
-
-type FirstArg<T extends Function> = T extends (...args: [infer T, any]) => any ? unknown extends T ? any : T : never
-type SecondArg<T extends Function> = T extends (...args: [any, infer T]) => any ? unknown extends T ? any : T : never
-type MaybeField<T, K extends string> = T extends { [k in K]: infer G } ? G extends Function ? G : never : never
-
-
-
-function checkFields<_ extends { [k in keyof any]: never }>() {}
-
-// https://github.com/sindresorhus/type-fest
-type Numeric = number | bigint
-type Zero = 0 | 0n
-type Negative<T extends Numeric> = T extends Zero ? never : `${T}` extends `-${string}` ? T : never
-type NonNegative<T extends Numeric> = T extends Zero ? T : Negative<T> extends never ? T : '__invalid_negative_number__'
-// File: /home/asaace00/repo/business/findMyRoomy/nextjs-findmyroomy/src/app/roommates/[city]/page.tsx
-import * as entry from '../../../../../src/app/roommates/[city]/page.js'
-import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
-
-type TEntry = typeof import('../../../../../src/app/roommates/[city]/page.js')
-
-type SegmentParams<T extends Object = any> = T extends Record<string, any>
-  ? { [K in keyof T]: T[K] extends string ? string | string[] | undefined : never }
-  : T
-
-// Check that the entry is a valid entry
-checkFields<Diff<{
-  default: Function
-  config?: {}
-  generateStaticParams?: Function
-  revalidate?: RevalidateRange<TEntry> | false
-  dynamic?: 'auto' | 'force-dynamic' | 'error' | 'force-static'
-  dynamicParams?: boolean
-  fetchCache?: 'auto' | 'force-no-store' | 'only-no-store' | 'default-no-store' | 'default-cache' | 'only-cache' | 'force-cache'
-  preferredRegion?: 'auto' | 'global' | 'home' | string | string[]
-  runtime?: 'nodejs' | 'experimental-edge' | 'edge'
-  maxDuration?: number
-  
-  metadata?: any
-  generateMetadata?: Function
-  viewport?: any
-  generateViewport?: Function
-  experimental_ppr?: boolean
-  
-}, TEntry, ''>>()
-
-
-// Check the prop type of the entry function
-checkFields<Diff<PageProps, FirstArg<TEntry['default']>, 'default'>>()
-
-// Check the arguments and return type of the generateMetadata function
-if ('generateMetadata' in entry) {
-  checkFields<Diff<PageProps, FirstArg<MaybeField<TEntry, 'generateMetadata'>>, 'generateMetadata'>>()
-  checkFields<Diff<ResolvingMetadata, SecondArg<MaybeField<TEntry, 'generateMetadata'>>, 'generateMetadata'>>()
-}
-
-// Check the arguments and return type of the generateViewport function
-if ('generateViewport' in entry) {
-  checkFields<Diff<PageProps, FirstArg<MaybeField<TEntry, 'generateViewport'>>, 'generateViewport'>>()
-  checkFields<Diff<ResolvingViewport, SecondArg<MaybeField<TEntry, 'generateViewport'>>, 'generateViewport'>>()
-}
-
-// Check the arguments and return type of the generateStaticParams function
-if ('generateStaticParams' in entry) {
-  checkFields<Diff<{ params: SegmentParams }, FirstArg<MaybeField<TEntry, 'generateStaticParams'>>, 'generateStaticParams'>>()
-  checkFields<Diff<{ __tag__: 'generateStaticParams', __return_type__: any[] | Promise<any[]> }, { __tag__: 'generateStaticParams', __return_type__: ReturnType<MaybeField<TEntry, 'generateStaticParams'>> }>>()
-}
-
-export interface PageProps {
-  params?: Promise<SegmentParams>
-  searchParams?: Promise<any>
-}
-export interface LayoutProps {
-  children?: React.ReactNode
-
-  params?: Promise<SegmentParams>
-}
-
-// =============
-// Utility types
-type RevalidateRange<T> = T extends { revalidate: any } ? NonNegative<T['revalidate']> : never
-
-// If T is unknown or any, it will be an empty {} type. Otherwise, it will be the same as Omit<T, keyof Base>.
-type OmitWithTag<T, K extends keyof any, _M> = Omit<T, K>
-type Diff<Base, T extends Base, Message extends string = ''> = 0 extends (1 & T) ? {} : OmitWithTag<T, keyof Base, Message>
-
-type FirstArg<T extends Function> = T extends (...args: [infer T, any]) => any ? unknown extends T ? any : T : never
-type SecondArg<T extends Function> = T extends (...args: [any, infer T]) => any ? unknown extends T ? any : T : never
-type MaybeField<T, K extends string> = T extends { [k in K]: infer G } ? G extends Function ? G : never : never
-
-
-
-function checkFields<_ extends { [k in keyof any]: never }>() {}
-
-// https://github.com/sindresorhus/type-fest
-type Numeric = number | bigint
-type Zero = 0 | 0n
-type Negative<T extends Numeric> = T extends Zero ? never : `${T}` extends `-${string}` ? T : never
-type NonNegative<T extends Numeric> = T extends Zero ? T : Negative<T> extends never ? T : '__invalid_negative_number__'
-import type { NextConfig } from 'next'
-import path from 'path';
-
-const isGithubPages = process.env.NODE_ENV === 'production' && process.env.GITHUB_PAGES;
-
-const nextConfig: NextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true, // ✅ Disables ESLint checks on `next build`
-  },
-  output: 'export',
-  trailingSlash: true, // Required for static hosting like GH Pages
-  basePath: isGithubPages ? '/Find-MyRoomie' : '',
-  images: {
-    unoptimized: true, // Required for next/image with static export
-  },
-  // Add webpack configuration for path aliases
-  webpack: (config: any) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@': path.resolve(__dirname, 'src'),
-    }
-    return config
-  }
-};
-
-export default nextConfig;
+.
+./aos.d.ts
+./eslint.config.mjs
+./package.json
+./src
+./src/components
+./src/components/Testimonials.tsx
+./src/components/Data.tsx
+./src/components/BlogSidebar.tsx
+./src/components/PainPoints.tsx
+./src/components/Safety.tsx
+./src/components/HowItWorks.tsx
+./src/components/Features.tsx
+./src/components/ContactUs.tsx
+./src/components/Guarantees.tsx
+./src/components/CTA.tsx
+./src/components/_data
+./src/components/_data/cities.json
+./src/components/HeroSection.tsx
+./src/components/Navbar.tsx
+./src/components/Footer.tsx
+./src/components/CityIndex.tsx
+./src/app
+./src/app/favicon.ico
+./src/app/layout.tsx
+./src/app/globals.css
+./src/app/blogs
+./src/app/blogs/BlogPageClient.tsx
+./src/app/blogs/blogData.tsx
+./src/app/blogs/[id]
+./src/app/blogs/[id]/page.tsx
+./src/app/blogs/page.tsx
+./src/app/page.tsx
+./src/app/roommates
+./src/app/roommates/[city]
+./src/app/roommates/[city]/CityClientShell.tsx
+./src/app/roommates/[city]/page.tsx
+./pages
+./pages/_app.js
+./.github
+./.github/workflows
+./.github/workflows/deploy.yml
+./README.md
+./tailwind.config.js
+./temp.txt
+./package-lock.json
+./next-env.d.ts
+./.gitignore
+./.next
+./.next/required-server-files.json
+./.next/export-detail.json
+./.next/app-path-routes-manifest.json
+./.next/app-build-manifest.json
+./.next/package.json
+./.next/static
+./.next/static/media
+./.next/static/media/569ce4b8f30dc480-s.p.woff2
+./.next/static/media/747892c23ea88013-s.woff2
+./.next/static/media/9610d9e46709d722-s.woff2
+./.next/static/media/93f479601ee12b01-s.p.woff2
+./.next/static/media/8d697b304b401681-s.woff2
+./.next/static/media/ba015fad6dcf6784-s.woff2
+./.next/static/development
+./.next/static/development/_buildManifest.js
+./.next/static/development/_ssgManifest.js
+./.next/static/pnIkLwTP7vRi_bkJHEDPI
+./.next/static/pnIkLwTP7vRi_bkJHEDPI/_buildManifest.js
+./.next/static/pnIkLwTP7vRi_bkJHEDPI/_ssgManifest.js
+./.next/static/chunks
+./.next/static/chunks/783-3351d61066e8cdff.js
+./.next/static/chunks/pages
+./.next/static/chunks/pages/_app-350991895072369d.js
+./.next/static/chunks/pages/_error-cc3f077a18ea1793.js
+./.next/static/chunks/63-bdf879c4cf086d47.js
+./.next/static/chunks/main-4d6eccd818aeb85b.js
+./.next/static/chunks/polyfills-42372ed130431b0a.js
+./.next/static/chunks/431.95407bf20e8a189b.js
+./.next/static/chunks/684-3b77a74212816c1b.js
+./.next/static/chunks/main-app-ba09476c9b715d8a.js
+./.next/static/chunks/webpack-9610bdd6c24691b0.js
+./.next/static/chunks/webpack.js
+./.next/static/chunks/framework-73dc6f07f3ac8bae.js
+./.next/static/chunks/874-8968f43b4a384683.js
+./.next/static/chunks/app
+./.next/static/chunks/app/page-941d0b067c82d838.js
+./.next/static/chunks/app/layout-daf5aab353e94d25.js
+./.next/static/chunks/app/blogs
+./.next/static/chunks/app/blogs/page-f703235e9a736590.js
+./.next/static/chunks/app/blogs/[id]
+./.next/static/chunks/app/blogs/[id]/page-7b4e8c4aa30c9d98.js
+./.next/static/chunks/app/_not-found
+./.next/static/chunks/app/_not-found/page-1599d30195d758e9.js
+./.next/static/chunks/app/_not-found/page.js
+./.next/static/chunks/app/layout.js
+./.next/static/chunks/app/roommates
+./.next/static/chunks/app/roommates/[city]
+./.next/static/chunks/app/roommates/[city]/page-7674807a6a62c70a.js
+./.next/static/chunks/4bd1b696-87c7b1b95a75b91e.js
+./.next/static/chunks/325-a5eb61ea813ce89b.js
+./.next/static/chunks/19-173553284c9a796a.js
+./.next/static/chunks/fallback
+./.next/static/chunks/fallback/pages
+./.next/static/webpack
+./.next/static/webpack/ea17d96c8e2e6849.webpack.hot-update.json
+./.next/static/webpack/f085f52dcb4c4cfc.webpack.hot-update.json
+./.next/static/webpack/webpack.6a381c111bea3f64.hot-update.js
+./.next/static/webpack/webpack.7aa25804ee2589c6.hot-update.js
+./.next/static/webpack/webpack.f085f52dcb4c4cfc.hot-update.js
+./.next/static/webpack/7aa25804ee2589c6.webpack.hot-update.json
+./.next/static/webpack/6a381c111bea3f64.webpack.hot-update.json
+./.next/static/webpack/app
+./.next/static/webpack/app/layout.f085f52dcb4c4cfc.hot-update.js
+./.next/static/webpack/app/layout.6a381c111bea3f64.hot-update.js
+./.next/static/webpack/app/layout.ea17d96c8e2e6849.hot-update.js
+./.next/static/webpack/webpack.ea17d96c8e2e6849.hot-update.js
+./.next/static/css
+./.next/static/css/ef46db3751d8e999.css
+./.next/static/css/65aa3619a1925c9d.css
+./.next/static/css/f30152c0704fba31.css
+./.next/static/css/app
+./.next/static/css/app/layout.css
+./.next/fallback-build-manifest.json
+./.next/build-manifest.json
+./.next/cache
+./.next/cache/eslint
+./.next/cache/eslint/.cache_kg30zu
+./.next/cache/.rscinfo
+./.next/cache/webpack
+./.next/cache/webpack/client-development-fallback
+./.next/cache/webpack/client-development-fallback/index.pack.gz
+./.next/cache/webpack/client-development-fallback/index.pack.gz.old
+./.next/cache/webpack/client-development-fallback/0.pack.gz
+./.next/cache/webpack/client-development-fallback/1.pack.gz
+./.next/cache/webpack/server-development
+./.next/cache/webpack/server-development/index.pack.gz
+./.next/cache/webpack/server-development/index.pack.gz.old
+./.next/cache/webpack/server-development/0.pack.gz
+./.next/cache/webpack/server-development/2.pack.gz
+./.next/cache/webpack/server-development/1.pack.gz
+./.next/cache/webpack/server-development/3.pack.gz
+./.next/cache/webpack/server-development/4.pack.gz
+./.next/cache/webpack/server-production
+./.next/cache/webpack/server-production/index.pack
+./.next/cache/webpack/server-production/0.pack
+./.next/cache/webpack/server-production/7.pack
+./.next/cache/webpack/server-production/4.pack
+./.next/cache/webpack/server-production/index.pack.old
+./.next/cache/webpack/server-production/5.pack
+./.next/cache/webpack/server-production/2.pack
+./.next/cache/webpack/server-production/6.pack
+./.next/cache/webpack/server-production/3.pack
+./.next/cache/webpack/server-production/1.pack
+./.next/cache/webpack/client-production
+./.next/cache/webpack/client-production/9.pack
+./.next/cache/webpack/client-production/index.pack
+./.next/cache/webpack/client-production/0.pack
+./.next/cache/webpack/client-production/10.pack
+./.next/cache/webpack/client-production/7.pack
+./.next/cache/webpack/client-production/8.pack
+./.next/cache/webpack/client-production/4.pack
+./.next/cache/webpack/client-production/index.pack.old
+./.next/cache/webpack/client-production/5.pack
+./.next/cache/webpack/client-production/2.pack
+./.next/cache/webpack/client-production/6.pack
+./.next/cache/webpack/client-production/3.pack
+./.next/cache/webpack/client-production/1.pack
+./.next/cache/webpack/client-development
+./.next/cache/webpack/client-development/index.pack.gz
+./.next/cache/webpack/client-development/6.pack.gz
+./.next/cache/webpack/client-development/5.pack.gz
+./.next/cache/webpack/client-development/index.pack.gz.old
+./.next/cache/webpack/client-development/0.pack.gz
+./.next/cache/webpack/client-development/2.pack.gz
+./.next/cache/webpack/client-development/1.pack.gz
+./.next/cache/webpack/client-development/3.pack.gz
+./.next/cache/webpack/client-development/4.pack.gz
+./.next/cache/webpack/edge-server-production
+./.next/cache/webpack/edge-server-production/index.pack
+./.next/cache/webpack/edge-server-production/0.pack
+./.next/cache/webpack/edge-server-production/index.pack.old
+./.next/cache/.tsbuildinfo
+./.next/cache/swc
+./.next/cache/swc/plugins
+./.next/cache/swc/plugins/v7_linux_x86_64_9.0.0
+./.next/react-loadable-manifest.json
+./.next/server
+./.next/server/middleware-manifest.json
+./.next/server/functions-config-manifest.json
+./.next/server/middleware-build-manifest.js
+./.next/server/vendor-chunks
+./.next/server/vendor-chunks/next.js
+./.next/server/server-reference-manifest.json
+./.next/server/interception-route-rewrite-manifest.js
+./.next/server/pages
+./.next/server/pages/500.html
+./.next/server/pages/_error.js.nft.json
+./.next/server/pages/404.html
+./.next/server/pages/_document.js
+./.next/server/pages/_app.js.nft.json
+./.next/server/pages/_app.js
+./.next/server/pages/_document.js.nft.json
+./.next/server/pages/_error.js
+./.next/server/webpack-runtime.js
+./.next/server/chunks
+./.next/server/chunks/298.js
+./.next/server/chunks/533.js
+./.next/server/chunks/548.js
+./.next/server/chunks/567.js
+./.next/server/chunks/447.js
+./.next/server/chunks/384.js
+./.next/server/chunks/291.js
+./.next/server/chunks/169.js
+./.next/server/next-font-manifest.json
+./.next/server/app-paths-manifest.json
+./.next/server/server-reference-manifest.js
+./.next/server/middleware-react-loadable-manifest.js
+./.next/server/pages-manifest.json
+./.next/server/next-font-manifest.js
+./.next/server/app
+./.next/server/app/blogs.meta
+./.next/server/app/page_client-reference-manifest.js
+./.next/server/app/favicon.ico
+./.next/server/app/favicon.ico/route.js.nft.json
+./.next/server/app/favicon.ico/route.js
+./.next/server/app/_not-found.html
+./.next/server/app/index.meta
+./.next/server/app/favicon.ico.body
+./.next/server/app/blogs.rsc
+./.next/server/app/index.rsc
+./.next/server/app/page.js.nft.json
+./.next/server/app/blogs
+./.next/server/app/blogs/4.rsc
+./.next/server/app/blogs/1.rsc
+./.next/server/app/blogs/page_client-reference-manifest.js
+./.next/server/app/blogs/3.meta
+./.next/server/app/blogs/7.html
+./.next/server/app/blogs/1.meta
+./.next/server/app/blogs/2.html
+./.next/server/app/blogs/3.html
+./.next/server/app/blogs/4.meta
+./.next/server/app/blogs/8.rsc
+./.next/server/app/blogs/[id]
+./.next/server/app/blogs/[id]/page_client-reference-manifest.js
+./.next/server/app/blogs/[id]/page.js.nft.json
+./.next/server/app/blogs/[id]/page.js
+./.next/server/app/blogs/page.js.nft.json
+./.next/server/app/blogs/6.rsc
+./.next/server/app/blogs/5.html
+./.next/server/app/blogs/1.html
+./.next/server/app/blogs/2.rsc
+./.next/server/app/blogs/7.meta
+./.next/server/app/blogs/6.meta
+./.next/server/app/blogs/3.rsc
+./.next/server/app/blogs/2.meta
+./.next/server/app/blogs/8.html
+./.next/server/app/blogs/7.rsc
+./.next/server/app/blogs/page.js
+./.next/server/app/blogs/5.rsc
+./.next/server/app/blogs/8.meta
+./.next/server/app/blogs/4.html
+./.next/server/app/blogs/5.meta
+./.next/server/app/blogs/6.html
+./.next/server/app/_not-found
+./.next/server/app/_not-found/page_client-reference-manifest.js
+./.next/server/app/_not-found/index.meta
+./.next/server/app/_not-found/index.rsc
+./.next/server/app/_not-found/page.js.nft.json
+./.next/server/app/_not-found/page.js
+./.next/server/app/_not-found/index.html
+./.next/server/app/page.js
+./.next/server/app/roommates
+./.next/server/app/roommates/miami-fl.rsc
+./.next/server/app/roommates/columbus-oh.rsc
+./.next/server/app/roommates/seattle-wa.html
+./.next/server/app/roommates/fort-worth-tx.html
+./.next/server/app/roommates/long-beach-ca.html
+./.next/server/app/roommates/santa-clara-ca.meta
+./.next/server/app/roommates/phoenix-az.rsc
+./.next/server/app/roommates/nashville-tn.meta
+./.next/server/app/roommates/fort-worth-tx.rsc
+./.next/server/app/roommates/san-antonio-tx.meta
+./.next/server/app/roommates/oakland-ca.html
+./.next/server/app/roommates/chicago-il.rsc
+./.next/server/app/roommates/san-jose-ca.rsc
+./.next/server/app/roommates/los-angeles-ca.html
+./.next/server/app/roommates/orlando-fl.html
+./.next/server/app/roommates/fort-worth-tx.meta
+./.next/server/app/roommates/dallas-tx.html
+./.next/server/app/roommates/columbus-oh.meta
+./.next/server/app/roommates/charlotte-nc.html
+./.next/server/app/roommates/austin-tx.html
+./.next/server/app/roommates/jacksonville-fl.rsc
+./.next/server/app/roommates/new-york-ny.rsc
+./.next/server/app/roommates/long-beach-ca.meta
+./.next/server/app/roommates/san-francisco-ca.rsc
+./.next/server/app/roommates/oakland-ca.meta
+./.next/server/app/roommates/san-francisco-ca.html
+./.next/server/app/roommates/atlanta-ga.rsc
+./.next/server/app/roommates/atlanta-ga.meta
+./.next/server/app/roommates/san-antonio-tx.rsc
+./.next/server/app/roommates/houston-tx.meta
+./.next/server/app/roommates/boston-ma.meta
+./.next/server/app/roommates/orlando-fl.rsc
+./.next/server/app/roommates/[city]
+./.next/server/app/roommates/[city]/page_client-reference-manifest.js
+./.next/server/app/roommates/[city]/page.js.nft.json
+./.next/server/app/roommates/[city]/page.js
+./.next/server/app/roommates/nashville-tn.rsc
+./.next/server/app/roommates/denver-co.meta
+./.next/server/app/roommates/atlanta-ga.html
+./.next/server/app/roommates/long-beach-ca.rsc
+./.next/server/app/roommates/new-york-ny.html
+./.next/server/app/roommates/anaheim-ca.rsc
+./.next/server/app/roommates/tampa-fl.html
+./.next/server/app/roommates/philadelphia-pa.rsc
+./.next/server/app/roommates/san-antonio-tx.html
+./.next/server/app/roommates/denver-co.html
+./.next/server/app/roommates/washington-dc.meta
+./.next/server/app/roommates/oakland-ca.rsc
+./.next/server/app/roommates/orlando-fl.meta
+./.next/server/app/roommates/jacksonville-fl.meta
+./.next/server/app/roommates/washington-dc.rsc
+./.next/server/app/roommates/charlotte-nc.meta
+./.next/server/app/roommates/new-york-ny.meta
+./.next/server/app/roommates/phoenix-az.html
+./.next/server/app/roommates/seattle-wa.rsc
+./.next/server/app/roommates/dallas-tx.meta
+./.next/server/app/roommates/columbus-oh.html
+./.next/server/app/roommates/charlotte-nc.rsc
+./.next/server/app/roommates/indianapolis-in.html
+./.next/server/app/roommates/sacramento-ca.rsc
+./.next/server/app/roommates/santa-clara-ca.html
+./.next/server/app/roommates/austin-tx.rsc
+./.next/server/app/roommates/tampa-fl.rsc
+./.next/server/app/roommates/tampa-fl.meta
+./.next/server/app/roommates/sacramento-ca.html
+./.next/server/app/roommates/san-diego-ca.html
+./.next/server/app/roommates/chicago-il.meta
+./.next/server/app/roommates/san-jose-ca.meta
+./.next/server/app/roommates/dallas-tx.rsc
+./.next/server/app/roommates/washington-dc.html
+./.next/server/app/roommates/miami-fl.html
+./.next/server/app/roommates/nashville-tn.html
+./.next/server/app/roommates/anaheim-ca.meta
+./.next/server/app/roommates/phoenix-az.meta
+./.next/server/app/roommates/philadelphia-pa.meta
+./.next/server/app/roommates/san-diego-ca.meta
+./.next/server/app/roommates/boston-ma.rsc
+./.next/server/app/roommates/los-angeles-ca.rsc
+./.next/server/app/roommates/indianapolis-in.meta
+./.next/server/app/roommates/los-angeles-ca.meta
+./.next/server/app/roommates/san-jose-ca.html
+./.next/server/app/roommates/santa-clara-ca.rsc
+./.next/server/app/roommates/jacksonville-fl.html
+./.next/server/app/roommates/chicago-il.html
+./.next/server/app/roommates/anaheim-ca.html
+./.next/server/app/roommates/seattle-wa.meta
+./.next/server/app/roommates/san-francisco-ca.meta
+./.next/server/app/roommates/boston-ma.html
+./.next/server/app/roommates/philadelphia-pa.html
+./.next/server/app/roommates/indianapolis-in.rsc
+./.next/server/app/roommates/houston-tx.rsc
+./.next/server/app/roommates/denver-co.rsc
+./.next/server/app/roommates/houston-tx.html
+./.next/server/app/roommates/miami-fl.meta
+./.next/server/app/roommates/austin-tx.meta
+./.next/server/app/roommates/sacramento-ca.meta
+./.next/server/app/roommates/san-diego-ca.rsc
+./.next/server/app/blogs.html
+./.next/server/app/_not-found.rsc
+./.next/server/app/index.html
+./.next/server/app/_not-found.meta
+./.next/server/app/favicon.ico.meta
+./.next/server/dynamic-css-manifest.js
+./.next/routes-manifest.json
+./.next/BUILD_ID
+./.next/dynamic-css-manifest.json
+./.next/types
+./.next/types/package.json
+./.next/types/cache-life.d.ts
+./.next/types/app
+./.next/types/app/layout.ts
+./.next/types/app/blogs
+./.next/types/app/blogs/[id]
+./.next/types/app/blogs/[id]/page.ts
+./.next/types/app/blogs/page.ts
+./.next/types/app/page.ts
+./.next/types/app/roommates
+./.next/types/app/roommates/[city]
+./.next/types/app/roommates/[city]/page.ts
+./.next/next-server.js.nft.json
+./.next/prerender-manifest.json
+./.next/diagnostics
+./.next/diagnostics/framework.json
+./.next/diagnostics/build-diagnostics.json
+./.next/export-marker.json
+./.next/trace
+./.next/next-minimal-server.js.nft.json
+./.next/images-manifest.json
+./next.config.ts
+./out
+./out/window.svg
+./out/favicon.ico
+./out/404
+./out/404/index.html
+./out/vercel.svg
+./out/404.html
+./out/_next
+./out/_next/pnIkLwTP7vRi_bkJHEDPI
+./out/_next/static
+./out/_next/static/media
+./out/_next/static/media/569ce4b8f30dc480-s.p.woff2
+./out/_next/static/media/747892c23ea88013-s.woff2
+./out/_next/static/media/9610d9e46709d722-s.woff2
+./out/_next/static/media/93f479601ee12b01-s.p.woff2
+./out/_next/static/media/8d697b304b401681-s.woff2
+./out/_next/static/media/ba015fad6dcf6784-s.woff2
+./out/_next/static/pnIkLwTP7vRi_bkJHEDPI
+./out/_next/static/pnIkLwTP7vRi_bkJHEDPI/_buildManifest.js
+./out/_next/static/pnIkLwTP7vRi_bkJHEDPI/_ssgManifest.js
+./out/_next/static/chunks
+./out/_next/static/chunks/783-3351d61066e8cdff.js
+./out/_next/static/chunks/pages
+./out/_next/static/chunks/pages/_app-350991895072369d.js
+./out/_next/static/chunks/pages/_error-cc3f077a18ea1793.js
+./out/_next/static/chunks/63-bdf879c4cf086d47.js
+./out/_next/static/chunks/main-4d6eccd818aeb85b.js
+./out/_next/static/chunks/polyfills-42372ed130431b0a.js
+./out/_next/static/chunks/431.95407bf20e8a189b.js
+./out/_next/static/chunks/684-3b77a74212816c1b.js
+./out/_next/static/chunks/main-app-ba09476c9b715d8a.js
+./out/_next/static/chunks/webpack-9610bdd6c24691b0.js
+./out/_next/static/chunks/framework-73dc6f07f3ac8bae.js
+./out/_next/static/chunks/874-8968f43b4a384683.js
+./out/_next/static/chunks/app
+./out/_next/static/chunks/app/page-941d0b067c82d838.js
+./out/_next/static/chunks/app/layout-daf5aab353e94d25.js
+./out/_next/static/chunks/app/blogs
+./out/_next/static/chunks/app/blogs/page-f703235e9a736590.js
+./out/_next/static/chunks/app/blogs/[id]
+./out/_next/static/chunks/app/blogs/[id]/page-7b4e8c4aa30c9d98.js
+./out/_next/static/chunks/app/_not-found
+./out/_next/static/chunks/app/_not-found/page-1599d30195d758e9.js
+./out/_next/static/chunks/app/roommates
+./out/_next/static/chunks/app/roommates/[city]
+./out/_next/static/chunks/app/roommates/[city]/page-7674807a6a62c70a.js
+./out/_next/static/chunks/4bd1b696-87c7b1b95a75b91e.js
+./out/_next/static/chunks/325-a5eb61ea813ce89b.js
+./out/_next/static/chunks/19-173553284c9a796a.js
+./out/_next/static/css
+./out/_next/static/css/ef46db3751d8e999.css
+./out/_next/static/css/65aa3619a1925c9d.css
+./out/_next/static/css/f30152c0704fba31.css
+./out/blogs
+./out/blogs/6
+./out/blogs/6/index.txt
+./out/blogs/6/index.html
+./out/blogs/4
+./out/blogs/4/index.txt
+./out/blogs/4/index.html
+./out/blogs/2
+./out/blogs/2/index.txt
+./out/blogs/2/index.html
+./out/blogs/5
+./out/blogs/5/index.txt
+./out/blogs/5/index.html
+./out/blogs/7
+./out/blogs/7/index.txt
+./out/blogs/7/index.html
+./out/blogs/index.txt
+./out/blogs/8
+./out/blogs/8/index.txt
+./out/blogs/8/index.html
+./out/blogs/3
+./out/blogs/3/index.txt
+./out/blogs/3/index.html
+./out/blogs/1
+./out/blogs/1/index.txt
+./out/blogs/1/index.html
+./out/blogs/index.html
+./out/globe.svg
+./out/index.txt
+./out/next.svg
+./out/file.svg
+./out/roommates
+./out/roommates/phoenix-az
+./out/roommates/phoenix-az/index.txt
+./out/roommates/phoenix-az/index.html
+./out/roommates/atlanta-ga
+./out/roommates/atlanta-ga/index.txt
+./out/roommates/atlanta-ga/index.html
+./out/roommates/san-antonio-tx
+./out/roommates/san-antonio-tx/index.txt
+./out/roommates/san-antonio-tx/index.html
+./out/roommates/chicago-il
+./out/roommates/chicago-il/index.txt
+./out/roommates/chicago-il/index.html
+./out/roommates/denver-co
+./out/roommates/denver-co/index.txt
+./out/roommates/denver-co/index.html
+./out/roommates/tampa-fl
+./out/roommates/tampa-fl/index.txt
+./out/roommates/tampa-fl/index.html
+./out/roommates/santa-clara-ca
+./out/roommates/santa-clara-ca/index.txt
+./out/roommates/santa-clara-ca/index.html
+./out/roommates/orlando-fl
+./out/roommates/orlando-fl/index.txt
+./out/roommates/orlando-fl/index.html
+./out/roommates/sacramento-ca
+./out/roommates/sacramento-ca/index.txt
+./out/roommates/sacramento-ca/index.html
+./out/roommates/san-diego-ca
+./out/roommates/san-diego-ca/index.txt
+./out/roommates/san-diego-ca/index.html
+./out/roommates/indianapolis-in
+./out/roommates/indianapolis-in/index.txt
+./out/roommates/indianapolis-in/index.html
+./out/roommates/charlotte-nc
+./out/roommates/charlotte-nc/index.txt
+./out/roommates/charlotte-nc/index.html
+./out/roommates/anaheim-ca
+./out/roommates/anaheim-ca/index.txt
+./out/roommates/anaheim-ca/index.html
+./out/roommates/houston-tx
+./out/roommates/houston-tx/index.txt
+./out/roommates/houston-tx/index.html
+./out/roommates/fort-worth-tx
+./out/roommates/fort-worth-tx/index.txt
+./out/roommates/fort-worth-tx/index.html
+./out/roommates/jacksonville-fl
+./out/roommates/jacksonville-fl/index.txt
+./out/roommates/jacksonville-fl/index.html
+./out/roommates/dallas-tx
+./out/roommates/dallas-tx/index.txt
+./out/roommates/dallas-tx/index.html
+./out/roommates/washington-dc
+./out/roommates/washington-dc/index.txt
+./out/roommates/washington-dc/index.html
+./out/roommates/new-york-ny
+./out/roommates/new-york-ny/index.txt
+./out/roommates/new-york-ny/index.html
+./out/roommates/san-jose-ca
+./out/roommates/san-jose-ca/index.txt
+./out/roommates/san-jose-ca/index.html
+./out/roommates/seattle-wa
+./out/roommates/seattle-wa/index.txt
+./out/roommates/seattle-wa/index.html
+./out/roommates/san-francisco-ca
+./out/roommates/san-francisco-ca/index.txt
+./out/roommates/san-francisco-ca/index.html
+./out/roommates/austin-tx
+./out/roommates/austin-tx/index.txt
+./out/roommates/austin-tx/index.html
+./out/roommates/miami-fl
+./out/roommates/miami-fl/index.txt
+./out/roommates/miami-fl/index.html
+./out/roommates/nashville-tn
+./out/roommates/nashville-tn/index.txt
+./out/roommates/nashville-tn/index.html
+./out/roommates/los-angeles-ca
+./out/roommates/los-angeles-ca/index.txt
+./out/roommates/los-angeles-ca/index.html
+./out/roommates/columbus-oh
+./out/roommates/columbus-oh/index.txt
+./out/roommates/columbus-oh/index.html
+./out/roommates/boston-ma
+./out/roommates/boston-ma/index.txt
+./out/roommates/boston-ma/index.html
+./out/roommates/long-beach-ca
+./out/roommates/long-beach-ca/index.txt
+./out/roommates/long-beach-ca/index.html
+./out/roommates/oakland-ca
+./out/roommates/oakland-ca/index.txt
+./out/roommates/oakland-ca/index.html
+./out/roommates/philadelphia-pa
+./out/roommates/philadelphia-pa/index.txt
+./out/roommates/philadelphia-pa/index.html
+./out/index.html
+./postcss.config.js
+./.git
+./.git/branches
+./.git/HEAD
+./.git/index
+./.git/info
+./.git/info/exclude
+./.git/refs
+./.git/refs/stash
+./.git/refs/tags
+./.git/refs/remotes
+./.git/refs/remotes/origin
+./.git/refs/remotes/origin/main
+./.git/refs/heads
+./.git/refs/heads/main
+./.git/refs/heads/master
+./.git/description
+./.git/COMMIT_EDITMSG
+./.git/config
+./.git/objects
+./.git/objects/e7
+./.git/objects/e7/bf24fa3b464b712f102cd8ed7fd94d0fbca4ac
+./.git/objects/68
+./.git/objects/68/e41f279760f44a138e0cfbb8bf6128f00b1820
+./.git/objects/91
+./.git/objects/91/65984dfe3862b8654c27ed7eafd3538c3a2975
+./.git/objects/4e
+./.git/objects/4e/d540e5ea1e05ebddc8725be102100879290915
+./.git/objects/a2
+./.git/objects/a2/cc38a6298b83901af3a03e41ce56f06fefe8d4
+./.git/objects/a2/106d177ce2f63df831fed893f3ee25e7becf3c
+./.git/objects/a2/dc41ecee5ec435200fe7cba2bde4107f823774
+./.git/objects/af
+./.git/objects/af/156dd988c1a33188d3e6a5ec857915e6d16246
+./.git/objects/af/1596c31c54f94fd08e72afca12abd65e763190
+./.git/objects/c2
+./.git/objects/c2/d421f8fb8c579e625c6bc5a50b07ff4830cfcd
+./.git/objects/c2/fce452daaeaa529c66d0eb806add46d58a58c6
+./.git/objects/e2
+./.git/objects/e2/7cdba685eb9bf628b2319bac0f6fb2e547fbb3
+./.git/objects/e2/15bc4ccf138bbc38ad58ad57e92135484b3c0f
+./.git/objects/51
+./.git/objects/51/74b28c565c285e3e312ec5178be64fbeca8398
+./.git/objects/f1
+./.git/objects/f1/5c32b7d9f1c4aa8236d3b09731ac1da2422ee5
+./.git/objects/f1/faee8eaf4bd6896dcae45feb48d33224a4ddce
+./.git/objects/d5
+./.git/objects/d5/aa1dd879aac23dd225cb7aba68e0019fb8d5a0
+./.git/objects/d5/cb6be7e7971db4de179c9e8f2c1e2a47377e9b
+./.git/objects/0e
+./.git/objects/0e/72dc681ba39430f85a305e03544a4a82fc8aa0
+./.git/objects/0e/d8dfaf3f89c2dd68952e5fccd1597e3f21cdca
+./.git/objects/75
+./.git/objects/75/38e27e53ebb3525bf09469b5749f03cc673bdc
+./.git/objects/92
+./.git/objects/92/31a21ea72e81004c8582839fd38d9d6372f79f
+./.git/objects/f4
+./.git/objects/f4/774ce6bf08d676a66f19e031b79b0f5f53e302
+./.git/objects/f4/9097d30b7e31cae8356b5c6652315471240eb4
+./.git/objects/84
+./.git/objects/84/6868740287a7a134ce1ec60e73120e3f6e20ed
+./.git/objects/84/04d81596d85a7d7bfd11a04fc24c31a78ab142
+./.git/objects/9c
+./.git/objects/9c/c200ac30a3cb3979cb7a98740b8c0315e7cad9
+./.git/objects/de
+./.git/objects/de/cef35c42caee4f5f6ba91919535dea29f16d88
+./.git/objects/83
+./.git/objects/83/082baa2c1ce27984fed8b7301209fa53bfc441
+./.git/objects/83/8381f9295b2757d4ba1a1496cf5d96464311d2
+./.git/objects/c1
+./.git/objects/c1/334095f876a408c10f2357faaced969ec090ab
+./.git/objects/c1/be519d252809a88b0f95517feea8abdb5c6d41
+./.git/objects/14
+./.git/objects/14/93571e231fea820cff9d1d8a25af51a699250b
+./.git/objects/98
+./.git/objects/98/1e742590eb2db85a31c0e708dd1513f259586d
+./.git/objects/b3
+./.git/objects/b3/72a680e3b642bd288d9568257c5c9e04e08dd1
+./.git/objects/f9
+./.git/objects/f9/869b851e6a0efffe62bedcdffd9a9170a82c58
+./.git/objects/ee
+./.git/objects/ee/a99bf045ee593297ff2265d393e6dc7fc23f72
+./.git/objects/0f
+./.git/objects/0f/d0a560b6218bc8e877f88e72c64844cba4b2a7
+./.git/objects/64
+./.git/objects/64/464e93babd20ccad6fbb5a91ee18840ce3d3b1
+./.git/objects/3f
+./.git/objects/3f/9a4f4839964879d2fb07f6c29deab8c20c2ea1
+./.git/objects/db
+./.git/objects/db/8082245d31bb546c4f249542f38ab0ccd965c9
+./.git/objects/2b
+./.git/objects/2b/2040fe9928275a90859a41e563113363dd1e9d
+./.git/objects/56
+./.git/objects/56/7f17b0d7c7fb662c16d4357dd74830caf2dccb
+./.git/objects/56/dfe2b118331d448e8b3b66c9e889f32b8796ef
+./.git/objects/c7
+./.git/objects/c7/bcb4b1ee14cd5e25078c2c934529afdd2a7df9
+./.git/objects/45
+./.git/objects/45/fa18a5d4bacea0c7025a260230e6fe6cf94922
+./.git/objects/45/56ba7a9b18121cba35eafea76809ed50ea3b0e
+./.git/objects/e8
+./.git/objects/e8/bae7363104e4f47b072725069adbd4bf40bdba
+./.git/objects/36
+./.git/objects/36/ef3e544f414ce2d3ec7de2fe2fe5fd0757e60a
+./.git/objects/7e
+./.git/objects/7e/2764b13cee5f51bc0eacb1c740f72c6b04b19e
+./.git/objects/7e/171013c86e28429b83f686e84a1f57c9784fb3
+./.git/objects/63
+./.git/objects/63/68c5ed5b5e808d21d099e8d77f0193051a208b
+./.git/objects/2a
+./.git/objects/2a/8a7d2bef2f56338d23e3dbfe607fd93437c67f
+./.git/objects/2a/5ce256e4427a3050997c241fdfd6e150bd8177
+./.git/objects/93
+./.git/objects/93/4d19c765389ac8d5bf36448d1e690f5ca1f539
+./.git/objects/93/0a79969b07749d3e02f15a39a6578fb9451964
+./.git/objects/97
+./.git/objects/97/2a6a40f5c931a2157959b51d99ad9201170dc7
+./.git/objects/info
+./.git/objects/09
+./.git/objects/09/91d11aee17b9e66f9912ccb23e8518009af423
+./.git/objects/09/7dc60c3b182ab9463aa2dc5b29825d368b54e5
+./.git/objects/19
+./.git/objects/19/72651a3fa66f5b7e55d04a806999fb085e1142
+./.git/objects/dc
+./.git/objects/dc/30b21980dd2208236b80d2c04bda170156887a
+./.git/objects/7b
+./.git/objects/7b/619aabdadbc1833da84ede4a4e9866380ca225
+./.git/objects/7b/a1337aeda7a39dffa8ea367bb13ded7a82c2f5
+./.git/objects/70
+./.git/objects/70/ca8f58ded73b258e664633720ff77a00ce7ce1
+./.git/objects/ea
+./.git/objects/ea/3abe69efb35f06ce74a507cc4777dfaae1f958
+./.git/objects/ea/1cbf517cde3d0bae7cb95ce6d2716a778ee015
+./.git/objects/11
+./.git/objects/11/08389ca1d320f250d1faa4efd68d97c5ce8b59
+./.git/objects/aa
+./.git/objects/aa/c20e8e2374a39060dcda6c12ff4a2236dbf075
+./.git/objects/aa/ae1c589fc57ec2a0b2139cd9f11cae2dca25a7
+./.git/objects/62
+./.git/objects/62/d9f8c35ced75a647e82a58e31d71f606cba521
+./.git/objects/71
+./.git/objects/71/8e96741fe112679856d471426cffcf661c6fa7
+./.git/objects/71/8d6fea4835ec2d246af9800eddb7ffb276240c
+./.git/objects/71/b7f85408279a3353f3421aaf8979f86ddf9b1b
+./.git/objects/5a
+./.git/objects/5a/e5bb559a06b0bd60c909db6baf035546f6a381
+./.git/objects/cf
+./.git/objects/cf/05c4e35362b6458859a8ff5339d0d912c6fb7c
+./.git/objects/c0
+./.git/objects/c0/e91c4afcdb294d712691576568198a702aaeaf
+./.git/objects/8b
+./.git/objects/8b/0edc8d3ed287a168a554651b7abd888407b939
+./.git/objects/b7
+./.git/objects/b7/ad2d2375af9f1c7c9b51d9bcb0ea2ad97830b2
+./.git/objects/0b
+./.git/objects/0b/2fa8886345df5b260f68304d6ed373cdbf9285
+./.git/objects/0b/b687d3de56d05260258e1c0ced723a4cb9829c
+./.git/objects/0b/55f874647b25716a93645419e52910b348b67c
+./.git/objects/3a
+./.git/objects/3a/98dab97fa412f86e118b5f6c1fb2cf144c2c7c
+./.git/objects/d2
+./.git/objects/d2/1496cd10843c4b92dde0421ab942776fd930aa
+./.git/objects/d0
+./.git/objects/d0/687d85384bcf33d9c915c4b9aadabb6b6632b9
+./.git/objects/d4
+./.git/objects/d4/020a159da280c8087e299e6bb743d7a3021a55
+./.git/objects/1a
+./.git/objects/1a/6fffca37b4c8133f0d19d66f3045231a972509
+./.git/objects/ac
+./.git/objects/ac/f1da58e8e68e323f3f63fb5055dd9f83222d46
+./.git/objects/ac/d749de3dcfbe4449ffade81ce0ade5791f69c9
+./.git/objects/94
+./.git/objects/94/7a3a303251654bef66e57f3ab4023906305214
+./.git/objects/c5
+./.git/objects/c5/d8c1eb90c7184cf4982cfbedf47ebd0f67e44f
+./.git/objects/c5/1006495518cbd7c399c50e203480173468c1ed
+./.git/objects/ad
+./.git/objects/ad/1390f29c16b9ca32b612815487f4ce529abe3c
+./.git/objects/ad/ab281b0557ee72f7d089575a4929dce68e5ef5
+./.git/objects/43
+./.git/objects/43/39bd8e131a6f78bfb61183c5304fe47ec73604
+./.git/objects/c8
+./.git/objects/c8/5fb67c463f20d1ee449b0ffee725a61dfb9259
+./.git/objects/c8/8f389de09f418da376598c42e8788d4fb6d172
+./.git/objects/90
+./.git/objects/90/59d0de02746c60b728320235c39c5b0a5dc334
+./.git/objects/6f
+./.git/objects/6f/ce9ef8f28950dc5e49632c3b428f8e85d6bf44
+./.git/objects/33
+./.git/objects/33/4a5f5cef1342875d7552e07b64105686ebd018
+./.git/objects/52
+./.git/objects/52/38c9cf913c88f524d82084406b10f4bf537faf
+./.git/objects/52/f7aa12ef38e50a241a50db27cc6bf3d49cb73e
+./.git/objects/52/5d787a2ea18d8af5c238612b7d2a6328fc7aa5
+./.git/objects/7c
+./.git/objects/7c/37fb19cd78e3490c1552cc9175766b7cb04b34
+./.git/objects/f8
+./.git/objects/f8/9d5485dc63f480fca4e21cf9b0c9c72df64924
+./.git/objects/f8/9d60481646c2e53150f3afb402acccf30f2a5a
+./.git/objects/f8/abb3671abdf92cb36980ffd011938b03fcac4e
+./.git/objects/f8/91a93377c6a21ab4fcabf7f63bc78e7878e3f4
+./.git/objects/pack
+./.git/objects/95
+./.git/objects/95/5b473e86d062e3a4efa33b962e4a97b2aad795
+./.git/objects/d8
+./.git/objects/d8/a5d2ba348b27ba98fe76620f805e2f79c69479
+./.git/objects/ed
+./.git/objects/ed/c99e8319a1478f30fdc6b2dd4fb2512c9e428f
+./.git/objects/ed/9cab527ace17d2e7c9c6751e0e5f71ced345ec
+./.git/objects/cc
+./.git/objects/cc/17a290e1dbbdc31c0808fb98111f4ed2323e0b
+./.git/objects/1f
+./.git/objects/1f/3ab87d55674ddd35b1e62b866d86bfe0467723
+./.git/objects/8e
+./.git/objects/8e/7a2f8db4c1c3ab4a7d51f42ab6e325e859d0ae
+./.git/objects/8e/39ef9581e2fad25e709a14e2e11cacd1c9c5a4
+./.git/objects/96
+./.git/objects/96/bb01e7dd1fcd9b131ec736a3be2570721d4c8c
+./.git/objects/26
+./.git/objects/26/96790bc5aa2116feadcfee42ba01d3aa70f000
+./.git/objects/b4
+./.git/objects/b4/149883d90ca477292d53890ac433ec96b51d17
+./.git/objects/9a
+./.git/objects/9a/d46404160e8176b5426daf1ff99ed49352f46a
+./.git/objects/9a/687686405281a0f9b11e65f7e46e71faafda2a
+./.git/objects/b6
+./.git/objects/b6/f9a1a0f2a34e8bdc1cd6f4457e858c6156f87c
+./.git/objects/e0
+./.git/objects/e0/77a252dcb5730b4b71f2c73032392f4f3041e0
+./.git/objects/e0/02824959ebe773aa74bd4b2dc8d1a25d040fc4
+./.git/objects/e0/cc4b8254af630c5778feb0b37f50efa53f9bf9
+./.git/objects/e0/26a17c09569ae4772b1fd9ab4db4fb8348d5e3
+./.git/objects/32
+./.git/objects/32/bce393b66356b948e703740993c95e9fb4a96a
+./.git/objects/05
+./.git/objects/05/c61c4f2674d42bb5c773c59e0fa22f7b4c5cfa
+./.git/objects/bb
+./.git/objects/bb/8ddcd56306cdc00c19abe7e796904893cb6893
+./.git/objects/76
+./.git/objects/76/373675bbb2cc072f99d0e2e4a437bf57d07630
+./.git/objects/0c
+./.git/objects/0c/9055fa6c3b81b4b686dedaf7f63d3cf53db41d
+./.git/objects/d9
+./.git/objects/d9/47deace52645400f9e24a95830fd76aea7e90a
+./.git/objects/b8
+./.git/objects/b8/3214404ce4e40c4c9a42f6896ea0a01908c94c
+./.git/objects/a5
+./.git/objects/a5/c5a5cb5add9a8ad5a5835721e5e362d84e0a3f
+./.git/objects/a5/b3f5517aa4886fca0d226b9099d9b8832fa130
+./.git/objects/49
+./.git/objects/49/c2916f78def094cd39a4b02d4e25d232a240f1
+./.git/objects/f7
+./.git/objects/f7/fa87eb875260ed98651bc419c8139b5119e554
+./.git/objects/53
+./.git/objects/53/6df739367c705ff7b82bb6fdc412edab4fe0eb
+./.git/objects/e9
+./.git/objects/e9/ffa3083ad279ecf95fd8eae59cb253e9a539c4
+./.git/objects/bf
+./.git/objects/bf/c8e5f3875b0eeaa151a51bc1cd39988b94d77b
+./.git/objects/1b
+./.git/objects/1b/0051fbf59162f601ed50ab2f9f9c3cba2dc25c
+./.git/objects/b1
+./.git/objects/b1/63c2bb82dc77b842c9dadbf3367634bcb484b9
+./.git/objects/b1/fefd2e8e2035351a791e70e45f820f32fdf0a2
+./.git/objects/c4
+./.git/objects/c4/4eb0c1ab9b66475dbcf5b50eef7e8a70f3424c
+./.git/objects/c4/c6dd54c6a6a814334000a0b9f5d660b43bb470
+./.git/objects/c4/75a035fc3474d2d43fa809ba149fa25d0bb1b3
+./.git/objects/9d
+./.git/objects/9d/d63710f5f8238245a8d0501bee3a6fccd6df19
+./.git/objects/c3
+./.git/objects/c3/6aa76db19dfd886e77a614cad4252203ce1da3
+./.git/objects/b9
+./.git/objects/b9/6458829539cffe2fac5ddf5a14bf3710c0a783
+./.git/objects/17
+./.git/objects/17/c81e4b8944322cec4bb1d9be13426abef807c0
+./.git/objects/17/b76c89fdb26166b008c5c40549af1dafcb38a0
+./.git/objects/a0
+./.git/objects/a0/f935bb49d11dda2340c5dd9be3076d29ab76e4
+./.git/objects/a0/9b8aeba9eb68bc9e7ca7cf229f96c766df2a5d
+./.git/objects/ab
+./.git/objects/ab/eec4333703ec6072da1f69d16436cc76a2549d
+./.git/objects/58
+./.git/objects/58/7a72f02c88f74e0667eec4cbb4eb8d0e966d77
+./.git/objects/d6
+./.git/objects/d6/91e4513114599713431db43207faa82ce7928f
+./.git/objects/1d
+./.git/objects/1d/a48730e2cae316fc9e6d1d616657fcce2189d5
+./.git/objects/1d/730a53522221add9d6c666ed7e77e3b572c4ab
+./.git/objects/1d/3f77df237ed77c35efe4a22f6c36e0d1ad8fe1
+./.git/objects/24
+./.git/objects/24/5be6b3cb78f8f576d072b500e362ec787ad975
+./.git/objects/24/7a1a7e6fae5fa118a38af3a0b43d5ef318673c
+./.git/objects/d3
+./.git/objects/d3/71dc94ef77e5130fb2368c382e0a6c469959e3
+./.git/objects/a4
+./.git/objects/a4/7f31a9485f3d8b3236b42c2e9f0671a0a1c7c6
+./.git/objects/a4/ac6582f2899750db495ac6887cbbb958a3ff7d
+./.git/objects/03
+./.git/objects/03/d89e617a61ad05cf50b3112011f88b93313478
+./.git/objects/77
+./.git/objects/77/053960334e2e34dc584dea8019925c3b4ccca9
+./.git/objects/77/59c2807c0751135007becae2350fa19d666029
+./.git/objects/77/059eb60700f8aa131f82ca5784dac5bb96f145
+./.git/objects/77/348359a888ce002a0581e96055c08376da5537
+./.git/objects/0d
+./.git/objects/0d/c9f6936c9e8fc455b8a084d948756f6cf7fd01
+./.git/objects/07
+./.git/objects/07/6619e4911d6b3dc5dca4a95ac0f0975ab470eb
+./.git/objects/fb
+./.git/objects/fb/e4f7bcd024d9442a465e0a59321d9c4efe4976
+./.git/objects/fb/a139f84c9be0b2b68e99546ec6b0dcf364f9c3
+./.git/objects/25
+./.git/objects/25/3d0108979242ae613b1c4a8f24a71c24abd061
+./.git/objects/c9
+./.git/objects/c9/6835cdf8986124711c7a6e3915c0eb2f86a69b
+./.git/objects/8f
+./.git/objects/8f/d22779690db83ce370609f3815561dcbb4365a
+./.git/objects/ef
+./.git/objects/ef/94bca985aa3dcff8cab90f9c119562d26ecee9
+./.git/objects/5e
+./.git/objects/5e/f6a520780202a1d6addd833d800ccb1ecac0bb
+./.git/objects/f6
+./.git/objects/f6/ea3b36ec5589d0526d959246b1952b6e4be344
+./.git/objects/b2
+./.git/objects/b2/7d707a880f23aec956187387cca9719d680834
+./.git/objects/b2/b2a44f6ebc70c450043c05a002e7a93ba5d651
+./.git/objects/00
+./.git/objects/00/a400de427c5f63f18b216eaca65f871795829a
+./.git/objects/00/05351c365d7b9076154b60cf7dfede11002a66
+./.git/objects/00/4145cddf3f9db91b57b9cb596683c8eb420862
+./.git/hooks
+./.git/hooks/update.sample
+./.git/hooks/pre-rebase.sample
+./.git/hooks/push-to-checkout.sample
+./.git/hooks/prepare-commit-msg.sample
+./.git/hooks/pre-push.sample
+./.git/hooks/fsmonitor-watchman.sample
+./.git/hooks/applypatch-msg.sample
+./.git/hooks/pre-merge-commit.sample
+./.git/hooks/post-update.sample
+./.git/hooks/pre-receive.sample
+./.git/hooks/pre-applypatch.sample
+./.git/hooks/sendemail-validate.sample
+./.git/hooks/commit-msg.sample
+./.git/hooks/pre-commit.sample
+./.git/logs
+./.git/logs/HEAD
+./.git/logs/refs
+./.git/logs/refs/stash
+./.git/logs/refs/remotes
+./.git/logs/refs/remotes/origin
+./.git/logs/refs/remotes/origin/main
+./.git/logs/refs/heads
+./.git/logs/refs/heads/main
+./.git/logs/refs/heads/master
+./.git/ORIG_HEAD
+./tsconfig.json
+./postcss.config.mjs
+./public
+./public/window.svg
+./public/vercel.svg
+./public/globe.svg
+./public/next.svg
+./public/file.svg

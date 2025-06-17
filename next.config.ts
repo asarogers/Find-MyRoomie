@@ -1,4 +1,5 @@
 import type { NextConfig } from 'next'
+import path from 'path';
 
 const isGithubPages = process.env.NODE_ENV === 'production' && process.env.GITHUB_PAGES;
 
@@ -13,7 +14,7 @@ const nextConfig: NextConfig = {
   webpack: (config: any) => {
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@': './src',
+      '@': path.resolve(__dirname, 'src'),
     }
     return config
   }

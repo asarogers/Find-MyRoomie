@@ -1,14 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
-Sitemap: https://findmyroomy.com/sitemap.xml
-Sitemap: https://findmyroomy.com/sitemap-index.xml
-Sitemap: https://findmyroomy.com/rss.xml
+# Host
+Host: https://www.yoursite.com
 
-Crawl-delay: 1
-
-User-agent: Googlebot
-Crawl-delay: 0
-
-User-agent: Bingbot
-Crawl-delay: 1
+# Sitemaps
+Sitemap: https://www.yoursite.com/sitemap.xml

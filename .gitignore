@@ -9,6 +9,9 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+findmyroomie.zip
+out.zip
+
 
 # testing
 /coverage

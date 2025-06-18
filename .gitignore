@@ -42,3 +42,51 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+# IDEs
+.vscode/
+.idea/
+
+# System files
+Thumbs.db
+
+# Static export + sitemap artifacts
+sitemap*.xml
+sitemap-*.xml
+sitemap-index.xml
+robots.txt
+rss.xml
+humans.txt
+
+# Firebase/Cloud configs (if used)
+.firebase/
+.firebaserc
+
+# Output bundles
+findmyroomie.zip
+out.zip
+
+# Local test or scratch files
+temp.txt
+
+# Build outputs
+/out
+/.next
+/build
+
+# Generated config artifacts (optional)
+next-env.d.ts
+aos.d.ts
+
+# Ignore compiled sitemap outputs (redundant if already listed)
+sitemap*.xml
+sitemap-*.xml
+sitemap-index.xml
+robots.txt
+rss.xml
+humans.txt
+
+# Logs or debug scripts
+scripts/debug*.js
+scripts/devtools*.js

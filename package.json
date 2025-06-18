@@ -2,13 +2,15 @@
   "name": "nextjs-findmyroomy",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d out",
-    "postbuild": "next-sitemap"
-  },
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "export": "next export",
+  "postbuild": "next-sitemap",
+  "predeploy": "npm run build && npm run postbuild",
+  "deploy": "npm run predeploy && rsync -avz --delete -e 'ssh -p 65002' out/ u555286648@82.197.83.3:~/domains/findmyroomy.com/public_html/"
+},
+
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/style": "^0.8.0",

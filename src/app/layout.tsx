@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Find MyRoomy - Find your vibe. Find your space.",
+  title: "Find  - Find your vibe. Find your space.",
   description: "The safe, real, and functional way to find compatible roommates and apply to apartments together. No fake profiles, no hidden fees, no broken filters.",
   metadataBase: new URL("https://findmyroomy.com"),
   openGraph: {

@@ -1,7 +1,9 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: 'https://www.yoursite.com',
-    generateRobotsTxt: true, // (optional)
-    sitemapSize: 7000,
-  };
+    siteUrl: 'https://findmyroomy.com', // ✅ updated domain
+    generateRobotsTxt: true,
+    generateIndexSitemap: true,
+    sitemapSize: 5000,
+    outDir: './out',
+  }
   

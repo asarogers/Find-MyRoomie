@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.yoursite.com
+Host: https://findmyroomy.com
 
 # Sitemaps
-Sitemap: https://www.yoursite.com/sitemap.xml
+Sitemap: https://findmyroomy.com/sitemap.xml

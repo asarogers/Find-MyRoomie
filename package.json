@@ -8,7 +8,7 @@
   "export": "next export",
   "postbuild": "next-sitemap",
   "predeploy": "npm run build && npm run postbuild",
-  "deploy": "npm run predeploy && rsync -avz --delete -e 'ssh -p 65002' out/ u555286648@82.197.83.3:~/domains/findmyroomy.com/public_html/"
+  "deploy": "rsync -avz --delete -e 'ssh -p 65002' out/ u555286648@82.197.83.3:~/domains/findmyroomy.com/public_html/"
 },
 
   "dependencies": {

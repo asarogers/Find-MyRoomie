@@ -1,26 +1,35 @@
 // app/pets/[city]/page.tsx
-import React from 'react';
-import { PawPrint } from 'lucide-react';
-import CityClientShell from '../../roommates/[city]/CityClientShell';
-import cityList from '../../../components/_data/cities.json';
 import { notFound } from 'next/navigation';
+import cityList from '@/components/_data/cities.json';
+import CityClientShell from '../../roommates/[city]/CityClientShell';
+import { Metadata } from 'next';
+
+
+type Params = {
+  params: Promise<{ city: string }>;
+};
+
 
 export async function generateStaticParams() {
   return cityList.map(({ slug }) => ({ city: slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ city: string }> }) {
-  const { city: citySlug } = await params;
+export async function generateMetadata({ params } : Params): Promise<Metadata> {
+  const {city : citySlug} = await params;
   const city = cityList.find((c) => c.slug === citySlug);
   if (!city) notFound();
+
   return {
     title: `Pet-Friendly Housing in ${city.name} | Live With Your Pets – MyRoomie`,
     description: `Searching for pet-friendly roommates or apartments in ${city.name}? MyRoomie connects you with people and places that welcome pets.`,
+    alternates: {
+      canonical: `https://findmyroomy.com/pets/${city.slug}`,
+    },
   };
 }
 
-export default async function PetsCityPage({ params }: { params: Promise<{ city: string }> }) {
-  const { city: citySlug } = await params;
+export default async function PetsCityPage({ params } :  Params) {
+  const {city : citySlug} = await params;
   const city = cityList.find((c) => c.slug === citySlug);
   if (!city) notFound();
 

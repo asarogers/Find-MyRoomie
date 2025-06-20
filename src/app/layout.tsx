@@ -85,6 +85,13 @@ export default function RootLayout({
         {/* Favicon & Manifest */}
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+        {/* <link rel="alternate" hreFlang="en-us" href="https://findmyroomy.com" />
+        <link rel="alternate" hreflang="x-default" href="https://findmyroomy.com" /> */}
+
+
         <meta name="theme-color" content="#ffffff" />
 
         {/* Open Graph Tags */}
@@ -139,11 +146,7 @@ export default function RootLayout({
 
         {/* Performance Hints */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="true"
-        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link rel="preload" as="image" href="/social-preview.png" />
 
         {/* Optional Security Headers (meta fallback) */}
@@ -164,7 +167,7 @@ export default function RootLayout({
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-XXXXXXX');
+          gtag('config', 'G-DZ7XR9RW3T');
         `,
           }}
         />

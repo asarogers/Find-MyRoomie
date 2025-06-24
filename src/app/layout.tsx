@@ -12,8 +12,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Find MyRoomy - Find your vibe. Find your space.",
+export const metadata: Metadata = {
+  title: {
+    default: "Find MyRoomy - Find your vibe. Find your space.",
+    template: "%s - Find MyRoomy"
+  },
   description:
     "The safe, real, and functional way to find compatible roommates and apply to apartments together. No fake profiles, no hidden fees, no broken filters.",
   metadataBase: new URL("https://findmyroomy.com"),
@@ -43,6 +46,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const isProduction = process.env.NODE_ENV === 'production';
+  
   return (
     <html lang="en">
       <head>
@@ -85,13 +90,6 @@ export default function RootLayout({
         {/* Favicon & Manifest */}
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com"/>
-        {/* <link rel="alternate" hreFlang="en-us" href="https://findmyroomy.com" />
-        <link rel="alternate" hreflang="x-default" href="https://findmyroomy.com" /> */}
-
-
         <meta name="theme-color" content="#ffffff" />
 
         {/* Open Graph Tags */}
@@ -126,51 +124,74 @@ export default function RootLayout({
         />
 
         {/* Structured Data – JSON-LD */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: "FindMyRoomy",
-            url: "https://findmyroomy.com",
-            description:
-              "The safe, real, and functional way to find compatible roommates and apply to apartments together.",
-            logo: "https://findmyroomy.com/logo.png",
-            sameAs: [
-              "https://facebook.com/findmyroomy",
-              "https://instagram.com/findmyroomy",
-              "https://twitter.com/findmyroomy",
-              "https://linkedin.com/company/findmyroomy",
-            ],
-          })}
-        </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "FindMyRoomy",
+              url: "https://findmyroomy.com",
+              description:
+                "The safe, real, and functional way to find compatible roommates and apply to apartments together.",
+              logo: "https://findmyroomy.com/logo.png",
+              sameAs: [
+                "https://facebook.com/findmyroomy",
+                "https://instagram.com/findmyroomy",
+                "https://twitter.com/findmyroomy",
+                "https://linkedin.com/company/findmyroomy",
+              ],
+            }),
+          }}
+        />
 
         {/* Performance Hints */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link rel="preload" as="image" href="/social-preview.png" />
+        {/* <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        /> */}
+        
+        {/* Only preload in production or if file exists */}
+        {isProduction && (
+          <link rel="preload" as="image" href="/social-preview.png" />
+        )}
 
-        {/* Optional Security Headers (meta fallback) */}
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta
-          httpEquiv="Content-Security-Policy"
-          content="default-src 'self'; img-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline';"
-        />
+        {/* Content Security Policy - Only in production */}
+        {isProduction && (
+          <meta
+            httpEquiv="Content-Security-Policy"
+            content="
+              default-src 'self';
+              script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com;
+              style-src 'self' 'unsafe-inline';
+              img-src * data:;
+              connect-src 'self' https://www.google-analytics.com;
+              frame-src https://www.googletagmanager.com;
+            "
+          />
+        )}
 
-        {/* Google Analytics – replace G-XXXXXXX with your ID */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-DZ7XR9RW3T"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-DZ7XR9RW3T');
-        `,
-          }}
-        />
+        {/* Google Analytics - Only in production */}
+        {isProduction && (
+          <>
+            <script
+              async
+              src="https://www.googletagmanager.com/gtag/js?id=G-DZ7XR9RW3T"
+            ></script>
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'G-DZ7XR9RW3T');
+                `,
+              }}
+            />
+          </>
+        )}
       </head>
 
       <body

@@ -1,6 +1,7 @@
 import React from "react";
 import { MapPin, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import Map from "../map/map"
 
 
 interface HeroSectionProps {
@@ -50,27 +51,8 @@ export default function HeroSection({ city }: HeroSectionProps) {
             <MapPin className="ml-2 w-5 h-5" />
           </motion.a>
         </div>
-
-        <div id="map" className="map-container">
-          <div className="map-frame">
-            <div className="map-inner">
-              <div className="map-window-controls">
-                <div className="map-dots">
-                  <div className="map-dot dot-red" />
-                  <div className="map-dot dot-yellow" />
-                  <div className="map-dot dot-green" />
-                </div>
-                <span className="text-sm text-gray-500">MyRoomie Map Demo</span>
-              </div>
-              <div className="map-text">
-                <div className="text-center">
-                  <MapPin className="w-16 h-16 mx-auto mb-4 text-blue-600" />
-                  <p className="map-description">Interactive map demo coming soon</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Map />
+       
       </div>
     </section>
   );

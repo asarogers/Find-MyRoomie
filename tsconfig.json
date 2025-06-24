@@ -23,6 +23,6 @@
 }
 
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/roommates/[city]/page.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/roommates/[city]/page.js", "src/map/map.tsx"],
   "exclude": ["node_modules"]
 }

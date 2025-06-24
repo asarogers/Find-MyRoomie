@@ -1,9 +1,43 @@
-# *
+# Optimized robots.txt for FindMyRoomy.com
+# Updated: June 20, 2025
+
 User-agent: *
 Allow: /
 
-# Host
-Host: https://findmyroomy.com
+# Block admin and internal pages
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /_next/
+Disallow: /private/
 
-# Sitemaps
+# Block duplicate content from URL parameters
+Disallow: /*?sort=*&page=*
+Disallow: /*?*&sort=*
+Disallow: /*?utm_*
+
+# Allow important filter parameters
+Allow: /*?pets=*
+Allow: /*?budget=*
+Allow: /*?lifestyle=*
+Allow: /*?move-in=*
+
+# Crawl delay to prevent server overload
+Crawl-delay: 1
+
+# Sitemap references
 Sitemap: https://findmyroomy.com/sitemap.xml
+Sitemap: https://findmyroomy.com/sitemap-cities.xml
+Sitemap: https://findmyroomy.com/sitemap-roommates.xml
+Sitemap: https://findmyroomy.com/sitemap-apartments.xml
+
+# Google-specific optimizations
+User-agent: Googlebot
+Crawl-delay: 0
+Allow: /
+
+# Bing-specific optimizations
+User-agent: Bingbot
+Crawl-delay: 2
+Allow: /

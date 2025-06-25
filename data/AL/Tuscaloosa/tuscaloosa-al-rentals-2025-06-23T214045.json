@@ -1,0 +1,295 @@
+[
+  {
+    "homeData": {
+      "propertyId": "51327786",
+      "url": "/MN/Minneapolis/Oaks-Braemar/apartment/51327786",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 1,
+            "version": "3"
+          },
+          {
+            "startPos": 2,
+            "endPos": 24,
+            "version": "2"
+          },
+          {
+            "startPos": 25,
+            "endPos": 57,
+            "version": "3"
+          }
+        ]
+      },
+      "sashes": [
+        {
+          "sashTypeId": 31,
+          "sashTypeName": "3D Walkthrough",
+          "sashTypeColor": "#7556F2"
+        }
+      ],
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.87322%2C-93.365059&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=Qk6-HebpLvHHSh_L4Kq19nQ9swY=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.87322,
+            "longitude": -93.365059
+          }
+        },
+        "formattedStreetLine": "7150 Cahill Rd",
+        "city": "Minneapolis",
+        "state": "MN",
+        "zip": "55439",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "3a26d2d4-0adf-4cb1-8fcb-63d34b308c16",
+      "bedRange": {
+        "min": 2,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 2.0,
+        "max": 2.0
+      },
+      "sqftRange": {
+        "min": 1150,
+        "max": 1150
+      },
+      "rentPriceRange": {
+        "min": 1508,
+        "max": 1758
+      },
+      "lastUpdated": "2025-06-17T13:56:11.459669Z",
+      "numAvailableUnits": 3,
+      "status": 2,
+      "propertyName": "Oaks Braemar",
+      "dateAvailable": "2025-08-02T00:00:00Z",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 1.0,
+      "freshnessTimestamp": "2025-06-17T13:54:52.855Z",
+      "description": "Welcome to Oaks Braemar Apartments.  Oaks Braemar is located in the desirable city of Edina close to several major restaurants, shopping areas and freeways. Our community is surrounded by woods, a bea",
+      "revenuePerLead": 11.0,
+      "feedSourceInternalId": "lc5967150",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "9525200693",
+      "mobileWebPhone": "9525200693",
+      "mobileAppPhone": "9525200693",
+      "feedSource": "RentPath",
+      "feedExternalId": "34vfns9fu1h5u",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "6516665332"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "177406439",
+      "url": "/MN/Minneapolis/Oak-Glen-of-Edina/apartment/177406439",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 1,
+            "version": "2"
+          },
+          {
+            "startPos": 2,
+            "endPos": 18,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.8740777%2C-93.3644346&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=tT1szWN2spJOLqAMXv9Zwx3qLr4=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.8740777,
+            "longitude": -93.3644346
+          }
+        },
+        "formattedStreetLine": "5515 Oak Glen Rd",
+        "city": "Minneapolis",
+        "state": "MN",
+        "zip": "55439",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "06899d57-3c8e-4be7-b46b-61b48923ba9c",
+      "bedRange": {
+        "min": 2,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 2.0,
+        "max": 2.0
+      },
+      "sqftRange": {
+        "min": 1100,
+        "max": 1100
+      },
+      "rentPriceRange": {
+        "min": 1800,
+        "max": 1800
+      },
+      "lastUpdated": "2025-06-17T13:55:20.469315Z",
+      "numAvailableUnits": 0,
+      "status": 1,
+      "propertyName": "Oak Glen of Edina",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 2.0,
+      "freshnessTimestamp": "2025-05-10T12:46:32.129Z",
+      "description": "Nestled in a picturesque setting with mature oak trees and a scenic private pond, Oak Glen of Edina offers the perfect blend of comfort, convenience, and natural beauty. Our spacious townhomes feature",
+      "revenuePerLead": 11.0,
+      "feedSourceInternalId": "lc6046308",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "6516665388",
+      "mobileWebPhone": "6516665388",
+      "mobileAppPhone": "6516665388",
+      "feedSource": "RentPath",
+      "feedExternalId": "278jbqktd7x48",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "6516665160"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "51327751",
+      "url": "/MN/Minneapolis/Edina-Manor-Apartments/apartment/51327751",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 1,
+            "version": "4"
+          },
+          {
+            "startPos": 2,
+            "endPos": 4,
+            "version": "3"
+          },
+          {
+            "startPos": 5,
+            "endPos": 5,
+            "version": "2"
+          },
+          {
+            "startPos": 6,
+            "endPos": 28,
+            "version": "3"
+          },
+          {
+            "startPos": 29,
+            "endPos": 29,
+            "version": "2"
+          },
+          {
+            "startPos": 30,
+            "endPos": 33,
+            "version": "3"
+          },
+          {
+            "startPos": 34,
+            "endPos": 34,
+            "version": "2"
+          },
+          {
+            "startPos": 35,
+            "endPos": 37,
+            "version": "3"
+          },
+          {
+            "startPos": 38,
+            "endPos": 38,
+            "version": "4"
+          },
+          {
+            "startPos": 39,
+            "endPos": 41,
+            "version": "3"
+          },
+          {
+            "startPos": 42,
+            "endPos": 42,
+            "version": "4"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.876251%2C-93.361036&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=ZhszSkNSk9YI-fH_SGCxNqpHQYc=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.876251,
+            "longitude": -93.361036
+          }
+        },
+        "formattedStreetLine": "5400 W 70th St",
+        "city": "Minneapolis",
+        "state": "MN",
+        "zip": "55439",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "50f02bc0-6e2e-4790-9f0c-1ce39e31b9a3",
+      "bedRange": {
+        "min": 1,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.5
+      },
+      "sqftRange": {
+        "min": 736,
+        "max": 936
+      },
+      "rentPriceRange": {
+        "min": 1289,
+        "max": 1439
+      },
+      "lastUpdated": "2025-06-19T16:56:23.375871Z",
+      "numAvailableUnits": 2,
+      "status": 2,
+      "propertyName": "Edina Manor Apartments",
+      "dateAvailable": "2025-07-31T00:00:00Z",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 3.0,
+      "freshnessTimestamp": "2025-06-19T16:55:59.936Z",
+      "description": "Our spacious apartment homes are conveniently located just one mile from Hwy 494, 1 mile East on France Avenue, 2 miles from Hwy 62 and just blocks from Hwy 100. Serene Nine Mile Creek runs directly b",
+      "revenuePerLead": 6.0,
+      "feedSourceInternalId": "lc5922169",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "7632028316",
+      "mobileWebPhone": "7632028316",
+      "mobileAppPhone": "7632028316",
+      "feedSource": "RentPath",
+      "feedExternalId": "3kweardc8mkg4",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "7632028374"
+    }
+  }
+]

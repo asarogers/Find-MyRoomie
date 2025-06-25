@@ -1,0 +1,70 @@
+[
+  {
+    "homeData": {
+      "propertyId": "195844960",
+      "url": "/MN/St-Paul-Park/4-W-Pullman-Ave-55071/unit-4/apartment/195844960",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 3,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.8366572%2C-93.0023076&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=O9hUAZvndWcJTCKRXwti5FCTU8o=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.8366572,
+            "longitude": -93.0023076
+          }
+        },
+        "formattedStreetLine": "4 W Pullman Ave Unit 4",
+        "city": "St Paul Park",
+        "state": "MN",
+        "zip": "55071",
+        "unitNumber": "Unit 4",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "da8be6da-058a-48ab-b06e-27020b427473",
+      "bedRange": {
+        "min": 2,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "rentPriceRange": {
+        "min": 1300,
+        "max": 1300
+      },
+      "lastUpdated": "2025-06-01T12:04:03.954429Z",
+      "numAvailableUnits": 1,
+      "status": 1,
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 1.0,
+      "freshnessTimestamp": "2025-06-01T12:04:01.413Z",
+      "description": "cozy 2-bedroom,1 bathroom in Stpaul park, completely renovated, new bathroom ?, carpet, kitchen, etc. quiet comfy 2-bedroom, new carpet, remolded, bathroom completely remodeled, will accept section 8 ",
+      "feedSourceInternalId": "lv415941251",
+      "isCommercialPaid": false,
+      "feedOriginalSource": "LOVELY",
+      "desktopPhone": "6123989330",
+      "mobileWebPhone": "6123989330",
+      "mobileAppPhone": "6123989330",
+      "feedSource": "BUILDIUM",
+      "feedExternalId": "100817_1467788",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "6123989330"
+    }
+  }
+]

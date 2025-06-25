@@ -1,0 +1,220 @@
+[
+  {
+    "homeData": {
+      "propertyId": "195515184",
+      "url": "/MN/Brooklyn-Park/Decatur-Landing/apartment/195515184",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 11,
+            "version": "1"
+          }
+        ]
+      },
+      "sashes": [
+        {
+          "sashTypeId": 7,
+          "sashTypeName": "New",
+          "sashTypeColor": "#2E7E36",
+          "timeOnRedfin": "24274903"
+        },
+        {
+          "sashTypeId": 35,
+          "sashTypeName": "FREE UNDERGROUND PARKING!*",
+          "sashTypeColor": "#E96727"
+        }
+      ],
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=45.128289%2C-93.398495&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=MeflQ5JuuYuXlQWK1zzCxEWUhyk=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 45.128289,
+            "longitude": -93.398495
+          }
+        },
+        "formattedStreetLine": "9500 Decatur Dr N",
+        "city": "Brooklyn Park",
+        "state": "MN",
+        "zip": "55445",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "3a98a259-867b-49da-a20d-26e122d54798",
+      "bedRange": {
+        "min": 1,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 2.0
+      },
+      "sqftRange": {
+        "min": 691,
+        "max": 967
+      },
+      "rentPriceRange": {
+        "min": 1408,
+        "max": 1987
+      },
+      "lastUpdated": "2025-06-23T19:56:20.301724Z",
+      "numAvailableUnits": 76,
+      "status": 2,
+      "propertyName": "Decatur Landing",
+      "dateAvailable": "2025-06-30T00:00:00Z",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 1.0,
+      "freshnessTimestamp": "2025-06-23T19:56:12.916Z",
+      "description": "Nestled near the convenient intersections of HWYs 169 and 610, Decatur Landing Apartments in Brooklyn Park, MN, offers a blend of modern luxury and community charm. This brand new community, still und",
+      "revenuePerLead": 11.0,
+      "feedSourceInternalId": "lc6067211",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "9526666343",
+      "mobileWebPhone": "9526666343",
+      "mobileAppPhone": "9526666343",
+      "feedSource": "RentPath",
+      "feedExternalId": "2edftb8ba0ubm",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "9526663923"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "62536439",
+      "url": "/MN/Brooklyn-Park/610-West/apartment/62536439",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 2,
+            "version": "3"
+          },
+          {
+            "startPos": 3,
+            "endPos": 4,
+            "version": "4"
+          },
+          {
+            "startPos": 5,
+            "endPos": 5,
+            "version": "3"
+          },
+          {
+            "startPos": 6,
+            "endPos": 37,
+            "version": "4"
+          },
+          {
+            "startPos": 38,
+            "endPos": 40,
+            "version": "3"
+          },
+          {
+            "startPos": 41,
+            "endPos": 44,
+            "version": "2"
+          },
+          {
+            "startPos": 45,
+            "endPos": 45,
+            "version": "1"
+          },
+          {
+            "startPos": 46,
+            "endPos": 46,
+            "version": "2"
+          },
+          {
+            "startPos": 47,
+            "endPos": 48,
+            "version": "7"
+          },
+          {
+            "startPos": 49,
+            "endPos": 49,
+            "version": "6"
+          }
+        ]
+      },
+      "sashes": [
+        {
+          "sashTypeId": 7,
+          "sashTypeName": "New",
+          "sashTypeColor": "#2E7E36",
+          "timeOnRedfin": "132442428"
+        },
+        {
+          "sashTypeId": 35,
+          "sashTypeName": "Price shown is Base Rent, does not include non-optional fees and utilities. Review Building overview for details.",
+          "sashTypeColor": "#E96727"
+        }
+      ],
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=45.1313715%2C-93.3649404&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=OfPvPlGYhqD_B6R6B_YTAlUwRdM=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 45.1313715,
+            "longitude": -93.3649404
+          }
+        },
+        "formattedStreetLine": "6717 Oak Grove Pkwy",
+        "city": "Brooklyn Park",
+        "state": "MN",
+        "zip": "55445",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "5bccc161-a0a4-463b-ba9d-5269960db979",
+      "bedRange": {
+        "min": 0,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 2.5
+      },
+      "sqftRange": {
+        "min": 643,
+        "max": 1608
+      },
+      "rentPriceRange": {
+        "min": 1520,
+        "max": 2730
+      },
+      "lastUpdated": "2025-06-23T12:36:20.441659Z",
+      "numAvailableUnits": 40,
+      "status": 1,
+      "propertyName": "610 West",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 2.0,
+      "freshnessTimestamp": "2025-06-22T13:53:25.391Z",
+      "description": "Price shown is Base Rent. Residents are required to pay: At Application: Application Fee ($50.00/applicant, nonrefundable); At Move-in: Admin Fee ($200.00/unit); Security Deposit (Refundable) ($500.00",
+      "revenuePerLead": 7.0,
+      "feedSourceInternalId": "lc5929653",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "7632028515",
+      "mobileWebPhone": "7632028515",
+      "mobileAppPhone": "7632028515",
+      "feedSource": "RentPath",
+      "feedExternalId": "3n6bpakxf8pc2",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "7632027770"
+    }
+  }
+]

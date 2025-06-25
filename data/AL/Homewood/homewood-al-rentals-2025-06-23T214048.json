@@ -1,0 +1,75 @@
+[
+  {
+    "homeData": {
+      "propertyId": "191438147",
+      "url": "/MN/Elko-New-Market/Old-Town-Apartments/apartment/191438147",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 23,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.574428%2C-93.360635&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=6MhxGpGWeAqYh4MUjWydkc_HwBg=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.574428,
+            "longitude": -93.360635
+          }
+        },
+        "formattedStreetLine": "220 Old Town Rd",
+        "city": "Elko New Market",
+        "state": "MN",
+        "zip": "55054",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "cecaefa6-8640-4ebd-a366-39a9d0dc9fdb",
+      "bedRange": {
+        "min": 1,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 2.0
+      },
+      "sqftRange": {
+        "min": 758,
+        "max": 1072
+      },
+      "rentPriceRange": {
+        "min": 1350,
+        "max": 1900
+      },
+      "lastUpdated": "2025-05-23T14:41:48.475072Z",
+      "numAvailableUnits": 0,
+      "status": 1,
+      "propertyName": "Old Town Apartments",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 1.0,
+      "freshnessTimestamp": "2025-05-21T22:55:22.525Z",
+      "description": "Please reach out while we still have units available! Come and enjoy maintenance free living at Old Town Apartments, Elko New Market's newest apartment complex. Feel at home in one of our one- or two-",
+      "revenuePerLead": 6.0,
+      "feedSourceInternalId": "lc5908311",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "7633638639",
+      "mobileWebPhone": "7633638639",
+      "mobileAppPhone": "7633638639",
+      "feedSource": "RentPath",
+      "feedExternalId": "2mxgzhfe20fdy",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "9526416751"
+    }
+  }
+]

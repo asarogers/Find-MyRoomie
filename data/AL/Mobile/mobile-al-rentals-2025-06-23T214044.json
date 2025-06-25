@@ -1,0 +1,966 @@
+[
+  {
+    "homeData": {
+      "propertyId": "194139240",
+      "url": "/MN/Inver-Grove-Heights/Avalon-Apartments-Townhomes/apartment/194139240",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 1,
+            "version": "3"
+          },
+          {
+            "startPos": 2,
+            "endPos": 3,
+            "version": "2"
+          },
+          {
+            "startPos": 4,
+            "endPos": 4,
+            "version": "3"
+          },
+          {
+            "startPos": 5,
+            "endPos": 7,
+            "version": "2"
+          },
+          {
+            "startPos": 8,
+            "endPos": 8,
+            "version": "3"
+          },
+          {
+            "startPos": 9,
+            "endPos": 9,
+            "version": "4"
+          },
+          {
+            "startPos": 10,
+            "endPos": 11,
+            "version": "5"
+          },
+          {
+            "startPos": 12,
+            "endPos": 12,
+            "version": "4"
+          },
+          {
+            "startPos": 13,
+            "endPos": 13,
+            "version": "5"
+          },
+          {
+            "startPos": 14,
+            "endPos": 15,
+            "version": "4"
+          },
+          {
+            "startPos": 16,
+            "endPos": 16,
+            "version": "5"
+          },
+          {
+            "startPos": 17,
+            "endPos": 18,
+            "version": "4"
+          },
+          {
+            "startPos": 19,
+            "endPos": 21,
+            "version": "5"
+          },
+          {
+            "startPos": 22,
+            "endPos": 24,
+            "version": "4"
+          },
+          {
+            "startPos": 25,
+            "endPos": 25,
+            "version": "3"
+          },
+          {
+            "startPos": 26,
+            "endPos": 45,
+            "version": "1"
+          }
+        ]
+      },
+      "sashes": [
+        {
+          "sashTypeId": 7,
+          "sashTypeName": "New",
+          "sashTypeColor": "#2E7E36",
+          "timeOnRedfin": "50963898"
+        },
+        {
+          "sashTypeId": 35,
+          "sashTypeName": "Apply in the month of June to receive 1 month free plus an additional $1500 on select floorplans on a 13-15 month lease. Call for details!",
+          "sashTypeColor": "#E96727"
+        }
+      ],
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.807134%2C-93.104715&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=Zfjhjo_EaaTsP92SA02jbN6oHXw=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.807134,
+            "longitude": -93.104715
+          }
+        },
+        "formattedStreetLine": "9800 Diffley Ct",
+        "city": "Inver Grove Heights",
+        "state": "MN",
+        "zip": "55077",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "e0d0298c-34c5-41a9-98fd-6612a1312c81",
+      "bedRange": {
+        "min": 1,
+        "max": 4
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 4.0
+      },
+      "sqftRange": {
+        "min": 714,
+        "max": 1707
+      },
+      "rentPriceRange": {
+        "min": 1590,
+        "max": 3115
+      },
+      "lastUpdated": "2025-06-23T12:31:22.785951Z",
+      "numAvailableUnits": 118,
+      "status": 1,
+      "propertyName": "Avalon Apartments & Townhomes",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 1.0,
+      "freshnessTimestamp": "2025-06-23T12:31:20.639Z",
+      "description": "Avalon offers an impressive selection of brand-new studio, 1, 2, 3, and 4-bedroom apartments and 2 and 3-bedroom townhomes with attached garages in Inver Grove Heights, MN. Our pet-friendly apartment ",
+      "revenuePerLead": 11.0,
+      "feedSourceInternalId": "lc5910903",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "9529527362",
+      "mobileWebPhone": "9529527362",
+      "mobileAppPhone": "9529527362",
+      "feedSource": "RentPath",
+      "feedExternalId": "1t20sr0hambx4",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "9529527409"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "177387576",
+      "url": "/MN/Inver-Grove-Heights/Lake-Cove-Village-Apartments/apartment/177387576",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 1,
+            "version": "2"
+          },
+          {
+            "startPos": 2,
+            "endPos": 27,
+            "version": "1"
+          },
+          {
+            "startPos": 28,
+            "endPos": 34,
+            "version": "2"
+          }
+        ]
+      },
+      "sashes": [
+        {
+          "sashTypeId": 35,
+          "sashTypeName": "Select Units 1-Month FREE or $1200.00 Rent Credit",
+          "sashTypeColor": "#E96727"
+        }
+      ],
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.8709616%2C-93.0693984&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=jjZHYt-uCgsYp0M6iCqCaCesRCU=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.8709616,
+            "longitude": -93.0693984
+          }
+        },
+        "formattedStreetLine": "5359 Audobon Ave",
+        "city": "Inver Grove Heights",
+        "state": "MN",
+        "zip": "55077",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "daaf8348-2978-4434-a467-0ca41c94212c",
+      "bedRange": {
+        "min": 0,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.5
+      },
+      "sqftRange": {
+        "min": 759,
+        "max": 910
+      },
+      "rentPriceRange": {
+        "min": 1129,
+        "max": 1434
+      },
+      "lastUpdated": "2025-06-19T07:59:49.676025Z",
+      "numAvailableUnits": 0,
+      "status": 1,
+      "propertyName": "Lake Cove Village Apartments",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 2.0,
+      "freshnessTimestamp": "2025-06-13T16:58:19.520Z",
+      "description": "Discover Lake Cove Village Apartments, where peaceful lakeside living meets city convenience. Nestled on Lake Schmidt, our beautiful community is nestled just 10 minutes from downtown St. Paul and the",
+      "revenuePerLead": 11.0,
+      "feedSourceInternalId": "lc6041113",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "6516665552",
+      "mobileWebPhone": "6516665552",
+      "mobileAppPhone": "6516665552",
+      "feedSource": "RentPath",
+      "feedExternalId": "23215a8hjd90p",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "6516665541"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "186299864",
+      "url": "/MN/Inver-Grove-Heights/6953-Abra-Ln-55077/home/186299864",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 28,
+            "version": "2"
+          },
+          {
+            "startPos": 29,
+            "endPos": 29,
+            "version": "3"
+          },
+          {
+            "startPos": 30,
+            "endPos": 30,
+            "version": "2"
+          },
+          {
+            "startPos": 31,
+            "endPos": 35,
+            "version": "3"
+          },
+          {
+            "startPos": 36,
+            "endPos": 36,
+            "version": "2"
+          },
+          {
+            "startPos": 37,
+            "endPos": 38,
+            "version": "3"
+          },
+          {
+            "startPos": 39,
+            "endPos": 49,
+            "version": "2"
+          },
+          {
+            "startPos": 50,
+            "endPos": 50,
+            "version": "3"
+          },
+          {
+            "startPos": 51,
+            "endPos": 51,
+            "version": "2"
+          },
+          {
+            "startPos": 52,
+            "endPos": 52,
+            "version": "3"
+          },
+          {
+            "startPos": 53,
+            "endPos": 54,
+            "version": "2"
+          },
+          {
+            "startPos": 55,
+            "endPos": 55,
+            "version": "3"
+          },
+          {
+            "startPos": 56,
+            "endPos": 62,
+            "version": "2"
+          },
+          {
+            "startPos": 63,
+            "endPos": 63,
+            "version": "3"
+          },
+          {
+            "startPos": 64,
+            "endPos": 70,
+            "version": "2"
+          },
+          {
+            "startPos": 71,
+            "endPos": 72,
+            "version": "3"
+          },
+          {
+            "startPos": 73,
+            "endPos": 73,
+            "version": "2"
+          },
+          {
+            "startPos": 74,
+            "endPos": 75,
+            "version": "3"
+          },
+          {
+            "startPos": 76,
+            "endPos": 83,
+            "version": "2"
+          }
+        ]
+      },
+      "sashes": [
+        {
+          "sashTypeId": 7,
+          "sashTypeName": "New",
+          "sashTypeColor": "#2E7E36",
+          "timeOnRedfin": "2736986"
+        },
+        {
+          "sashTypeId": 35,
+          "sashTypeName": "Now offering up to 4 weeks free on a 12-month lease!",
+          "sashTypeColor": "#E96727"
+        }
+      ],
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.8494236%2C-93.0818049&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=ODjH2sHppjxugJWJ3sSiz8Iti38=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.8494236,
+            "longitude": -93.0818049
+          }
+        },
+        "formattedStreetLine": "6953 Abra Ln",
+        "city": "Inver Grove Heights",
+        "state": "MN",
+        "zip": "55077",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "24c887d2-2d4f-49d7-9b6b-470f7a8f024b",
+      "bedRange": {
+        "min": 2,
+        "max": 4
+      },
+      "bathRange": {
+        "min": 2.0,
+        "max": 2.5
+      },
+      "sqftRange": {
+        "min": 842,
+        "max": 2173
+      },
+      "rentPriceRange": {
+        "min": 2224,
+        "max": 3672
+      },
+      "lastUpdated": "2025-06-24T01:55:47.019373Z",
+      "numAvailableUnits": 19,
+      "status": 1,
+      "propertyName": "Canvas at Inver Grove Heights",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 3.0,
+      "freshnessTimestamp": "2025-06-24T01:55:07.551Z",
+      "description": "Our sought-after Canvas at Inver Grove Heights offers modern farmhouse-styled single-family homes for an ideal living experience in Inver Grove Heights, Minnesota. Enjoy maintenance-free living with a",
+      "revenuePerLead": 11.0,
+      "feedSourceInternalId": "lc5967257",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "6516215823",
+      "mobileWebPhone": "6516215823",
+      "mobileAppPhone": "6516215823",
+      "feedSource": "RentPath",
+      "feedExternalId": "1adgg4aq0eq1m",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "6516215791"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "177388500",
+      "url": "/MN/Inver-Grove-Heights/Greystone-Heights/apartment/177388500",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 0,
+            "version": "3"
+          },
+          {
+            "startPos": 1,
+            "endPos": 26,
+            "version": "4"
+          },
+          {
+            "startPos": 27,
+            "endPos": 44,
+            "version": "3"
+          },
+          {
+            "startPos": 45,
+            "endPos": 48,
+            "version": "1"
+          }
+        ]
+      },
+      "sashes": [
+        {
+          "sashTypeId": 35,
+          "sashTypeName": "Up to $2,000 of Rent Credit - Newly Remodeled - granite, in-home laundry, attached garage!",
+          "sashTypeColor": "#E96727"
+        },
+        {
+          "sashTypeId": 31,
+          "sashTypeName": "3D Walkthrough",
+          "sashTypeColor": "#7556F2"
+        }
+      ],
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.8736%2C-93.0662&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=wRfytOgH8lD2K422wY8p5VWPfGc=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.8736,
+            "longitude": -93.0662
+          }
+        },
+        "formattedStreetLine": "5220 Greystone Dr",
+        "city": "Inver Grove Heights",
+        "state": "MN",
+        "zip": "55077",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "16a118c2-aaec-4079-abfb-5324f218ed30",
+      "bedRange": {
+        "min": 3,
+        "max": 3
+      },
+      "bathRange": {
+        "min": 2.0,
+        "max": 2.0
+      },
+      "sqftRange": {
+        "min": 1189,
+        "max": 1189
+      },
+      "rentPriceRange": {
+        "min": 2000,
+        "max": 2175
+      },
+      "lastUpdated": "2025-06-24T01:52:41.435428Z",
+      "numAvailableUnits": 13,
+      "status": 1,
+      "propertyName": "Greystone Heights",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 4.0,
+      "freshnessTimestamp": "2025-06-04T12:27:27.008Z",
+      "description": "Additional fees for this community include:Non-Optional FeesApplication fee: $50/adultNon-refundable administrative fee: Management charges a $150, non-refundable, administrative fee that is related t",
+      "revenuePerLead": 7.0,
+      "feedSourceInternalId": "lc5901907",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "9529521643",
+      "mobileWebPhone": "9529521643",
+      "mobileAppPhone": "9529521643",
+      "feedSource": "RentPath",
+      "feedExternalId": "1d6hpv0235njy",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "9529523574"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "177442048",
+      "url": "/MN/Inver-Grove-Heights/PEARLWOOD-ESTATES/apartment/177442048",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 0,
+            "version": "25"
+          },
+          {
+            "startPos": 1,
+            "endPos": 5,
+            "version": "24"
+          },
+          {
+            "startPos": 6,
+            "endPos": 6,
+            "version": "25"
+          },
+          {
+            "startPos": 7,
+            "endPos": 7,
+            "version": "24"
+          },
+          {
+            "startPos": 8,
+            "endPos": 8,
+            "version": "25"
+          },
+          {
+            "startPos": 9,
+            "endPos": 9,
+            "version": "21"
+          },
+          {
+            "startPos": 10,
+            "endPos": 11,
+            "version": "20"
+          },
+          {
+            "startPos": 12,
+            "endPos": 12,
+            "version": "22"
+          },
+          {
+            "startPos": 13,
+            "endPos": 13,
+            "version": "18"
+          },
+          {
+            "startPos": 14,
+            "endPos": 14,
+            "version": "20"
+          },
+          {
+            "startPos": 15,
+            "endPos": 15,
+            "version": "26"
+          },
+          {
+            "startPos": 16,
+            "endPos": 16,
+            "version": "23"
+          },
+          {
+            "startPos": 17,
+            "endPos": 17,
+            "version": "26"
+          },
+          {
+            "startPos": 18,
+            "endPos": 19,
+            "version": "22"
+          },
+          {
+            "startPos": 20,
+            "endPos": 20,
+            "version": "26"
+          },
+          {
+            "startPos": 21,
+            "endPos": 21,
+            "version": "25"
+          },
+          {
+            "startPos": 22,
+            "endPos": 25,
+            "version": "20"
+          },
+          {
+            "startPos": 26,
+            "endPos": 26,
+            "version": "18"
+          },
+          {
+            "startPos": 27,
+            "endPos": 39,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.8728548%2C-93.0681879&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=RuXFnMW2NKD2HGdJuOoAx42XcN4=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.8728548,
+            "longitude": -93.0681879
+          }
+        },
+        "formattedStreetLine": "1860 52nd St E",
+        "city": "Inver Grove Heights",
+        "state": "MN",
+        "zip": "55077",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "f53453c8-8120-4f4f-81fe-a2f45780838f",
+      "bedRange": {
+        "min": 1,
+        "max": 3
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 2.0
+      },
+      "sqftRange": {
+        "min": 706,
+        "max": 1306
+      },
+      "rentPriceRange": {
+        "min": 1100,
+        "max": 1725
+      },
+      "lastUpdated": "2025-06-24T01:52:33.989647Z",
+      "numAvailableUnits": 12,
+      "status": 1,
+      "propertyName": "PEARLWOOD ESTATES",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 5.0,
+      "freshnessTimestamp": "2025-06-21T07:51:57.228Z",
+      "revenuePerLead": 11.0,
+      "feedSourceInternalId": "lc5906441",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "9529523599",
+      "mobileWebPhone": "9529523599",
+      "mobileAppPhone": "9529523599",
+      "feedSource": "RentPath",
+      "feedExternalId": "2xrkjyq3c1749",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "7633639318"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "177396979",
+      "url": "/MN/Inver-Grove-Heights/Salem-Green-Apartments/apartment/177396979",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 27,
+            "version": "2"
+          },
+          {
+            "startPos": 28,
+            "endPos": 48,
+            "version": "1"
+          }
+        ]
+      },
+      "sashes": [
+        {
+          "sashTypeId": 7,
+          "sashTypeName": "New",
+          "sashTypeColor": "#2E7E36",
+          "timeOnRedfin": "2694882"
+        }
+      ],
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.8707578%2C-93.0769914&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=n5s8s5mFs2cFZyW6-I7vyzLEbXc=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.8707578,
+            "longitude": -93.0769914
+          }
+        },
+        "formattedStreetLine": "1455 Upper 55th St E",
+        "city": "Inver Grove Heights",
+        "state": "MN",
+        "zip": "55077",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "f10badec-f0b6-4801-9562-edea49790928",
+      "bedRange": {
+        "min": 1,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 2.0
+      },
+      "sqftRange": {
+        "min": 764,
+        "max": 1025
+      },
+      "rentPriceRange": {
+        "min": 1395,
+        "max": 1630
+      },
+      "lastUpdated": "2025-06-24T01:56:20.206751Z",
+      "numAvailableUnits": 8,
+      "status": 1,
+      "propertyName": "Salem Green Apartments",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 6.0,
+      "freshnessTimestamp": "2025-06-24T01:55:49.655Z",
+      "description": "Escape to Salem Green Apartments where lakeside views, wooded surroundings, and abundant green space create a serene retreat. With 28 floor plans (studio to 3-bedroom apartments) and 17+ thoughtfully ",
+      "revenuePerLead": 11.0,
+      "feedSourceInternalId": "lc6040777",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "6516665892",
+      "mobileWebPhone": "6516665892",
+      "mobileAppPhone": "6516665892",
+      "feedSource": "RentPath",
+      "feedExternalId": "32gqe1rpbqjfh",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "6516665660"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "195166687",
+      "url": "/MN/Inver-Grove-Heights/Avana-Southview/apartment/195166687",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 1,
+            "version": "3"
+          },
+          {
+            "startPos": 2,
+            "endPos": 71,
+            "version": "2"
+          }
+        ]
+      },
+      "sashes": [
+        {
+          "sashTypeId": 7,
+          "sashTypeName": "New",
+          "sashTypeColor": "#2E7E36",
+          "timeOnRedfin": "2884473"
+        },
+        {
+          "sashTypeId": 35,
+          "sashTypeName": "Price shown is Base Rent, does not include non-optional fees and utilities. Review Building overview for details.",
+          "sashTypeColor": "#E96727"
+        }
+      ],
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.8773566%2C-93.072371&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=V6EqsmcNdfSzCO8_teml7wnCAiI=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.8773566,
+            "longitude": -93.072371
+          }
+        },
+        "formattedStreetLine": "4930 Ashley Ln",
+        "city": "Inver Grove Heights",
+        "state": "MN",
+        "zip": "55077",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "8d3cc2c4-9f15-4586-b116-010d9c5dade8",
+      "bedRange": {
+        "min": 1,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 2.0
+      },
+      "sqftRange": {
+        "min": 789,
+        "max": 1177
+      },
+      "rentPriceRange": {
+        "min": 1260,
+        "max": 1767
+      },
+      "lastUpdated": "2025-06-24T01:52:55.667843Z",
+      "numAvailableUnits": 11,
+      "status": 1,
+      "propertyName": "Avana Southview",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 7.0,
+      "freshnessTimestamp": "2025-06-24T01:52:40.064Z",
+      "description": "Price shown is Base Rent. Residents are required to pay: At Application: Application Fee ($35.00/applicant, nonrefundable); At Move-in: Security Deposit (Refundable) ($500.00/unit); Utility-New Accoun",
+      "revenuePerLead": 7.0,
+      "feedSourceInternalId": "lc5906262",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "9529526972",
+      "mobileWebPhone": "9529526972",
+      "mobileAppPhone": "9529526972",
+      "feedSource": "RentPath",
+      "feedExternalId": "2553drrsmrj4d",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "9529526889"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "175552234",
+      "url": "/MN/Inver-Grove-Heights/Crossings-at-Inver-Woods-Apartments/apartment/175552234",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 1,
+            "version": "3"
+          },
+          {
+            "startPos": 2,
+            "endPos": 6,
+            "version": "2"
+          },
+          {
+            "startPos": 7,
+            "endPos": 8,
+            "version": "3"
+          },
+          {
+            "startPos": 9,
+            "endPos": 11,
+            "version": "4"
+          },
+          {
+            "startPos": 12,
+            "endPos": 17,
+            "version": "3"
+          },
+          {
+            "startPos": 18,
+            "endPos": 20,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.8330633%2C-93.0738376&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=MN64UztqTZL167tMsqyTU9nouos=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.8330633,
+            "longitude": -93.0738376
+          }
+        },
+        "formattedStreetLine": "1462 80th St E",
+        "city": "Inver Grove Heights",
+        "state": "MN",
+        "zip": "55077",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "bd961727-0d2b-43ba-8818-d9d402ec9888",
+      "bedRange": {
+        "min": 0,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 2.0
+      },
+      "sqftRange": {
+        "min": 589,
+        "max": 1213
+      },
+      "rentPriceRange": {
+        "min": 1439,
+        "max": 2389
+      },
+      "lastUpdated": "2025-06-12T20:04:54.449493Z",
+      "numAvailableUnits": 12,
+      "status": 1,
+      "propertyName": "Crossings at Inver Woods Apartments",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 8.0,
+      "freshnessTimestamp": "2025-06-12T20:02:20.975Z",
+      "description": "Welcome to The Crossings at Inver Woods in beautiful Inver Grove Heights!  We are very conveniently located at 1462 E. 80th Street, just off of Hwy 52; nestled in the suburbs yet right down the street",
+      "revenuePerLead": 11.0,
+      "feedSourceInternalId": "lc5967246",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "9525203366",
+      "mobileWebPhone": "9525203366",
+      "mobileAppPhone": "9525203366",
+      "feedSource": "RentPath",
+      "feedExternalId": "38u8mv569561p",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "6516665335"
+    }
+  }
+]

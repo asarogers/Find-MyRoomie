@@ -1,0 +1,3123 @@
+[
+  {
+    "homeData": {
+      "propertyId": "51116848",
+      "url": "/MN/Saint-Paul/West-7th/apartment/51116848",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 3,
+            "version": "3"
+          },
+          {
+            "startPos": 4,
+            "endPos": 22,
+            "version": "2"
+          },
+          {
+            "startPos": 23,
+            "endPos": 46,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9053834%2C-93.1621637&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=fiawNZw_rZxx6-NyVx12yCjTah4=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9053834,
+            "longitude": -93.1621637
+          }
+        },
+        "formattedStreetLine": "2246 7th St W",
+        "city": "Saint Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "4a0ccd9c-4c9b-484e-b3a8-955a4c251936",
+      "bedRange": {
+        "min": 1,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 700,
+        "max": 900
+      },
+      "rentPriceRange": {
+        "min": 1015,
+        "max": 1135
+      },
+      "lastUpdated": "2025-06-18T14:51:53.046155Z",
+      "numAvailableUnits": 1,
+      "status": 1,
+      "propertyName": "West 7th",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 1.0,
+      "freshnessTimestamp": "2025-05-10T12:29:39.649Z",
+      "description": "Equidistant from the natural beauty of the Mississippi River and the heart of the Highland Park neighborhood of St. Paul, West 7th Apartments offers spacious one and two-bedroom apartments. You will a",
+      "revenuePerLead": 11.0,
+      "feedSourceInternalId": "lc5912507",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "9529522384",
+      "mobileWebPhone": "9529522384",
+      "mobileAppPhone": "9529522384",
+      "feedSource": "RentPath",
+      "feedExternalId": "1xqa885wwt3w5",
+      "leadRequiresMoveInDate": false
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "51064430",
+      "url": "/MN/Saint-Paul/The-Communities-of-River-Crossing/apartment/51064430",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 10,
+            "version": "2"
+          },
+          {
+            "startPos": 11,
+            "endPos": 11,
+            "version": "1"
+          }
+        ]
+      },
+      "sashes": [
+        {
+          "sashTypeId": 31,
+          "sashTypeName": "3D Walkthrough",
+          "sashTypeColor": "#7556F2"
+        }
+      ],
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.899417%2C-93.172882&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=l6KImZlgvxysdyXyjTLj-ypUoNs=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.899417,
+            "longitude": -93.172882
+          }
+        },
+        "formattedStreetLine": "1735 Graham Ave",
+        "city": "Saint Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "a7757118-aac9-416f-98e0-a1aa3c237bd2",
+      "bedRange": {
+        "min": 1,
+        "max": 3
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 2.5
+      },
+      "sqftRange": {
+        "min": 753,
+        "max": 1532
+      },
+      "rentPriceRange": {
+        "min": 1440,
+        "max": 2395
+      },
+      "lastUpdated": "2025-06-23T12:40:28.960404Z",
+      "numAvailableUnits": 28,
+      "status": 1,
+      "propertyName": "The Communities of River Crossing",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 2.0,
+      "freshnessTimestamp": "2025-06-21T19:59:13.680Z",
+      "description": "The Communities of River Crossing are located in St. Paul, Minnesota's Highland Park neighborhood. Our one, two, and three bedroom apartment homes and townhomes feature in home washers and dryers, exp",
+      "revenuePerLead": 11.0,
+      "feedSourceInternalId": "lc5970241",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "6516213954",
+      "mobileWebPhone": "6516213954",
+      "mobileAppPhone": "6516213954",
+      "feedSource": "RentPath",
+      "feedExternalId": "7e2k1hpnv7q6",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "6516213602"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "51131016",
+      "url": "/MN/Saint-Paul/South-Highland/apartment/51131016",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 0,
+            "version": "3"
+          },
+          {
+            "startPos": 1,
+            "endPos": 1,
+            "version": "2"
+          },
+          {
+            "startPos": 2,
+            "endPos": 7,
+            "version": "3"
+          },
+          {
+            "startPos": 8,
+            "endPos": 23,
+            "version": "2"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9029344%2C-93.1716614&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=CPI3ej4DY4pGVLlXDJ_VQ8SyeUU=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9029344,
+            "longitude": -93.1716614
+          }
+        },
+        "formattedStreetLine": "1280 Davern St",
+        "city": "Saint Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "f43d8ece-3613-4627-b76e-2ccb3fe91bdc",
+      "bedRange": {
+        "min": 0,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 328,
+        "max": 866
+      },
+      "rentPriceRange": {
+        "min": 935,
+        "max": 1350
+      },
+      "lastUpdated": "2025-06-19T12:35:01.084801Z",
+      "numAvailableUnits": 6,
+      "status": 1,
+      "propertyName": "South Highland",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 3.0,
+      "freshnessTimestamp": "2025-06-04T12:28:34.719Z",
+      "description": "Additional fees for this community include:Non-Optional FeesApplication fee: $50/adultNon-refundable administrative fee: Management charges a $150, non-refundable, administrative fee that is related t",
+      "revenuePerLead": 7.0,
+      "feedSourceInternalId": "lc5898165",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "6518679389",
+      "mobileWebPhone": "6518679389",
+      "mobileAppPhone": "6518679389",
+      "feedSource": "RentPath",
+      "feedExternalId": "nj42dgtjk7g0",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "6518679381"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "194254619",
+      "url": "/MN/St-Paul/Cleveland-Terrace/apartment/194254619",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 0,
+            "version": "2"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9244919%2C-93.1876612&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=FR0pW5Gz9fp5kLPJCcWcT9z_x94=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9244919,
+            "longitude": -93.1876612
+          }
+        },
+        "formattedStreetLine": "569 Cleveland Ave S",
+        "city": "St Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "c8436497-5038-487d-8a5b-85bbefd7ad07",
+      "bedRange": {
+        "min": 0,
+        "max": 1
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 480,
+        "max": 650
+      },
+      "rentPriceRange": {
+        "min": 999,
+        "max": 1099
+      },
+      "lastUpdated": "2025-06-13T16:58:09.396625Z",
+      "numAvailableUnits": 2,
+      "status": 2,
+      "propertyName": "Cleveland Terrace",
+      "dateAvailable": "2025-07-01T00:00:00Z",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 4.0,
+      "freshnessTimestamp": "2025-06-13T16:56:13.733Z",
+      "description": "Indulge in the vibrant and upbeat neighborhood of Highland Park when you live at Cleveland Terrace. Enjoy the tranquil park setting and easy access to St. Catherine's University, located just across t",
+      "revenuePerLead": 6.0,
+      "feedSourceInternalId": "lc6008335",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "7634657694",
+      "mobileWebPhone": "7634657694",
+      "mobileAppPhone": "7634657694",
+      "feedSource": "RentPath",
+      "feedExternalId": "3txqfp3cydkw7",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "7634659533"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "51120110",
+      "url": "/MN/Saint-Paul/Village-Apts-1921/apartment/51120110",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 4,
+            "version": "2"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9181833%2C-93.1814954&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=B_Q7uVfSx8ymqKjfSV5fuCbV-Qk=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9181833,
+            "longitude": -93.1814954
+          }
+        },
+        "formattedStreetLine": "1921 Ford Pkwy",
+        "city": "Saint Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "adbf256c-0565-438e-9115-9716c6938789",
+      "bedRange": {
+        "min": 1,
+        "max": 1
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 650,
+        "max": 650
+      },
+      "lastUpdated": "2025-06-18T15:02:29.451688Z",
+      "numAvailableUnits": 0,
+      "status": 1,
+      "propertyName": "Village Apts (1921)",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 5.0,
+      "freshnessTimestamp": "2025-05-23T20:04:56.519Z",
+      "revenuePerLead": 6.0,
+      "feedSourceInternalId": "lc6012149",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "7634653087",
+      "mobileWebPhone": "7634653087",
+      "mobileAppPhone": "7634653087",
+      "feedSource": "RentPath",
+      "feedExternalId": "55yhup2wkkpa8",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "7634657609"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "195166922",
+      "url": "/MN/St-Paul/Cleveland-Niles-Apartments/apartment/195166922",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 1,
+            "version": "3"
+          },
+          {
+            "startPos": 2,
+            "endPos": 9,
+            "version": "2"
+          }
+        ]
+      },
+      "sashes": [
+        {
+          "sashTypeId": 31,
+          "sashTypeName": "3D Walkthrough",
+          "sashTypeColor": "#7556F2"
+        }
+      ],
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9249497%2C-93.1876437&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=LUuZne0t-WTSW5Mdl_idqneu14o=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9249497,
+            "longitude": -93.1876437
+          }
+        },
+        "formattedStreetLine": "555 Cleveland Ave S",
+        "city": "St Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "fe5c37c7-73a3-46f9-9ed9-f8b06f9a9b44",
+      "bedRange": {
+        "min": 1,
+        "max": 1
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 650,
+        "max": 650
+      },
+      "rentPriceRange": {
+        "min": 925,
+        "max": 1025
+      },
+      "lastUpdated": "2025-05-22T12:59:23.869203Z",
+      "numAvailableUnits": 0,
+      "status": 1,
+      "propertyName": "Cleveland/Niles Apartments",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 6.0,
+      "freshnessTimestamp": "2025-05-10T12:40:13.789Z",
+      "description": "This charming 10 unit building is situated directly across the street from the lovely campus of St. Catherine's University. This is a great location for students from around the area and professionals",
+      "revenuePerLead": 6.0,
+      "feedSourceInternalId": "lc5904672",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "9529529087",
+      "mobileWebPhone": "9529529087",
+      "mobileAppPhone": "9529529087",
+      "feedSource": "RentPath",
+      "feedExternalId": "1kse19kjd2na4",
+      "leadRequiresMoveInDate": false
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "51120109",
+      "url": "/MN/Saint-Paul/Village-Apts-1929/apartment/51120109",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 8,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9181806%2C-93.1818225&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=cnKkxcRoO_SD7gAeHLE3OhaONcQ=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9181806,
+            "longitude": -93.1818225
+          }
+        },
+        "formattedStreetLine": "1929 Ford Pkwy",
+        "city": "Saint Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "1c1e70df-cb6f-4f2c-b976-d5cfa2b4efcb",
+      "bedRange": {
+        "min": 1,
+        "max": 1
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 650,
+        "max": 650
+      },
+      "lastUpdated": "2025-06-18T15:02:29.411419Z",
+      "numAvailableUnits": 0,
+      "status": 1,
+      "propertyName": "Village Apts (1929)",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 7.0,
+      "freshnessTimestamp": "2025-05-23T20:05:02.454Z",
+      "revenuePerLead": 6.0,
+      "feedSourceInternalId": "lc6083620",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "7634654237",
+      "mobileWebPhone": "7634654237",
+      "mobileAppPhone": "7634654237",
+      "feedSource": "RentPath",
+      "feedExternalId": "527p268d1nw8f",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "7633638968"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "51132980",
+      "url": "/MN/Saint-Paul/Hyland-Park-Apartments/apartment/51132980",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 5,
+            "version": "2"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9045323%2C-93.1667722&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=HQ-TGGsK2K3rmYey060sqksvVCk=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9045323,
+            "longitude": -93.1667722
+          }
+        },
+        "formattedStreetLine": "1565 Saint Paul Ave",
+        "city": "Saint Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "6f726bca-2f73-4e1c-92d7-35ee7f4927c6",
+      "bedRange": {
+        "min": 1,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 725,
+        "max": 875
+      },
+      "rentPriceRange": {
+        "min": 1099,
+        "max": 1299
+      },
+      "lastUpdated": "2025-06-18T15:52:32.257879Z",
+      "numAvailableUnits": 2,
+      "status": 1,
+      "propertyName": "Hyland Park Apartments",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 8.0,
+      "freshnessTimestamp": "2025-06-01T12:42:09.562Z",
+      "description": "1 and 2 bedrooms Conveniently located in the trendy Highland Park area of St. Paul. Close to the MSP International Airport, Grand Avenue, St. Catherine's, Macalester College, and the University of St.",
+      "revenuePerLead": 6.0,
+      "feedSourceInternalId": "lc5917238",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "7634653260",
+      "mobileWebPhone": "7634653260",
+      "mobileAppPhone": "7634653260",
+      "feedSource": "RentPath",
+      "feedExternalId": "2j3u3ue238gft",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "7633445774"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "187580933",
+      "url": "/MN/Saint-Paul/The-Collection-at-Highland-Bridge/apartment/187580933",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 25,
+            "version": "2"
+          }
+        ]
+      },
+      "sashes": [
+        {
+          "sashTypeId": 35,
+          "sashTypeName": "Fall into savings $1000 off select units *Limited time offer. Restrictions apply. Specials, pricing and availability subject to change daily. Contact the leasing office for details.",
+          "sashTypeColor": "#E96727"
+        }
+      ],
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9169844%2C-93.1922161&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=Osqmzo7yOJoFaNpK4XXQm84yzaA=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9169844,
+            "longitude": -93.1922161
+          }
+        },
+        "formattedStreetLine": "800 Cretin Ave S",
+        "city": "Saint Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "7f2f129f-eb70-4d4b-b4d2-38ae681b4efc",
+      "bedRange": {
+        "min": 0,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 2.0
+      },
+      "sqftRange": {
+        "min": 480,
+        "max": 1212
+      },
+      "rentPriceRange": {
+        "min": 1530,
+        "max": 4265
+      },
+      "lastUpdated": "2025-06-24T01:56:20.090235Z",
+      "numAvailableUnits": 15,
+      "status": 1,
+      "propertyName": "The Collection at Highland Bridge",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 9.0,
+      "freshnessTimestamp": "2025-05-25T19:58:02.167Z",
+      "description": "The Collection at Highland Bridge offers premier shopping, world-class recreation, and delicious restaurants steps outside your front door in St. Paul, MN. Our community offers stunning studio, 1 and ",
+      "revenuePerLead": 7.0,
+      "feedSourceInternalId": "lc5965493",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "6516215917",
+      "mobileWebPhone": "6516215917",
+      "mobileAppPhone": "6516215917",
+      "feedSource": "RentPath",
+      "feedExternalId": "3gek3va4g7244",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "6516213388"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "51133228",
+      "url": "/MN/Saint-Paul/Shepard-Terrace/apartment/51133228",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 11,
+            "version": "2"
+          }
+        ]
+      },
+      "sashes": [
+        {
+          "sashTypeId": 35,
+          "sashTypeName": "Half month free!! Select units. Contact our team today for details!",
+          "sashTypeColor": "#E96727"
+        },
+        {
+          "sashTypeId": 31,
+          "sashTypeName": "3D Walkthrough",
+          "sashTypeColor": "#7556F2"
+        }
+      ],
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9050958%2C-93.1546714&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=3-7pN1JpqjDkf94s41w7HwevLgs=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9050958,
+            "longitude": -93.1546714
+          }
+        },
+        "formattedStreetLine": "2061 Shepard Rd",
+        "city": "Saint Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "09ad49f6-eb43-4b1f-91c9-f43e1b433bea",
+      "bedRange": {
+        "min": 1,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 650,
+        "max": 825
+      },
+      "rentPriceRange": {
+        "min": 1150,
+        "max": 1325
+      },
+      "lastUpdated": "2025-06-18T15:52:05.036158Z",
+      "numAvailableUnits": 2,
+      "status": 1,
+      "propertyName": "Shepard Terrace",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 10.0,
+      "freshnessTimestamp": "2025-06-14T04:54:43.887Z",
+      "description": "Welcome to Shepard Terrace Apartments, an exceptional living experience in the heart of Saint Paul, MN. Nestled in the charming Shepard Park neighborhood, our community offers a perfect blend of comfo",
+      "revenuePerLead": 6.0,
+      "feedSourceInternalId": "lc5910955",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "6516213829",
+      "mobileWebPhone": "6516213829",
+      "mobileAppPhone": "6516213829",
+      "feedSource": "RentPath",
+      "feedExternalId": "2fv5mqwt72v0h",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "7632701047"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "177405917",
+      "url": "/MN/St-Paul/Highland-Village-Apartments/apartment/177405917",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 1,
+            "version": "3"
+          },
+          {
+            "startPos": 2,
+            "endPos": 8,
+            "version": "2"
+          },
+          {
+            "startPos": 9,
+            "endPos": 41,
+            "version": "3"
+          },
+          {
+            "startPos": 42,
+            "endPos": 42,
+            "version": "2"
+          }
+        ]
+      },
+      "sashes": [
+        {
+          "sashTypeId": 35,
+          "sashTypeName": "1 month free on one-bedrooms! 1 month free on two-bedrooms! 6 months free fiber internet with Arvig Muliwav!",
+          "sashTypeColor": "#E96727"
+        }
+      ],
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9157177%2C-93.1882829&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=D7W505kas3TtIdmTtnd80pPS8fM=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9157177,
+            "longitude": -93.1882829
+          }
+        },
+        "formattedStreetLine": "845 Cleveland Ave S",
+        "city": "St Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "d33499fe-eaf4-449b-92f7-ab3d54acd585",
+      "bedRange": {
+        "min": 1,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 609,
+        "max": 990
+      },
+      "rentPriceRange": {
+        "min": 1199,
+        "max": 1850
+      },
+      "lastUpdated": "2025-06-19T07:57:23.883431Z",
+      "numAvailableUnits": 0,
+      "status": 1,
+      "propertyName": "Highland Village Apartments",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 11.0,
+      "freshnessTimestamp": "2025-05-10T12:40:00.668Z",
+      "description": "Built in the 1930s, Highland Village Apartments offers a prime metropolitan location with a small town feel. Peaceful, scenic & historic, people often say our property is like a beautiful park tucked ",
+      "revenuePerLead": 6.0,
+      "feedSourceInternalId": "lc5915407",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "9529523821",
+      "mobileWebPhone": "9529523821",
+      "mobileAppPhone": "9529523821",
+      "feedSource": "RentPath",
+      "feedExternalId": "5adeysxvaprsv",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "9525202175"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "51120179",
+      "url": "/MN/Saint-Paul/Ford-Parkway-Apartments/apartment/51120179",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 1,
+            "version": "4"
+          },
+          {
+            "startPos": 2,
+            "endPos": 10,
+            "version": "3"
+          },
+          {
+            "startPos": 11,
+            "endPos": 12,
+            "version": "2"
+          },
+          {
+            "startPos": 13,
+            "endPos": 30,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.917717%2C-93.1812095&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=QEFjb-7RbgqFxIl3PTNgyLnec4Q=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.917717,
+            "longitude": -93.1812095
+          }
+        },
+        "formattedStreetLine": "1912 Ford Pkwy",
+        "city": "Saint Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "43e5fc26-749a-4f03-b5de-3fbee1497175",
+      "bedRange": {
+        "min": 1,
+        "max": 1
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 650,
+        "max": 650
+      },
+      "rentPriceRange": {
+        "min": 965,
+        "max": 965
+      },
+      "lastUpdated": "2025-06-18T15:02:38.580322Z",
+      "numAvailableUnits": 1,
+      "status": 1,
+      "propertyName": "Ford Parkway Apartments",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 12.0,
+      "freshnessTimestamp": "2025-04-16T13:12:24.657Z",
+      "description": "Inside Ford Parkway Apartments, you'll find over 700 square feet of space of living in our one bedroom units. This units feature big closets, built-in shelving, and a huge bay window that brings in to",
+      "revenuePerLead": 6.0,
+      "feedSourceInternalId": "lc5913258",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "9525202922",
+      "mobileWebPhone": "9525202922",
+      "mobileAppPhone": "9525202922",
+      "feedSource": "RentPath",
+      "feedExternalId": "2cuc1nxk0ph8k",
+      "leadRequiresMoveInDate": false
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "51119917",
+      "url": "/MN/Saint-Paul/Highland-Towers-Apartments/apartment/51119917",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 25,
+            "version": "2"
+          }
+        ]
+      },
+      "sashes": [
+        {
+          "sashTypeId": 35,
+          "sashTypeName": "One month free! Conditions apply",
+          "sashTypeColor": "#E96727"
+        },
+        {
+          "sashTypeId": 31,
+          "sashTypeName": "3D Walkthrough",
+          "sashTypeColor": "#7556F2"
+        }
+      ],
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9177371%2C-93.1679782&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=J2l_ueRpraLzut8xbp-DVfToXME=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9177371,
+            "longitude": -93.1679782
+          }
+        },
+        "formattedStreetLine": "1600 Ford Pkwy",
+        "city": "Saint Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "433043fc-9872-4eba-a994-704c8d438e42",
+      "bedRange": {
+        "min": 1,
+        "max": 1
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 640,
+        "max": 640
+      },
+      "rentPriceRange": {
+        "min": 999,
+        "max": 1089
+      },
+      "lastUpdated": "2025-06-18T15:00:56.840921Z",
+      "numAvailableUnits": 8,
+      "status": 1,
+      "propertyName": "Highland Towers Apartments",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 13.0,
+      "freshnessTimestamp": "2025-06-12T19:54:59.048Z",
+      "description": "Highland Towers Apartments is located in beautiful Highland Park, with convenient access to shopping, dining, parks and more. Our 1 bedroom apartments feature functional layouts and upgraded kitchens ",
+      "revenuePerLead": 6.0,
+      "feedSourceInternalId": "lc5906091",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "9529524674",
+      "mobileWebPhone": "9529524674",
+      "mobileAppPhone": "9529524674",
+      "feedSource": "RentPath",
+      "feedExternalId": "2j76r5sw49cfj",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "9529523023"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "177431589",
+      "url": "/MN/St-Paul/Highland-on-the-Park/apartment/177431589",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 0,
+            "version": "10"
+          },
+          {
+            "startPos": 1,
+            "endPos": 1,
+            "version": "9"
+          },
+          {
+            "startPos": 2,
+            "endPos": 4,
+            "version": "7"
+          },
+          {
+            "startPos": 5,
+            "endPos": 7,
+            "version": "6"
+          },
+          {
+            "startPos": 8,
+            "endPos": 8,
+            "version": "2"
+          },
+          {
+            "startPos": 9,
+            "endPos": 9,
+            "version": "3"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9087751%2C-93.1535594&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=Tk-AtqXfSh6-oBMDcBDGs6Lz2HY=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9087751,
+            "longitude": -93.1535594
+          }
+        },
+        "formattedStreetLine": "2000 7th St W",
+        "city": "St Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "3e26179d-027b-4c95-a0f8-b8b74cc237f2",
+      "bedRange": {
+        "min": 1,
+        "max": 1
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 687,
+        "max": 916
+      },
+      "rentPriceRange": {
+        "min": 1310,
+        "max": 1380
+      },
+      "lastUpdated": "2025-06-21T19:56:07.588982Z",
+      "numAvailableUnits": 2,
+      "status": 1,
+      "propertyName": "Highland on the Park",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 14.0,
+      "freshnessTimestamp": "2025-05-06T22:54:52.544Z",
+      "description": "Welcome home! At Highland on the Park Apartments, you will find your perfect new home with a unique architectural design. We have many different floor plans to choose from featuring curved bays, angle",
+      "revenuePerLead": 6.0,
+      "feedSourceInternalId": "lc5918000",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "7632028488",
+      "mobileWebPhone": "7632028488",
+      "mobileAppPhone": "7632028488",
+      "feedSource": "RentPath",
+      "feedExternalId": "37us518dfdcg2",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "9529523145"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "195267263",
+      "url": "/MN/St-Paul/Tower-Apts-1609/apartment/195267263",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 6,
+            "version": "2"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9181998%2C-93.1683148&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=V79S2laIFxCnOi8DK_uI_0g7POk=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9181998,
+            "longitude": -93.1683148
+          }
+        },
+        "formattedStreetLine": "1609 Ford Pkwy",
+        "city": "St Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "c71fcb5f-f470-4daa-b195-a8f232006192",
+      "bedRange": {
+        "min": 1,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 630,
+        "max": 875
+      },
+      "lastUpdated": "2025-06-05T20:04:55.025590Z",
+      "numAvailableUnits": 0,
+      "status": 1,
+      "propertyName": "Tower Apts (1609)",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 15.0,
+      "freshnessTimestamp": "2025-06-05T20:03:28.050Z",
+      "revenuePerLead": 6.0,
+      "feedSourceInternalId": "lc5987811",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "9525924724",
+      "mobileWebPhone": "9525924724",
+      "mobileAppPhone": "9525924724",
+      "feedSource": "RentPath",
+      "feedExternalId": "26x28kpyr2qhy",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "9525920524"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "51132988",
+      "url": "/MN/Saint-Paul/The-Plaza/apartment/51132988",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 1,
+            "version": "2"
+          },
+          {
+            "startPos": 2,
+            "endPos": 20,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9010251%2C-93.1631903&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=bOm9fgPSkY_eCtMvW3nZkJ1cwLQ=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9010251,
+            "longitude": -93.1631903
+          }
+        },
+        "formattedStreetLine": "2353 Youngman Ave",
+        "city": "Saint Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "73a2380d-6718-4c8e-b043-4540e09a4125",
+      "bedRange": {
+        "min": 1,
+        "max": 3
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 2.0
+      },
+      "sqftRange": {
+        "min": 820,
+        "max": 1584
+      },
+      "rentPriceRange": {
+        "min": 1495,
+        "max": 2747
+      },
+      "lastUpdated": "2025-06-21T12:43:17.124726Z",
+      "numAvailableUnits": 0,
+      "status": 1,
+      "propertyName": "The Plaza",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 16.0,
+      "freshnessTimestamp": "2025-06-20T07:51:00.569Z",
+      "description": "It's all here at The Plaza! Apartments the size of a home, luxury finishes that feel like a condo, stunning views of the Mississippi River, gorgeous pool, award winning management, and scenic Shepard ",
+      "revenuePerLead": 11.0,
+      "feedSourceInternalId": "lc6040591",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "7633638535",
+      "mobileWebPhone": "7633638535",
+      "mobileAppPhone": "7633638535",
+      "feedSource": "RentPath",
+      "feedExternalId": "5eg4z23vp1cbk",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "6516665623"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "51119815",
+      "url": "/MN/Saint-Paul/Ford-Parkway-Apartments/apartment/51119815",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 1,
+            "version": "5"
+          },
+          {
+            "startPos": 2,
+            "endPos": 9,
+            "version": "4"
+          },
+          {
+            "startPos": 10,
+            "endPos": 17,
+            "version": "2"
+          }
+        ]
+      },
+      "sashes": [
+        {
+          "sashTypeId": 31,
+          "sashTypeName": "3D Walkthrough",
+          "sashTypeColor": "#7556F2"
+        }
+      ],
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9182378%2C-93.1764651&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=_td-39cy1MP-IQqm7yW7xnOmtfY=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9182378,
+            "longitude": -93.1764651
+          }
+        },
+        "formattedStreetLine": "1807 Ford Pkwy",
+        "city": "Saint Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "85c7f151-8a67-4b0c-81a0-7d34ae7a7571",
+      "bedRange": {
+        "min": 1,
+        "max": 1
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 700,
+        "max": 700
+      },
+      "rentPriceRange": {
+        "min": 995,
+        "max": 1095
+      },
+      "lastUpdated": "2025-06-18T15:01:17.251309Z",
+      "numAvailableUnits": 0,
+      "status": 1,
+      "propertyName": "Ford Parkway Apartments",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 17.0,
+      "freshnessTimestamp": "2025-05-10T12:30:30.634Z",
+      "description": "This art deco mid 1930's building is just a jewel in the lovely Highland neighborhood of St. Paul. The 18 unit building is situated directly on the corner of Ford Parkway and Fairview Avenue. The retr",
+      "revenuePerLead": 6.0,
+      "feedSourceInternalId": "lc5921069",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "9523959578",
+      "mobileWebPhone": "9523959578",
+      "mobileAppPhone": "9523959578",
+      "feedSource": "RentPath",
+      "feedExternalId": "4cs2e68p6qkqq",
+      "leadRequiresMoveInDate": false
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "51120376",
+      "url": "/MN/Saint-Paul/YG-Flats/apartment/51120376",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 0,
+            "version": "4"
+          },
+          {
+            "startPos": 1,
+            "endPos": 34,
+            "version": "3"
+          },
+          {
+            "startPos": 35,
+            "endPos": 43,
+            "version": "2"
+          }
+        ]
+      },
+      "sashes": [
+        {
+          "sashTypeId": 31,
+          "sashTypeName": "3D Walkthrough",
+          "sashTypeColor": "#7556F2"
+        }
+      ],
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9112202%2C-93.1858841&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=IZAl4AsQu-6HWNjiTb1hwECwNEo=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9112202,
+            "longitude": -93.1858841
+          }
+        },
+        "formattedStreetLine": "2034 Yorkshire Ave",
+        "city": "Saint Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "84416432-2958-4aa6-96d9-25de40be0f81",
+      "bedRange": {
+        "min": 0,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 377,
+        "max": 805
+      },
+      "rentPriceRange": {
+        "min": 1049,
+        "max": 1349
+      },
+      "lastUpdated": "2025-06-18T15:04:24.101371Z",
+      "numAvailableUnits": 3,
+      "status": 1,
+      "propertyName": "YG Flats",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 18.0,
+      "freshnessTimestamp": "2025-05-30T16:57:06.059Z",
+      "description": "Welcome to YG Flats; where mid-century charm meets modern style and relevant amenities! Our 2020-2021 remodel brought new open floor plans, redesigned kitchens, dishwasher, new flooring, bathroom upgr",
+      "revenuePerLead": 11.0,
+      "feedSourceInternalId": "lc5925997",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "7634657975",
+      "mobileWebPhone": "7634657975",
+      "mobileAppPhone": "7634657975",
+      "feedSource": "RentPath",
+      "feedExternalId": "16ffutbybtxzc",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "7632028630"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "51122542",
+      "url": "/MN/Saint-Paul/Highland-Terrace/apartment/51122542",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 0,
+            "version": "3"
+          },
+          {
+            "startPos": 1,
+            "endPos": 1,
+            "version": "4"
+          },
+          {
+            "startPos": 2,
+            "endPos": 2,
+            "version": "3"
+          },
+          {
+            "startPos": 3,
+            "endPos": 5,
+            "version": "2"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9099686%2C-93.1877096&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=ta274DByYyCTMP8sYf3mroEbRdk=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9099686,
+            "longitude": -93.1877096
+          }
+        },
+        "formattedStreetLine": "1045 Cleveland Ave S",
+        "city": "Saint Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "4c1afb90-e5be-43e5-b7a9-c357b1652e27",
+      "bedRange": {
+        "min": 2,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 850,
+        "max": 850
+      },
+      "rentPriceRange": {
+        "min": 1450,
+        "max": 1450
+      },
+      "lastUpdated": "2025-06-18T15:12:06.710604Z",
+      "numAvailableUnits": 1,
+      "status": 1,
+      "propertyName": "Highland Terrace",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 19.0,
+      "freshnessTimestamp": "2025-04-16T13:04:58.494Z",
+      "description": "The Highland Terrace Apartments is conveniently located on Cleveland Avenue in the Highland Park Neighborhood, just blocks from Ford Parkway and shops, restaurants, and the River hiking trails. The bu",
+      "revenuePerLead": 6.0,
+      "feedSourceInternalId": "lc5901716",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "9529522095",
+      "mobileWebPhone": "9529522095",
+      "mobileAppPhone": "9529522095",
+      "feedSource": "RentPath",
+      "feedExternalId": "4cx6nrf9znkjz",
+      "leadRequiresMoveInDate": false
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "195166247",
+      "url": "/MN/St-Paul/The-Finn/apartment/195166247",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 0,
+            "version": "4"
+          },
+          {
+            "startPos": 1,
+            "endPos": 21,
+            "version": "3"
+          },
+          {
+            "startPos": 22,
+            "endPos": 57,
+            "version": "2"
+          },
+          {
+            "startPos": 58,
+            "endPos": 67,
+            "version": "1"
+          }
+        ]
+      },
+      "sashes": [
+        {
+          "sashTypeId": 31,
+          "sashTypeName": "3D Walkthrough",
+          "sashTypeColor": "#7556F2"
+        }
+      ],
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9191177%2C-93.1877918&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=FdNfpqNQ02hTzGxMnc8OcjZFpms=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9191177,
+            "longitude": -93.1877918
+          }
+        },
+        "formattedStreetLine": "725 Cleveland Ave S",
+        "city": "St Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "8630a8d7-c75b-4a8f-8ade-1d9ea957cfe0",
+      "bedRange": {
+        "min": 0,
+        "max": 0
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 506,
+        "max": 506
+      },
+      "rentPriceRange": {
+        "min": 1690,
+        "max": 1690
+      },
+      "lastUpdated": "2025-06-21T07:52:36.780768Z",
+      "numAvailableUnits": 1,
+      "status": 1,
+      "propertyName": "The Finn",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 20.0,
+      "freshnessTimestamp": "2025-06-14T04:54:14.065Z",
+      "description": "Additional fees for this community include:Non-Optional FeesApplication fee: $50/adultNon-refundable administrative fee: Management charges a $150, non-refundable, administrative fee that is related t",
+      "revenuePerLead": 7.0,
+      "feedSourceInternalId": "lc5914893",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "9529522267",
+      "mobileWebPhone": "9529522267",
+      "mobileAppPhone": "9529522267",
+      "feedSource": "RentPath",
+      "feedExternalId": "1hwxgpd9u0eaq",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "9525204253"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "51119919",
+      "url": "/MN/Saint-Paul/Tower-Apts-1603/apartment/51119919",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 4,
+            "version": "2"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9181906%2C-93.1679909&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=IwORUNjTnanCILMX6ZeKTBS6D-U=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9181906,
+            "longitude": -93.1679909
+          }
+        },
+        "formattedStreetLine": "1603 Ford Pkwy",
+        "city": "Saint Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "8749870a-a327-48d8-b1ab-7867296a069d",
+      "bedRange": {
+        "min": 1,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 575,
+        "max": 875
+      },
+      "lastUpdated": "2025-06-19T16:53:01.083107Z",
+      "numAvailableUnits": 0,
+      "status": 1,
+      "propertyName": "Tower Apts (1603)",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 21.0,
+      "freshnessTimestamp": "2025-06-07T20:00:01.103Z",
+      "revenuePerLead": 6.0,
+      "feedSourceInternalId": "lc5894576",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "7634653138",
+      "mobileWebPhone": "7634653138",
+      "mobileAppPhone": "7634653138",
+      "feedSource": "RentPath",
+      "feedExternalId": "22jn8m6sv1988",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "7634657865"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "51116880",
+      "url": "/MN/Saint-Paul/Rankin-Apartments/apartment/51116880",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 14,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9059475%2C-93.1594514&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=mAIywyAbk_3mqtQuOWr_VBUx8gA=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9059475,
+            "longitude": -93.1594514
+          }
+        },
+        "formattedStreetLine": "1115 Rankin St",
+        "city": "Saint Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "7c6f2ec4-61f6-4860-9025-9661d1f034a5",
+      "bedRange": {
+        "min": 1,
+        "max": 1
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 570,
+        "max": 570
+      },
+      "rentPriceRange": {
+        "min": 975,
+        "max": 975
+      },
+      "lastUpdated": "2025-06-18T14:51:57.403088Z",
+      "numAvailableUnits": 1,
+      "status": 2,
+      "propertyName": "Rankin Apartments",
+      "dateAvailable": "2025-08-01T00:00:00Z",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 22.0,
+      "freshnessTimestamp": "2025-06-13T16:58:57.122Z",
+      "description": "Rankin Apartments sit on the south end of the well desired Highland Park neighborhood. Just a couple blocks away from the many parks along the Mississippi River, and a short drive to downtown St. Paul",
+      "revenuePerLead": 6.0,
+      "feedSourceInternalId": "lc6124258",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "7634656240",
+      "mobileWebPhone": "7634656240",
+      "mobileAppPhone": "7634656240",
+      "feedSource": "RentPath",
+      "feedExternalId": "48f1h4q3x3b1",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "6516215729"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "51119918",
+      "url": "/MN/Saint-Paul/Tower-Apts-1615/apartment/51119918",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 7,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9181805%2C-93.1686923&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=57RBYFAuxZ8sPl3j7Z1ea5GPtcM=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9181805,
+            "longitude": -93.1686923
+          }
+        },
+        "formattedStreetLine": "1615 Ford Pkwy",
+        "city": "Saint Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "1768d1c7-56c4-4ac1-b75f-853949cd07dd",
+      "bedRange": {
+        "min": 1,
+        "max": 1
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 630,
+        "max": 875
+      },
+      "lastUpdated": "2025-06-18T15:00:56.333291Z",
+      "numAvailableUnits": 0,
+      "status": 1,
+      "propertyName": "Tower Apts (1615)",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 23.0,
+      "freshnessTimestamp": "2025-05-23T20:05:18.147Z",
+      "revenuePerLead": 6.0,
+      "feedSourceInternalId": "lc6083717",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "7633639288",
+      "mobileWebPhone": "7633639288",
+      "mobileAppPhone": "7633639288",
+      "feedSource": "RentPath",
+      "feedExternalId": "1h4cv72v7phvn",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "7633638405"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "195166508",
+      "url": "/MN/St-Paul/Montcalm-Luxury-Apartments/apartment/195166508",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 0,
+            "version": "4"
+          },
+          {
+            "startPos": 1,
+            "endPos": 2,
+            "version": "3"
+          },
+          {
+            "startPos": 3,
+            "endPos": 10,
+            "version": "2"
+          },
+          {
+            "startPos": 11,
+            "endPos": 17,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9257043%2C-93.1474164&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=4ah9pW0TTiHtnlc7SfEhV3CKnzg=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9257043,
+            "longitude": -93.1474164
+          }
+        },
+        "formattedStreetLine": "535 Lexington Pkwy S",
+        "city": "St Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "2aa2f049-76b1-4d5d-aa09-afbe14689756",
+      "bedRange": {
+        "min": 2,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 2.0,
+        "max": 2.0
+      },
+      "sqftRange": {
+        "min": 1295,
+        "max": 1295
+      },
+      "rentPriceRange": {
+        "min": 1835,
+        "max": 1935
+      },
+      "lastUpdated": "2025-05-22T12:51:48.578310Z",
+      "numAvailableUnits": 0,
+      "status": 1,
+      "propertyName": "Montcalm Luxury Apartments",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 24.0,
+      "freshnessTimestamp": "2025-05-10T12:43:30.297Z",
+      "description": "At Montcalm apartments we offer more than an apartment. We offer a sense of community. The comfort of dependable service you can trust. The knowledge that we are not happy until you are happy.   Nestl",
+      "revenuePerLead": 11.0,
+      "feedSourceInternalId": "lc5925228",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "7632028485",
+      "mobileWebPhone": "7632028485",
+      "mobileAppPhone": "7632028485",
+      "feedSource": "RentPath",
+      "feedExternalId": "1zdg1pn83cenc",
+      "leadRequiresMoveInDate": false
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "177405730",
+      "url": "/MN/St-Paul/Davern-Park-Apartments/apartment/177405730",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 1,
+            "version": "3"
+          },
+          {
+            "startPos": 2,
+            "endPos": 56,
+            "version": "2"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9039439%2C-93.1684355&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=EZf4F3PlNHZKyKo1FCMAbHToYbs=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9039439,
+            "longitude": -93.1684355
+          }
+        },
+        "formattedStreetLine": "1517 St Paul Ave",
+        "city": "St Paul",
+        "state": "MN",
+        "zip": "55116",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "140b4e92-27d7-4490-9bf2-9fb3ed551247",
+      "bedRange": {
+        "min": 1,
+        "max": 1
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 750,
+        "max": 750
+      },
+      "rentPriceRange": {
+        "min": 1005,
+        "max": 1005
+      },
+      "lastUpdated": "2025-05-22T12:57:24.131047Z",
+      "numAvailableUnits": 0,
+      "status": 1,
+      "propertyName": "Davern Park Apartments",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 25.0,
+      "freshnessTimestamp": "2025-05-10T12:34:38.942Z",
+      "description": "Fantastic Highland Park location, located on bus line, close to shopping and restaurants. You will find a very caring staff in our on-site rental office as well as our on-site maintenance and caretake",
+      "revenuePerLead": 11.0,
+      "feedSourceInternalId": "lc5962378",
+      "isCommercialPaid": true,
+      "feedOriginalSource": "ZILLOW",
+      "desktopPhone": "9526664807",
+      "mobileWebPhone": "9526664807",
+      "mobileAppPhone": "9526664807",
+      "feedSource": "RentPath",
+      "feedExternalId": "5amgezgkuqupt",
+      "leadRequiresMoveInDate": false
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "196043961",
+      "url": "/MN/St-Paul/751-Mount-Curve-Blvd-55116/unit-10/apartment/196043961",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 4,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9187743%2C-93.1959829&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=BCQP8By6b1Xl75eFMB68tJTzwQo=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9187743,
+            "longitude": -93.1959829
+          }
+        },
+        "formattedStreetLine": "751 Mount Curve Blvd Unit 10",
+        "city": "St Paul",
+        "state": "MN",
+        "zip": "55116",
+        "unitNumber": "Unit 10",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "26adaeeb-a9e4-4ced-a98d-2e08c5f3fc83",
+      "bedRange": {
+        "min": 2,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 900,
+        "max": 900
+      },
+      "rentPriceRange": {
+        "min": 1239,
+        "max": 1239
+      },
+      "lastUpdated": "2025-06-11T17:35:49.201616Z",
+      "numAvailableUnits": 1,
+      "status": 1,
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 26.0,
+      "freshnessTimestamp": "2025-06-11T11:59:39.532Z",
+      "feedSourceInternalId": "lv2258202867",
+      "isCommercialPaid": false,
+      "feedOriginalSource": "LOVELY",
+      "desktopPhone": "6128744410",
+      "mobileWebPhone": "6128744410",
+      "mobileAppPhone": "6128744410",
+      "feedSource": "APPFOLIO_FREE",
+      "feedExternalId": "19646236-59f4-11ed-bee5-121b4c23fad9_332fdb21-59f4-11ed-bee5-121b4c23fad9",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "6128744410"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "189670806",
+      "url": "/MN/St-Paul/1344-Saint-Paul-Ave-55116/unit-8/apartment/189670806",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 7,
+            "version": "3"
+          },
+          {
+            "startPos": 8,
+            "endPos": 9,
+            "version": "2"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9045484%2C-93.1755733&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=Q_9ZP3AUi7aZgPHgOA78MSjJQnc=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9045484,
+            "longitude": -93.1755733
+          }
+        },
+        "formattedStreetLine": "1344 Saint Paul Ave Unit 8",
+        "city": "St Paul",
+        "state": "MN",
+        "zip": "55116",
+        "unitNumber": "Unit 8",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "14d35541-893f-4b97-ba60-ec1a18a6d8b0",
+      "bedRange": {
+        "min": 1,
+        "max": 1
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 750,
+        "max": 750
+      },
+      "rentPriceRange": {
+        "min": 1050,
+        "max": 1050
+      },
+      "lastUpdated": "2025-06-06T11:26:50.876776Z",
+      "numAvailableUnits": 0,
+      "status": 2,
+      "dateAvailable": "2025-08-01T00:00:00Z",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 27.0,
+      "freshnessTimestamp": "2025-05-22T11:30:22.892Z",
+      "description": "Top floor unit, with natural light. The kitchen that is great to cook in with a window for light, many nice oak cabinets and good counter space. Bar/counter open to living room. Large living room with",
+      "feedSourceInternalId": "lv206885079",
+      "isCommercialPaid": false,
+      "feedOriginalSource": "LOVELY",
+      "desktopPhone": "6516992990",
+      "mobileWebPhone": "6516992990",
+      "mobileAppPhone": "6516992990",
+      "feedSource": "BUILDIUM",
+      "feedExternalId": "217340_133567",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "6516992990"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "195432013",
+      "url": "/MN/St-Paul/638-Snelling-Ave-S-55116/unit-642-8/apartment/195432013",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 8,
+            "version": "2"
+          },
+          {
+            "startPos": 9,
+            "endPos": 9,
+            "version": "1"
+          }
+        ]
+      },
+      "sashes": [
+        {
+          "sashTypeId": 7,
+          "sashTypeName": "New",
+          "sashTypeColor": "#2E7E36",
+          "timeOnRedfin": "141362237"
+        }
+      ],
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9222094%2C-93.1666403&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=4IbckG02kG2LgoKTRXoETcW61pE=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9222094,
+            "longitude": -93.1666403
+          }
+        },
+        "formattedStreetLine": "638 Snelling Ave S Unit 642-8",
+        "city": "St Paul",
+        "state": "MN",
+        "zip": "55116",
+        "unitNumber": "Unit 642-8",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "17120577-ffb9-434b-97ba-15127c4248a5",
+      "bedRange": {
+        "min": 1,
+        "max": 1
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 506,
+        "max": 506
+      },
+      "rentPriceRange": {
+        "min": 999,
+        "max": 999
+      },
+      "lastUpdated": "2025-06-22T11:24:46.846225Z",
+      "numAvailableUnits": 0,
+      "status": 2,
+      "dateAvailable": "2025-08-01T00:00:00Z",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 28.0,
+      "freshnessTimestamp": "2025-06-22T11:24:45.076Z",
+      "feedSourceInternalId": "lv2121088462",
+      "isCommercialPaid": false,
+      "feedOriginalSource": "LOVELY",
+      "desktopPhone": "6512392543",
+      "mobileWebPhone": "6512392543",
+      "mobileAppPhone": "6512392543",
+      "feedSource": "APPFOLIO_FREE",
+      "feedExternalId": "4a6d2f35-2020-11ea-b721-1866da9eda96_c1671cbf-21c3-11ea-b721-1866da9eda96",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "6512392543"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "192332160",
+      "url": "/MN/St-Paul/1597-Hartford-Ave-55116/unit-MAIN/apartment/192332160",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 19,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9236136%2C-93.1678451&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=zfvrC7qsoAmoLRoNUoX2i6figVI=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9236136,
+            "longitude": -93.1678451
+          }
+        },
+        "formattedStreetLine": "1597 Hartford Ave Unit MAIN",
+        "city": "St Paul",
+        "state": "MN",
+        "zip": "55116",
+        "unitNumber": "Unit MAIN",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "b847885f-dbaa-4954-85f4-eaee6486f5fc",
+      "bedRange": {
+        "min": 2,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 650,
+        "max": 650
+      },
+      "rentPriceRange": {
+        "min": 1800,
+        "max": 1800
+      },
+      "lastUpdated": "2025-05-15T11:15:54.166430Z",
+      "numAvailableUnits": 1,
+      "status": 1,
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 29.0,
+      "freshnessTimestamp": "2025-01-23T23:27:08.349Z",
+      "description": "Welcome to Highland Park in Saint Paul, MN! Situated just between the downtown areas of Minneapolis and Saint Paul with easy access to the Mall of America, airport, and state fair grounds! Also near S",
+      "feedSourceInternalId": "lv1543246441",
+      "isCommercialPaid": false,
+      "feedOriginalSource": "LOVELY",
+      "desktopPhone": "6513030019",
+      "mobileWebPhone": "6513030019",
+      "mobileAppPhone": "6513030019",
+      "feedSource": "BUILDIUM",
+      "feedExternalId": "323307_437456",
+      "leadRequiresMoveInDate": false
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "193782685",
+      "url": "/MN/St-Paul/2040-W-Saunders-Ave-55116/unit-202/apartment/193782685",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 1,
+            "version": "2"
+          },
+          {
+            "startPos": 2,
+            "endPos": 15,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9132099%2C-93.1865257&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=qTqcAhoT9kJ7NHvPaATCZI6qmOE=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9132099,
+            "longitude": -93.1865257
+          }
+        },
+        "formattedStreetLine": "2040 W Saunders Ave Unit 202",
+        "city": "St Paul",
+        "state": "MN",
+        "zip": "55116",
+        "unitNumber": "Unit 202",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "f66efe4c-5a81-4b52-b614-82ab24541f44",
+      "bedRange": {
+        "min": 1,
+        "max": 1
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 598,
+        "max": 598
+      },
+      "rentPriceRange": {
+        "min": 962,
+        "max": 962
+      },
+      "lastUpdated": "2025-06-21T11:15:00.912055Z",
+      "numAvailableUnits": 1,
+      "status": 1,
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 30.0,
+      "freshnessTimestamp": "2025-06-21T11:14:43.354Z",
+      "feedSourceInternalId": "lv1772892805",
+      "isCommercialPaid": false,
+      "feedOriginalSource": "LOVELY",
+      "desktopPhone": "9523035982",
+      "mobileWebPhone": "9523035982",
+      "mobileAppPhone": "9523035982",
+      "feedSource": "APPFOLIO_FREE",
+      "feedExternalId": "319d5af5-8fce-11ef-be47-0e89a8475669_7f430ef8-8fea-11ef-be47-0e89a8475669",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "9523035982"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "193953738",
+      "url": "/MN/St-Paul/885-Saint-Paul-Ave-55116/unit-7/apartment/193953738",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 14,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9141482%2C-93.1863802&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=CQBY4SUYUY5EmEb0E-hUR-1NswE=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9141482,
+            "longitude": -93.1863802
+          }
+        },
+        "formattedStreetLine": "885 Saint Paul Ave Unit 7",
+        "city": "St Paul",
+        "state": "MN",
+        "zip": "55116",
+        "unitNumber": "Unit 7",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "2042ee74-b8ae-4a6d-bf5f-63c4479c7e89",
+      "bedRange": {
+        "min": 0,
+        "max": 0
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 450,
+        "max": 450
+      },
+      "rentPriceRange": {
+        "min": 950,
+        "max": 950
+      },
+      "lastUpdated": "2025-06-15T11:19:44.896571Z",
+      "numAvailableUnits": 1,
+      "status": 1,
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 31.0,
+      "freshnessTimestamp": "2025-06-15T11:19:42.812Z",
+      "description": "This charming studio apartment features a smart layout designed for comfort and convenience. Features: Spacious Main Room: Bright and airy with two large windows, a built-in A/C unit, and plenty of sp",
+      "feedSourceInternalId": "lv1804316593",
+      "isCommercialPaid": false,
+      "feedOriginalSource": "LOVELY",
+      "desktopPhone": "6516994303",
+      "mobileWebPhone": "6516994303",
+      "mobileAppPhone": "6516994303",
+      "feedSource": "TURBOTENANT",
+      "feedExternalId": "bc6fb09e339bd6c9677f7945d457518d",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "6516994303"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "195644446",
+      "url": "/MN/St-Paul/499-Snelling-Ave-S-55116/unit-201/apartment/195644446",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 9,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9263989%2C-93.1675873&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=eljYnBrBOrWw9q1mZs65mjQm_Ho=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9263989,
+            "longitude": -93.1675873
+          }
+        },
+        "formattedStreetLine": "499 Snelling Ave S Unit 201",
+        "city": "St Paul",
+        "state": "MN",
+        "zip": "55116",
+        "unitNumber": "Unit 201",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "568bc6d3-dfea-4d4a-89a3-1831fdb6383d",
+      "bedRange": {
+        "min": 1,
+        "max": 1
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 600,
+        "max": 600
+      },
+      "rentPriceRange": {
+        "min": 981,
+        "max": 981
+      },
+      "lastUpdated": "2025-06-01T11:42:38.847105Z",
+      "numAvailableUnits": 1,
+      "status": 1,
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 32.0,
+      "freshnessTimestamp": "2025-06-01T11:42:35.995Z",
+      "feedSourceInternalId": "lv2179353509",
+      "isCommercialPaid": false,
+      "feedOriginalSource": "LOVELY",
+      "desktopPhone": "6128744410",
+      "mobileWebPhone": "6128744410",
+      "mobileAppPhone": "6128744410",
+      "feedSource": "APPFOLIO_FREE",
+      "feedExternalId": "248ea4f1-59f4-11ed-bee5-121b4c23fad9_7f982b94-59f4-11ed-bee5-121b4c23fad9",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "6128744410"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "194876239",
+      "url": "/MN/St-Paul/1936-Ford-Pkwy-55116/unit-105/apartment/194876239",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 10,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9176463%2C-93.1821757&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=M4Jz1HBJnq5gFSwG0gnxz8bX1wY=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9176463,
+            "longitude": -93.1821757
+          }
+        },
+        "formattedStreetLine": "1936 Ford Pkwy Unit 105",
+        "city": "St Paul",
+        "state": "MN",
+        "zip": "55116",
+        "unitNumber": "Unit 105",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "17a1f96a-1c39-4741-9dde-4639e000328f",
+      "bedRange": {
+        "min": 0,
+        "max": 0
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 380,
+        "max": 380
+      },
+      "rentPriceRange": {
+        "min": 938,
+        "max": 938
+      },
+      "lastUpdated": "2025-05-15T11:25:09.394331Z",
+      "numAvailableUnits": 1,
+      "status": 1,
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 33.0,
+      "freshnessTimestamp": "2025-05-01T11:33:08.313Z",
+      "feedSourceInternalId": "lv2004566721",
+      "isCommercialPaid": false,
+      "feedOriginalSource": "LOVELY",
+      "desktopPhone": "9524529254",
+      "mobileWebPhone": "9524529254",
+      "mobileAppPhone": "9524529254",
+      "feedSource": "APPFOLIO_FREE",
+      "feedExternalId": "b300ca82-5939-11ed-b6ee-02f960a3b4d9_d2a02217-5939-11ed-b6ee-02f960a3b4d9",
+      "leadRequiresMoveInDate": false
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "194923054",
+      "url": "/MN/St-Paul/639-Cleveland-Ave-S-55116/unit-1-1/apartment/194923054",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 3,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9222512%2C-93.187709&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=jZ4Cc3nXpJok0_CTdcTp-fHCU5Y=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9222512,
+            "longitude": -93.187709
+          }
+        },
+        "formattedStreetLine": "639 Cleveland Ave S Unit 1 1",
+        "city": "St Paul",
+        "state": "MN",
+        "zip": "55116",
+        "unitNumber": "Unit 1 1",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "7ddf2f25-c951-4c0e-b691-a408d5d28c70",
+      "bedRange": {
+        "min": 4,
+        "max": 4
+      },
+      "bathRange": {
+        "min": 2.0,
+        "max": 2.0
+      },
+      "rentPriceRange": {
+        "min": 675,
+        "max": 675
+      },
+      "lastUpdated": "2025-05-25T11:21:29.404958Z",
+      "numAvailableUnits": 1,
+      "status": 1,
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 34.0,
+      "freshnessTimestamp": "2025-05-25T11:21:27.498Z",
+      "feedSourceInternalId": "lv2009228603",
+      "isCommercialPaid": false,
+      "feedOriginalSource": "LOVELY",
+      "desktopPhone": "6122132230",
+      "mobileWebPhone": "6122132230",
+      "mobileAppPhone": "6122132230",
+      "feedSource": "APPFOLIO_FREE",
+      "feedExternalId": "950a1bcf-a0a3-11e8-9666-1866da72ac10_030389e4-f477-11e9-90f6-b083fed11cf0",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "6122132230"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "195161657",
+      "url": "/MN/St-Paul/647-S-Cleveland-Ave-55116/unit-4/apartment/195161657",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 10,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9220092%2C-93.18768&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=DHZw2xIZK4EypVr_hdWAi14RApg=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9220092,
+            "longitude": -93.18768
+          }
+        },
+        "formattedStreetLine": "647 S Cleveland Ave Unit 4",
+        "city": "St Paul",
+        "state": "MN",
+        "zip": "55116",
+        "unitNumber": "Unit 4",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "3c2ea65b-8154-4a49-a02a-8cefdcc124d5",
+      "bedRange": {
+        "min": 1,
+        "max": 1
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 500,
+        "max": 500
+      },
+      "rentPriceRange": {
+        "min": 1099,
+        "max": 1099
+      },
+      "lastUpdated": "2025-06-01T11:26:27.294425Z",
+      "numAvailableUnits": 1,
+      "status": 1,
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 35.0,
+      "freshnessTimestamp": "2025-06-01T11:26:24.843Z",
+      "feedSourceInternalId": "lv2059166194",
+      "isCommercialPaid": false,
+      "feedOriginalSource": "LOVELY",
+      "desktopPhone": "6512392543",
+      "mobileWebPhone": "6512392543",
+      "mobileAppPhone": "6512392543",
+      "feedSource": "APPFOLIO_FREE",
+      "feedExternalId": "dc3651d6-b1bf-11ef-8125-064d511af0f3_e8ee4e9a-b1bf-11ef-8125-064d511af0f3",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "6512392543"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "195961017",
+      "url": "/MN/St-Paul/1344-Saint-Paul-Ave-55116/unit-14/apartment/195961017",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 13,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9045266%2C-93.1755367&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=pWt9fwF8HJhkkt_iOW7sL_g6Seo=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9045266,
+            "longitude": -93.1755367
+          }
+        },
+        "formattedStreetLine": "1344 Saint Paul Ave Unit 14",
+        "city": "St Paul",
+        "state": "MN",
+        "zip": "55116",
+        "unitNumber": "Unit 14",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "cd82cd2c-e5d2-43fc-8928-5ef075832263",
+      "bedRange": {
+        "min": 2,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 900,
+        "max": 900
+      },
+      "rentPriceRange": {
+        "min": 1395,
+        "max": 1395
+      },
+      "lastUpdated": "2025-06-04T11:27:52.003888Z",
+      "numAvailableUnits": 0,
+      "status": 2,
+      "dateAvailable": "2025-07-01T00:00:00Z",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 36.0,
+      "freshnessTimestamp": "2025-06-01T11:29:29.957Z",
+      "description": "Come home to a lovely apartment home in an exceptionally clean and quiet building. Security building, nonsmoking, 24 hour maintenance. Kitchen is great to cook in with a window for light, many nice oa",
+      "feedSourceInternalId": "lv209626769",
+      "isCommercialPaid": false,
+      "feedOriginalSource": "LOVELY",
+      "desktopPhone": "6516992990",
+      "mobileWebPhone": "6516992990",
+      "mobileAppPhone": "6516992990",
+      "feedSource": "BUILDIUM",
+      "feedExternalId": "217340_133572",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "6516992990"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "51102388",
+      "url": "/MN/Saint-Paul/1164-Randolph-Ave-55105/home/51102388",
+      "propertyType": 4,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 10,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9266957%2C-93.1492601&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=H4a7UMi8-23-3N5xa0JOvj0MWso=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9266957,
+            "longitude": -93.1492601
+          }
+        },
+        "formattedStreetLine": "1164 Randolph Ave",
+        "city": "Saint Paul",
+        "state": "MN",
+        "zip": "55105",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "fcbd743a-8d05-4769-b27d-229d53ddfedb",
+      "bedRange": {
+        "min": 3,
+        "max": 3
+      },
+      "bathRange": {
+        "min": 1.5,
+        "max": 1.5
+      },
+      "sqftRange": {
+        "min": 1300,
+        "max": 1300
+      },
+      "rentPriceRange": {
+        "min": 1985,
+        "max": 1985
+      },
+      "lastUpdated": "2025-06-18T13:56:00.715045Z",
+      "numAvailableUnits": 1,
+      "status": 1,
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 37.0,
+      "freshnessTimestamp": "2025-05-16T02:27:16.610Z",
+      "description": "Can be furnished for an extra fee! Comes with parking pad, garage may be negotiable. Wonderfully updated Mac Groveland home. This charming half-duplex is just a stone's throw away from Trader Joe's, o",
+      "feedSourceInternalId": "lv2197666130",
+      "isCommercialPaid": false,
+      "feedOriginalSource": "LOVELY",
+      "desktopPhone": "6124160482",
+      "mobileWebPhone": "6124160482",
+      "mobileAppPhone": "6124160482",
+      "feedSource": "TENANTTURNER2",
+      "feedExternalId": "611492",
+      "leadRequiresMoveInDate": false
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "195609299",
+      "url": "/MN/St-Paul/1344-Saint-Paul-Ave-55116/unit-16/apartment/195609299",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 12,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9045266%2C-93.1755367&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=pWt9fwF8HJhkkt_iOW7sL_g6Seo=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9045266,
+            "longitude": -93.1755367
+          }
+        },
+        "formattedStreetLine": "1344 Saint Paul Ave Unit 16",
+        "city": "St Paul",
+        "state": "MN",
+        "zip": "55116",
+        "unitNumber": "Unit 16",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "50be9080-2a7f-4b10-99da-e099b16ca7de",
+      "bedRange": {
+        "min": 1,
+        "max": 1
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 695,
+        "max": 695
+      },
+      "rentPriceRange": {
+        "min": 1110,
+        "max": 1110
+      },
+      "lastUpdated": "2025-06-06T12:06:47.268765Z",
+      "numAvailableUnits": 1,
+      "status": 1,
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 38.0,
+      "freshnessTimestamp": "2025-05-06T09:34:38.523Z",
+      "description": "Top floor unit, with natural light. The kitchen that is great to cook in with a window for light, many nice oak cabinets and good counter space. Bar/counter open to living room. Large living room with",
+      "feedSourceInternalId": "lv661821253",
+      "isCommercialPaid": false,
+      "feedOriginalSource": "LOVELY",
+      "desktopPhone": "6516992990",
+      "mobileWebPhone": "6516992990",
+      "mobileAppPhone": "6516992990",
+      "feedSource": "BUILDIUM",
+      "feedExternalId": "217340_133574",
+      "leadRequiresMoveInDate": false,
+      "paidPhone": "6516992990"
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "195645286",
+      "url": "/MN/St-Paul/1825-Ford-Pkwy-55116/unit-35-101/apartment/195645286",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 5,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9181886%2C-93.1774669&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=sFzVcEWVtVxlNHJrBSL5SkWl51Y=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9181886,
+            "longitude": -93.1774669
+          }
+        },
+        "formattedStreetLine": "1825 Ford Pkwy Unit 35-101",
+        "city": "St Paul",
+        "state": "MN",
+        "zip": "55116",
+        "unitNumber": "Unit 35-101",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "d62190b8-2a86-4f63-ab15-0f6df6e6daec",
+      "bedRange": {
+        "min": 1,
+        "max": 1
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 550,
+        "max": 550
+      },
+      "rentPriceRange": {
+        "min": 1011,
+        "max": 1011
+      },
+      "lastUpdated": "2025-05-15T11:55:17.902326Z",
+      "numAvailableUnits": 0,
+      "status": 2,
+      "dateAvailable": "2025-07-01T00:00:00Z",
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 39.0,
+      "freshnessTimestamp": "2025-05-08T09:42:15.002Z",
+      "feedSourceInternalId": "lv2179413694",
+      "isCommercialPaid": false,
+      "feedOriginalSource": "LOVELY",
+      "desktopPhone": "6128744410",
+      "mobileWebPhone": "6128744410",
+      "mobileAppPhone": "6128744410",
+      "feedSource": "APPFOLIO_FREE",
+      "feedExternalId": "1876af7f-59f4-11ed-bee5-121b4c23fad9_52ae1f2e-59f4-11ed-bee5-121b4c23fad9",
+      "leadRequiresMoveInDate": false
+    }
+  },
+  {
+    "homeData": {
+      "propertyId": "195797298",
+      "url": "/MN/St-Paul/760-Mount-Curve-Blvd-55116/unit-405/apartment/195797298",
+      "propertyType": 5,
+      "photosInfo": {
+        "photoRanges": [
+          {
+            "startPos": 0,
+            "endPos": 11,
+            "version": "1"
+          }
+        ]
+      },
+      "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=44.9185776%2C-93.195264&channel=seekers-search_map&size=574x430&format=jpg&scale=2&zoom=11&client=gme-redfin&signature=1Ry5-neKX9gQuIbd1f8wyR25jFM=",
+      "hasAttFiber": false,
+      "addressInfo": {
+        "centroid": {
+          "centroid": {
+            "latitude": 44.9185776,
+            "longitude": -93.195264
+          }
+        },
+        "formattedStreetLine": "760 Mount Curve Blvd Unit 405",
+        "city": "St Paul",
+        "state": "MN",
+        "zip": "55116",
+        "unitNumber": "Unit 405",
+        "streetlineDisplayLevel": 1,
+        "unitNumberDisplayLevel": 1,
+        "locationDisplayLevel": 1,
+        "countryCode": 1,
+        "postalCodeDisplayLevel": 1
+      }
+    },
+    "rentalExtension": {
+      "rentalId": "23a0e183-f870-47d5-9a5d-5c56be3216d9",
+      "bedRange": {
+        "min": 2,
+        "max": 2
+      },
+      "bathRange": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "sqftRange": {
+        "min": 900,
+        "max": 900
+      },
+      "rentPriceRange": {
+        "min": 1395,
+        "max": 1395
+      },
+      "lastUpdated": "2025-05-15T12:00:46.050087Z",
+      "numAvailableUnits": 1,
+      "status": 1,
+      "rentalDetailsPageType": 6,
+      "searchRankScore": 40.0,
+      "freshnessTimestamp": "2025-05-13T21:26:45.119Z",
+      "feedSourceInternalId": "lv2192520829",
+      "isCommercialPaid": false,
+      "feedOriginalSource": "LOVELY",
+      "desktopPhone": "6512392543",
+      "mobileWebPhone": "6512392543",
+      "mobileAppPhone": "6512392543",
+      "feedSource": "APPFOLIO_FREE",
+      "feedExternalId": "caaeef30-b3dc-11ef-8125-064d511af0f3_4c250094-b3dd-11ef-8125-064d511af0f3",
+      "leadRequiresMoveInDate": false
+    }
+  }
+]

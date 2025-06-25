@@ -22,6 +22,7 @@ out.zip
 
 # production
 /build
+/test
 
 # misc
 .DS_Store

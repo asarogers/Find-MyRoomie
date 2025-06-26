@@ -35,6 +35,7 @@ export default function DownloadAppPage() {
   const handleJoinEarlyAdopters = () => {
     // Add your early adopter signup logic here
     console.log('User wants to join early adopters for:', selectedPlatform);
+    window.location.href = "https://forms.gle/qJQXtqEgHb45Y2Y8A";
     handleClose();
   };
 

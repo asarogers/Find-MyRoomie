@@ -1,43 +1,198 @@
-# Optimized robots.txt for FindMyRoomy.com
-# Updated: June 20, 2025
+# Robots.txt - Google-Only Access Configuration
+# Last Updated: June 26, 2025
+# This file strictly allows only Googlebot while blocking all other crawlers
 
-User-agent: *
+# === GOOGLEBOT - FULL ACCESS ===
+User-agent: Googlebot
 Allow: /
-
-# Block admin and internal pages
+# Allow Google to crawl clean URLs without parameters
+Allow: /*?
+# Block sensitive/internal paths
 Disallow: /admin/
-Disallow: /dashboard/
-Disallow: /api/
-Disallow: /auth/
-Disallow: /_next/
 Disallow: /private/
-
-# Block duplicate content from URL parameters
-Disallow: /*?sort=*&page=*
-Disallow: /*?*&sort=*
-Disallow: /*?utm_*
-
-# Allow important filter parameters
-Allow: /*?pets=*
-Allow: /*?budget=*
-Allow: /*?lifestyle=*
-Allow: /*?move-in=*
-
-# Crawl delay to prevent server overload
+Disallow: /internal/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/uploads/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /temp/
+Disallow: /cache/
+Disallow: /logs/
+Disallow: /.git/
+Disallow: /.env
+Disallow: /config/
+Disallow: /database/
+Disallow: /backup/
+# Block common parameter-based duplicate content
+Disallow: /*?sort=
+Disallow: /*?filter=
+Disallow: /*?page=
+Disallow: /*?ref=
+Disallow: /*?utm_
+Disallow: /*?fbclid=
+Disallow: /*?gclid=
+Disallow: /*?sessionid=
+Disallow: /*?PHPSESSID=
+# Block search result pages that create infinite crawl loops
+Disallow: /search?
+Disallow: /search/
+Disallow: /*?q=
+Disallow: /*?query=
+# Block printer-friendly and mobile versions if they create duplicates
+Disallow: /*?print=
+Disallow: /*?mobile=
+Disallow: /print/
+# Crawl delay for Googlebot (optional - remove if not needed)
 Crawl-delay: 1
 
-# Sitemap references
-Sitemap: https://findmyroomy.com/sitemap.xml
-Sitemap: https://findmyroomy.com/sitemap-cities.xml
-Sitemap: https://findmyroomy.com/sitemap-roommates.xml
-Sitemap: https://findmyroomy.com/sitemap-apartments.xml
-
-# Google-specific optimizations
-User-agent: Googlebot
-Crawl-delay: 0
-Allow: /
-
-# Bing-specific optimizations
+# === BINGBOT - FULL ACCESS ===
 User-agent: Bingbot
-Crawl-delay: 2
 Allow: /
+# Block sensitive/internal paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /internal/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/uploads/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /temp/
+Disallow: /cache/
+Disallow: /logs/
+Disallow: /.git/
+Disallow: /.env
+Disallow: /config/
+Disallow: /database/
+Disallow: /backup/
+# Block common parameter-based duplicate content
+Disallow: /*?sort=
+Disallow: /*?filter=
+Disallow: /*?page=
+Disallow: /*?ref=
+Disallow: /*?utm_
+Disallow: /*?fbclid=
+Disallow: /*?gclid=
+Disallow: /*?sessionid=
+Disallow: /*?PHPSESSID=
+# Block search result pages that create infinite crawl loops
+Disallow: /search?
+Disallow: /search/
+Disallow: /*?q=
+Disallow: /*?query=
+# Block printer-friendly and mobile versions if they create duplicates
+Disallow: /*?print=
+Disallow: /*?mobile=
+Disallow: /print/
+# Crawl delay for Bingbot (optional - remove if not needed)
+Crawl-delay: 1
+
+# === BLOCK OTHER MAJOR SEARCH ENGINE BOTS ===
+User-agent: Slurp
+Disallow: /
+
+User-agent: DuckDuckBot
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: YandexBot
+Disallow: /
+
+User-agent: facebookexternalhit
+Disallow: /
+
+# === BLOCK SEO/MARKETING CRAWLERS ===
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SeznamBot
+Disallow: /
+
+User-agent: LinkdexBot
+Disallow: /
+
+User-agent: MegaIndex
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: Screaming Frog SEO Spider
+Disallow: /
+
+# === BLOCK SCRAPING/CONTENT BOTS ===
+User-agent: CCBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: MauiBot
+Disallow: /
+
+User-agent: SiteAuditBot
+Disallow: /
+
+User-agent: Applebot
+Disallow: /
+
+# === BLOCK ARCHIVING BOTS ===
+User-agent: ia_archiver
+Disallow: /
+
+User-agent: archive.org_bot
+Disallow: /
+
+User-agent: Wayback
+Disallow: /
+
+# === BLOCK MALICIOUS/AGGRESSIVE CRAWLERS ===
+User-agent: SurveyBot
+Disallow: /
+
+User-agent: CensysInspect
+Disallow: /
+
+User-agent: masscan
+Disallow: /
+
+User-agent: nmap
+Disallow: /
+
+User-agent: ZmEu
+Disallow: /
+
+User-agent: Nikto
+Disallow: /
+
+# === BLOCK ALL OTHER UNSPECIFIED BOTS ===
+# This wildcard rule blocks any bot not explicitly allowed above
+User-agent: *
+Disallow: /
+
+# === SITEMAP LOCATION ===
+# Make sitemap accessible to Google (and any tools that respect robots.txt)
+Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://yourdomain.com/sitemap_index.xml
+
+# === OPTIONAL: HOST DIRECTIVE ===
+# Uncomment and modify if you need to specify preferred domain
+# Host: https://www.yourdomain.com

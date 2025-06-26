@@ -91,3 +91,4 @@ humans.txt
 # Logs or debug scripts
 scripts/debug*.js
 scripts/devtools*.js
+test/lib/

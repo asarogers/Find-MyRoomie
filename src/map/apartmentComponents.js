@@ -66,7 +66,7 @@ export const ApartmentMarker = ({ apartment, isSelected, onClick }) => (
                 height: 60,
                 borderRadius: "50%",
                 background:
-                  "radial-gradient(circle, rgba(25,118,210,0.2) 0%, transparent 70%)",
+                  "radial-gradient(circle, rgba(255,87,34,0.3) 0%, transparent 70%)",
                 animation: "pulse 2s infinite",
               }}
             />
@@ -76,7 +76,7 @@ export const ApartmentMarker = ({ apartment, isSelected, onClick }) => (
                 width: 40,
                 height: 40,
                 borderRadius: "50%",
-                backgroundColor: "rgba(25,118,210,0.2)",
+                backgroundColor: "rgba(255,87,34,0.2)",
                 animation: "pulse 1.5s infinite 0.5s",
               }}
             />
@@ -85,18 +85,18 @@ export const ApartmentMarker = ({ apartment, isSelected, onClick }) => (
         <Box
           sx={{
             position: "relative",
-            color: isSelected ? "#0f4c81" : "#4682B4",
+            color: isSelected ? "#D84315" : "#FF5722",
             filter: isSelected
-              ? "drop-shadow(0 4px 8px rgba(25,118,210,0.4))"
-              : "drop-shadow(0 2px 4px rgba(25,118,210,0.2))",
+              ? "drop-shadow(0 4px 8px rgba(255,87,34,0.5))"
+              : "drop-shadow(0 2px 4px rgba(255,87,34,0.3))",
             transition: "all 0.3s ease",
           }}
         >
           <MapPin
             size={36}
             strokeWidth={2.5}
-            color="white"
-            fill={isSelected ? "#2E7D32" : "#4CAF50"} // rich green for selected, lighter green for default
+            stroke={isSelected ? "#FFFFFF" : "#FFFFFF"}
+            fill={isSelected ? "#FF5722" : "#FF7043"} // bright orange-red for better visibility
           />
         </Box>
         <Box

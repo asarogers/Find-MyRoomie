@@ -4,8 +4,7 @@ import time
 import json
 import requests
 
-API_KEY = "AIzaSyCQGyJsfj--hDGtbNXIn6r5hKeA2miNZas"  # Ensure billing-enabled key
-
+API_KEY = os.environ.get("GOOGLE_MAPS_API_KEY")
 # Load state codes from JSON file
 with open("./src/map/states.json") as f:
     STATE_CODES = json.load(f)

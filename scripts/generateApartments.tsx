@@ -44,7 +44,7 @@
 //     const filePath = path.join(cityDir, 'index.html');
 //     const html = createHTML(city);
 //     fs.writeFileSync(filePath, html, 'utf-8');
-//     console.log(`Generated: /roommates/${city.slug}/index.html`);
+//     // console.log(`Generated: /roommates/${city.slug}/index.html`);
 //   }
 // }
 

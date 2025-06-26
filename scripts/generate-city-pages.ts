@@ -54,7 +54,7 @@ function generateTSXPages() {
     const pageContent = createPageTSX(city);
     fs.writeFileSync(filePath, pageContent, 'utf-8');
 
-    console.log(`✅ Generated: app/roommates/${city.slug}/page.tsx`);
+    // console.log(`✅ Generated: app/roommates/${city.slug}/page.tsx`);
   }
 }
 

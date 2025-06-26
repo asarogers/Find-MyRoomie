@@ -34,7 +34,7 @@ async function processFile(state, file) {
     if (error) {
       console.error(`❌ Error uploading ${name} (${place_id}):`, error.message);
     } else {
-      console.log(`✅ Uploaded: ${name} → ${state}/${zip_code}`);
+      // console.log(`✅ Uploaded: ${name} → ${state}/${zip_code}`);
     }
   }
 }

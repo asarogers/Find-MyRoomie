@@ -3,7 +3,7 @@ import puppeteer from 'puppeteer';
 import fs from 'fs/promises';
 import path from 'path';
 
-const regionUrl = 'https://www.redfin.com/city/29470/IL/Chicago/apartments-for-rent'; // example city page
+const regionUrl = 'https://www.redfin.com/city/29470/IL/Chicago/apartments-for-rent';
 
 async function scrapeRedfinWithPuppeteer() {
   const browser = await puppeteer.launch({ headless: 'new' });
@@ -29,7 +29,7 @@ async function scrapeRedfinWithPuppeteer() {
   const filename = `redfin-puppeteer-${new Date().toISOString().split('T')[0]}.json`;
   await fs.writeFile(path.join(dir, filename), JSON.stringify(data, null, 2));
 
-  console.log(`✅ Data saved to ${path.join(dir, filename)}`);
+  // console.log(`✅ Data saved to ${path.join(dir, filename)}`);
 }
 
 scrapeRedfinWithPuppeteer().catch(console.error);

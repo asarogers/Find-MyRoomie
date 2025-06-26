@@ -150,16 +150,16 @@ Crawl-delay: 1`;
 
 if (!existsSync("public/robots.txt")) {
   writeFileSync("public/robots.txt", robotsTxt, "utf-8");
-  console.log("✅ robots.txt generated at public/robots.txt");
+  // console.log("✅ robots.txt generated at public/robots.txt");
 }
 
-console.log(`✅ SEO-optimized sitemap generated with ${allRoutes.length} URLs`);
-console.log(`📊 Breakdown:`);
-console.log(`   - Static pages: ${staticRoutes.length}`);
-console.log(`   - City pages: ${cityRoutes.length}`);
-console.log(`   - Blog posts: ${blogRoutes.length}`);
-console.log(`🎯 Major metros prioritized for better crawling`);
-console.log(`📅 Dynamic lastmod dates for freshness signals`);
+// console.log(`✅ SEO-optimized sitemap generated with ${allRoutes.length} URLs`);
+// console.log(`📊 Breakdown:`);
+// console.log(`   - Static pages: ${staticRoutes.length}`);
+// console.log(`   - City pages: ${cityRoutes.length}`);
+// console.log(`   - Blog posts: ${blogRoutes.length}`);
+// console.log(`🎯 Major metros prioritized for better crawling`);
+// console.log(`📅 Dynamic lastmod dates for freshness signals`);
 
 
 // Ensure SEO directory exists
@@ -178,7 +178,7 @@ function generateSitemapIndex() {
 </sitemapindex>`;
 
   writeFileSync("public/sitemap-index.xml", sitemapIndex, "utf-8");
-  console.log("✅ Sitemap index generated");
+  // console.log("✅ Sitemap index generated");
 }
 
 // 2. Generate structured data for better rich snippets
@@ -242,7 +242,7 @@ function generateStructuredData() {
   const allSchemas = [organizationSchema, websiteSchema, ...localBusinessSchemas];
   
   writeFileSync("public/seo/structured-data.json", JSON.stringify(allSchemas, null, 2), "utf-8");
-  console.log("✅ Structured data schemas generated");
+  // console.log("✅ Structured data schemas generated");
 }
 
 // 3. Generate RSS feed for blog content
@@ -277,7 +277,7 @@ ${rssItems}
 </rss>`;
 
   writeFileSync("public/rss.xml", rssFeed, "utf-8");
-  console.log("✅ RSS feed generated");
+  // console.log("✅ RSS feed generated");
 }
 
 // 4. Generate enhanced robots.txt with additional directives
@@ -310,7 +310,7 @@ User-agent: Bingbot
 Crawl-delay: 1`;
 
   writeFileSync("public/robots.txt", robotsTxt, "utf-8");
-  console.log("✅ Enhanced robots.txt generated");
+  // console.log("✅ Enhanced robots.txt generated");
 }
 
 // 5. Generate security.txt for better site credibility
@@ -325,7 +325,7 @@ Canonical: ${baseUrl}/.well-known/security.txt`;
   }
   
   writeFileSync("public/.well-known/security.txt", securityTxt, "utf-8");
-  console.log("✅ security.txt generated");
+  // console.log("✅ security.txt generated");
 }
 
 // 6. Generate manifest.json for PWA signals
@@ -353,12 +353,12 @@ function generateManifest() {
   };
 
   writeFileSync("public/manifest.json", JSON.stringify(manifest, null, 2), "utf-8");
-  console.log("✅ PWA manifest generated");
+  // console.log("✅ PWA manifest generated");
 }
 
 // Run all generators
 function generateAllSEOAssets() {
-  console.log("🚀 Generating comprehensive SEO assets...\n");
+  // console.log("🚀 Generating comprehensive SEO assets...\n");
   
   generateSitemapIndex();
   generateStructuredData();
@@ -367,13 +367,13 @@ function generateAllSEOAssets() {
   generateSecurityTxt();
   generateManifest();
   
-  console.log("\n🎉 All SEO assets generated successfully!");
-  console.log("\n📋 Next steps:");
-  console.log("1. Add structured data to your page headers");
-  console.log("2. Submit sitemaps to Google Search Console");
-  console.log("3. Verify RSS feed is working");
-  console.log("4. Test robots.txt at /robots.txt");
-  console.log("5. Add social media URLs to structured data");
+  // console.log("\n🎉 All SEO assets generated successfully!");
+  // console.log("\n📋 Next steps:");
+  // console.log("1. Add structured data to your page headers");
+  // console.log("2. Submit sitemaps to Google Search Console");
+  // console.log("3. Verify RSS feed is working");
+  // console.log("4. Test robots.txt at /robots.txt");
+  // console.log("5. Add social media URLs to structured data");
 }
 
 // Export for use in other scripts or run directly

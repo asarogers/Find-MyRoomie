@@ -13,13 +13,22 @@ import {
 } from "@mui/material";
 
 interface HeroSectionProps {
-  city?: string;
+  city?: {
+    name: string;
+    state: string;
+  };
 }
 
 export default function HeroSection({ city }: HeroSectionProps) {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-  const cityText = city ? ` in ${city}` : "";
+
+  const cityText = city ? ` in ${city.name}` : "";
+
+  
+  const stateAbbreviation = city?.state ?? "IL"; // fallback to IL if not provided
+
+
 
   const headline = (
     <>
@@ -116,7 +125,7 @@ export default function HeroSection({ city }: HeroSectionProps) {
             mt: { xs: 4, md: 0 },
           }}
         >
-          <Map />
+          <Map key={stateAbbreviation} useCurrentLocation={true}/>
         </Box>
       </Stack>
     </Box>

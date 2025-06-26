@@ -160,18 +160,20 @@ export default function RootLayout({
 
         {/* Content Security Policy - Only in production */}
         {isProduction && (
-          <meta
-            httpEquiv="Content-Security-Policy"
-            content="
-              default-src 'self';
-              script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com;
-              style-src 'self' 'unsafe-inline';
-              img-src * data:;
-              connect-src 'self' https://www.google-analytics.com;
-              frame-src https://www.googletagmanager.com;
-            "
-          />
-        )}
+  <meta
+    httpEquiv="Content-Security-Policy"
+    content="
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com;
+      style-src 'self' 'unsafe-inline';
+      img-src * data:;
+      connect-src 'self' https://www.google-analytics.com https://api.mapbox.com https://viscgyefdktuymldptuz.supabase.co;
+      frame-src https://www.googletagmanager.com;
+      worker-src 'self' blob:;
+    "
+  />
+)}
+
 
         {/* Google Analytics - Only in production */}
         {isProduction && (

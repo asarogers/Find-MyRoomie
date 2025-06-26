@@ -8,10 +8,53 @@ import { Box, Typography, Button, Stack } from "@mui/material";
 import { ApartmentMarker, ApartmentPopup } from "./apartmentComponents";
 import cityList from "../components/_data/cities.json";
 
-const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
-let apartmentsCache = {};
+// Type definitions
+interface Location {
+  lat: number;
+  lng: number;
+}
 
-function calculateDistance(lat1, lon1, lat2, lon2) {
+interface Apartment {
+  place_id: string;
+  location: Location;
+  name?: string;
+  featured?: boolean;
+  rating?: number;
+  [key: string]: any; // Allow for additional properties
+}
+
+interface City {
+  name: string;
+  slug: string;
+  lat: number;
+  lng: number;
+}
+
+interface UserLocation {
+  latitude: number;
+  longitude: number;
+}
+
+interface Viewport {
+  latitude: number;
+  longitude: number;
+  zoom: number;
+}
+
+interface MapComponentProps {
+  stateKey: string;
+  citySlug: Location;
+  useCurrentLocation: boolean;
+}
+
+interface ApartmentsCache {
+  [key: string]: Apartment[];
+}
+
+const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
+let apartmentsCache: ApartmentsCache = {};
+
+function calculateDistance(lat1: number, lon1: number, lat2: number, lon2: number): number {
   const R = 6371;
   const dLat = (lat2 - lat1) * Math.PI / 180;
   const dLon = (lon2 - lon1) * Math.PI / 180;
@@ -25,46 +68,46 @@ function calculateDistance(lat1, lon1, lat2, lon2) {
   return R * c;
 }
 
-function getRadiusFromZoom(zoom) {
+function getRadiusFromZoom(zoom: number): number {
   const baseRadius = 50;
   const zoomFactor = Math.pow(2, 10 - zoom);
   return Math.max(1, baseRadius * zoomFactor);
 }
 
 // Helper function to truncate apartment names
-function truncateName(name, maxLength = 15) {
+function truncateName(name: string | undefined, maxLength: number = 15): string {
   if (!name) return '';
   if (name.length <= maxLength) return name;
   return name.substring(0, maxLength) + '...';
 }
 
 // Helper function to determine if names should be shown based on zoom level
-function shouldShowNames(zoom) {
+function shouldShowNames(zoom: number): boolean {
   return zoom >= 14; // Only show names when zoomed in enough
 }
 
 // Helper function to select which apartments should show names (e.g., top-rated or featured)
-function selectApartmentsForNames(apartments, maxNames = 10) {
+function selectApartmentsForNames(apartments: Apartment[], maxNames: number = 10): Apartment[] {
   // You can customize this logic based on your data structure
   // For example, prioritize by rating, price, or featured status
   return apartments
-    .filter(apt => apt.featured || apt.rating >= 4.0) // Example criteria
+    .filter(apt => apt.featured || (apt.rating && apt.rating >= 4.0)) // Example criteria
     .slice(0, maxNames);
 }
 
-export default function MapComponent({ stateKey, citySlug, useCurrentLocation }) {
+export default function MapComponent({ stateKey, citySlug, useCurrentLocation }: MapComponentProps) {
   const mapRef = useRef<MapRef | null>(null);
-  const [allApartments, setAllApartments] = useState([]);
-  const [selectedApartment, setSelectedApartment] = useState(null);
-  const [userLocation, setUserLocation] = useState(null);
-  const [error, setError] = useState(null);
-  const [isMapLoaded, setIsMapLoaded] = useState(false);
-  const [showAllNames, setShowAllNames] = useState(false); // Toggle for showing all names
+  const [allApartments, setAllApartments] = useState<Apartment[]>([]);
+  const [selectedApartment, setSelectedApartment] = useState<Apartment | null>(null);
+  const [userLocation, setUserLocation] = useState<UserLocation | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [isMapLoaded, setIsMapLoaded] = useState<boolean>(false);
+  const [showAllNames, setShowAllNames] = useState<boolean>(false); // Toggle for showing all names
   
-  const targetCity = useMemo(() => cityList.find((c) => c.slug === stateKey), [stateKey]);
+  const targetCity = useMemo(() => (cityList as City[]).find((c) => c.slug === stateKey), [stateKey]);
   
   // Initialize viewport based on target city or default
-  const [viewport, setViewport] = useState(() => {
+  const [viewport, setViewport] = useState<Viewport>(() => {
     if (!useCurrentLocation) {
       return {
         latitude: citySlug.lat,
@@ -96,7 +139,7 @@ export default function MapComponent({ stateKey, citySlug, useCurrentLocation })
                 zoom: 13,
                 speed: 1.6,
                 curve: 1,
-                easing: (t) => t,
+                easing: (t: number) => t,
               });
             }
           },
@@ -116,7 +159,7 @@ export default function MapComponent({ stateKey, citySlug, useCurrentLocation })
           zoom: 13,
           speed: 1.6,
           curve: 1,
-          easing: (t) => t,
+          easing: (t: number) => t,
         });
       }
     }
@@ -135,11 +178,11 @@ export default function MapComponent({ stateKey, citySlug, useCurrentLocation })
       return;
     }
     fetchApartments(stateKey)
-      .then((data) => {
+      .then((data: Apartment[]) => {
         apartmentsCache[cacheKey] = data;
         setAllApartments(data);
       })
-      .catch((err) => {
+      .catch((err: any) => {
         console.error("Error loading apartments:", err);
         setError("Failed to load apartments data");
       });
@@ -266,8 +309,7 @@ export default function MapComponent({ stateKey, citySlug, useCurrentLocation })
                 <ApartmentMarker
                   apartment={apt}
                   isSelected={selectedApartment?.place_id === apt.place_id}
-                  showName={shouldShowName}
-                  onClick={(e) => {
+                  onClick={(e: React.MouseEvent) => {
                     e.stopPropagation();
                     setSelectedApartment(apt);
                   }}

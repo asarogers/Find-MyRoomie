@@ -11,6 +11,20 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
+import cityList from "../components/_data/cities.json";
+
+// Import the Location type from your map component
+interface Location {
+  lat: number;
+  lng: number;
+}
+
+interface City {
+  name: string;
+  slug: string;
+  lat: number;
+  lng: number;
+}
 
 interface HeroSectionProps {
   city?: {
@@ -22,13 +36,20 @@ interface HeroSectionProps {
 export default function HeroSection({ city }: HeroSectionProps) {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-
   const cityText = city ? ` in ${city.name}` : "";
-
-  
   const stateAbbreviation = city?.state ?? "IL"; // fallback to IL if not provided
 
-
+  // Find the city coordinates from cityList to create Location object
+  const cityLocation: Location | undefined = React.useMemo(() => {
+    if (!city) return undefined;
+    
+    const foundCity = (cityList as City[]).find(c => 
+      c.name.toLowerCase() === city.name.toLowerCase() && 
+      c.slug.toLowerCase() === city.state.toLowerCase()
+    );
+    
+    return foundCity ? { lat: foundCity.lat, lng: foundCity.lng } : undefined;
+  }, [city]);
 
   const headline = (
     <>
@@ -77,7 +98,6 @@ export default function HeroSection({ city }: HeroSectionProps) {
           >
             {subtext}
           </Typography>
-
           <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
             <motion.a
               whileHover={{ scale: 1.05 }}
@@ -95,7 +115,6 @@ export default function HeroSection({ city }: HeroSectionProps) {
                 Become a beta tester
               </Button>
             </motion.a>
-
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -125,7 +144,19 @@ export default function HeroSection({ city }: HeroSectionProps) {
             mt: { xs: 4, md: 0 },
           }}
         >
-          <Map key={stateAbbreviation} useCurrentLocation={true}/>
+          {cityLocation ? (
+            <Map 
+              stateKey={stateAbbreviation} 
+              citySlug={cityLocation}
+              useCurrentLocation={false}
+            />
+          ) : (
+            <Map 
+              stateKey={stateAbbreviation} 
+              citySlug={{ lat: 41.8781, lng: -87.6298 }} // Default to Chicago
+              useCurrentLocation={true}
+            />
+          )}
         </Box>
       </Stack>
     </Box>

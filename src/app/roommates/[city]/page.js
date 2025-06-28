@@ -1,5 +1,6 @@
 // app/roommates/[city]/page.js
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import cityList from '@/components/_data/cities.json';
 import CityClientShell from './CityClientShell';
 import Map from '../../../map/map';  // Adjust path as needed
@@ -212,12 +213,12 @@ export default async function RoommateCityPage({ params }) {
             
             {/* Enhanced CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors shadow-lg hover:shadow-xl">
+              <Link href="/downloadApp" className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors shadow-lg hover:shadow-xl">
                 Browse {city.name} Roommates
-              </button>
-              <button className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 px-8 py-4 rounded-lg font-bold text-lg transition-colors">
+              </Link>
+              <Link href="/downloadApp" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 px-8 py-4 rounded-lg font-bold text-lg transition-colors">
                 Create Free Profile
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -560,12 +561,12 @@ export default async function RoommateCityPage({ params }) {
               Start browsing roommates in {city.name} today - it's completely free!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg">
+              <Link href="/downloadApp" className="bg-white text-purple-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg">
                 Browse {city.name} Roommates
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-10 py-4 rounded-lg font-bold text-lg transition-colors">
+              </Link>
+              <Link href="/downloadApp" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-10 py-4 rounded-lg font-bold text-lg transition-colors">
                 Create Your Profile
-              </button>
+              </Link>
             </div>
             <p className="text-sm mt-4 opacity-75">
               ✅ Free Forever  •  🔒 Verified Profiles  •  🚫 No Scams  •  ⚡ Find Matches Fast

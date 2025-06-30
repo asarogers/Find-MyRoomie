@@ -1,37 +1,27 @@
-// src/app/blogs/[id]/page.tsx
-import { sanity } from "@/lib/sanity";
-import { notFound } from "next/navigation";
-import BlogPageClient from "./BlogPageClient";
-import { Metadata } from "next";
+// src/app/blogs/page.tsx
+import React from "react";
+import { client, blogQueries, SanityBlogPost } from "../../lib/sanity";
+import BlogListClient from "./BlogListClient";
 
-export async function generateStaticParams() {
-  const posts = await sanity.fetch(`*[_type == "post"]{slug}`);
-  return posts.map((post: any) => ({
-    id: post.slug.current,
-  }));
+export const metadata = {
+  title: "MyRoomy Blog • Verified Roommate Advice & Insights",
+  description:
+    "Get expert roommate tips, industry insights, and safety advice from MyRoomy. Discover featured stories and real-life experiences from our community.",
+};
+
+async function getBlogPosts(): Promise<SanityBlogPost[]> {
+  try {
+    const posts = await client.fetch(blogQueries.getAllBlogs);
+    console.log("Fetched posts:", posts);
+    return posts;
+  } catch (error) {
+    console.error("Error fetching blog posts:", error);
+    return [];
+  }
 }
 
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const post = await sanity.fetch(
-    `*[_type == "post" && slug.current == $id][0]`,
-    { id: params.id }
-  );
-
-  if (!post) return { title: "Not Found" };
-
-  return {
-    title: post.title,
-    description: post.excerpt || "",
-  };
-}
-
-export default async function BlogPost({ params }: { params: { id: string } }) {
-  const post = await sanity.fetch(
-    `*[_type == "post" && slug.current == $id][0]`,
-    { id: params.id }
-  );
-
-  if (!post) return notFound();
-
-  return <BlogPageClient blog={post} />;
+export default async function BlogListPage() {
+  const blogPosts = await getBlogPosts();
+  
+  return <BlogListClient blogPosts={blogPosts} />;
 }

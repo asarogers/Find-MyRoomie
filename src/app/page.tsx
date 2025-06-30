@@ -31,6 +31,7 @@ export default function LandingPage() {
         <meta name="description" content="Discover and connect with verified roommates across New York, Los Angeles, Chicago, and 27 more U.S. metros on MyRoomie." />
       </Head>
       {isOpen && <ContactUs onClose={() => setIsOpen(false)} />}
+        
       <Navbar setIsOpen={setIsOpen} />
       <HeroSection />
       <PainPoints />

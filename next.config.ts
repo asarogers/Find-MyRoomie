@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true, // ✅ Disables ESLint checks on `next build`
   },
-  output: 'export',
+   output: 'export',
   trailingSlash: true, // Required for static hosting like GH Pages
   basePath: isGithubPages ? '/Find-MyRoomie' : '',
   images: {

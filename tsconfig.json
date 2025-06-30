@@ -23,6 +23,6 @@
 }
 
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/roommates/[city]/page.js", "src/map/map.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/roommates/[city]/page.js", "src/map/map.tsx", "src/app/studio/schemaTypes/blogs.ts", "src/app/blogs/blogData.js", "src/app/blogs/blogData.js", "migrate.mjs"],
   "exclude": ["node_modules"]
 }

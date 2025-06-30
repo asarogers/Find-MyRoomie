@@ -27,6 +27,8 @@ export default function BlogPageClient({ blog }: { blog: SanityBlogPost }) {
       text: blog.excerpt,
       url: window.location.href,
     };
+    console.log('🔍 SITE LOADED - VERSION 3.0')
+    console.log('🔍 Window location:', window.location.href)
 
     try {
       if (navigator.share) {

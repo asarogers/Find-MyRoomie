@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+// Add at the very top of your main blog component
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -19,7 +21,7 @@ export const metadata: Metadata = {
   },
   description:
     "The safe, real, and functional way to find compatible roommates and apply to apartments together. No fake profiles, no hidden fees, no broken filters.",
-  metadataBase: new URL("https://findmyroomy.com"),
+  metadataBase: new URL("https://findmyroomy.com/"),
   openGraph: {
     type: "website",
     url: "https://findmyroomy.com/",
@@ -71,7 +73,7 @@ export default function RootLayout({
         <meta name="publisher" content="Find MyRoomy" />
 
         {/* Canonical */}
-        <link rel="canonical" href="https://findmyroomy.com" />
+        <link rel="canonical" href="https://www.findmyroomy.com/" />
 
         {/* Sitemap and RSS */}
         <link
@@ -101,7 +103,7 @@ export default function RootLayout({
           property="og:description"
           content="The safe, real, and functional way to find compatible roommates and apply to apartments together."
         />
-        <meta property="og:url" content="https://findmyroomy.com" />
+       <meta property="og:url" content="https://www.findmyroomy.com/" />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
@@ -131,7 +133,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "FindMyRoomy",
-              url: "https://findmyroomy.com",
+              url: "https://findmyroomy.com/",
               description:
                 "The safe, real, and functional way to find compatible roommates and apply to apartments together.",
               logo: "https://findmyroomy.com/logo.png",

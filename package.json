@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "export": "next export",
-    "predeploy": "npm run build",
+  "studio": "sanity dev --studio studio",
+  "build": "next build",                    
+  "predeploy": "npm run build",  
     "deploy": "rsync -avz --delete -e 'ssh -p 65002' out/ u555286648@82.197.83.3:~/domains/findmyroomy.com/public_html/"
   },
   "dependencies": {

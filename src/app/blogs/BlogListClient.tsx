@@ -101,16 +101,6 @@ export default function BlogListClient({ blogPosts }: BlogListClientProps) {
                       <p className="text-gray-600 mb-4 line-clamp-3">
                         {post.excerpt}
                       </p>
-                      <div className="flex items-center space-x-4 text-sm text-gray-500">
-                        <div className="flex items-center">
-                          <Heart className="w-4 h-4 mr-1" />
-                          <span>{post.likes}</span>
-                        </div>
-                        <div className="flex items-center">
-                          <MessageCircle className="w-4 h-4 mr-1" />
-                          <span>{post.comments}</span>
-                        </div>
-                      </div>
                     </div>
                   </Link>
                 </article>

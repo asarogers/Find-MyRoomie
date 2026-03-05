@@ -1,19 +1,41 @@
+// src/lib/sanity.ts
 import { createClient } from '@sanity/client'
 import imageUrlBuilder from '@sanity/image-url'
 
-// Client configuration
+// ✅ Sanity Client Configuration
 export const client = createClient({
-  projectId: 'zt5tih1k', // Your project ID
+  projectId: 'zt5tih1k', // Replace with your project ID
   dataset: 'production',
-  useCdn: false,
+  useCdn: false, // ✅ Already set to false - good!
   apiVersion: '2023-05-03',
+  // Add these for force refresh:
+  ignoreBrowserTokenWarning: true,
+  perspective: 'published', // Only get published content
 })
 
-// Image URL builder
+// ✅ Helper function to fetch with cache busting
+export const fetchWithRefresh = async (query: string, params = {}) => {
+  try {
+    // Add timestamp to force fresh data
+    const result = await client.fetch(query, {
+      ...params,
+      _cacheBust: Date.now() // Cache busting parameter
+    }, {
+      // Additional fetch options
+      cache: 'no-store', // Prevent caching
+    })
+    return result
+  } catch (error) {
+    console.error('Sanity fetch error:', error)
+    throw error
+  }
+}
+
+// ✅ Image URL Builder
 const builder = imageUrlBuilder(client)
 export const urlFor = (source: any) => builder.image(source)
 
-// Blog post type definition
+// ✅ Blog Post Type Definition
 export interface SanityBlogPost {
   _id: string
   title: string
@@ -44,9 +66,9 @@ export interface SanityBlogPost {
   }>
 }
 
-// GROQ queries
+// ✅ GROQ Queries with cache busting
 export const blogQueries = {
-  getAllBlogs: `*[_type == "blog"] | order(publishedAt desc) {
+  getAllBlogs: `*[_type == "blog" && !(_id in path("drafts.**"))] | order(publishedAt desc) {
     _id,
     title,
     slug,
@@ -62,8 +84,8 @@ export const blogQueries = {
     comments,
     tags
   }`,
-
-  getBlogBySlug: `*[_type == "blog" && slug.current == $slug][0] {
+  
+  getBlogBySlug: `*[_type == "blog" && slug.current == $slug && !(_id in path("drafts.**"))][0] {
     _id,
     title,
     slug,
@@ -82,7 +104,7 @@ export const blogQueries = {
       subtitle,
       contentType,
       textContent,
-      listContent[]{
+      listContent[] {
         label,
         text
       },
@@ -90,8 +112,8 @@ export const blogQueries = {
       sectionVideo
     }
   }`,
-
-  getFeaturedBlogs: `*[_type == "blog" && featured == true] | order(publishedAt desc) {
+  
+  getFeaturedBlogs: `*[_type == "blog" && featured == true && !(_id in path("drafts.**"))] | order(publishedAt desc) {
     _id,
     title,
     slug,
@@ -107,4 +129,10 @@ export const blogQueries = {
     comments,
     tags
   }`
+}
+
+// ✅ Quick refresh function for testing
+export const refreshBlogData = async () => {
+  console.log('🔄 Forcing fresh blog data...')
+  return await fetchWithRefresh(blogQueries.getAllBlogs)
 }

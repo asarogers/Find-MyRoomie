@@ -82,18 +82,6 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'likes',
-      title: 'Likes',
-      type: 'number',
-      initialValue: 0,
-    }),
-    defineField({
-      name: 'comments',
-      title: 'Comments',
-      type: 'number',
-      initialValue: 0,
-    }),
-    defineField({
       name: 'featured',
       title: 'Featured Post',
       type: 'boolean',

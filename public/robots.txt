@@ -1,5 +1,5 @@
 # Robots.txt - Google-Only Access Configuration
-# Last Updated: June 26, 2025
+# Last Updated: July 8, 2025
 # This file strictly allows only Googlebot while blocking all other crawlers
 
 # === GOOGLEBOT - FULL ACCESS ===
@@ -43,8 +43,6 @@ Disallow: /*?query=
 Disallow: /*?print=
 Disallow: /*?mobile=
 Disallow: /print/
-# Crawl delay for Googlebot (optional - remove if not needed)
-Crawl-delay: 1
 
 # === BINGBOT - FULL ACCESS ===
 User-agent: Bingbot
@@ -85,8 +83,13 @@ Disallow: /*?query=
 Disallow: /*?print=
 Disallow: /*?mobile=
 Disallow: /print/
-# Crawl delay for Bingbot (optional - remove if not needed)
-Crawl-delay: 1
+
+# === ALLOW SOCIAL MEDIA CRAWLERS FOR BETTER PREVIEWS ===
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
 
 # === BLOCK OTHER MAJOR SEARCH ENGINE BOTS ===
 User-agent: Slurp
@@ -99,9 +102,6 @@ User-agent: Baiduspider
 Disallow: /
 
 User-agent: YandexBot
-Disallow: /
-
-User-agent: facebookexternalhit
 Disallow: /
 
 # === BLOCK SEO/MARKETING CRAWLERS ===
@@ -190,9 +190,5 @@ Disallow: /
 
 # === SITEMAP LOCATION ===
 # Make sitemap accessible to Google (and any tools that respect robots.txt)
-Sitemap: https://yourdomain.com/sitemap.xml
-Sitemap: https://yourdomain.com/sitemap_index.xml
-
-# === OPTIONAL: HOST DIRECTIVE ===
-# Uncomment and modify if you need to specify preferred domain
-# Host: https://www.yourdomain.com
+Sitemap: https://www.findmyroomy.com/sitemap.xml
+Sitemap: https://www.findmyroomy.com/sitemap_index.xml

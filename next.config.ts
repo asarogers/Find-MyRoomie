@@ -1,26 +1,25 @@
 import type { NextConfig } from 'next'
-import path from 'path';
+import path from 'path'
 
-const isGithubPages = process.env.NODE_ENV === 'production' && process.env.GITHUB_PAGES;
+const isGithubPages = process.env.NODE_ENV === 'production' && process.env.GITHUB_PAGES
 
 const nextConfig: NextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true, // ✅ Disables ESLint checks on `next build`
-  },
-   output: 'export',
-  trailingSlash: true, // Required for static hosting like GH Pages
-  basePath: isGithubPages ? '/Find-MyRoomie' : '',
+  output: 'export',                        // ✅ Enables `next export` functionality
+  trailingSlash: true,                    // ✅ Required for static file routing
+  basePath: isGithubPages ? '/Find-MyRoomie' : '', // ✅ Optional: only for GH Pages under subpath
   images: {
-    unoptimized: true, // Required for next/image with static export
+    unoptimized: true                     // ✅ Allows <Image> without next/image optimization
   },
-  // Add webpack configuration for path aliases
+  eslint: {
+    ignoreDuringBuilds: true             // ✅ Skip ESLint on production build
+  },
   webpack: (config: any) => {
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@': path.resolve(__dirname, 'src'),
+      '@': path.resolve(__dirname, 'src') // ✅ Allows imports like `@/lib/sanity`
     }
     return config
   }
-};
+}
 
-export default nextConfig;
+export default nextConfig

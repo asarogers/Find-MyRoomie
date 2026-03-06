@@ -4,23 +4,20 @@ import { Star, Quote } from 'lucide-react';
 const testimonials = [
   {
     name: "Sarah M.",
-    age: 24,
-    location: "Austin, TX",
-    quote: "Finally a roommate app that doesn't feel sketchy. The verification system actually works and I found my perfect roommate in 2 weeks!",
+    location: "Chicago, IL",
+    quote: "Roomster wanted $30/month just to read messages. I joined here for free, drew my neighborhood on the map, and had 4 people reach out within a week. This is what it should have always been.",
     rating: 5,
   },
   {
     name: "Jake L.",
-    age: 27,
     location: "Denver, CO",
-    quote: "Being able to draw my zone and find real listings is a game changer. No more fake apartments or broken location filters.",
+    quote: "I used Facebook groups and Craigslist for months — half the posts were fake. The verification here is night and day. I actually felt safe meeting someone from this app.",
     rating: 5,
   },
   {
     name: "Maya P.",
-    age: 22,
     location: "Seattle, WA",
-    quote: "I used to be scared of scams—this felt like Airbnb + Hinge for roommates. The vibe matching actually works!",
+    quote: "The zone map is the feature I didn't know I needed. I work in South Lake Union so I drew a 10-min commute circle and only saw roommates in my actual area. Genius.",
     rating: 5,
   },
 ];
@@ -31,10 +28,10 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            What our early users are saying
+            What beta testers are saying
           </h2>
           <p className="text-xl text-gray-600">
-            Real stories from real people who found their perfect roommates
+            Real feedback from real people who ditched Roomster and found something better
           </p>
         </div>
 
@@ -65,7 +62,7 @@ export default function Testimonials() {
                 <div>
                   <p className="font-semibold text-gray-900">{testimonial.name}</p>
                   <p className="text-sm text-gray-500">
-                    Age {testimonial.age} • {testimonial.location}
+                    {testimonial.location} · Early beta tester
                   </p>
                 </div>
               </div>

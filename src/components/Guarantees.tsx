@@ -11,11 +11,10 @@ export default function Guarantees(){
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Our Commitment to You
+              Three promises we actually keep
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We stand behind our platform with guarantees that put your success
-              first.
+              No fine print. No paywalls buried in the terms. Just three things we&apos;ll always stand behind.
             </p>
           </div>
 

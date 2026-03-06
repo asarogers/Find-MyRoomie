@@ -39,9 +39,9 @@ export default function Safety({ city }: SafetyProps) {
 
           <div className="text-center p-8 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl">
             <Users className="w-16 h-16 mx-auto mb-6 text-purple-600" />
-            <h3 className="text-xl font-bold mb-4">Smart Matching</h3>
+            <h3 className="text-xl font-bold mb-4">Lifestyle Matching</h3>
             <p className="text-gray-600">
-              AI-powered compatibility scoring prevents mismatched situations.
+              Filter by sleep schedule, pets, cleanliness, and social style — so you find someone you actually vibe with.
             </p>
           </div>
         </div>

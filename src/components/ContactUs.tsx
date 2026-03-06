@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useRef } from "react";
 import { MapPin, Phone, Mail, X, Facebook, Linkedin, Youtube } from "lucide-react";
 import emailjs from "emailjs-com";
+import { Events } from "@/lib/analytics";
 
 export default function ContactUs({ onClose }: { onClose: () => void }) {
+  const formStartFired = useRef(false);
+
+  const handleFirstFocus = () => {
+    if (!formStartFired.current) {
+      formStartFired.current = true;
+      Events.formStart('contact_modal');
+    }
+  };
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -15,6 +24,7 @@ export default function ContactUs({ onClose }: { onClose: () => void }) {
     
       .then(
         () => {
+          Events.emailSignup();
           alert("✅ Message sent successfully!");
           (e.target as HTMLFormElement).reset();
           onClose();
@@ -64,6 +74,7 @@ export default function ContactUs({ onClose }: { onClose: () => void }) {
                 name="name"
                 placeholder="Your Name"
                 required
+                onFocus={handleFirstFocus}
                 className="w-full p-4 text-base border border-black rounded-xl bg-white/80 text-slate-700 placeholder-slate-400 focus:ring-2 focus:ring-blue-500 transition duration-200"
               />
               <input

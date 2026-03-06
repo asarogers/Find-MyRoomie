@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import AnalyticsProvider from "@/components/AnalyticsProvider";
 
 // Add at the very top of your main blog component
 
@@ -58,7 +59,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {/* Title and Meta Description */}
-        <title>Find MyRoomy – Find your vibe. Find your space.</title>
+        <title>Find MyRoomy - Find your vibe. Find your space.</title>
         <meta
           name="description"
           content="The safe, real, and functional way to find compatible roommates and apply to apartments together."
@@ -201,6 +202,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <AnalyticsProvider />
         {children}
       </body>
     </html>

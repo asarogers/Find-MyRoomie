@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { MapPin, ArrowRight } from "lucide-react";
+import { Events } from "@/lib/analytics";
 import { motion } from "framer-motion";
 import Map from "../map/map";
 import {
@@ -83,6 +84,12 @@ export default function HeroSection({ city }: HeroSectionProps) {
       >
         {/* Left content */}
         <Box flex={1} maxWidth={{ md: "50%" }}>
+          {/* Beta urgency badge */}
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-purple-50 border border-purple-200 rounded-full mb-4 text-sm font-semibold text-purple-700">
+            <span className="w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse" />
+            Beta open · Free forever · No credit card
+          </div>
+
           <Typography
             variant="h3"
             component="h1"
@@ -105,6 +112,7 @@ export default function HeroSection({ city }: HeroSectionProps) {
               href="https://forms.gle/qJQXtqEgHb45Y2Y8A"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => Events.formStart('hero')}
             >
               <Button
                 variant="contained"

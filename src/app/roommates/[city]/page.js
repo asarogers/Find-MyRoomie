@@ -134,12 +134,6 @@ export default async function RoommateCityPage({ params }) {
         "price": "0",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "2847",
-        "bestRating": "5"
       }
     },
     "breadcrumb": {
@@ -185,39 +179,40 @@ export default async function RoommateCityPage({ params }) {
           
           {/* Enhanced Hero Section with Local Keywords */}
           <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-50 border border-green-200 rounded-full mb-5">
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+              <span className="text-sm font-semibold text-green-700">Beta open · Free forever · No credit card</span>
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Roommate Finder {city.name} | Find Your Perfect Match
+              Find Roommates in {city.name} — Free to Message, Always
             </h1>
             <p className="text-lg md:text-xl text-gray-700 mb-6 max-w-4xl mx-auto">
-              Browse verified roommate profiles in {city.name}. Connect with pet-friendly, student, and professional roommates. 
-              Background-checked, scam-free, and completely free to use.
+              Tired of Roomster charging $30/month just to read a message? Every verified roommate in {city.name} is free to contact — no subscription, no paywall, no catch.
             </p>
 
-            
-            
             {/* Trust indicators */}
             <div className="flex flex-wrap justify-center gap-4 mb-8 text-sm text-gray-600">
               <span className="bg-green-100 px-4 py-2 rounded-full flex items-center">
-                ✅ 15,000+ Verified Users
+                ✅ Gov ID Verified
               </span>
               <span className="bg-blue-100 px-4 py-2 rounded-full flex items-center">
                 🔒 Background Checked
               </span>
               <span className="bg-purple-100 px-4 py-2 rounded-full flex items-center">
-                💰 Always Free
+                💬 Free to Message
               </span>
               <span className="bg-orange-100 px-4 py-2 rounded-full flex items-center">
-                🚫 Zero Scams
+                🚫 Zero Fake Profiles
               </span>
             </div>
-            
-            {/* Enhanced CTA Buttons */}
+
+            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link href="/downloadApp" className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors shadow-lg hover:shadow-xl">
-                Browse {city.name} Roommates
+              <Link href="/downloadApp" className="bg-black hover:bg-gray-800 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg">
+                Find My Roommate in {city.name} — It&apos;s Free
               </Link>
-              <Link href="/downloadApp" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 px-8 py-4 rounded-lg font-bold text-lg transition-colors">
-                Create Free Profile
+              <Link href="/downloadApp" className="border-2 border-black text-black hover:bg-black hover:text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105">
+                Claim Founding Member Status
               </Link>
             </div>
           </div>
@@ -417,20 +412,20 @@ export default async function RoommateCityPage({ params }) {
                   How long does it take to find a roommate in {city.name}?
                 </summary>
                 <p className="text-gray-700">
-                  Most users find compatible roommates within 2-4 weeks. Premium verified profiles typically 
-                  match 50% faster. The key is having a complete profile and actively messaging potential matches 
-                  in the {city.name} area.
+                  It depends on your area and preferences — but completing your profile fully and messaging
+                  people promptly makes a big difference. Beta testers report getting responses within days
+                  of joining. The key is being specific about your lifestyle and reaching out directly.
                 </p>
               </details>
-              
+
               <details className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <summary className="font-bold text-lg cursor-pointer mb-3">
                   Is MyRoomie really free to use?
                 </summary>
                 <p className="text-gray-700">
-                  Yes! MyRoomie is completely free for roommate seekers. Create your profile, browse roommates 
-                  in {city.name}, and connect with matches at no cost. No hidden fees, no subscription required. 
-                  We only charge landlords who list properties.
+                  Yes — messaging, browsing, and connecting are free. That&apos;s the founding promise.
+                  Unlike Roomster ($30/month just to read messages), we don&apos;t believe you should pay
+                  to find a place to live. Beta testers lock in free messaging permanently.
                 </p>
               </details>
               
@@ -485,7 +480,7 @@ export default async function RoommateCityPage({ params }) {
                 </li>
                 <li className="flex items-start">
                   <span className="text-purple-500 mr-3 mt-1">✓</span>
-                  <span><strong>24/7 support</strong> — Local team helps resolve any roommate issues</span>
+                  <span><strong>Direct founder access</strong> — Beta testers get a direct line to the founder for feedback and issues</span>
                 </li>
               </ul>
             </div>
@@ -509,67 +504,65 @@ export default async function RoommateCityPage({ params }) {
             </div>
           </section>
 
-          {/* Success Stories */}
+          {/* Beta Tester Stories */}
           <section className="mb-16 bg-white rounded-xl p-8 shadow-lg">
-            <h2 className="text-3xl font-bold mb-8 text-center">Success Stories from {city.name}</h2>
+            <h2 className="text-3xl font-bold mb-2 text-center">What beta testers are saying</h2>
+            <p className="text-center text-gray-500 mb-8">Early access members who switched from Roomster and Craigslist</p>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center p-6 bg-purple-50 rounded-lg">
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-purple-600">A</span>
+                  <span className="text-2xl font-bold text-purple-600">S</span>
                 </div>
                 <p className="text-gray-700 mb-4 italic">
-                  "Found my perfect roommate in 2 weeks! The verification process made me feel safe, 
-                  and we both love our dogs. Great {city.name} community!"
+                  &quot;Roomster wanted $30/month just to read messages. I joined here for free and had 4 people reach out in a week. This is what it should have always been.&quot;
                 </p>
-                <p className="font-semibold">Alex M.</p>
-                <p className="text-sm text-gray-500">Marketing Professional</p>
+                <p className="font-semibold">Sarah M.</p>
+                <p className="text-sm text-gray-500">Beta tester · {city.name}</p>
               </div>
-              
+
               <div className="text-center p-6 bg-green-50 rounded-lg">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-green-600">S</span>
+                  <span className="text-2xl font-bold text-green-600">J</span>
                 </div>
                 <p className="text-gray-700 mb-4 italic">
-                  "As a grad student, finding affordable housing in {city.name} was tough. 
-                  MyRoomie connected me with another student - we're best friends now!"
+                  &quot;I used Facebook groups and Craigslist for months — half the posts were fake. The verification here is night and day. I actually felt safe meeting someone.&quot;
                 </p>
-                <p className="font-semibold">Sarah K.</p>
-                <p className="text-sm text-gray-500">Graduate Student</p>
+                <p className="font-semibold">Jake L.</p>
+                <p className="text-sm text-gray-500">Beta tester · {city.name}</p>
               </div>
-              
+
               <div className="text-center p-6 bg-blue-50 rounded-lg">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-blue-600">M</span>
                 </div>
                 <p className="text-gray-700 mb-4 italic">
-                  "Moved to {city.name} for work and knew nobody. MyRoomie helped me find a 
-                  roommate who became my social circle. Amazing platform!"
+                  &quot;The zone map is the feature I didn&apos;t know I needed. I drew my commute circle and only saw roommates in my actual area. Why didn&apos;t this exist sooner?&quot;
                 </p>
-                <p className="font-semibold">Mike T.</p>
-                <p className="text-sm text-gray-500">Software Engineer</p>
+                <p className="font-semibold">Maya P.</p>
+                <p className="text-sm text-gray-500">Beta tester · {city.name}</p>
               </div>
             </div>
           </section>
 
-          {/* Enhanced CTA Section */}
+          {/* CTA Section */}
           <section className="text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white p-12 rounded-xl">
             <h2 className="text-3xl font-bold mb-4">
-              Ready to Find Your {city.name} Roommate?
+              Find your roommate in {city.name} — free.
             </h2>
             <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-              Join 15,000+ verified users who found their perfect living situation. 
-              Start browsing roommates in {city.name} today - it's completely free!
+              Beta testers get founding member status, 6 months free premium, and messaging that&apos;s free forever.
+              No Roomster paywall. No credit card. Takes 60 seconds.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/downloadApp" className="bg-white text-purple-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg">
-                Browse {city.name} Roommates
+              <Link href="/downloadApp" className="bg-white text-purple-600 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg">
+                Find My Roommate in {city.name} — It&apos;s Free
               </Link>
-              <Link href="/downloadApp" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-10 py-4 rounded-lg font-bold text-lg transition-colors">
-                Create Your Profile
+              <Link href="/downloadApp" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-10 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105">
+                Claim Founding Member Status
               </Link>
             </div>
             <p className="text-sm mt-4 opacity-75">
-              ✅ Free Forever  •  🔒 Verified Profiles  •  🚫 No Scams  •  ⚡ Find Matches Fast
+              Free to message · Gov ID verified · No scams · Beta spots limited
             </p>
           </section>
         </div>

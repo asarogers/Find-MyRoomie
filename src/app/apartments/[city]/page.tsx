@@ -1,5 +1,6 @@
 // src/app/apartment/[city]/page.tsx
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import cityList from '@/components/_data/cities.json';
 import CityClientShell from '../../roommates/[city]/CityClientShell';
 import Map from '../../../map/map'; // Adjust path as needed
@@ -144,21 +145,25 @@ export default async function ApartmentCityPage({ params }: Params) {
         <div className="max-w-7xl mx-auto px-4">
           {/* Hero Section */}
           <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-50 border border-green-200 rounded-full mb-5">
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+              <span className="text-sm font-semibold text-green-700">Beta open · Free forever · No credit card</span>
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Apartments for Roommates in {city.name}
+              Shared Apartments in {city.name} — Find Roommates Free
             </h1>
             <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-              Lower rent, better living. MyRoomie helps you find shared apartments in {city.name} that match your lifestyle and budget.
+              Split rent 30–50% and live somewhere you actually want to be. Every roommate in {city.name} is verified — and messaging is always free.
             </p>
-            
+
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                Find Apartments
-              </button>
-              <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-semibold transition-colors">
-                Post Your Listing
-              </button>
+              <Link href="/downloadApp" className="bg-black hover:bg-gray-800 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg">
+                Find My Roommate in {city.name} — It&apos;s Free
+              </Link>
+              <Link href="/downloadApp" className="border-2 border-black text-black hover:bg-black hover:text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105">
+                Claim Founding Member Status
+              </Link>
             </div>
           </div>
 
@@ -190,7 +195,7 @@ export default async function ApartmentCityPage({ params }: Params) {
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-500 mr-3 mt-1">✓</span>
-                  <span><strong>Apply together</strong> — Skip the stress of individual applications</span>
+                  <span><strong>Draw your zone</strong> — Set your commute radius on the map, see only roommates in your area</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-500 mr-3 mt-1">✓</span>
@@ -256,16 +261,19 @@ export default async function ApartmentCityPage({ params }: Params) {
             </div>
           </section>
 
-          {/* Local SEO Content */}
+          {/* CTA */}
           <section className="text-center">
-            <h2 className="text-2xl font-bold mb-4">Start Your Roommate Journey in {city.name}</h2>
+            <h2 className="text-2xl font-bold mb-4">Ready to split rent in {city.name}?</h2>
             <p className="text-gray-700 mb-8 max-w-2xl mx-auto">
-              Join thousands of people who've found their perfect shared living situation in {city.name}. 
-              Better apartments, better prices, better roommates.
+              Join as a beta tester — free forever, founding member badge, and first access to every feature we ship.
             </p>
-            <button className="bg-green-600 hover:bg-green-700 text-white px-10 py-4 rounded-lg font-bold text-lg transition-colors">
-              Get Started Today
-            </button>
+            <Link
+              href="/downloadApp"
+              className="inline-block bg-black hover:bg-gray-800 text-white px-10 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+            >
+              Find My Roommate — It&apos;s Free
+            </Link>
+            <p className="text-sm text-gray-400 mt-3">No credit card · 60 seconds · Free forever</p>
           </section>
         </div>
       </main>

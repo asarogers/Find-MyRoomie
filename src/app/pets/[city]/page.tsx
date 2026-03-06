@@ -1,5 +1,6 @@
 // app/pets/[city]/page.tsx
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import cityList from '@/components/_data/cities.json';
 import CityClientShell from '../../roommates/[city]/CityClientShell';
 import { Metadata } from 'next';
@@ -53,12 +54,15 @@ export default async function PetsCityPage({ params }: Params) {
         <div className="max-w-4xl mx-auto px-4">
           {/* Hero Section */}
           <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-50 border border-green-200 rounded-full mb-5">
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+              <span className="text-sm font-semibold text-green-700">Beta open · Free forever · No credit card</span>
+            </div>
             <h1 className="text-4xl font-bold mb-4">
-              Find Pet-Friendly Roommates & Apartments in {city.name}
+              Pet-Friendly Roommates in {city.name} — Free to Message
             </h1>
             <p className="text-xl text-gray-700 mb-6">
-              Connect with pet owners and find housing that welcomes your furry friends. 
-              No surprise pet fees or deposit drama.
+              Find verified roommates who love pets as much as you do. No Roomster paywall. No fake listings. Just real pet owners in {city.name} you can message for free.
             </p>
             <div className="flex flex-wrap justify-center gap-2 text-sm text-gray-600">
               <span className="bg-green-100 px-3 py-1 rounded-full">🐕 Dog Friendly</span>
@@ -182,8 +186,8 @@ export default async function PetsCityPage({ params }: Params) {
                   What about pet deposits and fees?
                 </summary>
                 <p className="mt-2 text-gray-700">
-                  Our listings show pet deposit requirements upfront. Many roommates share 
-                  pet costs, and some landlords waive deposits for responsible pet owners.
+                  Ask potential roommates directly in the chat — many are open to discussing how to split
+                  or handle pet costs. Finding someone who already has pets is often the easiest path.
                 </p>
               </details>
               <details className="bg-white p-4 rounded-lg shadow-sm">
@@ -199,16 +203,20 @@ export default async function PetsCityPage({ params }: Params) {
           </section>
 
           {/* CTA Section */}
-          <section className="text-center bg-green-50 p-8 rounded-lg">
-            <h2 className="text-2xl font-semibold mb-4">
-              Ready to Find Your Perfect Pet-Friendly Match?
+          <section className="text-center bg-green-50 p-8 rounded-xl border border-green-100">
+            <h2 className="text-2xl font-bold mb-4">
+              Find your pet-friendly roommate in {city.name} — free.
             </h2>
             <p className="text-gray-700 mb-6">
-              Join thousands of pet owners who found their ideal living situation in {city.name}
+              Beta testers get founding member status and free messaging forever. No paywall, no credit card.
             </p>
-            <button className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
-              Start Your Search
-            </button>
+            <Link
+              href="/downloadApp"
+              className="inline-block bg-black hover:bg-gray-800 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+            >
+              Find My Roommate — It&apos;s Free
+            </Link>
+            <p className="text-sm text-gray-400 mt-3">Takes 60 seconds · Free forever</p>
           </section>
         </div>
       </main>

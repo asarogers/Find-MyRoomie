@@ -29,7 +29,7 @@ export default function LandingPage() {
   return (
     <div className="bg-[#FDFBF7] text-gray-900 overflow-x-hidden">
       <Head>
-        <title>MyRoomie • Find Verified Roommates in 30+ U.S. Cities</title>
+        <title>MyRoomie - Find Verified Roommates in 30+ U.S. Cities</title>
         <meta name="description" content="Discover and connect with verified roommates across New York, Los Angeles, Chicago, and 27 more U.S. metros on MyRoomie." />
       </Head>
       {isOpen && <ContactUs onClose={() => setIsOpen(false)} />}

@@ -13,7 +13,7 @@ export default function RankingsPage() {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Placeholder for nomination form submission logic
     console.log('Nomination:', nomination, 'Email:', email);

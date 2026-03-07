@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import cityList from '@/components/_data/cities.json';
+import { allBlogs } from '@/components/_data/blogs';
 
 // ─── sitemap.ts ───────────────────────────────────────────────────────────────
 // City pages auto-generate from cities.json — Forge never needs to touch those.
@@ -23,17 +24,8 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/cookie-policy`,      changeFrequency: 'yearly',  priority: 0.3 },
 ];
 
-// ── Blog posts — add new slugs here when Quill publishes ─────────────────────
-// Forge: append new slugs to this array after each blog deployment.
-const BLOG_SLUGS = [
-  'the-psychology-of-shared-spaces-creating-harmony-at-home',
-  'digital-roommate-matching-the-science-behind-compatibility',
-  'gen-z-s-housing-crisis-why-traditional-apartment-hunting-is-broken',
-  'the-hidden-costs-of-bad-roommates-a-11-000-wake-up-call',
-  'why-90-of-roommate-apps-fail-and-how-we-re-different',
-  'building-trust-in-roommate-apps-how-we-verify-profiles',
-  // ADD NEW BLOG SLUGS HERE ↓
-];
+// ── Blog posts — auto-generated from blogs.ts (no manual editing needed) ─────
+const BLOG_SLUGS = allBlogs.map((b) => b.slug);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // ── City pages — auto-generated, never edit manually ──

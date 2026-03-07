@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "predeploy": "npm run build",
-    "deploy": "rsync -avz --delete -e 'ssh -p 65002' out/ u555286648@82.197.83.3:~/domains/findmyroomy.com/public_html/",
+    "deploy": "wsl bash /mnt/c/Users/cyber/repo/FindMyRoomy/Find-MyRoomie/scripts/deploy.sh",
     "postdeploy": "npx ts-node scripts/request-indexing.ts",
     "index": "npx ts-node scripts/request-indexing.ts",
     "index:all": "npx ts-node scripts/request-indexing.ts --all",

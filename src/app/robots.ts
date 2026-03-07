@@ -1,5 +1,7 @@
 import { MetadataRoute } from 'next';
 
+export const dynamic = 'force-static';
+
 // ─── robots.ts ───────────────────────────────────────────────────────────────
 // Forge: when adding new routes, add sensitive paths to the Googlebot/Bingbot
 // disallow lists if needed. No other changes required — new public pages are

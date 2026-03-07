@@ -2,6 +2,8 @@ import { MetadataRoute } from 'next';
 import cityList from '@/components/_data/cities.json';
 import { allBlogs } from '@/components/_data/blogs';
 
+export const dynamic = 'force-static';
+
 // ─── sitemap.ts ───────────────────────────────────────────────────────────────
 // City pages auto-generate from cities.json — Forge never needs to touch those.
 //

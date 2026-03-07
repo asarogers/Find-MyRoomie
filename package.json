@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "predeploy": "npm run build",
-    "deploy": "rsync -avz --delete -e 'ssh -p 65002' out/ u555286648@82.197.83.3:~/domains/findmyroomy.com/public_html/"
+    "deploy": "rsync -avz --delete -e 'ssh -p 65002' out/ u555286648@82.197.83.3:~/domains/findmyroomy.com/public_html/",
+    "postdeploy": "npx ts-node scripts/request-indexing.ts",
+    "index": "npx ts-node scripts/request-indexing.ts",
+    "index:all": "npx ts-node scripts/request-indexing.ts --all",
+    "index:dry": "npx ts-node scripts/request-indexing.ts --dry",
+    "index:ping": "npx ts-node scripts/request-indexing.ts --ping"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -39,6 +44,7 @@
     "eslint": "^8.57.0",
     "eslint-config-next": "15.3.3",
     "gh-pages": "^6.3.0",
+    "google-auth-library": "^10.6.1",
     "node-fetch": "^3.3.2",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",

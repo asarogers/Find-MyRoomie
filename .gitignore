@@ -88,6 +88,10 @@ robots.txt
 rss.xml
 humans.txt
 
+# Google Indexing API
+google-indexing-key.json
+.indexing-cache.json
+
 # Logs or debug scripts
 scripts/debug*.js
 scripts/devtools*.js

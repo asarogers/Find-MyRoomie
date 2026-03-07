@@ -248,7 +248,7 @@ export default function RoomsterAlternativePage() {
 
       </main>
 
-      <Footer />
+      <Footer setIsOpen={setIsOpen} />
     </>
   );
 }

@@ -1,23 +1,15 @@
 'use client';
 
-import React, { useState } from "react";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
-import {
-  Calendar,
-  Clock,
-  ArrowLeft,
-  Share2,
-} from "lucide-react";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import ContactUs from "../../components/ContactUs";
-import Image from "next/image";
-import { SanityBlogPost, urlFor } from "@/lib/sanity";
+import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { Calendar, Clock, ArrowLeft, Share2 } from 'lucide-react';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
+import ContactUs from '../../components/ContactUs';
+import { BlogPost } from '@/components/_data/blogs';
 
-
-
-export default function BlogPageClient({ blog }: { blog: SanityBlogPost }) {
+export default function BlogPageClient({ blog }: { blog: BlogPost }) {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -27,16 +19,12 @@ export default function BlogPageClient({ blog }: { blog: SanityBlogPost }) {
       text: blog.excerpt,
       url: window.location.href,
     };
-    console.log('🔍 SITE LOADED - VERSION 3.0')
-    console.log('🔍 Window location:', window.location.href)
 
     try {
       if (navigator.share) {
         await navigator.share(shareData);
       } else {
         await navigator.clipboard.writeText(shareData.url);
-        // You could add a toast notification here
-        console.log('URL copied to clipboard');
       }
     } catch (error) {
       console.error('Error sharing:', error);
@@ -69,7 +57,7 @@ export default function BlogPageClient({ blog }: { blog: SanityBlogPost }) {
             {new Date(blog.publishedAt).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',
-              day: 'numeric'
+              day: 'numeric',
             })}
           </div>
           <div className="flex items-center gap-2">
@@ -77,19 +65,6 @@ export default function BlogPageClient({ blog }: { blog: SanityBlogPost }) {
             {blog.readTime}
           </div>
         </div>
-
-        {blog.mainImage && (
-          <div className="relative mb-8">
-            <Image
-              src={urlFor(blog.mainImage).width(800).height(400).url()}
-              alt={blog.title}
-              width={800}
-              height={400}
-              className="rounded-xl w-full object-cover max-h-[400px]"
-              priority
-            />
-          </div>
-        )}
 
         <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8 rounded-r-lg">
           <p className="text-gray-700 font-medium leading-relaxed">
@@ -116,46 +91,19 @@ export default function BlogPageClient({ blog }: { blog: SanityBlogPost }) {
               <h2 className="text-2xl font-bold mb-6 text-gray-900">
                 {section.subtitle}
               </h2>
-              
+
               {section.contentType === 'list' && section.listContent ? (
                 <div className="space-y-4">
                   {section.listContent.map((item, j) => (
                     <div key={j} className="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-500">
-                      <h4 className="font-semibold text-gray-900 mb-2">
-                        {item.label}
-                      </h4>
-                      <p className="text-gray-700 leading-relaxed">
-                        {item.text}
-                      </p>
+                      <h4 className="font-semibold text-gray-900 mb-2">{item.label}</h4>
+                      <p className="text-gray-700 leading-relaxed">{item.text}</p>
                     </div>
                   ))}
                 </div>
               ) : (
                 <div className="text-gray-700 leading-relaxed whitespace-pre-line">
                   {section.textContent}
-                </div>
-              )}
-              
-              {section.sectionImage && (
-                <div className="my-8">
-                  <Image
-                    src={urlFor(section.sectionImage).width(800).height(400).url()}
-                    alt={`Image for ${section.subtitle}`}
-                    width={800}
-                    height={400}
-                    className="rounded-xl w-full object-cover max-h-[400px]"
-                  />
-                </div>
-              )}
-              
-              {section.sectionVideo && (
-                <div className="my-8">
-                  <video
-                    src={section.sectionVideo}
-                    className="rounded-xl w-full"
-                    controls
-                    preload="metadata"
-                  />
                 </div>
               )}
             </section>

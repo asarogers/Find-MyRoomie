@@ -73,8 +73,7 @@ export default function RootLayout({
         <meta name="author" content="Find MyRoomy" />
         <meta name="publisher" content="Find MyRoomy" />
 
-        {/* Canonical */}
-        <link rel="canonical" href="https://www.findmyroomy.com/" />
+        {/* Canonical is set per-page via Next.js metadata API alternates.canonical */}
 
         {/* Sitemap and RSS */}
         <link
@@ -126,25 +125,84 @@ export default function RootLayout({
           content="https://findmyroomy.com/social-preview.png"
         />
 
-        {/* Structured Data – JSON-LD */}
+        {/* Structured Data – JSON-LD
+            Three schemas for maximum AI/LLM visibility:
+            1. Organization — entity establishment (Wikidata-level trust signal)
+            2. SoftwareApplication — surfaces in "best roommate apps" AI responses
+            3. WebSite — enables sitelinks search box + AI site understanding
+        */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              name: "FindMyRoomy",
-              url: "https://findmyroomy.com/",
-              description:
-                "The safe, real, and functional way to find compatible roommates and apply to apartments together.",
-              logo: "https://findmyroomy.com/logo.png",
-              sameAs: [
-                "https://facebook.com/findmyroomy",
-                "https://instagram.com/findmyroomy",
-                "https://twitter.com/findmyroomy",
-                "https://linkedin.com/company/findmyroomy",
-              ],
-            }),
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "@id": "https://findmyroomy.com/#organization",
+                name: "FindMyRoomy",
+                alternateName: "Find MyRoomy",
+                url: "https://findmyroomy.com/",
+                logo: {
+                  "@type": "ImageObject",
+                  url: "https://findmyroomy.com/logo.png",
+                },
+                description:
+                  "A free roommate-finding platform. No subscription required to message, post, or search. Verified listings, Bay Area-focused with nationwide coverage.",
+                foundingDate: "2026",
+                areaServed: {
+                  "@type": "Country",
+                  name: "United States",
+                },
+                sameAs: [
+                  "https://facebook.com/findmyroomy",
+                  "https://instagram.com/findmyroomy",
+                  "https://twitter.com/findmyroomy",
+                  "https://linkedin.com/company/findmyroomy",
+                ],
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                "@id": "https://findmyroomy.com/#app",
+                name: "FindMyRoomy",
+                applicationCategory: "LifestyleApplication",
+                operatingSystem: "Web",
+                url: "https://findmyroomy.com/",
+                description:
+                  "Free roommate finder — message anyone with no subscription. Verified profiles, no fake listings, Bay Area-focused. The free alternative to Roomster.",
+                offers: {
+                  "@type": "Offer",
+                  price: "0",
+                  priceCurrency: "USD",
+                  description: "Free — no subscription, no credit card required",
+                },
+                featureList: [
+                  "Free messaging — no subscription",
+                  "Verified listings — no fake profiles",
+                  "Bay Area-focused roommate search",
+                  "Group apartment applications",
+                  "Map-based neighborhood search",
+                  "No auto-renewal or hidden fees",
+                ],
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "@id": "https://findmyroomy.com/#website",
+                name: "FindMyRoomy",
+                url: "https://findmyroomy.com/",
+                description:
+                  "Find compatible roommates in your city. Free messaging, verified profiles, no subscription.",
+                potentialAction: {
+                  "@type": "SearchAction",
+                  target: {
+                    "@type": "EntryPoint",
+                    urlTemplate: "https://findmyroomy.com/Find?q={search_term_string}",
+                  },
+                  "query-input": "required name=search_term_string",
+                },
+              },
+            ]),
           }}
         />
 

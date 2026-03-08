@@ -85,21 +85,27 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'Baiduspider', disallow: '/' },
       { userAgent: 'YandexBot',   disallow: '/' },
 
-      // ── Block scraping / AI training bots ──
-      { userAgent: 'CCBot',           disallow: '/' },
-      { userAgent: 'ChatGPT-User',    disallow: '/' },
-      { userAgent: 'GPTBot',          disallow: '/' },
-      { userAgent: 'anthropic-ai',    disallow: '/' },
-      { userAgent: 'Claude-Web',      disallow: '/' },
-      { userAgent: 'cohere-ai',       disallow: '/' },
-      { userAgent: 'PetalBot',        disallow: '/' },
-      { userAgent: 'MauiBot',         disallow: '/' },
-      { userAgent: 'SiteAuditBot',    disallow: '/' },
+      // ── AI search & answer engines — allow so findmyroomy.com appears in
+      //    ChatGPT, Claude, Perplexity, and other AI assistant responses ──
+      { userAgent: 'GPTBot',          allow: '/', disallow: SENSITIVE_PATHS },  // OpenAI training
+      { userAgent: 'OAI-SearchBot',   allow: '/', disallow: SENSITIVE_PATHS },  // ChatGPT live search
+      { userAgent: 'ChatGPT-User',    allow: '/', disallow: SENSITIVE_PATHS },  // ChatGPT browsing
+      { userAgent: 'anthropic-ai',    allow: '/', disallow: SENSITIVE_PATHS },  // Anthropic training
+      { userAgent: 'ClaudeBot',       allow: '/', disallow: SENSITIVE_PATHS },  // Claude web search
+      { userAgent: 'Claude-Web',      allow: '/', disallow: SENSITIVE_PATHS },  // Claude browsing
+      { userAgent: 'PerplexityBot',   allow: '/', disallow: SENSITIVE_PATHS },  // Perplexity
+      { userAgent: 'cohere-ai',       allow: '/', disallow: SENSITIVE_PATHS },  // Cohere
 
-      // ── Block archiving bots ──
-      { userAgent: 'ia_archiver',     disallow: '/' },
-      { userAgent: 'archive.org_bot', disallow: '/' },
-      { userAgent: 'Wayback',         disallow: '/' },
+      // ── Archiving bots — allow for trust signals and historical indexing ──
+      { userAgent: 'ia_archiver',     allow: '/' },
+      { userAgent: 'archive.org_bot', allow: '/' },
+      { userAgent: 'Wayback',         allow: '/' },
+
+      // ── Block aggressive scrapers ──
+      { userAgent: 'CCBot',        disallow: '/' },
+      { userAgent: 'PetalBot',     disallow: '/' },
+      { userAgent: 'MauiBot',      disallow: '/' },
+      { userAgent: 'SiteAuditBot', disallow: '/' },
 
       // ── Block aggressive / malicious crawlers ──
       { userAgent: 'MJ12bot',        disallow: '/' },

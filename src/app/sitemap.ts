@@ -20,8 +20,11 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/Find`,               changeFrequency: 'monthly', priority: 0.7 },
   { url: `${BASE_URL}/downloadApp`,        changeFrequency: 'weekly',  priority: 0.9 },
   { url: `${BASE_URL}/blogs`,              changeFrequency: 'weekly',  priority: 0.8 },
-  { url: `${BASE_URL}/roomster-alternative`, changeFrequency: 'monthly', priority: 0.9 },
-  { url: `${BASE_URL}/privacy`,            changeFrequency: 'yearly',  priority: 0.3 },
+  { url: `${BASE_URL}/roomster-alternative`,  changeFrequency: 'monthly', priority: 0.9 },
+  { url: `${BASE_URL}/roomi-alternative`,     changeFrequency: 'monthly', priority: 0.9 },
+  { url: `${BASE_URL}/spareroom-alternative`, changeFrequency: 'monthly', priority: 0.9 },
+  { url: `${BASE_URL}/roommate-apps`,         changeFrequency: 'monthly', priority: 0.95 },
+  { url: `${BASE_URL}/privacy`,              changeFrequency: 'yearly',  priority: 0.3 },
   { url: `${BASE_URL}/terms`,              changeFrequency: 'yearly',  priority: 0.3 },
   { url: `${BASE_URL}/cookie-policy`,      changeFrequency: 'yearly',  priority: 0.3 },
 ];

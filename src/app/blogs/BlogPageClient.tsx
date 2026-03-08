@@ -28,7 +28,14 @@ type TemplateType = 'competitor' | 'advice'
 type FaqItem = { q: string; a: string }
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
+const CITY_PREFIXES = ['free-roommate-finder-', 'how-to-find-a-roommate-']
+
+function isEditorialSlug(slug: string): boolean {
+  return !CITY_PREFIXES.some(p => slug.startsWith(p))
+}
+
 function getCityName(slug: string): string {
+  if (isEditorialSlug(slug)) return 'the Bay Area'
   const citySlug = slug
     .replace('free-roommate-finder-', '')
     .replace('how-to-find-a-roommate-', '')
@@ -41,6 +48,7 @@ function getTemplateType(slug: string): TemplateType {
 }
 
 function getCitySlug(slug: string): string {
+  if (isEditorialSlug(slug)) return 'san-francisco-ca'
   return slug.replace('free-roommate-finder-', '').replace('how-to-find-a-roommate-', '')
 }
 
@@ -319,6 +327,36 @@ function FAQSection({ faqItems }: { faqItems: FaqItem[] }) {
 
 // ── Related Cluster ───────────────────────────────────────────────────────────
 function RelatedCluster({ slug, city }: { slug: string; city: string }) {
+  if (isEditorialSlug(slug)) {
+    const editorialLinks = [
+      { href: '/roomster-alternative', label: 'Roomster Alternative — Full Comparison' },
+      { href: '/roommate-safety', label: 'Roommate Safety Guide 2026' },
+      { href: '/neighborhoods', label: 'Bay Area Neighborhood Guides' },
+      { href: '/blogs/free-roommate-finder-san-francisco-ca', label: 'Free Roommate Finder San Francisco' },
+      { href: '/blogs/free-roommate-finder-san-jose-ca', label: 'Free Roommate Finder San Jose' },
+    ].filter(l => !l.href.endsWith(slug))
+
+    return (
+      <div className="my-10 not-prose">
+        <h2 className="text-lg font-bold mb-4 text-slate-900">Related guides</h2>
+        <div className="grid sm:grid-cols-2 gap-3">
+          {editorialLinks.slice(0, 4).map(link => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="flex items-center gap-3 p-3.5 bg-white border border-slate-200 rounded-xl hover:border-blue-300 hover:shadow-sm transition-all group"
+            >
+              <ArrowRight className="w-4 h-4 text-blue-400 shrink-0 group-hover:translate-x-0.5 transition-transform" />
+              <span className="text-sm text-slate-700 font-medium group-hover:text-blue-600 transition-colors">
+                {link.label}
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    )
+  }
+
   const citySlug = getCitySlug(slug)
   const partnerSlug = slug.startsWith('free-roommate-finder-')
     ? slug.replace('free-roommate-finder-', 'how-to-find-a-roommate-')

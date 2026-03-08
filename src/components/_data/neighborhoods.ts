@@ -485,6 +485,99 @@ export const allNeighborhoods: Neighborhood[] = [
     relatedSlugs: ['temescal-oakland', 'soma-san-francisco', 'mission-district-san-francisco']
   },
   {
+    slug: 'temescal-oakland',
+    name: 'Temescal, Oakland',
+    neighborhood: 'Temescal',
+    city: 'Oakland',
+    citySlug: 'oakland-ca',
+    state: 'CA',
+    roomRent: '$1,400–$2,000/mo',
+    soloRent: '$2,800–$3,600/mo',
+    savings: 'Save $1,400+/mo with a roommate',
+    vibe: 'Artsy, foodie, rapidly gentrifying',
+    transit: 'Good — MacArthur BART (walk), AC Transit lines, 20 min to downtown SF',
+    bestFor: 'East Bay creatives, tech workers, price-conscious SF commuters',
+    employers: 'UCSF Benioff Oakland (5 min), downtown Oakland firms (10 min), SF via BART (20 min)',
+    roommateAngle: 'One of the few Oakland neighborhoods where roommate demand consistently exceeds supply — MacArthur BART walkability drives it',
+    quickVerdict: 'Best value East Bay neighborhood for BART commuters — more culture than Rockridge, cheaper than SF, walking distance to a major station',
+    primaryKeyword: 'roommate temescal oakland',
+    tags: ['temescal', 'oakland', 'roommate-guide', 'east-bay', 'bart-accessible'],
+    publishedAt: '2026-03-08T14:00:00Z',
+    readTime: '6 min read',
+    intro: 'Temescal is Oakland\'s highest-demand roommate neighborhood in 2026 — a walkable stretch along Telegraph Avenue anchored by MacArthur BART, with a restaurant and café density that makes it feel more like a San Francisco neighborhood than most of Oakland does. Shared rooms run $1,400–$2,000/month, which is $800–$1,800/month cheaper than comparable access in SoMa SF while keeping BART commute times to downtown SF under 25 minutes. For East Bay renters who work in SF or Oakland, Temescal is the roommate market that consistently has more qualified seekers than available rooms.',
+    sections: [
+      {
+        subtitle: 'Temescal Rent in 2026: What Shared Housing Costs',
+        contentType: 'list',
+        listContent: [
+          {
+            label: 'Shared room (typical)',
+            text: '$1,400–$2,000/month. The tightest inventory is in the blocks immediately around MacArthur BART — anything within 5-minute walk of the station commands a premium. Furnished rooms with month-to-month flexibility run slightly higher at $1,600–$2,100/month.'
+          },
+          {
+            label: 'Solo 1BR apartment',
+            text: '$2,800–$3,600/month for a 1BR in Temescal proper. This is meaningfully below SF equivalent, but the roommate math still works: the $1,400–$1,600/month monthly savings compounds to $16,800–$19,200/year — significant even for a mid-level tech salary.'
+          },
+          {
+            label: 'Neighboring Rockridge (higher end)',
+            text: '$1,600–$2,200/month for shared rooms — somewhat pricier than Temescal with more college-educated professionals and quieter residential feel. College Avenue has the better restaurant strip but Temescal\'s BART access is stronger.'
+          },
+          {
+            label: 'Market dynamics',
+            text: 'Temescal has one of the lowest roommate vacancy rates in the East Bay. New listings on Craigslist and Facebook typically receive 10-20 inquiries within 24 hours. For seekers, response speed and profile quality matter more here than in slower markets.'
+          }
+        ]
+      },
+      {
+        subtitle: 'MacArthur BART: Why It Drives Everything',
+        contentType: 'text',
+        textContent: 'MacArthur BART station at 40th and Telegraph is what makes Temescal command a premium over surrounding Oakland neighborhoods. From MacArthur: downtown Oakland is 7 minutes, downtown SF is 22 minutes, and Berkeley is 8 minutes. For a hybrid tech worker doing 2-3 days in SF per week, that commute profile is comparable to living in the Richmond or Sunset districts of SF — but with Oakland rent prices and substantially more walkable street life on the Temescal side. The station sits at the border of Temescal and Rockridge, meaning residents of both neighborhoods effectively share its access. This BART-adjacency drives year-round demand and is the primary reason listings move faster here than in most East Bay markets.'
+      },
+      {
+        subtitle: 'Temescal vs. Rockridge: Which Is Right for You?',
+        contentType: 'list',
+        listContent: [
+          {
+            label: 'Choose Temescal if',
+            text: 'You want walkable Telegraph Avenue food and coffee culture, slightly lower rent, and proximity to MacArthur BART. More mixed demographic, more urban energy, faster-changing neighborhood.'
+          },
+          {
+            label: 'Choose Rockridge if',
+            text: 'You want a quieter residential feel, College Avenue restaurants, and slightly more established neighborhood character. Rockridge BART is walkable from the College Avenue strip. Marginally more expensive.'
+          },
+          {
+            label: 'Both neighborhoods share',
+            text: 'MacArthur BART access, East Bay food culture, relative safety compared to other Oakland neighborhoods, and strong roommate demand that makes finding a quality co-tenant easier than in slower markets.'
+          }
+        ]
+      },
+      {
+        subtitle: 'Find a Verified Temescal Roommate — Free',
+        contentType: 'text',
+        textContent: 'FindMyRoomy has verified profiles in Oakland, Temescal, and Rockridge. Government ID verification on every profile. Free messaging — no paywall. For Oakland roommate seekers, the FindMyRoomy beta is the verified alternative to Craigslist and Facebook groups. Join Beta — It\'s Free.'
+      }
+    ],
+    faqs: [
+      {
+        q: 'What is the average rent for a shared room in Temescal Oakland?',
+        a: 'Shared rooms in Temescal typically run $1,400–$2,000/month in 2026. The premium end is in blocks immediately adjacent to MacArthur BART. This is $800–$1,800/month less than comparable SF access neighborhoods.'
+      },
+      {
+        q: 'Is Temescal Oakland safe?',
+        a: 'Temescal is considered one of Oakland\'s safer, more livable neighborhoods. The Telegraph Avenue corridor has high pedestrian activity and an established restaurant/coffee scene. As with any urban neighborhood, awareness is normal, but Temescal has a significantly lower crime profile than many Oakland areas.'
+      },
+      {
+        q: 'How long is the BART commute from Temescal to San Francisco?',
+        a: 'MacArthur BART station is walkable from most Temescal addresses. From MacArthur to Embarcadero or Montgomery in downtown SF is approximately 22-25 minutes. Oakland 19th Street is 7 minutes for downtown Oakland employers.'
+      },
+      {
+        q: 'Is Temescal or Rockridge better for roommates?',
+        a: 'Both share MacArthur BART access. Temescal is slightly cheaper ($1,400–$2,000 vs. $1,600–$2,200 for Rockridge shared rooms) and has more walkable food/café culture on Telegraph. Rockridge has a quieter residential feel and College Avenue. Both have strong roommate demand.'
+      }
+    ],
+    relatedSlugs: ['rockridge-oakland', 'soma-san-francisco', 'mission-district-san-francisco']
+  },
+  {
     slug: 'north-san-jose',
     name: 'North San Jose, CA',
     neighborhood: 'North San Jose',

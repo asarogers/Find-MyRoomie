@@ -1,4 +1,4 @@
-// src/app/apartment/[city]/page.tsx
+// src/app/apartments/[city]/page.tsx
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import cityList from '@/components/_data/cities.json';
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     openGraph: {
       title,
       description,
-      url: `https://findmyroomy.com/apartment/${city.slug}`,
+      url: `https://findmyroomy.com/apartments/${city.slug}`,
       siteName: 'MyRoomie',
       type: 'website',
       locale: 'en_US',
@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       images: [`https://findmyroomy.com/og-images/apartment-${city.slug}.jpg`],
     },
     alternates: {
-      canonical: `https://findmyroomy.com/apartment/${city.slug}`,
+      canonical: `https://findmyroomy.com/apartments/${city.slug}`,
     },
     robots: {
       index: true,
@@ -92,7 +92,7 @@ export default async function ApartmentCityPage({ params }: Params) {
     "@type": "WebPage",
     "name": `Shared Apartments in ${city.name}`,
     "description": `Find affordable shared apartments and roommates in ${city.name}. Split rent, utilities, and enjoy better living with verified matches.`,
-    "url": `https://findmyroomy.com/apartment/${city.slug}`,
+    "url": `https://findmyroomy.com/apartments/${city.slug}`,
     "mainEntity": {
       "@type": "Service",
       "name": "MyRoomie Apartment Sharing",
@@ -121,13 +121,13 @@ export default async function ApartmentCityPage({ params }: Params) {
           "@type": "ListItem",
           "position": 2,
           "name": "Apartments",
-          "item": "https://findmyroomy.com/apartment"
+          "item": "https://findmyroomy.com/apartments"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": city.name,
-          "item": `https://findmyroomy.com/apartment/${city.slug}`
+          "item": `https://findmyroomy.com/apartments/${city.slug}`
         }
       ]
     }
@@ -258,6 +258,40 @@ export default async function ApartmentCityPage({ params }: Params) {
                   Once matched, you and your roommates can submit joint applications through our platform, simplifying the process.
                 </p>
               </div>
+            </div>
+          </section>
+
+          {/* Related guides — cross-linking */}
+          <section className="mb-16">
+            <h2 className="text-2xl font-bold mb-6 text-center">Roommate guides for {city.name}</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <Link
+                href={`/roommates/${city.slug}`}
+                className="block bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-green-200 transition-all"
+              >
+                <p className="text-xs font-semibold text-green-600 uppercase tracking-wide mb-2">Browse Profiles</p>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Roommates in {city.name}</h3>
+                <p className="text-sm text-gray-600">Browse verified roommate profiles available in {city.name}.</p>
+                <span className="mt-4 inline-block text-sm font-semibold text-green-600">Find roommates →</span>
+              </Link>
+              <Link
+                href={`/blogs/free-roommate-finder-${city.slug}`}
+                className="block bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-green-200 transition-all"
+              >
+                <p className="text-xs font-semibold text-green-600 uppercase tracking-wide mb-2">Free Finder</p>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Free Roommate Finder in {city.name}</h3>
+                <p className="text-sm text-gray-600">No Roomster paywall. Free messaging always. Here's what to use instead.</p>
+                <span className="mt-4 inline-block text-sm font-semibold text-green-600">Read guide →</span>
+              </Link>
+              <Link
+                href={`/blogs/how-to-find-a-roommate-${city.slug}`}
+                className="block bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-green-200 transition-all"
+              >
+                <p className="text-xs font-semibold text-green-600 uppercase tracking-wide mb-2">2026 Guide</p>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">How to Find a Roommate in {city.name}</h3>
+                <p className="text-sm text-gray-600">What to ask, how to avoid scams, and how to vet someone before signing anything.</p>
+                <span className="mt-4 inline-block text-sm font-semibold text-green-600">Read guide →</span>
+              </Link>
             </div>
           </section>
 

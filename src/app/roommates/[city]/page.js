@@ -544,6 +544,39 @@ export default async function RoommateCityPage({ params }) {
             </div>
           </section>
 
+          {/* Related guides — city ↔ blog cross-linking */}
+          <section className="mb-16">
+            <h2 className="text-2xl font-bold mb-6 text-center">Guides for finding a roommate in {city.name}</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Link
+                href={`/blogs/free-roommate-finder-${city.slug}`}
+                className="block bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-purple-200 transition-all"
+              >
+                <p className="text-xs font-semibold text-purple-600 uppercase tracking-wide mb-2">Free Roommate Finder</p>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  Free Roommate Finder in {city.name} — No Paywall
+                </h3>
+                <p className="text-sm text-gray-600">
+                  Why Roomster costs $29.99/month and what to use instead. Verified, free, no credit card.
+                </p>
+                <span className="mt-4 inline-block text-sm font-semibold text-purple-600">Read guide →</span>
+              </Link>
+              <Link
+                href={`/blogs/how-to-find-a-roommate-${city.slug}`}
+                className="block bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-purple-200 transition-all"
+              >
+                <p className="text-xs font-semibold text-purple-600 uppercase tracking-wide mb-2">2026 Guide</p>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  How to Find a Roommate in {city.name} (2026)
+                </h3>
+                <p className="text-sm text-gray-600">
+                  What to ask, how to avoid scams, and how to vet a stranger before handing over a deposit.
+                </p>
+                <span className="mt-4 inline-block text-sm font-semibold text-purple-600">Read guide →</span>
+              </Link>
+            </div>
+          </section>
+
           {/* CTA Section */}
           <section className="text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white p-12 rounded-xl">
             <h2 className="text-3xl font-bold mb-4">

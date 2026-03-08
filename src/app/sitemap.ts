@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import cityList from '@/components/_data/cities.json';
 import { allBlogs } from '@/components/_data/blogs';
+import { getAllNeighborhoods } from '@/components/_data/neighborhoods';
 
 export const dynamic = 'force-static';
 
@@ -20,6 +21,7 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/Find`,               changeFrequency: 'monthly', priority: 0.7 },
   { url: `${BASE_URL}/downloadApp`,        changeFrequency: 'weekly',  priority: 0.9 },
   { url: `${BASE_URL}/blogs`,              changeFrequency: 'weekly',  priority: 0.8 },
+  { url: `${BASE_URL}/neighborhoods`,      changeFrequency: 'weekly',  priority: 0.8 },
   { url: `${BASE_URL}/roomster-alternative`,  changeFrequency: 'monthly', priority: 0.9 },
   { url: `${BASE_URL}/roomi-alternative`,     changeFrequency: 'monthly', priority: 0.9 },
   { url: `${BASE_URL}/spareroom-alternative`, changeFrequency: 'monthly', priority: 0.9 },
@@ -66,11 +68,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  // ── Neighborhood guides — auto-generated from neighborhoods.ts ──
+  const neighborhoodPages: MetadataRoute.Sitemap = getAllNeighborhoods().map((n) => ({
+    url: `${BASE_URL}/neighborhoods/${n.slug}`,
+    lastModified: TODAY,
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }));
+
   return [
     ...STATIC_PAGES.map((p) => ({ ...p, lastModified: TODAY })),
     ...roommatePages,
     ...apartmentPages,
     ...petPages,
     ...blogPages,
+    ...neighborhoodPages,
   ];
 }

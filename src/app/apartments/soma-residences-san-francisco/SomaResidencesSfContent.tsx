@@ -1,5 +1,6 @@
 "use client";
 import { useState } from 'react';
+import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ContactUs from '@/components/ContactUs';
@@ -23,6 +24,13 @@ const FAQS = [
     q: "What is the best value apartment in SoMa?",
     a: "For pure price-per-sqft value, SOMA Residences is one of SoMa's strongest options — $5-6/sqft vs $8-10 at newer towers. With a roommate on a 2BR, per-person cost drops to $2,400-$2,800/month — among SoMa's most affordable shared-living arrangements.",
   },
+];
+
+const RELATED = [
+  { slug: 'soma-788-san-francisco', name: 'SOMA 788', desc: 'Premium SoMa comparison. Rooftop pool.' },
+  { slug: 'rooms-for-rent-san-francisco', name: 'Rooms for Rent in SF', desc: 'Affordable SF shared housing options.' },
+  { slug: 'san-francisco-ca', name: 'San Francisco City Guide', desc: 'Full SF roommate market overview.' },
+  { slug: 'ansel-hayes-valley-sf', name: 'Ansel Hayes Valley', desc: 'Hayes Valley luxury option for comparison.' },
 ];
 
 export default function SomaResidencesSfContent() {
@@ -246,6 +254,25 @@ export default function SomaResidencesSfContent() {
               Find a SOMA Roommate →
             </a>
             <p className="text-sm text-purple-400 mt-3">Free · No subscription · Verified profiles</p>
+          </div>
+        </section>
+
+        {/* Related Links */}
+        <section className="py-16 px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6">More Bay Area Guides</h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              {RELATED.map((c, i) => (
+                <Link
+                  key={i}
+                  href={`/apartments/${c.slug}/`}
+                  className="block p-5 border border-gray-200 rounded-xl hover:border-purple-300 hover:bg-purple-50 transition-colors"
+                >
+                  <div className="font-bold mb-1">{c.name}</div>
+                  <div className="text-gray-500 text-sm">{c.desc}</div>
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
 

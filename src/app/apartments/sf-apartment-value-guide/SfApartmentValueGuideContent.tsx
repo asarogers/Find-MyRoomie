@@ -39,6 +39,13 @@ const NEIGHBORHOODS = [
   { name: "Pacific Heights", avgRent: "$9–$12/sqft", walkability: "91", transit: "78", value: "4.5/10", color: "red" },
 ];
 
+const RELATED = [
+  { slug: 'rooms-for-rent-san-francisco', name: 'Rooms for Rent in SF', desc: 'Affordable SF shared housing options.' },
+  { slug: 'most-overrated-sf-apartments', name: 'Most Overrated SF Apartments', desc: 'Which buildings aren\'t worth the premium.' },
+  { slug: 'soma-788-san-francisco', name: 'SOMA 788 Review', desc: 'Honest review of SoMa\'s top luxury tower.' },
+  { slug: 'san-francisco-ca', name: 'San Francisco City Guide', desc: 'Full SF roommate market overview.' },
+];
+
 export default function SfApartmentValueGuideContent() {
   const [isOpen, setIsOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -233,6 +240,25 @@ export default function SfApartmentValueGuideContent() {
             >
               Find Roommates in San Francisco →
             </a>
+          </div>
+        </section>
+
+        {/* Related Links */}
+        <section className="py-16 px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6">More Bay Area Guides</h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              {RELATED.map((c, i) => (
+                <Link
+                  key={i}
+                  href={`/apartments/${c.slug}/`}
+                  className="block p-5 border border-gray-200 rounded-xl hover:border-purple-300 hover:bg-purple-50 transition-colors"
+                >
+                  <div className="font-bold mb-1">{c.name}</div>
+                  <div className="text-gray-500 text-sm">{c.desc}</div>
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
 

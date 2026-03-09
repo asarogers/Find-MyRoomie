@@ -26,6 +26,13 @@ const FAQS = [
   },
 ];
 
+const RELATED = [
+  { slug: 'venn-on-market-san-francisco', name: 'Venn on Market SF', desc: 'Mission border value. Cheaper than Hayes Valley.' },
+  { slug: 'soma-788-san-francisco', name: 'SOMA 788', desc: 'Caltrain access. One of SoMa\'s best-managed towers.' },
+  { slug: 'san-francisco-ca', name: 'San Francisco Roommates — City Guide', desc: 'Full SF roommate market overview.' },
+  { slug: 'rooms-for-rent-san-francisco', name: 'Rooms for Rent in San Francisco', desc: 'Affordable SF shared housing options.' },
+];
+
 export default function AnselHayesValleyContent() {
   const [isOpen, setIsOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -230,6 +237,25 @@ export default function AnselHayesValleyContent() {
               Find Roommates in SF →
             </a>
             <p className="text-purple-300 mt-4 text-sm">Free messaging. No subscription. Ever.</p>
+          </div>
+        </section>
+
+        {/* Related Links */}
+        <section className="py-16 px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6">More Bay Area Guides</h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              {RELATED.map((c, i) => (
+                <Link
+                  key={i}
+                  href={`/apartments/${c.slug}/`}
+                  className="block p-5 border border-gray-200 rounded-xl hover:border-purple-300 hover:bg-purple-50 transition-colors"
+                >
+                  <div className="font-bold mb-1">{c.name}</div>
+                  <div className="text-gray-500 text-sm">{c.desc}</div>
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
 

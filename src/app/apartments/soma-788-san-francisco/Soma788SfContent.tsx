@@ -26,6 +26,13 @@ const FAQS = [
   },
 ];
 
+const RELATED = [
+  { slug: 'soma-residences-san-francisco', name: 'SOMA Residences', desc: 'Older SoMa building. Better value per sqft.' },
+  { slug: 'rooms-for-rent-san-francisco', name: 'Rooms for Rent in SF', desc: 'Affordable SF shared housing options.' },
+  { slug: 'san-francisco-ca', name: 'San Francisco City Guide', desc: 'Full SF roommate market overview.' },
+  { slug: 'venn-on-market-san-francisco', name: 'Venn on Market', desc: 'Mission border value. Cheaper than SoMa.' },
+];
+
 export default function Soma788SfContent() {
   const [isOpen, setIsOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -211,6 +218,25 @@ export default function Soma788SfContent() {
               Find Roommates in SoMa SF →
             </a>
             <p className="text-purple-300 mt-4 text-sm">Free messaging. No subscription. Ever.</p>
+          </div>
+        </section>
+
+        {/* Related Links */}
+        <section className="py-16 px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6">More Bay Area Guides</h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              {RELATED.map((c, i) => (
+                <Link
+                  key={i}
+                  href={`/apartments/${c.slug}/`}
+                  className="block p-5 border border-gray-200 rounded-xl hover:border-purple-300 hover:bg-purple-50 transition-colors"
+                >
+                  <div className="font-bold mb-1">{c.name}</div>
+                  <div className="text-gray-500 text-sm">{c.desc}</div>
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
 

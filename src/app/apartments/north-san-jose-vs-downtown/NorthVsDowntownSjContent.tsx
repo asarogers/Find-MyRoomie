@@ -26,6 +26,13 @@ const FAQS = [
   },
 ];
 
+const RELATED = [
+  { slug: 'miro-san-jose', name: 'Miro San Jose', desc: 'Downtown guide. Near Diridon Station.' },
+  { slug: 'crescent-village-san-jose', name: 'Crescent Village', desc: 'North SJ option. Lowest per-person costs.' },
+  { slug: 'san-jose-ca', name: 'San Jose Roommates — City Guide', desc: 'Full San Jose roommate market overview.' },
+  { slug: 'roommates-near-cisco', name: 'Roommates Near Cisco', desc: 'North SJ guide for Cisco commuters.' },
+];
+
 export default function NorthVsDowntownSjContent() {
   const [isOpen, setIsOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -213,6 +220,25 @@ export default function NorthVsDowntownSjContent() {
             >
               Find Roommates in San Jose →
             </a>
+          </div>
+        </section>
+
+        {/* Related Links */}
+        <section className="py-16 px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6">More Bay Area Guides</h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              {RELATED.map((c, i) => (
+                <Link
+                  key={i}
+                  href={`/apartments/${c.slug}/`}
+                  className="block p-5 border border-gray-200 rounded-xl hover:border-purple-300 hover:bg-purple-50 transition-colors"
+                >
+                  <div className="font-bold mb-1">{c.name}</div>
+                  <div className="text-gray-500 text-sm">{c.desc}</div>
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
 

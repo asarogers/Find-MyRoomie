@@ -35,6 +35,13 @@ const HONEST_REVIEW = [
   { label: "Roommate value", rating: "Good", detail: "$1,800-$2,100/person on a 2BR. Competitive for the LinkedIn corridor. Better location math than going further south." },
 ];
 
+const RELATED = [
+  { slug: 'montclaire-sunnyvale', name: 'Montclaire Sunnyvale', desc: 'Caltrain access. Central AC confirmed.' },
+  { slug: 'mission-pointe-sunnyvale', name: 'Mission Pointe Sunnyvale', desc: 'New construction near Apple Park.' },
+  { slug: 'roommates-near-apple', name: 'Roommates Near Apple Park', desc: 'Find roommates near Apple headquarters.' },
+  { slug: 'sunnyvale-ca', name: 'Sunnyvale City Guide', desc: 'Full Sunnyvale roommate market overview.' },
+];
+
 export default function CrossingsSunnyvaleContent() {
   const [isOpen, setIsOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -162,6 +169,25 @@ export default function CrossingsSunnyvaleContent() {
               Find Sunnyvale Roommates Free →
             </a>
             <p className="text-purple-300 mt-4 text-sm">Free messaging. No subscription. Ever.</p>
+          </div>
+        </section>
+
+        {/* Related Links */}
+        <section className="py-16 px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6">More Bay Area Guides</h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              {RELATED.map((c, i) => (
+                <Link
+                  key={i}
+                  href={`/apartments/${c.slug}/`}
+                  className="block p-5 border border-gray-200 rounded-xl hover:border-purple-300 hover:bg-purple-50 transition-colors"
+                >
+                  <div className="font-bold mb-1">{c.name}</div>
+                  <div className="text-gray-500 text-sm">{c.desc}</div>
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
 

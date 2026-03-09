@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/build.js",
     "predeploy": "npm run build",
     "deploy": "wsl bash /mnt/c/Users/cyber/repo/FindMyRoomy/Find-MyRoomie/scripts/deploy.sh",
     "postdeploy": "npx ts-node scripts/request-indexing.ts",

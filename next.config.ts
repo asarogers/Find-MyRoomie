@@ -13,6 +13,9 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true             // ✅ Skip ESLint on production build
   },
+  experimental: {
+    cpus: 1,                             // ✅ Fix WSL2 race condition on .next/export/ mkdir
+  },
   webpack: (config: any) => {
     config.resolve.alias = {
       ...config.resolve.alias,

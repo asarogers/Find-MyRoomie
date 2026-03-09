@@ -56,6 +56,11 @@ const STATIC_APARTMENT_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/apartments/roommates-near-airbnb/`, changeFrequency: 'monthly', priority: 0.7 },
 ];
 
+// ── Data / research pages ─────────────────────────────────────────────────────
+const DATA_PAGES: MetadataRoute.Sitemap = [
+  { url: `${BASE_URL}/data/sf-rent-prices/`, changeFrequency: 'monthly', priority: 0.95 },
+];
+
 // ── Static pages ─────────────────────────────────────────────────────────────
 const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/`,                    changeFrequency: 'weekly',  priority: 1.0 },
@@ -119,6 +124,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...STATIC_PAGES.map((p) => ({ ...p, lastModified: TODAY })),
+    ...DATA_PAGES.map((p) => ({ ...p, lastModified: TODAY })),
     ...STATIC_APARTMENT_PAGES.map((p) => ({ ...p, lastModified: TODAY })),
     ...roommatePages,
     ...apartmentPages,

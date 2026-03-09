@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Find MyRoomie
 
-## Getting Started
+Bay Area roommate finder — free to message, verified profiles, no paywall. Pre-launch.
 
-First, run the development server:
+**Live site:** https://findmyroomy.com
+**Beta signup:** https://forms.gle/qJQXtqEgHb45Y2Y8A
+**Repo:** https://github.com/asarogers/Find-MyRoomie
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Tech Stack
+
+- **Framework:** Next.js 15 (App Router)
+- **Output:** Static export (`next export`) — no SSR, no API routes at runtime
+- **Styling:** Tailwind CSS
+- **Hosting:** GitHub Pages / static CDN
+- **Analytics:** GA4
+
+## Project Structure
+
+```
+src/app/
+├── page.tsx                          # Homepage
+├── apartments/
+│   ├── page.tsx                      # /apartments/ hub index
+│   ├── [city]/page.tsx               # Dynamic city pages (77 cities via cities.json)
+│   ├── [complex-slug]/               # Static apartment complex reviews (20+)
+│   └── roommates-near-[employer]/    # Employer proximity pages (12)
+├── roommates/[city]/page.tsx         # Dynamic roommate city pages
+├── pets/[city]/page.tsx              # Pet-friendly city pages
+├── blogs/[slug]/page.tsx             # Dynamic blog posts
+├── neighborhoods/
+│   ├── [slug]/page.tsx               # Dynamic neighborhood fallback
+│   └── [static-slug]/               # Static neighborhood guides (3)
+├── how-to/[guide]/                   # How-to content pages (10)
+├── data/sf-rent-prices/              # SF Rent Tracker (Dataset schema)
+├── tools/rent-split-calculator/      # Rent split tool
+└── [competitor]-alternative/         # Attack pages (13)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Page Architecture
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Every page uses a **server + client split**:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `page.tsx` — Server Component only. Exports `metadata` and JSON-LD `<script>` tags. No UI logic.
+- `[Name]Content.tsx` — Client Component (`"use client"`). All rendering, state, Navbar, Footer, ContactUs.
 
-## Learn More
+```tsx
+// page.tsx pattern
+export const metadata: Metadata = { ... }
+export default function Page() {
+  return <PageContent />
+}
 
-To learn more about Next.js, take a look at the following resources:
+// [Name]Content.tsx pattern
+"use client"
+export default function PageContent() {
+  const [isOpen, setIsOpen] = useState(false)
+  return (
+    <>
+      <Navbar setIsOpen={setIsOpen} />
+      {/* content */}
+      <Footer setIsOpen={setIsOpen} />
+    </>
+  )
+}
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm install
+npm run build       # Outputs to /out/ (static HTML)
+npm run dev         # Dev server on localhost:3000
+```
 
-## Deploy on Vercel
+**WSL2 note:** `experimental: { cpus: 1 }` in `next.config.ts` prevents ENOTEMPTY race conditions on Windows NTFS via WSL2.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Key Config
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```ts
+// next.config.ts
+const nextConfig: NextConfig = {
+  output: 'export',        // Static export
+  trailingSlash: true,     // All URLs end with /
+  images: { unoptimized: true },
+  experimental: { cpus: 1 },  // WSL2 fix
+}
+```
+
+## Git Workflow
+
+Always commit and push after every change:
+
+```bash
+git add [changed-files]
+git commit -m "description"
+git push origin main
+```
+
+Remote: `https://github.com/asarogers/Find-MyRoomie.git` (HTTPS)
+
+## Page Count (as of 2026-03-09)
+
+| Route type | Count |
+|-----------|-------|
+| Static page.tsx files | 99 |
+| Dynamic city pages (roommates + apartments + pets) | 224 |
+| Blog posts | 156 |
+| **Total exports** | **479** |

@@ -682,6 +682,355 @@ export const allNeighborhoods: Neighborhood[] = [
       }
     ],
     relatedSlugs: ['soma-san-francisco', 'mission-district-san-francisco']
+  },
+  {
+    slug: 'downtown-san-jose',
+    name: 'Downtown San Jose, CA',
+    neighborhood: 'Downtown San Jose',
+    city: 'San Jose',
+    citySlug: 'san-jose-ca',
+    state: 'CA',
+    roomRent: '$800–$1,400/mo',
+    soloRent: '$2,200–$3,500/mo',
+    savings: 'Save $1,400+/mo with a roommate',
+    vibe: 'Urban renewal in progress — 60% vacancy towers, cheap rents',
+    transit: 'Excellent — Diridon Station (Caltrain+BART), SAP Center, light rail hub',
+    bestFor: 'Risk-tolerant renters who want urban SF experience at SJ prices',
+    employers: 'Adobe HQ (5 min walk), Zoom (10 min), Cisco far (25 min), Google/Apple shuttle 35+ min',
+    roommateAngle: 'The cheapest way to live near Diridon Station while both foreclosed towers (The Fay, Neo on First) offer below-market rates to fill vacancies',
+    quickVerdict: 'High risk, high reward — downtown SJ offers the best deals in the Bay Area for renters willing to accept ownership uncertainty',
+    primaryKeyword: 'roommate downtown san jose',
+    tags: ['downtown-san-jose', 'san-jose', 'roommate-guide', 'foreclosure', 'urban'],
+    publishedAt: '2026-03-09T10:00:00Z',
+    readTime: '8 min read',
+    intro: 'Downtown San Jose in March 2026 is the Bay Area\'s most unusual rental market: two premium towers in active foreclosure (The Fay at 60% vacancy, Neo on First in Chapter 11 bankruptcy), below-market rents actively being offered to fill units, and a transit hub that will only get better as Caltrain electrification improves. Shared rooms run $800–$1,400/month — the cheapest urban core pricing in the Bay Area. The tradeoff is ownership uncertainty: if you sign a lease at a building in foreclosure, your lease survives under California law, but renewals and amenity commitments may not.',
+    sections: [
+      {
+        subtitle: 'The Foreclosure Opportunity — What It Means for Renters',
+        contentType: 'text',
+        textContent: 'Two buildings define the downtown San Jose rental market in 2026. The Fay at 600 S. First Street — 336-unit luxury high-rise — entered active foreclosure in January 2026 with a $182.5 million construction loan default and a 60% vacancy rate. Neo on First, another downtown luxury tower, filed Chapter 11 bankruptcy in January 2026 to halt its own $21 million foreclosure. Both buildings are offering concessions — free months, reduced deposits, below-market rents — to fill units. This creates a genuine opportunity for renters who understand the legal situation: under California law, your lease transfers to the new owner. For a fixed-term lease (12 months), you are protected until lease end regardless of who owns the building. Month-to-month arrangements are riskier. If you can negotiate a 12-month lease during the foreclosure window, you get San Jose\'s best downtown location at SF-Tenderloin prices with your tenant rights intact.'
+      },
+      {
+        subtitle: 'Downtown San Jose Rent Reality — March 2026',
+        contentType: 'list',
+        listContent: [
+          { label: 'Foreclosure tower (The Fay / Neo)', text: '$1,800–$2,800/month for a 1BR solo — below their original listing prices. Shared room in these towers: rare but possible via subletting at $900–$1,200/month. Leasing offices are incentivized to fill units.' },
+          { label: 'Standard downtown 1BR', text: '$2,200–$3,200/month. Downtown SJ is ~30-40% cheaper than comparable SOMA SF.' },
+          { label: 'Shared room (roommate situation)', text: '$800–$1,400/month. The most affordable urban core roommate pricing in the Bay Area outside of Oakland\'s deepest East neighborhoods.' },
+          { label: 'Comparison: SOMA SF', text: 'Comparable downtown 1BR runs $4,500–$6,500/month in SOMA. Downtown San Jose is approximately 40–50% cheaper for the same urban lifestyle.' }
+        ]
+      },
+      {
+        subtitle: 'Transit: Downtown SJ\'s Real Advantage',
+        contentType: 'list',
+        listContent: [
+          { label: 'Diridon Station', text: 'Caltrain, Amtrak, ACE, and future BART extension all converge here. For hybrid workers commuting to SF, this is better transit than most Bay Area neighborhoods.' },
+          { label: 'Caltrain to SF', text: '45-60 minutes to SF Caltrain (4th/King). With electrification, frequency and speed improve significantly in 2026-2027.' },
+          { label: 'VTA Light Rail', text: 'Covers downtown San Jose extensively. Slower than BART but car-free option to Berryessa BART and North SJ.' },
+          { label: 'Walk/bike to Adobe HQ', text: 'Adobe\'s San Jose headquarters is a 5-minute walk from downtown. If you work at Adobe, living downtown eliminates commute entirely.' }
+        ]
+      },
+      {
+        subtitle: 'Should You Sign a Lease at a Foreclosed Tower?',
+        contentType: 'text',
+        textContent: 'The legal framework: California Civil Code protects tenants in foreclosure. Your lease transfers to the new owner. For a fixed-term lease (12 months), you are protected until lease end regardless of who owns the building. The risk window is: signing month-to-month at a foreclosed property — you could receive a 3-day or 30-day notice after ownership transfer. The practical advice: if you want to live downtown and take advantage of concession pricing, negotiate a 12-month fixed lease. Get everything in writing including amenity access and parking. The uncertainty is real but the legal protections for fixed-term tenants are strong. Read your lease fully and consider the concession math: free months offered at The Fay or Neo effectively bring first-year cost below anything comparable in the Bay Area.'
+      }
+    ],
+    faqs: [
+      { q: 'Is it safe to rent at The Fay or Neo on First in foreclosure?', a: 'Under California law, active leases survive foreclosure — your lease is binding on the new owner. Fixed-term leases (12 months) are more protected than month-to-month. Get all concessions in writing, negotiate a 12-month lease, and understand that amenity promises may not carry over to new ownership.' },
+      { q: 'What is the average rent for a shared room in downtown San Jose?', a: 'Shared rooms in downtown San Jose run $800–$1,400/month in March 2026. This is the most affordable urban core roommate pricing in the Bay Area. The foreclosure situations at two major towers have pushed concession pricing below comparable North San Jose rates.' },
+      { q: 'Is downtown San Jose safe?', a: 'Downtown SJ has improved significantly over the past 5 years. The area around Diridon Station and South First Street (SoFA) is generally safe for urban living. Like all urban cores, exercise normal awareness after midnight. The light rail and well-lit streets make it comparable to SOMA SF in safety profile.' },
+      { q: 'How far is downtown San Jose from Google and Apple?', a: 'Google (Mountain View) is 25-35 minutes by car or company shuttle. Apple (Cupertino) is 20-30 minutes by car. Neither has a direct transit option from downtown SJ that\'s under 45 minutes. Adobe HQ is a 5-minute walk.' }
+    ],
+    relatedSlugs: ['north-san-jose', 'soma-san-francisco']
+  },
+  {
+    slug: 'fremont-newark-union-city',
+    name: 'Fremont Area, CA',
+    neighborhood: 'Fremont / Newark / Union City',
+    city: 'Fremont',
+    citySlug: 'fremont-ca',
+    state: 'CA',
+    roomRent: '$900–$1,500/mo',
+    soloRent: '$2,500–$3,800/mo',
+    savings: 'Save $1,600+/mo with a roommate',
+    vibe: 'South Bay bedroom community — BART-connected, affordable, Indian-American hub',
+    transit: 'Good — Fremont BART, Union City BART, Tesla shuttle proximity',
+    bestFor: 'Tesla workers, South Bay tech commuters, Indian-American community, families',
+    employers: 'Tesla Fremont Factory (15 min), Meta (30 min via 880), BART to SF/Oakland 35 min, South Bay tech 20-35 min',
+    roommateAngle: 'The Bay Area\'s most overlooked BART-adjacent tech worker hub — 20% cheaper than equivalent South Bay options with actual BART access',
+    quickVerdict: 'Best value-to-transit ratio in the South Bay — Tesla workers and Indian-American families have built a community that makes the math work',
+    primaryKeyword: 'roommate fremont california',
+    tags: ['fremont', 'newark', 'union-city', 'south-bay', 'bart', 'tesla', 'indian-community'],
+    publishedAt: '2026-03-09T10:00:00Z',
+    readTime: '7 min read',
+    intro: 'Fremont, Newark, and Union City form a contiguous 15-mile arc in the East Bay that has quietly become one of the Bay Area\'s most practical roommate markets in 2026. Shared rooms run $900–$1,500/month. Two BART stations (Fremont and Union City) provide car-free access to Oakland and SF. Tesla\'s Fremont factory employs 20,000+ workers. The Indian-American community — anchored around businesses on Mowry Avenue and the Irvington District — has created one of the Bay Area\'s most active informal roommate networks. The problem: that informal network (Sulekha, WhatsApp groups, SFIndian.com) has zero verification, zero background checks, and zero recourse when a listing misrepresents conditions.',
+    sections: [
+      {
+        subtitle: 'Fremont vs Newark vs Union City — What\'s the Difference',
+        contentType: 'list',
+        listContent: [
+          { label: 'Fremont (Mission San Jose, Irvington, Warm Springs)', text: 'The most desirable and most expensive. Mission San Jose area has top-rated schools. Warm Springs BART opened in 2017, adding a third station. The Indian-American community is concentrated here. Shared rooms: $1,100–$1,500/month. Closest to Tesla factory and Warm Springs tech corridor.' },
+          { label: 'Newark', text: 'Less BART-accessible than Fremont (no direct station, Fremont or Union City stations are drives away). Lower prices: $900–$1,200/month for shared rooms. Large working-class community, fewer amenities. Primarily drives to work.' },
+          { label: 'Union City', text: 'Has its own BART station (Union City BART). Mid-range pricing $950–$1,350/month. Good option for workers at companies on the Union City/Hayward corridor. Less of a community identity than Fremont.' }
+        ]
+      },
+      {
+        subtitle: 'Tesla Workers and Fremont Roommates',
+        contentType: 'text',
+        textContent: 'Tesla\'s Fremont factory employs over 20,000 people — the single largest employment anchor in the East Bay. Tesla workers on manufacturing line pay ($25-45/hour) find shared housing in Fremont the most practical option. A shared room at $1,100/month is achievable on entry manufacturing wages in a way that SOMA SF at $2,500/month is not. There is also a significant community of Tesla engineers and software workers who prefer Fremont over South Bay or SF because the factory proximity eliminates commute. The informal housing network among Tesla workers (factory Facebook groups, Discord servers) is active but unverified. Scams targeting new Tesla employees — asking for deposits before showing a room — are documented and common. Verified roommate matching is exactly what this market needs.'
+      },
+      {
+        subtitle: 'BART Commute Times from Fremont',
+        contentType: 'list',
+        listContent: [
+          { label: 'Oakland 12th St (downtown)', text: '25-30 minutes via BART. Most practical Bay Area connection for Fremont residents.' },
+          { label: 'SF Civic Center / Powell St', text: '45-55 minutes via BART. Feasible for hybrid work 2-3 days/week. Long for daily commute.' },
+          { label: 'Union City BART to Fremont BART', text: '10-12 minutes — the Fremont/Newark/Union City corridor is essentially one BART zone.' },
+          { label: 'Warm Springs BART (Fremont)', text: 'Opened 2017. Connects to San Jose BART extension (under construction). Will eventually provide direct BART access to downtown San Jose and airport.' }
+        ]
+      },
+      {
+        subtitle: 'The Indian-American Community — Assets and Gaps',
+        contentType: 'text',
+        textContent: 'Fremont and Union City have one of the Bay Area\'s largest Indian-American communities — comparable in size to North San Jose but with stronger roots. Mowry Avenue and the Irvington District have dense clusters of South Asian businesses. The roommate market in this community is highly active through Sulekha, SFIndian.com, NRIconnect groups, and temple notice boards. Cultural compatibility is a stated preference in most listings: vegetarian household, no alcohol on premises, specific sleep and noise requirements. The practical advantage is real — finding a household that matches your lifestyle is easier through community networks than through general platforms. The disadvantage remains: no identity verification, no background checks, no dispute resolution. A scam asking for a $500 deposit before showing a room circulated through Fremont Sulekha listings in Q4 2025. Verified matching closes this gap.'
+      }
+    ],
+    faqs: [
+      { q: 'What is the average rent for a shared room in Fremont?', a: 'Shared rooms in Fremont run $1,100–$1,500/month in 2026. Newark is slightly cheaper at $900–$1,200/month. Union City falls in the middle at $950–$1,350/month. This is 20-30% cheaper than equivalent South Bay cities (Sunnyvale, Santa Clara) with comparable BART access.' },
+      { q: 'Is Fremont good for Tesla workers?', a: 'Yes. Tesla\'s Fremont factory is 15 minutes from most Fremont addresses. Both factory workers and engineers choose Fremont for zero-commute access. Shared housing in Fremont is financially viable on manufacturing wages in a way that other Bay Area cities are not.' },
+      { q: 'Is Fremont safe for roommate living?', a: 'Fremont consistently ranks among the safest large cities in California (top 10 in multiple years). The Mission San Jose and Irvington areas are particularly family-oriented and low-crime. Newark has higher crime rates than Fremont proper — research specific neighborhoods before committing.' },
+      { q: 'How do I find a verified roommate in Fremont?', a: 'FindMyRoomy has verified profiles in Fremont, Union City, and Newark. Government ID verification on every profile. Free messaging, no paywall. This is the verified alternative to Sulekha and Facebook group listings that have no identity checks.' }
+    ],
+    relatedSlugs: ['north-san-jose', 'rockridge-oakland']
+  },
+  {
+    slug: 'castro-san-francisco',
+    name: 'Castro, San Francisco, CA',
+    neighborhood: 'Castro',
+    city: 'San Francisco',
+    citySlug: 'san-francisco-ca',
+    state: 'CA',
+    roomRent: '$1,800–$2,800/mo',
+    soloRent: '$3,800–$5,500/mo',
+    savings: 'Save $2,000+/mo with a roommate',
+    vibe: 'Historic LGBTQ+ neighborhood — vibrant, inclusive, walkable',
+    transit: 'Excellent — Castro Muni Metro (F, K, L, M, T lines), 24th St BART nearby',
+    bestFor: 'LGBTQ+ community members, young professionals, people prioritizing walkability and nightlife',
+    employers: 'UCSF (15 min), SF financial district (25 min Muni), Twitter/X (20 min), Salesforce Tower (30 min)',
+    roommateAngle: 'The most verified-roommate-friendly neighborhood in SF for LGBTQ+ renters — community trust matters here more than anywhere else in the city',
+    quickVerdict: 'Premium location, premium price — but the right roommate in the Castro unlocks the most livable urban neighborhood in SF',
+    primaryKeyword: 'lgbtq roommate san francisco castro',
+    tags: ['castro', 'san-francisco', 'lgbtq', 'roommate-guide', 'rainbow-district'],
+    publishedAt: '2026-03-09T10:00:00Z',
+    readTime: '6 min read',
+    intro: 'The Castro is San Francisco\'s historic LGBTQ+ neighborhood and one of its most walkable, livable, and community-oriented districts in 2026. Shared rooms run $1,800–$2,800/month — above SF average but below comparable neighborhoods like Pacific Heights or Noe Valley for the quality of life provided. The Castro has a specific roommate dynamic: community trust and cultural alignment matter more here than in other SF neighborhoods. An LGBTQ+-verified roommate platform is not a niche — it\'s the standard expectation for most Castro listings.',
+    sections: [
+      {
+        subtitle: 'Castro Rent in 2026 — The Real Numbers',
+        contentType: 'list',
+        listContent: [
+          { label: 'Shared room (typical Castro flat)', text: '$1,800–$2,800/month. Castro flats are typically Victorian 2-3BR units. A shared room in a 3-bedroom Victorian flat near Market Street runs $2,000–$2,400/month all-in.' },
+          { label: 'Solo 1BR in Castro', text: '$3,800–$5,500/month. The Castro is approximately 10-15% cheaper than comparable Noe Valley or Pacific Heights 1BRs.' },
+          { label: 'Roommate savings math', text: 'Solo 1BR: $4,500/month average. Shared room: $2,200/month average. Annual roommate savings: $27,600. Over 2 years: $55,200.' },
+          { label: 'Comparison to SOMA', text: 'Castro shared rooms run $200-400/month more than SOMA. The premium buys: Victorian architecture, walkable streets, lower crime, stronger community, fewer tech-industry transients.' }
+        ]
+      },
+      {
+        subtitle: 'LGBTQ+ Roommate Living in the Castro',
+        contentType: 'text',
+        textContent: 'The Castro has a specific roommate culture built on community trust that general platforms don\'t accommodate. Most Castro listings explicitly state LGBTQ+-friendly household as a requirement. Many listings use informal networks — Rainbow Railroad housing lists, Castro community boards, the SF Queer Housing Facebook group — because these channels communicate cultural alignment without requiring explicit identity questions that create legal ambiguity. The practical problem: these channels have no verification. Scams targeting LGBTQ+ renters exist and are documented — a March 2025 incident circulated in SF Queer Housing involved a $1,200 deposit request for a Castro room that didn\'t exist. A verified platform with LGBTQ+-affirming profiles changes the math significantly.'
+      },
+      {
+        subtitle: 'Castro Transit and Walkability',
+        contentType: 'list',
+        listContent: [
+          { label: 'Castro Muni Station', text: 'Underground station serves F, K, L, M, T lines. Direct access to Civic Center, downtown, and the Embarcadero without transfers.' },
+          { label: '24th Street BART', text: '10-15 minute walk south through Noe Valley. BART access for East Bay commuters, SFO, and San Jose.' },
+          { label: 'Walkability score', text: 'Castro scores 98/100 for walkability. Every daily errand (grocery, pharmacy, coffee, restaurants) is within 5-minute walk. Car ownership is genuinely optional.' },
+          { label: 'Bike access', text: 'Market Street protected bike lane connects directly to the Embarcadero and financial district. 15-20 minute bike commute to most SF office clusters.' }
+        ]
+      },
+      {
+        subtitle: 'Finding a Verified LGBTQ+-Friendly Roommate in the Castro',
+        contentType: 'text',
+        textContent: 'FindMyRoomy has verified profiles in the Castro and across San Francisco. Identity verification on every profile eliminates the scam risk that has circulated in Castro housing groups. Free messaging — no paywall, no subscription. LGBTQ+-affirming matching means you can filter for households that have explicitly marked themselves as LGBTQ+-friendly without navigating the legal ambiguity of explicit identity questions. Beta access is open now — the Castro cohort is forming for April/May 2026 move-ins.'
+      }
+    ],
+    faqs: [
+      { q: 'How much does a shared room in the Castro cost?', a: 'Shared rooms in the Castro run $1,800–$2,800/month in 2026. A typical Victorian 3BR flat near Market Street rents for $2,000–$2,400/month per room. This is 10-15% above comparable SOMA pricing but below Pacific Heights or Noe Valley for similar quality.' },
+      { q: 'Is the Castro a good neighborhood for LGBTQ+ roommate living?', a: 'Yes — the Castro is SF\'s historic LGBTQ+ district and has the strongest community infrastructure for LGBTQ+ residents. Community trust is built into the neighborhood culture. The roommate dynamic here is distinctly different from other SF neighborhoods.' },
+      { q: 'How do I find an LGBTQ+-friendly roommate in San Francisco?', a: 'FindMyRoomy has LGBTQ+-affirming profiles with verified identities. Free messaging, no subscription. The platform allows filtering for LGBTQ+-friendly households without requiring explicit identity disclosure.' },
+      { q: 'What is the walkability of the Castro?', a: 'The Castro scores 98/100 for walkability. All daily errands are within a 5-minute walk. Muni Metro access is underground at Castro Station. Car ownership is genuinely optional for Castro residents.' }
+    ],
+    relatedSlugs: ['hayes-valley-san-francisco', 'mission-district-san-francisco']
+  },
+  {
+    slug: 'sunset-district-san-francisco',
+    name: 'Sunset District, San Francisco, CA',
+    neighborhood: 'Sunset District',
+    city: 'San Francisco',
+    citySlug: 'san-francisco-ca',
+    state: 'CA',
+    roomRent: '$1,600–$2,400/mo',
+    soloRent: '$3,200–$4,800/mo',
+    savings: 'Save $1,800+/mo with a roommate',
+    vibe: 'Quiet, fog-prone, residential — the anti-SOMA',
+    transit: 'Good — N Judah and L Taraval Muni lines, 19th Ave/BART-adjacent',
+    bestFor: 'UCSF students and staff, people who prioritize quiet, families, long-term SF renters',
+    employers: 'UCSF Parnassus (10 min), UCSF Mission Bay (20 min), SF downtown (30 min Muni)',
+    roommateAngle: 'SF\'s most underrated roommate neighborhood — 25% cheaper than comparable SOMA with actual parking and quiet streets',
+    quickVerdict: 'The Sunset is what non-San Franciscans imagine SF to be — residential streets, good restaurants, $1,600 shared rooms — without the tech-industry noise',
+    primaryKeyword: 'roommate sunset district san francisco',
+    tags: ['sunset-district', 'san-francisco', 'ucsf', 'outer-sunset', 'inner-sunset', 'roommate-guide'],
+    publishedAt: '2026-03-09T10:00:00Z',
+    readTime: '6 min read',
+    intro: 'The Sunset District — Inner Sunset, Outer Sunset, and the Sunset/West Portal border — is San Francisco\'s most overlooked roommate market in 2026. Shared rooms run $1,600–$2,400/month, roughly 25% cheaper than SOMA or Hayes Valley for equivalent quality. The neighborhood has parking (increasingly rare in SF), quiet residential streets, and UCSF proximity that makes it particularly practical for medical students and healthcare workers. The tradeoff is fog (the Sunset is noticeably foggier than the rest of SF) and longer transit to downtown SF (30 minutes via N Judah Muni).',
+    sections: [
+      {
+        subtitle: 'Inner Sunset vs Outer Sunset — Which to Choose',
+        contentType: 'list',
+        listContent: [
+          { label: 'Inner Sunset (Irving St corridor)', text: 'The restaurant destination — Carl and Cole, Irving Street have some of SF\'s best independent restaurants. Closest to Golden Gate Park and UCSF Parnassus. Shared rooms: $1,800–$2,400/month. Slightly more expensive than Outer Sunset but more walkable and lively.' },
+          { label: 'Outer Sunset (Judah St corridor)', text: 'Quieter, cheaper, more residential. Ocean Beach proximity. Shared rooms: $1,600–$2,100/month. Families with long SF tenure. If you want the most affordable SF living without leaving the city, the Outer Sunset delivers.' },
+          { label: 'West Portal (border area)', text: 'Slightly different character — actual neighborhood business district, slightly higher prices, K/L/M Muni access. Shared rooms: $1,900–$2,500/month.' }
+        ]
+      },
+      {
+        subtitle: 'UCSF Proximity — The Sunset\'s Hidden Advantage',
+        contentType: 'text',
+        textContent: 'UCSF Parnassus — the main campus on the hill — is a 10-minute bike ride or 15-minute walk from Inner Sunset. The UCSF medical student and resident population creates a specific roommate market: people who need affordable SF housing close to campus on stipends that don\'t support $2,500 studio rents. A shared room in the Sunset at $1,800/month versus a solo studio in SOMA at $4,200/month is a $28,800/year difference — significant on a medical resident salary of $65,000. The Sunset also hosts a large population of UCSF nurses and healthcare staff who want residential quiet after night shifts. This creates a market where compatible roommates (healthcare workers, respectful schedules, no parties) are concentrated and actively seeking.'
+      },
+      {
+        subtitle: 'Sunset District Rent in 2026',
+        contentType: 'list',
+        listContent: [
+          { label: 'Shared room Inner Sunset', text: '$1,800–$2,400/month. Victorian and Edwardian flats, typical 2-4BR. Usually includes street parking access.' },
+          { label: 'Shared room Outer Sunset', text: '$1,600–$2,100/month. More single-family home conversions. Typically quieter roommate setups, fewer houses with 4+ people.' },
+          { label: 'Solo 1BR Sunset average', text: '$3,200–$4,200/month. Compared to SOMA ($4,500–$6,000) or Hayes Valley ($4,200–$5,800), the Sunset is 25-35% cheaper per square foot.' },
+          { label: 'Roommate savings versus solo', text: 'Sunset 1BR solo: $3,700/month average. Shared room: $2,000/month average. Annual savings: $20,400. Every year of roommate living in the Sunset saves approximately one month\'s San Francisco salary.' }
+        ]
+      }
+    ],
+    faqs: [
+      { q: 'How much does a shared room in the Sunset District cost?', a: 'Shared rooms in the Sunset District run $1,600–$2,400/month in 2026, depending on Inner vs Outer Sunset and proximity to the N Judah line. This is 25% cheaper than comparable SOMA or Hayes Valley housing.' },
+      { q: 'Is the Sunset District good for UCSF students?', a: 'Yes — Inner Sunset is a 10-15 minute walk to UCSF Parnassus. The neighborhood has a large population of UCSF residents, nurses, and staff. Roommate search in the Sunset is more straightforward than other neighborhoods because the pool is concentrated around healthcare workers.' },
+      { q: 'How long is the commute from the Sunset to downtown SF?', a: '25-35 minutes on the N Judah Muni Metro to Civic Center, Powell, or Embarcadero. The Inner Sunset N Judah stop at 9th and Irving is frequent (every 8-12 minutes peak). Outer Sunset residents typically add 10-15 minutes for access to the N.' },
+      { q: 'Is the Sunset District safe?', a: 'The Sunset is one of SF\'s safest neighborhoods — consistently low crime rates, residential character, active neighborhood associations. Golden Gate Park provides a large buffer from the Haight. The Outer Sunset has occasional property crime but is considered safe for city living.' }
+    ],
+    relatedSlugs: ['inner-richmond-san-francisco', 'hayes-valley-san-francisco']
+  },
+  {
+    slug: 'inner-richmond-san-francisco',
+    name: 'Inner Richmond, San Francisco, CA',
+    neighborhood: 'Inner Richmond',
+    city: 'San Francisco',
+    citySlug: 'san-francisco-ca',
+    state: 'CA',
+    roomRent: '$1,700–$2,500/mo',
+    soloRent: '$3,400–$5,000/mo',
+    savings: 'Save $1,800+/mo with a roommate',
+    vibe: 'Multicultural residential — Clement Street food scene, low density',
+    transit: 'Good — 38 Geary (fastest SF bus), 1-California, limited BART proximity',
+    bestFor: 'Long-term SF residents, culinary workers, people who want quiet proximity to Golden Gate Park',
+    employers: 'UCSF Parnassus (15 min), downtown SF (30 min 38-Geary), Kaiser Permanente SF (15 min)',
+    roommateAngle: 'The most affordable neighborhood with actual access to good food, parks, and quiet — the secret that long-term SF residents keep',
+    quickVerdict: 'Inner Richmond is the Bay Area\'s best-kept secret for roommate living — Clement Street food, Golden Gate Park, reasonable prices, and a residential culture that makes shared living genuinely pleasant',
+    primaryKeyword: 'roommate inner richmond san francisco',
+    tags: ['inner-richmond', 'richmond-district', 'san-francisco', 'clement-street', 'roommate-guide'],
+    publishedAt: '2026-03-09T10:00:00Z',
+    readTime: '6 min read',
+    intro: 'The Inner Richmond — the stretch of San Francisco between Arguello and Park Presidio, bounded by California Street and Golden Gate Park — is the city\'s best-kept roommate secret in 2026. Shared rooms run $1,700–$2,500/month, roughly 20% cheaper than Hayes Valley or Mission for equivalent quality. Clement Street (SF\'s unofficial second Chinatown) has the highest restaurant-to-dollar ratio in the city. Golden Gate Park is three blocks away. The neighborhood skews long-term resident rather than tech-industry transient, which creates a specific roommate dynamic: people who are selective about who they live with, stay longer, and expect a functional household rather than a crash pad.',
+    sections: [
+      {
+        subtitle: 'Inner Richmond Rent in 2026',
+        contentType: 'list',
+        listContent: [
+          { label: 'Shared room (typical Richmond flat)', text: '$1,700–$2,500/month. Richmond housing stock is predominantly 2-4BR Edwardian and Victorian flats. Most include street parking and are larger than equivalent SOMA units.' },
+          { label: 'Solo 1BR average', text: '$3,400–$4,800/month. Cheaper than the Mission, Hayes Valley, and significantly cheaper than Pacific Heights (which borders the Richmond to the south).' },
+          { label: 'Long-term rental advantage', text: 'Inner Richmond has SF\'s highest concentration of rent-controlled tenants who\'ve lived in units for 10+ years. Below-market units do come available — patience and network matter more here than in higher-turnover neighborhoods.' }
+        ]
+      },
+      {
+        subtitle: 'The Clement Street Advantage',
+        contentType: 'text',
+        textContent: 'Clement Street between 1st and 12th Avenue is San Francisco\'s most practical daily living street. Two Chinese supermarkets (Sun Fat, New May Wah) with the best produce prices in the city. Burma Superstar (consistently ranked one of SF\'s best restaurants, regularly affordable). Dozens of dim sum, Vietnamese, Cambodian, and Korean restaurants. A hardware store. A movie theater. Everything a neighborhood needs, without the $7 pour-over coffee and exposed-brick startup aesthetic of the Mission or Hayes Valley. For roommate households watching a food budget, Clement Street is the most practical daily shopping street in SF — better prices, more variety, and walkable from anywhere in the Richmond.'
+      },
+      {
+        subtitle: 'Golden Gate Park Access',
+        contentType: 'text',
+        textContent: 'Inner Richmond borders Golden Gate Park to the south. The Park\'s running trails, bike paths, museums (de Young, Academy of Sciences), tennis courts, and Panhandle running path are all within a 5-10 minute walk. For shared households with active lifestyle priorities — runners, cyclists, dog owners — this is a meaningful daily quality of life advantage over SOMA or the Mission, which require Muni or a longer ride to reach comparable green space. The Panhandle (a narrow extension of the Park) provides a direct bike connection to the Lower Haight and Castro.'
+      }
+    ],
+    faqs: [
+      { q: 'How much does a shared room in the Inner Richmond cost?', a: 'Shared rooms in the Inner Richmond run $1,700–$2,500/month in 2026. This is 20% cheaper than comparable Hayes Valley or Mission housing for equivalent square footage and quality.' },
+      { q: 'Is the Inner Richmond a good neighborhood?', a: 'The Inner Richmond is consistently rated one of SF\'s most livable neighborhoods. Low crime, residential character, Clement Street food scene, Golden Gate Park access, and lower rents than comparable western neighborhoods. It\'s a neighborhood that rewards people who know SF over newcomers chasing proximity to tech offices.' },
+      { q: 'How do I get to downtown SF from the Inner Richmond?', a: 'The 38 Geary bus is SF\'s highest-ridership bus line, running Geary Blvd every 8-10 minutes to Market Street and the Civic Center (25-30 minutes). The 1-California runs California Street to the Financial District (30-35 minutes). BART access requires getting to 24th Street Mission or Montgomery/Powell, which adds 15-20 minutes.' },
+      { q: 'Is the Inner Richmond safe for roommate living?', a: 'Yes — the Richmond is one of SF\'s safer neighborhoods. The residential character, stable long-term tenant population, and lower density all contribute to safety. Property crime rates are below SF average.' }
+    ],
+    relatedSlugs: ['sunset-district-san-francisco', 'hayes-valley-san-francisco']
+  },
+  {
+    slug: 'berkeley-neighborhoods-guide',
+    name: 'Berkeley, CA — Neighborhood Guide',
+    neighborhood: 'Berkeley',
+    city: 'Berkeley',
+    citySlug: 'berkeley-ca',
+    state: 'CA',
+    roomRent: '$1,200–$2,000/mo',
+    soloRent: '$2,400–$3,800/mo',
+    savings: 'Save $1,400+/mo with a roommate',
+    vibe: 'University town with real neighborhoods — BART hub, activist culture, food scene',
+    transit: 'Excellent — Downtown Berkeley BART, North Berkeley BART, AC Transit',
+    bestFor: 'UC Berkeley students and faculty, East Bay tech workers, SF remote workers who want cheaper Bay Area base',
+    employers: 'UC Berkeley (largest employer), Lawrence Berkeley National Lab, UCSF (BART), SF financial district (BART 35 min)',
+    roommateAngle: 'The Bay Area\'s highest roommate search concentration by population — UC Berkeley creates the densest roommate market outside SF',
+    quickVerdict: 'Berkeley is the Bay Area\'s best value for verified roommate living — BART-connected, food-rich, and March-April is the critical roommate search window',
+    primaryKeyword: 'roommate berkeley california',
+    tags: ['berkeley', 'uc-berkeley', 'east-bay', 'roommate-guide', 'student-housing'],
+    publishedAt: '2026-03-09T10:00:00Z',
+    readTime: '7 min read',
+    intro: 'Berkeley\'s roommate market is unlike any other Bay Area city: it\'s driven by a 42,000-student UC Berkeley population that creates a predictable seasonal pattern — the March-April window is when most roommate groups form for fall, and groups that miss this window pay significantly more in August when options are scarce. Shared rooms run $1,200–$2,000/month depending on neighborhood and proximity to campus. North Berkeley (Gourmet Ghetto area) is quieter and more expensive; South Berkeley and the Flatlands are cheaper but require more transit to campus. Downtown Berkeley BART and North Berkeley BART connect to SF in 35 minutes.',
+    sections: [
+      {
+        subtitle: 'Berkeley Neighborhood Breakdown — Where to Live',
+        contentType: 'list',
+        listContent: [
+          { label: 'Northside (near campus north gate)', text: 'Walking distance to North Campus. Quiet, residential. Shared rooms: $1,600–$2,000/month. Mostly undergrad and grad student households. High competition in spring.' },
+          { label: 'Southside (Telegraph Ave, College Ave)', text: 'Traditional student area. Dense, noisy, walkable. Shared rooms: $1,300–$1,800/month. Telegraph Ave has improved significantly; College Ave is restaurant-destination level. Best for undergrads and first-year grad students.' },
+          { label: 'Elmwood (South Berkeley)', text: 'Quieter residential area south of campus. More long-term resident mix. Shared rooms: $1,400–$1,900/month. Best for grad students, postdocs, and professional Berkeley residents who want walkability without party density.' },
+          { label: 'North Berkeley (Gourmet Ghetto)', text: 'The neighborhood with the highest quality of life — Cheeseboard Pizza, Chez Panisse-adjacent, North Berkeley BART. Shared rooms: $1,700–$2,200/month. More faculty, researchers, and professional households than students.' },
+          { label: 'West Berkeley (near Ashby BART)', text: 'Industrial-adjacent, improving. Cheapest Berkeley rents: $1,200–$1,600/month. Good for people whose primary commute is BART (Ashby BART station).' }
+        ]
+      },
+      {
+        subtitle: 'The March-April Window — Why Timing Is Everything',
+        contentType: 'text',
+        textContent: 'Berkeley\'s roommate market has a hard seasonal pattern. March 1-April 30 is when UC Berkeley housing offers go out for continuing students, when new admits commit, and when the 4,200 annual PhD admits begin looking for housing. Groups that form in March-April lock in 9-12 month leases by June 1, securing housing at the best available rates. Groups that wait until July-August are competing for 60% of the options at 20-30% higher prices. For anyone starting a UC Berkeley program in Fall 2026, March 2026 is not early — it\'s the standard window. WhatsApp groups and Facebook groups fill and close during this period. Verified platforms with active Berkeley listings during this window are genuinely valuable because the informal network gets overwhelmed and poorly managed.'
+      },
+      {
+        subtitle: 'Berkeley BART Commute — Best East Bay Transit Access',
+        contentType: 'list',
+        listContent: [
+          { label: 'Downtown Berkeley BART to SF Powell', text: '32-35 minutes. The most reliable BART commute in the East Bay.' },
+          { label: 'Downtown Berkeley BART to Oakland 12th St', text: '12-15 minutes.' },
+          { label: 'North Berkeley BART to SF Powell', text: '35-38 minutes. Slightly longer but neighborhoods around North Berkeley BART are among Berkeley\'s most desirable.' },
+          { label: 'AC Transit to SF', text: 'Transbay buses (F, 6, 7) connect Berkeley to the SF Transbay Terminal in 35-45 minutes depending on traffic. Alternative to BART for direct SF office destinations.' }
+        ]
+      },
+      {
+        subtitle: 'How to Find a Verified Roommate in Berkeley — 2026',
+        contentType: 'text',
+        textContent: 'The Berkeley informal roommate market (Craigslist, UC Berkeley Facebook groups, the bDrive mailing list, department listservs) has high volume but zero verification. Scams targeting incoming Berkeley students — deposit requests for listings that don\'t exist — spike every February-March. FindMyRoomy has verified Berkeley profiles with government ID checks and free messaging. For incoming students, the platform is the verified alternative to the chaotic March-April WhatsApp scramble. Join during the March-April window to access the active Berkeley cohort forming for Fall 2026.'
+      }
+    ],
+    faqs: [
+      { q: 'What is the average rent for a shared room in Berkeley?', a: 'Shared rooms in Berkeley run $1,200–$2,000/month depending on neighborhood and proximity to UC Berkeley campus. North Berkeley and Northside (near campus) are most expensive ($1,600–$2,000). West Berkeley is cheapest ($1,200–$1,600).' },
+      { q: 'When should I start my Berkeley roommate search?', a: 'March and April are the primary window. Groups forming now (March 2026) will have signed leases and moved in by August. People who start in July are competing for leftover options at 20-30% higher prices. For Fall 2026 programs, start immediately.' },
+      { q: 'Is Berkeley good for UC Berkeley grad students?', a: 'Yes — Berkeley has the highest concentration of grad student roommate seekers in the Bay Area. The Elmwood, Southside, and North Berkeley neighborhoods are particularly active with PhD students, postdocs, and research staff looking for 12-month leases with compatible roommates.' },
+      { q: 'How do I commute from Berkeley to San Francisco?', a: 'BART is the primary option: 32-38 minutes depending on station to SF Powell or Montgomery. Downtown Berkeley BART is most central. AC Transit transbay buses are an alternative for direct SF office destinations.' }
+    ],
+    relatedSlugs: ['north-san-jose', 'rockridge-oakland', 'temescal-oakland']
   }
 ]
 

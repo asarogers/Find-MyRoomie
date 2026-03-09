@@ -15,6 +15,47 @@ export const dynamic = 'force-static';
 const BASE_URL = 'https://findmyroomy.com';
 const TODAY = new Date().toISOString();
 
+// ── Static apartment complex + specialty pages (not in cities.json) ───────────
+const STATIC_APARTMENT_PAGES: MetadataRoute.Sitemap = [
+  // SF apartment guides
+  { url: `${BASE_URL}/apartments/`, changeFrequency: 'weekly', priority: 0.9 },
+  { url: `${BASE_URL}/apartments/rooms-for-rent-san-francisco/`, changeFrequency: 'weekly', priority: 0.85 },
+  { url: `${BASE_URL}/apartments/soma-788-san-francisco/`, changeFrequency: 'monthly', priority: 0.7 },
+  { url: `${BASE_URL}/apartments/soma-residences-san-francisco/`, changeFrequency: 'monthly', priority: 0.7 },
+  { url: `${BASE_URL}/apartments/soma-square-san-francisco/`, changeFrequency: 'monthly', priority: 0.7 },
+  { url: `${BASE_URL}/apartments/venn-on-market-san-francisco/`, changeFrequency: 'monthly', priority: 0.7 },
+  { url: `${BASE_URL}/apartments/ansel-hayes-valley-sf/`, changeFrequency: 'monthly', priority: 0.7 },
+  { url: `${BASE_URL}/apartments/most-overrated-sf-apartments/`, changeFrequency: 'monthly', priority: 0.75 },
+  { url: `${BASE_URL}/apartments/sf-apartment-value-guide/`, changeFrequency: 'monthly', priority: 0.75 },
+  // Sunnyvale complexes
+  { url: `${BASE_URL}/apartments/the-crossings-sunnyvale/`, changeFrequency: 'monthly', priority: 0.7 },
+  { url: `${BASE_URL}/apartments/montclaire-sunnyvale/`, changeFrequency: 'monthly', priority: 0.7 },
+  { url: `${BASE_URL}/apartments/mission-pointe-sunnyvale/`, changeFrequency: 'monthly', priority: 0.7 },
+  { url: `${BASE_URL}/apartments/americana-sunnyvale/`, changeFrequency: 'monthly', priority: 0.65 },
+  { url: `${BASE_URL}/apartments/sunnyvale-no-ac-apartments/`, changeFrequency: 'monthly', priority: 0.65 },
+  // San Jose complexes
+  { url: `${BASE_URL}/apartments/miro-san-jose/`, changeFrequency: 'monthly', priority: 0.7 },
+  { url: `${BASE_URL}/apartments/neo-on-first-san-jose/`, changeFrequency: 'monthly', priority: 0.7 },
+  { url: `${BASE_URL}/apartments/crescent-village-san-jose/`, changeFrequency: 'monthly', priority: 0.7 },
+  { url: `${BASE_URL}/apartments/the-fay-san-jose/`, changeFrequency: 'monthly', priority: 0.7 },
+  { url: `${BASE_URL}/apartments/north-san-jose-vs-downtown/`, changeFrequency: 'monthly', priority: 0.7 },
+  { url: `${BASE_URL}/apartments/san-jose-foreclosure-tracker/`, changeFrequency: 'monthly', priority: 0.65 },
+  { url: `${BASE_URL}/apartments/reserve-mountain-view/`, changeFrequency: 'monthly', priority: 0.7 },
+  // Tech campus corridors
+  { url: `${BASE_URL}/apartments/roommates-near-apple/`, changeFrequency: 'monthly', priority: 0.8 },
+  { url: `${BASE_URL}/apartments/roommates-near-google/`, changeFrequency: 'monthly', priority: 0.8 },
+  { url: `${BASE_URL}/apartments/roommates-near-meta/`, changeFrequency: 'monthly', priority: 0.75 },
+  { url: `${BASE_URL}/apartments/roommates-near-nvidia/`, changeFrequency: 'monthly', priority: 0.75 },
+  { url: `${BASE_URL}/apartments/roommates-near-cisco/`, changeFrequency: 'monthly', priority: 0.75 },
+  { url: `${BASE_URL}/apartments/roommates-near-salesforce/`, changeFrequency: 'monthly', priority: 0.75 },
+  { url: `${BASE_URL}/apartments/roommates-near-oracle/`, changeFrequency: 'monthly', priority: 0.75 },
+  { url: `${BASE_URL}/apartments/roommates-near-stanford/`, changeFrequency: 'monthly', priority: 0.75 },
+  { url: `${BASE_URL}/apartments/roommates-near-ucsf/`, changeFrequency: 'monthly', priority: 0.75 },
+  { url: `${BASE_URL}/apartments/roommates-near-stripe/`, changeFrequency: 'monthly', priority: 0.7 },
+  { url: `${BASE_URL}/apartments/roommates-near-uber/`, changeFrequency: 'monthly', priority: 0.7 },
+  { url: `${BASE_URL}/apartments/roommates-near-airbnb/`, changeFrequency: 'monthly', priority: 0.7 },
+];
+
 // ── Static pages ─────────────────────────────────────────────────────────────
 const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/`,                    changeFrequency: 'weekly',  priority: 1.0 },
@@ -78,6 +119,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...STATIC_PAGES.map((p) => ({ ...p, lastModified: TODAY })),
+    ...STATIC_APARTMENT_PAGES.map((p) => ({ ...p, lastModified: TODAY })),
     ...roommatePages,
     ...apartmentPages,
     ...petPages,

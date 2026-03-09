@@ -21,11 +21,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title,
     description,
-    alternates: { canonical: `${BASE_URL}/neighborhoods/${slug}` },
+    alternates: { canonical: `${BASE_URL}/neighborhoods/${slug}/` },
     openGraph: {
       title,
       description,
-      url: `${BASE_URL}/neighborhoods/${slug}`,
+      url: `${BASE_URL}/neighborhoods/${slug}/`,
       siteName: 'Find MyRoomy',
       type: 'article',
       publishedTime: n.publishedAt,

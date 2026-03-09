@@ -53,7 +53,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `Find Roommates in ${city.name} | Verified & Compatible Matches`,
       description: `Browse hundreds of verified roommate profiles in ${city.name}. Pet-friendly options, student housing, professional matches. Join free today.`,
-      url: `https://findmyroomy.com/roommates/${city.slug}`,
+      url: `https://findmyroomy.com/roommates/${city.slug}/`,
       siteName: 'MyRoomie - Roommate Finder',
       type: 'website',
       locale: 'en_US',
@@ -73,7 +73,7 @@ export async function generateMetadata({ params }) {
       images: [`https://findmyroomy.com/og-images/roommates-${city.slug}.jpg`],
     },
     alternates: {
-      canonical: `https://findmyroomy.com/roommates/${city.slug}`,
+      canonical: `https://findmyroomy.com/roommates/${city.slug}/`,
     },
     robots: {
       index: true,
@@ -167,13 +167,13 @@ export default async function RoommateCityPage({ params }) {
   };
 
   return (
-    <CityClientShell>
-      {/* Enhanced Structured Data */}
+    <>
+      {/* Structured Data — must be outside client component wrapper for static export */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
+    <CityClientShell>
       <main className="bg-[#FDFBF7] text-gray-900 pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4">
           
@@ -601,5 +601,6 @@ export default async function RoommateCityPage({ params }) {
         </div>
       </main>
     </CityClientShell>
+    </>
   );
 }

@@ -31,13 +31,13 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       `pet owner roommates ${city.name.toLowerCase()}`
     ].join(', '),
     alternates: {
-      canonical: `https://findmyroomy.com/pets/${city.slug}`,
+      canonical: `https://findmyroomy.com/pets/${city.slug}/`,
     },
     openGraph: {
       title: `Pet-Friendly Housing in ${city.name} | MyRoomie`,
       description: `Connect with pet-friendly roommates and find apartments that welcome your pets in ${city.name}.`,
       type: 'website',
-      url: `https://findmyroomy.com/pets/${city.slug}`,
+      url: `https://findmyroomy.com/pets/${city.slug}/`,
     },
   };
 }

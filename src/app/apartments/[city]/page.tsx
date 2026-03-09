@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     openGraph: {
       title,
       description,
-      url: `https://findmyroomy.com/apartments/${city.slug}`,
+      url: `https://findmyroomy.com/apartments/${city.slug}/`,
       siteName: 'MyRoomie',
       type: 'website',
       locale: 'en_US',
@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       images: [`https://findmyroomy.com/og-images/apartment-${city.slug}.jpg`],
     },
     alternates: {
-      canonical: `https://findmyroomy.com/apartments/${city.slug}`,
+      canonical: `https://findmyroomy.com/apartments/${city.slug}/`,
     },
     robots: {
       index: true,

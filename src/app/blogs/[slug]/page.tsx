@@ -64,13 +64,13 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      url: `${BASE_URL}/blogs/${slug}`,
+      url: `${BASE_URL}/blogs/${slug}/`,
       siteName: 'Find MyRoomy',
       type: 'article',
       publishedTime: blog.publishedAt,
       tags: blog.tags,
     },
-    alternates: { canonical: `${BASE_URL}/blogs/${slug}` },
+    alternates: { canonical: `${BASE_URL}/blogs/${slug}/` },
     keywords: [
       `roommate finder ${city.toLowerCase()}`,
       `find roommate ${city.toLowerCase()}`,

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import FremontContent from './FremontContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Find a Roommate in Fremont — Verified, Free, Indian & Tech Worker Friendly | Find MyRoomie',
@@ -48,12 +49,33 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Apartments', url: 'https://findmyroomy.com/apartments/' },
+  { name: 'Fremont, CA', url: 'https://findmyroomy.com/apartments/fremont-ca/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — Fremont Roommate Finder',
+  description: 'Fremont has the highest concentration of Indian-American residents in the US. Find verified roommates near BART, Warm Springs, and Irvington — free, no subscription.',
+  url: 'https://findmyroomy.com/apartments/fremont-ca/',
+  areaServed: 'Fremont, California',
+});
+
 export default function FremontPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }}
       />
       <FremontContent />
     </>

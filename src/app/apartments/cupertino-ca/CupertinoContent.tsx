@@ -87,7 +87,9 @@ export default function CupertinoContent() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">The Cupertino Rental Reality</h2>
             <p className="text-gray-600 mb-6">
-              Cupertino is the most expensive city in Silicon Valley that isn't Palo Alto. Apple Park's 12,000+ on-site employees have pushed rents in a two-mile radius to levels that rival San Francisco's most sought-after neighborhoods. A standard 1BR near De Anza Blvd runs $3,800–$4,500/month. A 2BR with parking runs $4,200–$5,000.
+              Cupertino is the most expensive city in Silicon Valley that isn't Palo Alto. Apple Park's 12,000+ on-site employees have pushed rents in a two-mile radius to levels that rival San Francisco's most sought-after neighborhoods. A standard 1BR near De Anza Blvd runs $3,800–$4,500/month. A 2BR with parking runs $4,200–$5,000. If you're looking for{" "}
+              <Link href="/apartments/roommates-near-apple/" className="text-purple-700 underline hover:text-purple-900">roommates near Apple's Cupertino campus</Link>,{" "}
+              Find MyRoomie has verified listings in every Cupertino neighborhood.
             </p>
             <p className="text-gray-600 mb-8">
               Even on a $200,000+ total compensation package, the math is straightforward: split a 2BR with a verified roommate and you pay $2,100–$2,500/month instead of $3,800+ alone. Most Apple engineers running that calculation choose to share. The savings compound — $15,000–$24,000 per year goes into ESPP, 401(k), or simply stays liquid.
@@ -119,7 +121,11 @@ export default function CupertinoContent() {
               Cupertino's tech-heavy renter population is exactly the demographic Roomster targets with its $29.99/month subscription paywall. You land on the platform, see listings near Apple Park, try to message someone — and hit the paywall. You have no idea if the listing is real, current, or bot-generated before paying.
             </p>
             <p className="text-gray-600 mb-6">
-              The FTC and New York AG reached a $1.6M settlement with Roomster in 2023 over fake listings and fabricated reviews. Craigslist South Bay is worse — wire-transfer scams targeting engineers on H-1B status are documented in multiple Silicon Valley Reddit communities.
+              The FTC and New York AG reached a $1.6M settlement with Roomster in 2023 over fake listings and fabricated reviews. Craigslist South Bay is worse — wire-transfer scams targeting engineers on H-1B status are documented in multiple Silicon Valley Reddit communities. Neighboring{" "}
+              <Link href="/apartments/sunnyvale-ca/" className="text-purple-700 underline hover:text-purple-900">Sunnyvale</Link>{" "}
+              and{" "}
+              <Link href="/apartments/santa-clara-ca/" className="text-purple-700 underline hover:text-purple-900">Santa Clara</Link>{" "}
+              have the same scam exposure — verification matters across the entire South Bay corridor.
             </p>
             <div className="bg-purple-50 border border-purple-200 rounded-xl p-6">
               <p className="font-semibold text-purple-900">Find MyRoomie is free — no $29/month Roomster paywall.</p>

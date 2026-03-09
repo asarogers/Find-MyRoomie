@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import RoommatesNearStanfordContent from './RoommatesNearStanfordContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Roommates Near Stanford University — Verified, Free | Find MyRoomie',
@@ -56,12 +57,33 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Apartments', url: 'https://findmyroomy.com/apartments/' },
+  { name: 'Roommates Near Stanford', url: 'https://findmyroomy.com/apartments/roommates-near-stanford/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — Roommates Near Stanford',
+  description: 'Stanford students, postdocs, and researchers finding roommates near Stanford campus Palo Alto. Palo Alto, Menlo Park, East Palo Alto, Redwood City — rent math, commute times, free verified matching.',
+  url: 'https://findmyroomy.com/apartments/roommates-near-stanford/',
+  areaServed: 'San Francisco Bay Area, California',
+});
+
 export default function RoommatesNearStanfordPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }}
       />
       <RoommatesNearStanfordContent />
     </>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import SanJoseContent from './SanJoseContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Find a Roommate in San Jose — Silicon Valley\'s Affordable Hub | Find MyRoomie',
@@ -56,12 +57,33 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Apartments', url: 'https://findmyroomy.com/apartments/' },
+  { name: 'San Jose, CA', url: 'https://findmyroomy.com/apartments/san-jose-ca/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — San Jose Roommate Finder',
+  description: "San Jose median 2BR: $2,800–$3,400. Find verified roommates near Diridon, Berryessa, downtown SJ — free messaging, no subscription.",
+  url: 'https://findmyroomy.com/apartments/san-jose-ca/',
+  areaServed: 'San Jose, California',
+});
+
 export default function SanJosePage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }}
       />
       <SanJoseContent />
     </>

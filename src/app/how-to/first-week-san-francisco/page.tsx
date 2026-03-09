@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import FirstWeekSfContent from './FirstWeekSfContent';
+import { breadcrumbSchema, articleSchema, howToSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'First Week in San Francisco — Housing Survival Guide (2026) | Find MyRoomie',
@@ -53,10 +54,39 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'How-To Guides', url: 'https://findmyroomy.com/how-to/' },
+  { name: 'First Week in San Francisco — Housing Survival Guide', url: 'https://findmyroomy.com/how-to/first-week-san-francisco/' },
+]);
+
+const artSchema = articleSchema({
+  title: 'First Week in San Francisco — Housing Survival Guide (2026)',
+  description: 'Just arrived in SF with no permanent housing? Here is exactly what to do, in order, starting day 1. Includes neighborhoods to avoid, verified platforms, and scam alerts.',
+  url: 'https://findmyroomy.com/how-to/first-week-san-francisco/',
+  datePublished: '2025-12-01',
+  dateModified: '2026-03-09',
+});
+
+const howSchema = howToSchema({
+  name: 'First Week in San Francisco — Housing Survival Guide',
+  description: 'What to do in your first week in SF to secure permanent housing without overpaying or falling for scams',
+  steps: [
+    { name: 'Days 1–3: Secure temporary housing', text: 'Book an extended stay hotel in SOMA (Residence Inn or Home2 Suites, $160–$220/night) or an Airbnb in a neighborhood you are considering. Do not sign any lease on day one. Your only goal is a stable base.' },
+    { name: 'Days 3–7: Scout your target neighborhoods', text: 'Visit SOMA, the Mission, the Sunset, and Inner Richmond at different times of day — 8am and 11pm. Only sign in a neighborhood you have spent at least 4 hours in at different times. SF neighborhoods feel completely different at night.' },
+    { name: 'Days 7–14: Find your roommate on a verified platform', text: 'Create a profile on Find MyRoomie — free, ID-verified, Bay Area-specific. Message 10–15 candidates in your target neighborhood. Video call the top matches before scheduling in-person viewings.' },
+    { name: 'Verify listings before any payment', text: 'Never send a deposit to anyone you have not met in person at the actual property. Any listing priced 30%+ below comparable SF rooms is almost certainly a scam. Verify the address on Google Street View and check the building exterior against listing photos.' },
+    { name: 'Sign a written roommate agreement before move-in', text: 'Once you have found your roommate, get the rent split, utilities, and move-out notice period in writing before move-in day. In SF, an unwritten arrangement has real financial and legal consequences given SF rent control.' },
+  ],
+});
+
 export default function FirstWeekSfPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(artSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howSchema) }} />
       <FirstWeekSfContent />
     </>
   );

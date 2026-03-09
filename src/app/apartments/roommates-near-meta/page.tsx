@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import RoommatesNearMetaContent from './RoommatesNearMetaContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Roommates Near Meta Menlo Park — Verified, Free | Find MyRoomie',
@@ -56,12 +57,33 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Apartments', url: 'https://findmyroomy.com/apartments/' },
+  { name: 'Roommates Near Meta', url: 'https://findmyroomy.com/apartments/roommates-near-meta/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — Roommates Near Meta',
+  description: 'Meta employees and contractors finding roommates near 1 Hacker Way. Menlo Park, Redwood City, East Palo Alto — rent math, commute times, free verified matching.',
+  url: 'https://findmyroomy.com/apartments/roommates-near-meta/',
+  areaServed: 'San Francisco Bay Area, California',
+});
+
 export default function RoommatesNearMetaPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }}
       />
       <RoommatesNearMetaContent />
     </>

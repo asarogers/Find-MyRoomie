@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import RoommatesNearCiscoContent from './RoommatesNearCiscoContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Roommates Near Cisco San Jose — Verified, Free | Find MyRoomie',
@@ -56,12 +57,33 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Apartments', url: 'https://findmyroomy.com/apartments/' },
+  { name: 'Roommates Near Cisco', url: 'https://findmyroomy.com/apartments/roommates-near-cisco/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — Roommates Near Cisco',
+  description: 'Cisco employees and contractors finding roommates near Cisco HQ North San Jose. North San Jose, Sunnyvale, Milpitas, Fremont — rent math, commute times, free verified matching.',
+  url: 'https://findmyroomy.com/apartments/roommates-near-cisco/',
+  areaServed: 'San Francisco Bay Area, California',
+});
+
 export default function RoommatesNearCiscoPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }}
       />
       <RoommatesNearCiscoContent />
     </>

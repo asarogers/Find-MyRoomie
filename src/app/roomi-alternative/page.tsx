@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import RoomiAlternativeContent from './RoomiAlternativeContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Free Roomi Alternative 2026 — No $30/Month Paywall | Find MyRoomy',
@@ -61,10 +62,24 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Roomi Alternative', url: 'https://findmyroomy.com/roomi-alternative/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — Free Bay Area Roommate Finder',
+  description: "Roomi has 88% one-star reviews and charges $29.99/month. Find MyRoomy is 100% free — no subscription, no hidden fees. Verified roommates in SF, LA, NYC & beyond.",
+  url: 'https://findmyroomy.com/roomi-alternative/',
+  areaServed: 'San Francisco Bay Area, California',
+});
+
 export default function RoomiAlternativePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }} />
       <RoomiAlternativeContent />
     </>
   );

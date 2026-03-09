@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import OaklandContent from './OaklandContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Find a Roommate in Oakland — Free Verified Roommate Finder | Find MyRoomie',
@@ -48,12 +49,33 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Apartments', url: 'https://findmyroomy.com/apartments/' },
+  { name: 'Oakland, CA', url: 'https://findmyroomy.com/apartments/oakland-ca/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — Oakland Roommate Finder',
+  description: 'Oakland median 2BR runs $2,400–$3,200. Find verified roommates in Rockridge, Temescal, Lake Merritt — free messaging, no subscription.',
+  url: 'https://findmyroomy.com/apartments/oakland-ca/',
+  areaServed: 'Oakland, California',
+});
+
 export default function OaklandPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }}
       />
       <OaklandContent />
     </>

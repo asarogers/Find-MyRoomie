@@ -88,7 +88,9 @@ export default function FremontContent() {
               Fremont sits at the junction of South Bay and East Bay access, which makes it unusually strategic. Tesla's Gigafactory in south Fremont employs thousands of engineers and production workers. Lam Research, one of the world's largest semiconductor equipment manufacturers, has its headquarters here. And the BART Warm Springs extension connects directly to Silicon Valley without a car.
             </p>
             <p className="text-gray-600 mb-8">
-              If you're working at any employer along the tech corridor — Apple, Google, Intel, Nvidia, Meta — Fremont is a legitimate base with real transit options. You're not paying for the San Jose address. You're not fighting the Sunnyvale rent premium. And you're living in the Bay Area's most culturally grounded South Asian community.
+              If you're working at any employer along the tech corridor — Apple, Google, Intel, Nvidia, Meta — Fremont is a legitimate base with real transit options. You're not paying for the San Jose address. You're not fighting the Sunnyvale rent premium. And you're living in the Bay Area's most culturally grounded South Asian community. Find MyRoomie's{" "}
+              <Link href="/indian-roommate-finder-bay-area/" className="text-purple-700 underline hover:text-purple-900">Indian roommate finder for the Bay Area</Link>{" "}
+              is built specifically for this community.
             </p>
 
             <h3 className="text-xl font-bold mb-4">Commute options from Fremont:</h3>
@@ -141,7 +143,9 @@ export default function FremontContent() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">The Sulekha Problem</h2>
             <p className="text-gray-600 mb-6">
-              If you've searched for roommates in Fremont the way most Desi tech workers do — Sulekha, South Asian Bay Area Facebook groups, WhatsApp chains — you've encountered the same problem: listings with no verification. People you can't confirm are who they say they are. Scammers who specifically target the Desi community with fake listings, fake identities, and fake urgency.
+              If you've searched for roommates in Fremont the way most Desi tech workers do — Sulekha, South Asian Bay Area Facebook groups, WhatsApp chains — you've encountered the same problem: listings with no verification. People you can't confirm are who they say they are. Scammers who specifically target the Desi community with fake listings, fake identities, and fake urgency. H-1B workers on compressed timelines are especially vulnerable — our{" "}
+              <Link href="/how-to/h1b-visa-bay-area-housing/" className="text-purple-700 underline hover:text-purple-900">H-1B Bay Area housing guide</Link>{" "}
+              covers the specific risks and how to avoid them.
             </p>
             <p className="text-gray-600 mb-6">
               The Desi roommate search in Fremont is almost entirely informal. That works until it doesn't. And when it doesn't, you've either wired a deposit to someone who doesn't exist, or you've moved in with someone whose habits are nothing like what they described.

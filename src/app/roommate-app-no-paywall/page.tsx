@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import NoPaywallContent from './NoPaywallContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Roommate App With No Paywall — Free Messaging Forever | Find MyRoomie',
@@ -69,12 +70,32 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Roommate App No Paywall', url: 'https://findmyroomy.com/roommate-app-no-paywall/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — Free Bay Area Roommate Finder',
+  description: 'Most roommate apps lock messages behind a $20-30/month paywall. Find MyRoomie lets you message verified roommates for free. Bay Area focused.',
+  url: 'https://findmyroomy.com/roommate-app-no-paywall/',
+  areaServed: 'San Francisco Bay Area, California',
+});
+
 export default function NoPaywallPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }}
       />
       <NoPaywallContent />
     </>

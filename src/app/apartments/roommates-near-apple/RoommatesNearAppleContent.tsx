@@ -82,7 +82,12 @@ export default function RoommatesNearAppleContent() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">Apple Park Commute + Cost Map</h2>
             <p className="text-gray-600 mb-8">
-              Cupertino is walkable to Apple Park but commands a price premium. Sunnyvale and Santa Clara offer the best balance of commute and cost. North San Jose is the budget play — 20–25 min by car, meaningfully cheaper per person.
+              <Link href="/apartments/cupertino-ca/" className="text-purple-700 underline hover:text-purple-900">Cupertino</Link>{" "}
+              is walkable to Apple Park but commands a price premium.{" "}
+              <Link href="/apartments/sunnyvale-ca/" className="text-purple-700 underline hover:text-purple-900">Sunnyvale</Link>{" "}
+              and{" "}
+              <Link href="/apartments/santa-clara-ca/" className="text-purple-700 underline hover:text-purple-900">Santa Clara</Link>{" "}
+              offer the best balance of commute and cost. North San Jose is the budget play — 20–25 min by car, meaningfully cheaper per person.
             </p>
 
             <div className="overflow-x-auto mb-8">
@@ -115,7 +120,9 @@ export default function RoommatesNearAppleContent() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">The Cupertino Roommate Reality</h2>
             <p className="text-gray-600 mb-6">
-              Cupertino is majority Asian-American with a heavy South Asian and East Asian tech worker mix. The roommate search here runs through Sulekha, Bay Area Desi Facebook groups, and word of mouth from existing Apple employees. None of these have verification.
+              Cupertino is majority Asian-American with a heavy South Asian and East Asian tech worker mix. Our{" "}
+              <Link href="/indian-roommate-finder-bay-area/" className="text-purple-700 underline hover:text-purple-900">Indian roommate finder for the Bay Area</Link>{" "}
+              serves this community specifically. The roommate search here runs through Sulekha, Bay Area Desi Facebook groups, and word of mouth from existing Apple employees. None of these have verification.
             </p>
             <p className="text-gray-600 mb-6">
               The result: you are relying on social trust in a network you may have only just joined. For a Cupertino apartment situation — where you are sharing a kitchen, a living room, and potentially a bathroom — that is not enough.

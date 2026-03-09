@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import InternationalStudentsContent from './InternationalStudentsContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Roommate Finder for International Students — Bay Area, Verified & Free | Find MyRoomie',
@@ -61,12 +62,32 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Roommate Finder for International Students', url: 'https://findmyroomy.com/roommate-finder-international-students-bay-area/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — Free Bay Area Roommate Finder',
+  description: 'Arriving for Fall 2026? UC Berkeley, Stanford, UCSF, and USF students are forming roommate groups now. Find verified Bay Area roommates before cohorts fill — free.',
+  url: 'https://findmyroomy.com/roommate-finder-international-students-bay-area/',
+  areaServed: 'San Francisco Bay Area, California',
+});
+
 export default function InternationalStudentsPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }}
       />
       <InternationalStudentsContent />
     </>

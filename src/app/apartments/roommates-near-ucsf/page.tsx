@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import RoommatesNearUCSFContent from './RoommatesNearUCSFContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Roommates Near UCSF — Verified, Free | Find MyRoomie',
@@ -56,12 +57,33 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Apartments', url: 'https://findmyroomy.com/apartments/' },
+  { name: 'Roommates Near UCSF', url: 'https://findmyroomy.com/apartments/roommates-near-ucsf/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — Roommates Near UCSF',
+  description: 'UCSF students, residents, and staff finding roommates near UCSF campuses. Inner Sunset, Mission Bay, Cole Valley, SOMA — rent math, commute times, free verified matching.',
+  url: 'https://findmyroomy.com/apartments/roommates-near-ucsf/',
+  areaServed: 'San Francisco Bay Area, California',
+});
+
 export default function RoommatesNearUCSFPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }}
       />
       <RoommatesNearUCSFContent />
     </>

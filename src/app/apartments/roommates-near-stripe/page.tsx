@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import RoommatesNearStripeContent from './RoommatesNearStripeContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Roommates Near Stripe SF — Verified, Free | Find MyRoomie',
@@ -56,12 +57,33 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Apartments', url: 'https://findmyroomy.com/apartments/' },
+  { name: 'Roommates Near Stripe', url: 'https://findmyroomy.com/apartments/roommates-near-stripe/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — Roommates Near Stripe',
+  description: 'Stripe employees and contractors finding roommates near Stripe HQ SOMA San Francisco. SOMA, Mission, Hayes Valley, East Bay — rent math, commute times, free verified matching.',
+  url: 'https://findmyroomy.com/apartments/roommates-near-stripe/',
+  areaServed: 'San Francisco Bay Area, California',
+});
+
 export default function RoommatesNearStripePage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }}
       />
       <RoommatesNearStripeContent />
     </>

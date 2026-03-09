@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import CupertinoContent from './CupertinoContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Find a Roommate in Cupertino — Near Apple Park, Verified & Free | Find MyRoomie',
@@ -48,12 +49,33 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Apartments', url: 'https://findmyroomy.com/apartments/' },
+  { name: 'Cupertino, CA', url: 'https://findmyroomy.com/apartments/cupertino-ca/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — Cupertino Roommate Finder',
+  description: "Cupertino's Apple Park campus draws 12,000+ employees. Find verified roommates near De Anza Blvd and Apple Park — free messaging, no subscription.",
+  url: 'https://findmyroomy.com/apartments/cupertino-ca/',
+  areaServed: 'Cupertino, California',
+});
+
 export default function CupertinoPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }}
       />
       <CupertinoContent />
     </>

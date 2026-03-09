@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import FreeAppContent from './FreeAppContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Free Roommate App — No Subscription, No Fees, No Paywall (2026)',
@@ -54,10 +55,24 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Free Roommate App No Subscription', url: 'https://findmyroomy.com/free-roommate-app-no-subscription/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — Free Bay Area Roommate Finder',
+  description: 'Find a roommate in the Bay Area without paying $30/month. Find MyRoomie is 100% free — no subscription, no messaging fees, no credit card required. Verified profiles.',
+  url: 'https://findmyroomy.com/free-roommate-app-no-subscription/',
+  areaServed: 'San Francisco Bay Area, California',
+});
+
 export default function FreeRoommateAppPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }} />
       <FreeAppContent />
     </>
   );

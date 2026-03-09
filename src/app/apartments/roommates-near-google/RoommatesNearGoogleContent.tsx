@@ -83,7 +83,11 @@ export default function RoommatesNearGoogleContent() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">Where Google Employees Actually Live</h2>
             <p className="text-gray-600 mb-8">
-              Mountain View is the obvious choice — but it is also the most expensive. Most Googlers optimize for either cost (Fremont, North San Jose) or commute (Sunnyvale, Palo Alto). With a roommate, both options become viable on the same income.
+              <Link href="/apartments/mountain-view-ca/" className="text-purple-700 underline hover:text-purple-900">Mountain View</Link>{" "}
+              is the obvious choice — but it is also the most expensive. Most Googlers optimize for either cost ({" "}
+              <Link href="/apartments/fremont-ca/" className="text-gray-900 underline hover:text-gray-700">Fremont</Link>,{" "}
+              <Link href="/apartments/san-jose-ca/" className="text-purple-700 underline hover:text-purple-900">San Jose</Link>) or commute ({" "}
+              <Link href="/apartments/sunnyvale-ca/" className="text-purple-700 underline hover:text-purple-900">Sunnyvale</Link>, Palo Alto). With a roommate, both options become viable on the same income.
             </p>
 
             <div className="overflow-x-auto mb-8">
@@ -119,7 +123,9 @@ export default function RoommatesNearGoogleContent() {
               L4 total comp: approximately $175K. Solo Mountain View 1BR at $3,100/month = $37,200/year. That is 21% of gross — manageable, but it leaves less for savings, investing, or loan repayment than most financial advisors recommend.
             </p>
             <p className="text-gray-600 mb-6">
-              2BR roommate split: $2,100/person = $25,200/year. Saves $12,000/year. At 7.9% Mountain View rent growth (Zumper Q4 2025 data), that savings compounds materially over a 3-year vesting period.
+              2BR roommate split: $2,100/person = $25,200/year. Saves $12,000/year. Use a{" "}
+              <Link href="/tools/rent-split-calculator/" className="text-purple-700 underline hover:text-purple-900">rent split calculator</Link>{" "}
+              to model the exact numbers for your situation. At 7.9% Mountain View rent growth (Zumper Q4 2025 data), that savings compounds materially over a 3-year vesting period.
             </p>
             <div className="bg-purple-50 border border-purple-200 rounded-xl p-6">
               <p className="font-semibold text-purple-900">The $12,000/year case for a Mountain View roommate:</p>

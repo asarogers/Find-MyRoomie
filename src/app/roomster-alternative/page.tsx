@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import RoomsterAlternativeContent from './RoomsterAlternativeContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 // ─── Metadata ────────────────────────────────────────────────────────────────
 // Server-side metadata: correct title, description, and canonical for this page.
@@ -82,12 +83,32 @@ const faqSchema = {
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Roomster Alternative', url: 'https://findmyroomy.com/roomster-alternative/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — Free Bay Area Roommate Finder',
+  description: "Tired of Roomster's $30/month paywall and fake listings? Find MyRoomie is 100% free — no subscription, no hidden fees. Find verified roommates in SF, LA & beyond.",
+  url: 'https://findmyroomy.com/roomster-alternative/',
+  areaServed: 'San Francisco Bay Area, California',
+});
+
 export default function RoomsterAlternativePage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }}
       />
       <RoomsterAlternativeContent />
     </>

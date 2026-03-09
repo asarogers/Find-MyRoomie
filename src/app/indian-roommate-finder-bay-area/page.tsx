@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import IndianRoommateContent from './IndianRoommateContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Indian Roommate Finder Bay Area — Verified Desi Roommates, Free | Find MyRoomie',
@@ -61,12 +62,32 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Indian Roommate Finder Bay Area', url: 'https://findmyroomy.com/indian-roommate-finder-bay-area/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — Free Bay Area Roommate Finder',
+  description: '540,000+ South Asian adults live in the Bay Area. Find verified Indian roommates in Fremont, Cupertino, San Jose, and SF — free messaging, no subscription.',
+  url: 'https://findmyroomy.com/indian-roommate-finder-bay-area/',
+  areaServed: 'San Francisco Bay Area, California',
+});
+
 export default function IndianRoommatePage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }}
       />
       <IndianRoommateContent />
     </>

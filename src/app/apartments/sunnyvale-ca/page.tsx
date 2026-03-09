@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import SunnyvaleContent from './SunnyvaleContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Find a Roommate in Sunnyvale — LinkedIn, Google, Lockheed Corridor | Find MyRoomie',
@@ -56,12 +57,33 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Apartments', url: 'https://findmyroomy.com/apartments/' },
+  { name: 'Sunnyvale, CA', url: 'https://findmyroomy.com/apartments/sunnyvale-ca/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — Sunnyvale Roommate Finder',
+  description: 'Sunnyvale is home to LinkedIn HQ, Lockheed Martin HQ, and 2 miles from Google. Find verified roommates near Caltrain and the tech corridor — free messaging, no subscription.',
+  url: 'https://findmyroomy.com/apartments/sunnyvale-ca/',
+  areaServed: 'Sunnyvale, California',
+});
+
 export default function SunnyvalePage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }}
       />
       <SunnyvaleContent />
     </>

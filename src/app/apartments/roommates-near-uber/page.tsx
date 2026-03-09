@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import RoommatesNearUberContent from './RoommatesNearUberContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Roommates Near Uber SF — Verified, Free | Find MyRoomie',
@@ -56,12 +57,33 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Apartments', url: 'https://findmyroomy.com/apartments/' },
+  { name: 'Roommates Near Uber', url: 'https://findmyroomy.com/apartments/roommates-near-uber/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — Roommates Near Uber',
+  description: 'Uber employees finding roommates near Uber HQ Mission Bay San Francisco. Mission Bay, SOMA, Mission District, Oakland — rent math, commute times, free verified matching.',
+  url: 'https://findmyroomy.com/apartments/roommates-near-uber/',
+  areaServed: 'San Francisco Bay Area, California',
+});
+
 export default function RoommatesNearUberPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }}
       />
       <RoommatesNearUberContent />
     </>

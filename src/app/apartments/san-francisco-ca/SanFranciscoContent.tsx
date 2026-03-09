@@ -95,7 +95,9 @@ export default function SanFranciscoContent() {
               San Francisco is not going to get cheaper. Not this year. Rents grew 12% year-over-year in 2025 — the fastest rate of any US city. That reversed a brief cooling trend and put San Francisco back at the top of every "most expensive rental market in America" list. This is not a blip. It is a structural feature of a city where demand for housing has outrun supply for three consecutive decades.
             </p>
             <p className="text-gray-600 mb-8">
-              On a $90,000 salary — solid by most of America's standards, median in SF tech — you are spending roughly 47% of your gross income on rent if you live alone. That is not sustainable. That is why two-thirds of San Francisco renters share their housing.
+              On a $90,000 salary — solid by most of America's standards, median in SF tech — you are spending roughly 47% of your gross income on rent if you live alone. That is not sustainable. That is why two-thirds of San Francisco renters share their housing. SOMA is particularly popular with{" "}
+              <Link href="/apartments/roommates-near-google/" className="text-purple-700 underline hover:text-purple-900">tech workers near Google</Link>{" "}
+              who commute via Caltrain and prefer a central SF base.
             </p>
 
             {/* Neighborhood grid */}
@@ -122,7 +124,9 @@ export default function SanFranciscoContent() {
               Every person reading this has heard the same advice: "Just post on Craigslist." Maybe you have tried it.
             </p>
             <p className="text-gray-600 mb-6">
-              Here is what Craigslist roommate searches in SF actually deliver: listings that redirect you to third-party signup pages. Landlords requesting wire-transfer deposits before you have seen the unit. Fake listings documented by CBS San Francisco. Craigslist has no verification, no accountability mechanism, and no recourse when something goes wrong. It is a 1995 tool for a 2026 problem.
+              Here is what Craigslist roommate searches in SF actually deliver: listings that redirect you to third-party signup pages. Landlords requesting wire-transfer deposits before you have seen the unit. Fake listings documented by CBS San Francisco. Craigslist has no verification, no accountability mechanism, and no recourse when something goes wrong. It is a 1995 tool for a 2026 problem. Our guide on how to{" "}
+              <Link href="/how-to/avoid-roommate-scams-san-francisco/" className="text-purple-700 underline hover:text-purple-900">avoid roommate scams in SF</Link>{" "}
+              walks through the specific red flags SF renters encounter.
             </p>
             <p className="text-gray-600 mb-6">
               Roomster is the other name that comes up. Roomster used to be free. Now it runs a $29.99/month subscription to access messaging. You pay before you know if anyone on the platform matches your criteria. You pay before you can see if the listings in your neighborhood are real or bots. Reddit's r/roommates community has documented Roomster's fake listing problem in detail. The "Roomster scam" keyword cluster is not an accident. It is the lived experience of San Francisco renters who tried the platform and got burned.
@@ -192,7 +196,9 @@ export default function SanFranciscoContent() {
             </div>
 
             <p className="text-gray-600">
-              Twenty-one thousand dollars a year. That is what the right roommate is worth. The only question is whether you find them through a platform with verified profiles and free messaging, or through a process that exposes you to scammers, fake listings, and a $29.99/month paywall for the privilege of being disappointed.
+              Twenty-one thousand dollars a year. That is what the right roommate is worth. Use a{" "}
+              <Link href="/tools/rent-split-calculator/" className="text-purple-700 underline hover:text-purple-900">rent split calculator</Link>{" "}
+              to model the exact savings for your situation. The only question is whether you find them through a platform with verified profiles and free messaging, or through a process that exposes you to scammers, fake listings, and a $29.99/month paywall for the privilege of being disappointed.
             </p>
           </div>
         </section>
@@ -202,7 +208,9 @@ export default function SanFranciscoContent() {
           <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">Get Early Access — Free</h2>
             <p className="text-purple-200 mb-4">
-              Find MyRoomie is pre-launch. Members who join now get first access to verified listings in SOMA, Hayes Valley, Mission, and every SF neighborhood — before the platform opens to the public.
+              Find MyRoomie is pre-launch. Members who join now get first access to verified listings in{" "}
+              <Link href="/apartments/soma-square-san-francisco/" className="text-purple-200 underline hover:text-white">SOMA Square</Link>,{" "}
+              Hayes Valley, Mission, and every SF neighborhood — before the platform opens to the public.
             </p>
             <ul className="text-purple-200 text-sm mb-8 space-y-1">
               <li>✓ Priority matching before the platform goes public</li>

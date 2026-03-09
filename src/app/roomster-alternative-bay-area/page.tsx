@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import RoomsterAlternativeBayAreaContent from './RoomsterAlternativeBayAreaContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Roomster Alternative Bay Area — FTC-Settled Competitor, Free Messaging | Find MyRoomie',
@@ -64,12 +65,32 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Roomster Alternative Bay Area', url: 'https://findmyroomy.com/roomster-alternative-bay-area/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — Free Bay Area Roommate Finder',
+  description: 'Roomster was FTC-fined $1.4M for fake listings in 2023. Still charging $30/month. Bay Area roommate seekers need a verified, free alternative. Find MyRoomie delivers.',
+  url: 'https://findmyroomy.com/roomster-alternative-bay-area/',
+  areaServed: 'San Francisco Bay Area, California',
+});
+
 export default function RoomsterAlternativeBayAreaPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }}
       />
       <RoomsterAlternativeBayAreaContent />
     </>

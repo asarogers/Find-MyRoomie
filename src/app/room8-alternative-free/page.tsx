@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Room8AlternativeContent from './Room8AlternativeContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Room8 Alternative — Free Messaging vs Room8\'s Paywall (2026) | Find MyRoomie',
@@ -61,12 +62,32 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Room8 Alternative Free', url: 'https://findmyroomy.com/room8-alternative-free/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — Free Bay Area Roommate Finder',
+  description: 'Room8 requires a paid subscription to message matches. Find MyRoomie is permanently free to message — no paywall, no subscription, Bay Area-focused with ID verification.',
+  url: 'https://findmyroomy.com/room8-alternative-free/',
+  areaServed: 'San Francisco Bay Area, California',
+});
+
 export default function Room8AlternativePage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }}
       />
       <Room8AlternativeContent />
     </>

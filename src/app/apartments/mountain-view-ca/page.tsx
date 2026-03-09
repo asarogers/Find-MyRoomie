@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import MountainViewContent from './MountainViewContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Mountain View Roommate Finder — Near Google HQ | Find MyRoomie',
@@ -64,12 +65,33 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Apartments', url: 'https://findmyroomy.com/apartments/' },
+  { name: 'Mountain View, CA', url: 'https://findmyroomy.com/apartments/mountain-view-ca/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — Mountain View Roommate Finder',
+  description: "Mountain View has the Bay Area's fastest rent growth at 7.9% YoY. Median 2BR: $4,200/month. With a verified roommate: $2,100/person. Free messaging, no paywall.",
+  url: 'https://findmyroomy.com/apartments/mountain-view-ca/',
+  areaServed: 'Mountain View, California',
+});
+
 export default function MountainViewPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }}
       />
       <MountainViewContent />
     </>

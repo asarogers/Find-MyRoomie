@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import H1bVisaBayAreaContent from './H1bVisaBayAreaContent';
+import { breadcrumbSchema, articleSchema, howToSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'H1B Visa Bay Area Housing Guide 2026 — Roommates, Verification & What to Know | Find MyRoomie',
@@ -53,10 +54,39 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'How-To Guides', url: 'https://findmyroomy.com/how-to/' },
+  { name: 'H1B Visa Bay Area Housing Guide 2026', url: 'https://findmyroomy.com/how-to/h1b-visa-bay-area-housing/' },
+]);
+
+const artSchema = articleSchema({
+  title: 'H1B Visa Bay Area Housing Guide 2026 — Roommates, Verification & What to Know',
+  description: 'H1B holders face unique housing challenges in the Bay Area: credit history gaps, income verification requirements, and short initial stays. The complete 2026 guide.',
+  url: 'https://findmyroomy.com/how-to/h1b-visa-bay-area-housing/',
+  datePublished: '2025-12-01',
+  dateModified: '2026-03-09',
+});
+
+const howSchema = howToSchema({
+  name: 'H1B Visa Bay Area Housing — 3-Phase Path',
+  description: 'How H1B visa holders can secure Bay Area housing despite no US credit history or pay stubs',
+  steps: [
+    { name: 'Phase 1 (Months 1–3): Accept a flexible furnished room', text: 'Book a week-to-week or month-to-month furnished room with utilities and wifi included. Budget $1,200–$1,800/month all-in. You have no US pay stubs yet — pay the flexibility premium and use this time to learn the city and build your first 3 pay stubs.' },
+    { name: 'Overcome the credit history gap', text: 'Offer 2x–3x deposit in lieu of credit score when applying directly. Pair your employment offer letter with 3–6 months of home-country bank statements. Many Bay Area landlords — especially in North San Jose — are familiar with H1B documentation.' },
+    { name: 'Phase 2 (Months 3–6): Join a verified roommate household', text: 'After your first 3 pay stubs, join a verified roommate household via Find MyRoomie. Existing tenants already passed the landlord credit check — you sublease without a direct credit application. Your verified identity on the platform substitutes for traditional screening.' },
+    { name: 'Target North San Jose and Milpitas first', text: 'The strongest H1B roommate community in the Bay Area is in North San Jose and Milpitas. Month-to-month furnished rooms run $1,100–$1,500/month. Many local landlords specifically understand H1B documentation and have processed hundreds of applications from visa holders.' },
+    { name: 'Phase 3 (Month 6+): Transition to full market access', text: 'After 6 months of responsible credit use, your score will be 650–700. Standard lease applications are now viable at the same terms as any US-based renter. You now have full Bay Area housing market access.' },
+  ],
+});
+
 export default function H1bVisaBayAreaPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(artSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howSchema) }} />
       <H1bVisaBayAreaContent />
     </>
   );

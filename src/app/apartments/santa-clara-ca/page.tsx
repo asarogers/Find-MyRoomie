@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import SantaClaraContent from './SantaClaraContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Find a Roommate in Santa Clara — Intel, Nvidia, AMD Hub | Find MyRoomie',
@@ -56,12 +57,33 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Apartments', url: 'https://findmyroomy.com/apartments/' },
+  { name: 'Santa Clara, CA', url: 'https://findmyroomy.com/apartments/santa-clara-ca/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — Santa Clara Roommate Finder',
+  description: 'Santa Clara hosts Intel HQ, Nvidia HQ, and AMD HQ within 2 miles. Find verified roommates near Diridon Station and the tech corridor — free messaging, no subscription.',
+  url: 'https://findmyroomy.com/apartments/santa-clara-ca/',
+  areaServed: 'Santa Clara, California',
+});
+
 export default function SantaClaraPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }}
       />
       <SantaClaraContent />
     </>

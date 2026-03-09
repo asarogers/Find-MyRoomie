@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import TechWorkerRelocationContent from './TechWorkerRelocationContent';
+import { breadcrumbSchema, articleSchema, howToSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Tech Worker Bay Area Relocation Guide — Find a Roommate Before You Move | Find MyRoomie',
@@ -53,10 +54,39 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'How-To Guides', url: 'https://findmyroomy.com/how-to/' },
+  { name: 'Tech Worker Bay Area Relocation Guide', url: 'https://findmyroomy.com/how-to/tech-worker-relocation-bay-area/' },
+]);
+
+const artSchema = articleSchema({
+  title: 'Tech Worker Bay Area Relocation Guide — Find a Roommate Before You Move',
+  description: 'Relocating to the Bay Area for a tech job? The roommate-first strategy saves $20,000+ in your first year. Timeline, neighborhoods, and verified platforms that work.',
+  url: 'https://findmyroomy.com/how-to/tech-worker-relocation-bay-area/',
+  datePublished: '2025-12-01',
+  dateModified: '2026-03-09',
+});
+
+const howSchema = howToSchema({
+  name: 'Tech Worker Bay Area Relocation — Roommate-First Strategy',
+  description: 'How to relocate to the Bay Area for a tech job and save $13,800+ in your first six months by finding a roommate before you move',
+  steps: [
+    { name: '90 days out: Create a verified profile and start browsing', text: 'Set up a verified Find MyRoomie profile 90 days before your start date. Browse listings in your target neighborhood based on your office location. Google, Apple, and LinkedIn employees should target the South Bay — not SF — to avoid the 90+ minute daily commute.' },
+    { name: '60 days out: Start real conversations and video call candidates', text: 'Message 5–10 verified profiles in your target neighborhood. Video call 2–3 candidates who seem promising. Check for schedule compatibility, cleanliness norms, and deal-breakers before scheduling any in-person visit.' },
+    { name: '45 days out: Schedule your pre-start relocation trip', text: 'Narrow to 1–2 finalists. Schedule a Bay Area trip to see the actual apartments in person — never sign based on photos alone. Walk the neighborhoods at different times. This trip also gives you a chance to scope out the commute route.' },
+    { name: '30 days out: Sign the lease', text: 'Commit to your roommate and apartment. Sign the lease. Arrange movers. You now start your job on day one with housing fully sorted — zero distraction during onboarding.' },
+    { name: 'Use corporate housing correctly if offered', text: 'If your employer offers 30–60 days of corporate housing, use it as a search base — not as a reason to delay. By day 30 of corporate housing, you should have a signed lease ready to transition into. This is the optimal sequence.' },
+  ],
+});
+
 export default function TechWorkerRelocationPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(artSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howSchema) }} />
       <TechWorkerRelocationContent />
     </>
   );

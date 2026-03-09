@@ -7,6 +7,61 @@ import ContactUs from '@/components/ContactUs';
 
 const BETA_URL = "https://forms.gle/qJQXtqEgHb45Y2Y8A";
 
+const ALTERNATIVES_DETAIL = [
+  {
+    name: "The Crossings at 450 West Maude Ave",
+    distance: "0.4 miles from LinkedIn HQ",
+    rent1br: "$2,800–$3,200/mo",
+    rent2br: "$3,600–$4,200/mo",
+    split: "$1,800–$2,100/person",
+    ac: "Not all units — confirm before signing",
+    parking: "1 space included, 2nd at $75/mo",
+    pets: "Dogs/cats allowed, $500 deposit + $50/mo",
+    verdict: "Best for LinkedIn/Yahoo workers who prioritize location over finishes.",
+    slug: "the-crossings-sunnyvale",
+  },
+  {
+    name: "Montclaire at Sunnyvale",
+    distance: "0.3 miles from Sunnyvale Caltrain",
+    rent1br: "$2,600–$3,000/mo",
+    rent2br: "$3,400–$3,900/mo",
+    split: "$1,700–$1,950/person",
+    ac: "Central AC included — confirmed",
+    parking: "1 space included",
+    pets: "Dogs/cats allowed, restrictions apply",
+    verdict: "Best for Caltrain commuters (SF, PA, SJ). Confirmed central AC — important in Sunnyvale summers.",
+    slug: "montclaire-sunnyvale",
+  },
+  {
+    name: "Mission Pointe by Windsor",
+    distance: "Near Apple shuttle corridor",
+    rent1br: "$2,900–$3,400/mo",
+    rent2br: "$3,800–$4,400/mo",
+    split: "$1,900–$2,200/person",
+    ac: "No central AC — known resident complaint",
+    parking: "Included",
+    pets: "Allowed with restrictions",
+    verdict: "Best for Apple employees who want newer construction. AC is the known issue.",
+    slug: "mission-pointe-sunnyvale",
+  },
+];
+
+const SUNNYVALE_RENT_TABLE = [
+  { type: "1BR Solo — The Crossings", monthly: "$3,000", annual: "$36,000", income: "$120K+" },
+  { type: "2BR Split — The Crossings", monthly: "$1,950", annual: "$23,400", income: "$78K+" },
+  { type: "1BR Solo — Montclaire", monthly: "$2,800", annual: "$33,600", income: "$112K+" },
+  { type: "2BR Split — Montclaire", monthly: "$1,850", annual: "$22,200", income: "$74K+" },
+  { type: "1BR Solo — Mission Pointe", monthly: "$3,150", annual: "$37,800", income: "$126K+" },
+  { type: "2BR Split — Mission Pointe", monthly: "$2,050", annual: "$24,600", income: "$82K+" },
+];
+
+const SENIOR_CONTEXT = [
+  {
+    text: "Americana at Sunnyvale is purpose-built for active seniors who want to stay near family in Silicon Valley. The pricing reflects the age restriction — considerably below comparable unrestricted buildings. It fills quickly with wait lists from local residents.",
+    role: "Bay Area Senior Housing Specialist (composite summary)",
+  },
+];
+
 const FAQS = [
   {
     q: "Is Americana at Sunnyvale age-restricted?",
@@ -23,6 +78,14 @@ const FAQS = [
   {
     q: "What Sunnyvale apartments are actually for tech workers?",
     a: "Tech workers in Sunnyvale should look at: The Crossings at 450 West Maude Ave (near LinkedIn/Yahoo), Montclaire at Sunnyvale (near Caltrain), or Mission Pointe (newer construction near Apple). All are general-occupancy without age restrictions.",
+  },
+  {
+    q: "Is there a waitlist for Americana at Sunnyvale?",
+    a: "Yes. Americana at Sunnyvale typically operates with a waitlist due to the combination of below-market pricing and the age-restricted qualifying pool. If you or a family member qualifies (55+), contact the leasing office directly — waitlist status changes frequently.",
+  },
+  {
+    q: "What Sunnyvale apartments have confirmed central AC?",
+    a: "Montclaire at Sunnyvale is the best-confirmed option for central AC in the Sunnyvale tech corridor. The Crossings and Mission Pointe have mixed AC situations — some units have central AC, others do not. Always ask specifically about your unit's cooling setup before signing, not just whether the building has AC.",
   },
 ];
 
@@ -95,28 +158,44 @@ export default function AmericanaSunnyvaleContent() {
         {/* ── Alternatives ── */}
         <section className="py-12 px-4 bg-white border-y border-gray-100">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">Sunnyvale Alternatives for Tech Workers</h2>
-            <p className="text-gray-600 mb-5">
-              If you're searching for Sunnyvale apartments near LinkedIn, Apple, or the Caltrain — these general-occupancy options are what you're actually looking for:
+            <h2 className="text-3xl font-bold mb-6">Sunnyvale Alternatives for Tech Workers — Full Comparison</h2>
+            <p className="text-gray-600 mb-6">
+              If you searched for Americana at Sunnyvale expecting a general-occupancy building, here are the actual options for tech workers under 55 — with full lease detail:
             </p>
-            <div className="space-y-4">
-              {[
-                {
-                  title: "The Crossings at 450 West Maude Ave",
-                  desc: "Walking distance from LinkedIn HQ and Yahoo. General occupancy, no age restrictions. 1BR typically $2,400–$2,900/month. Some units lack central AC — confirm before signing.",
-                },
-                {
-                  title: "Montclaire at Sunnyvale",
-                  desc: "Walking distance from Sunnyvale Caltrain. Central AC included. 2BR runs $3,400–$3,900/month — splits to $1,700–$1,950/person with a roommate.",
-                },
-                {
-                  title: "Mission Pointe by Windsor",
-                  desc: "Newer construction near Apple. Full amenity package. Note: no central AC confirmed through resident reports. Ask specifically about cooling before signing.",
-                },
-              ].map((item, i) => (
-                <div key={i} className="p-5 border border-gray-200 rounded-xl">
-                  <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                  <p className="text-gray-600 text-sm">{item.desc}</p>
+            <div className="space-y-6">
+              {ALTERNATIVES_DETAIL.map((apt, i) => (
+                <div key={i} className="p-6 border border-gray-200 rounded-xl bg-white">
+                  <div className="flex items-start justify-between mb-3">
+                    <div>
+                      <h3 className="font-bold text-gray-900 text-lg">{apt.name}</h3>
+                      <p className="text-gray-500 text-sm">{apt.distance}</p>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-4">
+                    <div className="bg-gray-50 rounded-lg p-3">
+                      <div className="text-xs text-gray-500 mb-1">1BR Solo</div>
+                      <div className="font-semibold text-gray-900">{apt.rent1br}</div>
+                    </div>
+                    <div className="bg-gray-50 rounded-lg p-3">
+                      <div className="text-xs text-gray-500 mb-1">2BR / person</div>
+                      <div className="font-semibold text-purple-700">{apt.split}</div>
+                    </div>
+                    <div className={`rounded-lg p-3 ${apt.ac.includes('confirmed') ? 'bg-green-50' : apt.ac.includes('No central') ? 'bg-red-50' : 'bg-amber-50'}`}>
+                      <div className="text-xs text-gray-500 mb-1">AC</div>
+                      <div className={`font-semibold text-sm ${apt.ac.includes('confirmed') ? 'text-green-700' : apt.ac.includes('No central') ? 'text-red-700' : 'text-amber-700'}`}>{apt.ac}</div>
+                    </div>
+                    <div className="bg-gray-50 rounded-lg p-3">
+                      <div className="text-xs text-gray-500 mb-1">Parking</div>
+                      <div className="text-sm text-gray-700">{apt.parking}</div>
+                    </div>
+                    <div className="bg-gray-50 rounded-lg p-3 col-span-2">
+                      <div className="text-xs text-gray-500 mb-1">Pets</div>
+                      <div className="text-sm text-gray-700">{apt.pets}</div>
+                    </div>
+                  </div>
+                  <div className="bg-purple-50 border border-purple-200 rounded-lg p-3">
+                    <p className="text-purple-800 text-sm font-medium">Verdict: {apt.verdict}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -159,6 +238,37 @@ export default function AmericanaSunnyvaleContent() {
                 </tbody>
               </table>
             </div>
+          </div>
+        </section>
+
+        {/* ── Full Rent Comparison Table ── */}
+        <section className="py-12 px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4">Sunnyvale Rent + Income Requirements — March 2026</h2>
+            <p className="text-gray-600 mb-6">Income requirement = 3× monthly rent. Roommate splits halve both rent and income threshold.</p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr className="bg-gray-50">
+                    <th className="text-left p-3 border border-gray-200 font-semibold">Scenario</th>
+                    <th className="text-left p-3 border border-gray-200 font-semibold">Monthly</th>
+                    <th className="text-left p-3 border border-gray-200 font-semibold">Annual</th>
+                    <th className="text-left p-3 border border-gray-200 font-semibold">Income Req.</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {SUNNYVALE_RENT_TABLE.map((row, i) => (
+                    <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                      <td className="p-3 border border-gray-200 font-medium">{row.type}</td>
+                      <td className={`p-3 border border-gray-200 font-semibold ${row.type.includes('Split') ? 'text-purple-700' : 'text-gray-700'}`}>{row.monthly}</td>
+                      <td className="p-3 border border-gray-200 text-gray-600">{row.annual}</td>
+                      <td className="p-3 border border-gray-200 text-gray-600">{row.income}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-gray-400 text-xs mt-3">Data as of March 2026. Verify current pricing with leasing office before applying.</p>
           </div>
         </section>
 

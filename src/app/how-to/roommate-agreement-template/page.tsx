@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import RoommateAgreementContent from './RoommateAgreementContent';
+import { breadcrumbSchema, articleSchema, howToSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Free Roommate Agreement Template — SF & Bay Area Legal Guide (2026) | Find MyRoomie',
@@ -53,10 +54,39 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'How-To Guides', url: 'https://findmyroomy.com/how-to/' },
+  { name: 'Free Roommate Agreement Template — SF & Bay Area', url: 'https://findmyroomy.com/how-to/roommate-agreement-template/' },
+]);
+
+const artSchema = articleSchema({
+  title: 'Free Roommate Agreement Template — SF & Bay Area Legal Guide (2026)',
+  description: 'Download a free California-compliant roommate agreement. Covers rent splits, utilities, guests, chores, and lease violation procedures. For Bay Area renters in 2026.',
+  url: 'https://findmyroomy.com/how-to/roommate-agreement-template/',
+  datePublished: '2025-12-01',
+  dateModified: '2026-03-09',
+});
+
+const howSchema = howToSchema({
+  name: 'How to Create a Roommate Agreement in San Francisco',
+  description: 'How to draft a California-compliant roommate agreement that protects both parties under SF rent control rules',
+  steps: [
+    { name: 'Understand why a written agreement matters in SF', text: 'San Francisco rent control creates scenarios where unwritten arrangements have real legal consequences. If the master tenant moves out without documentation, a long-term subtenant may claim the unit. A written agreement protects both parties from day one.' },
+    { name: 'Include the SF rent control clause', text: 'Establish in writing who holds the master lease and what happens if that person moves out. This is the single most important SF-specific clause — it determines each party\'s rights under the SF Rent Board rules.' },
+    { name: 'Document rent split, utilities, and guest policy', text: 'Specify exact dollar amounts and due dates for rent. List each utility and who pays it. Set explicit overnight guest limits — California courts can recognize 30+ day guests as having occupancy rights.' },
+    { name: 'Set a move-out notice period', text: 'Require 30–60 days written notice. In SF\'s competitive market, finding a qualified replacement roommate can take 3–4 weeks alone. 60 days is more considerate than the 30-day minimum.' },
+    { name: 'Both parties sign before move-in', text: 'Copy the free template, fill in the bracketed fields, print two copies, and both parties sign before move-in day. Save as a PDF. A signed agreement is your basis for small claims court recovery if a roommate stops paying.' },
+  ],
+});
+
 export default function RoommateAgreementPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(artSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howSchema) }} />
       <RoommateAgreementContent />
     </>
   );

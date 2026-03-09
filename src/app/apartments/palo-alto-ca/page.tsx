@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import PaloAltoContent from './PaloAltoContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Find a Roommate in Palo Alto — Stanford Proximity, Tech Money & Verified Roommates | Find MyRoomie',
@@ -48,12 +49,33 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Apartments', url: 'https://findmyroomy.com/apartments/' },
+  { name: 'Palo Alto, CA', url: 'https://findmyroomy.com/apartments/palo-alto-ca/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — Palo Alto Roommate Finder',
+  description: 'Palo Alto has the highest 1BR rents in the Bay Area outside San Francisco. Find verified roommates near Stanford, Sand Hill Road, and Caltrain — free, no subscription.',
+  url: 'https://findmyroomy.com/apartments/palo-alto-ca/',
+  areaServed: 'Palo Alto, California',
+});
+
 export default function PaloAltoPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }}
       />
       <PaloAltoContent />
     </>

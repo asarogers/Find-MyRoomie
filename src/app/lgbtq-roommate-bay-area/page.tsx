@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import LGBTQRoommateContent from './LGBTQRoommateContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'LGBTQ+ Roommate Finder Bay Area — Safe, Verified, Free | Find MyRoomie',
@@ -61,12 +62,32 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'LGBTQ+ Roommate Bay Area', url: 'https://findmyroomy.com/lgbtq-roommate-bay-area/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — Free Bay Area Roommate Finder',
+  description: 'Find LGBTQ-friendly roommates in the Castro, Mission, Oakland, and across the Bay Area. Verified profiles, free messaging, identity filters. No subscription.',
+  url: 'https://findmyroomy.com/lgbtq-roommate-bay-area/',
+  areaServed: 'San Francisco Bay Area, California',
+});
+
 export default function LGBTQRoommatePage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }}
       />
       <LGBTQRoommateContent />
     </>

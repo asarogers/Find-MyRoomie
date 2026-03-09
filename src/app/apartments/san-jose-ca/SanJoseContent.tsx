@@ -154,7 +154,9 @@ export default function SanJoseContent() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">The Desi Community in San Jose</h2>
             <p className="text-gray-600 mb-6">
-              Berryessa district is one of the Bay Area&apos;s most established Indian-American neighborhoods. Temples, Indian grocery stores, and restaurants are within walking distance of apartment complexes where H-1B workers at Intel, Cisco, Nvidia, and AMD frequently settle.
+              Berryessa district is one of the Bay Area&apos;s most established Indian-American neighborhoods. Temples, Indian grocery stores, and restaurants are within walking distance of apartment complexes where{" "}
+              <Link href="/how-to/h1b-visa-bay-area-housing/" className="text-purple-700 underline hover:text-purple-900">H-1B workers</Link>{" "}
+              at Intel, Cisco, Nvidia, and AMD frequently settle.
             </p>
             <p className="text-gray-600 mb-6">
               For arrivals from India navigating the Bay Area rental market for the first time — no US credit history, unfamiliar geography, compressed timeline — the community infrastructure in North San Jose makes the transition significantly easier than any other Silicon Valley city.
@@ -170,7 +172,11 @@ export default function SanJoseContent() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">The Craigslist and Roomster Problem in San Jose</h2>
             <p className="text-gray-600 mb-6">
-              Downtown SJ luxury vacancies create an active fake listing problem. Operators run listings at below-market prices targeting tech workers who don&apos;t know the local market. You respond, they ask for a deposit via Venmo before a showing, the listing disappears.
+              Downtown SJ luxury vacancies create an active fake listing problem. Operators run listings at below-market prices targeting tech workers who don&apos;t know the local market — using names like{" "}
+              <Link href="/apartments/the-fay-san-jose/" className="text-purple-700 underline hover:text-purple-900">The Fay</Link>,{" "}
+              <Link href="/apartments/neo-on-first-san-jose/" className="text-purple-700 underline hover:text-purple-900">NEO on First</Link>, and{" "}
+              <Link href="/apartments/miro-san-jose/" className="text-purple-700 underline hover:text-purple-900">Miro</Link>{" "}
+              to appear legitimate. You respond, they ask for a deposit via Venmo before a showing, the listing disappears.
             </p>
             <p className="text-gray-600 mb-6">
               Roomster charges $29.99/month — you pay before knowing if San Jose has real listings. Reddit&apos;s roommate communities have documented this repeatedly. The &quot;Roomster scam&quot; keyword cluster exists because it reflects actual user experience.

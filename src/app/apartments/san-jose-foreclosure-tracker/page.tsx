@@ -22,6 +22,18 @@ export const metadata: Metadata = {
   },
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "San Jose Apartment Foreclosure Tracker 2026 — Live Status Updates",
+  description: "Track San Jose luxury apartment foreclosures in real time. The Fay: active foreclosure Jan 2026. Neo on First: Chapter 11 bankruptcy.",
+  datePublished: "2026-01-15T00:00:00.000Z",
+  dateModified: "2026-03-09T00:00:00.000Z",
+  author: { "@type": "Organization", name: "Find MyRoomie", url: "https://findmyroomy.com" },
+  publisher: { "@type": "Organization", name: "Find MyRoomie", url: "https://findmyroomy.com" },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://findmyroomy.com/apartments/san-jose-foreclosure-tracker/" },
+};
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -64,10 +76,8 @@ const faqSchema = {
 export default function SanJoseForeclosureTrackerPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <SanJoseForeclosureTrackerContent />
     </>
   );

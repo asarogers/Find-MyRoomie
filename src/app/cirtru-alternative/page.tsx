@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import CirtruContent from './CirtruContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Cirtru Alternative — Verified Bay Area Roommates, Free (2026)',
@@ -37,10 +38,24 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Cirtru Alternative', url: 'https://findmyroomy.com/cirtru-alternative/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — Free Bay Area Roommate Finder',
+  description: 'Cirtru has ScamAdviser warnings and limited Bay Area coverage. Find MyRoomie offers verified roommate matching in SF, Oakland, and Silicon Valley — completely free.',
+  url: 'https://findmyroomy.com/cirtru-alternative/',
+  areaServed: 'San Francisco Bay Area, California',
+});
+
 export default function CirtruAlternativePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }} />
       <CirtruContent />
     </>
   );

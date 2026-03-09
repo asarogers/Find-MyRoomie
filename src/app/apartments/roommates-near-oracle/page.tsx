@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import RoommatesNearOracleContent from './RoommatesNearOracleContent';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Roommates Near Oracle Redwood City — Verified, Free | Find MyRoomie',
@@ -56,12 +57,33 @@ const faqSchema = {
   ],
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Apartments', url: 'https://findmyroomy.com/apartments/' },
+  { name: 'Roommates Near Oracle', url: 'https://findmyroomy.com/apartments/roommates-near-oracle/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Find MyRoomie — Roommates Near Oracle',
+  description: 'Oracle employees finding roommates near Oracle HQ Redwood City. Redwood City, San Carlos, Menlo Park, East Palo Alto — rent math, commute times, free verified matching.',
+  url: 'https://findmyroomy.com/apartments/roommates-near-oracle/',
+  areaServed: 'San Francisco Bay Area, California',
+});
+
 export default function RoommatesNearOraclePage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }}
       />
       <RoommatesNearOracleContent />
     </>

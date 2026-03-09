@@ -103,7 +103,7 @@ export default function RootLayout({
           property="og:description"
           content="The safe, real, and functional way to find compatible roommates and apply to apartments together."
         />
-       <meta property="og:url" content="https://www.findmyroomy.com/" />
+        <meta property="og:url" content="https://findmyroomy.com/" />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"

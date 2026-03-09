@@ -69,6 +69,14 @@ export async function generateMetadata({
       type: 'article',
       publishedTime: blog.publishedAt,
       tags: blog.tags,
+      images: [
+        {
+          url: `${BASE_URL}/og-images/blog-default.jpg`,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
     },
     alternates: { canonical: `${BASE_URL}/blogs/${slug}/` },
     keywords: [
@@ -100,6 +108,7 @@ export default async function BlogPage({
     '@type': 'Article',
     headline: blog!.title,
     description: buildDescription(blog!),
+    image: { '@type': 'ImageObject', url: `${BASE_URL}/og-images/blog-default.jpg`, width: 1200, height: 630 },
     author: { '@type': 'Organization', name: 'The MyRoomy Team', url: BASE_URL },
     publisher: {
       '@type': 'Organization',

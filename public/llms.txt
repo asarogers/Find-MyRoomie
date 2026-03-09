@@ -23,8 +23,13 @@ Key differentiators:
 - [Find Roommates](https://findmyroomy.com/Find): Browse roommate listings by city
 - [How It Works](https://findmyroomy.com/#how-it-works): Platform walkthrough
 - [Roomster Alternative](https://findmyroomy.com/roomster-alternative/): Free alternative to Roomster — comparison table, reviews, FAQ
+- [SpareRoom Alternative](https://findmyroomy.com/spareroom-alternative/): Free alternative to SpareRoom for US renters
+- [Best Roommate Apps 2026](https://findmyroomy.com/roommate-apps/): Ranked comparison of the 6 most-used roommate finder apps
+- [Roommate Safety](https://findmyroomy.com/roommate-safety/): Guide to staying safe when finding a roommate online
+- [Diggz Alternative](https://findmyroomy.com/diggz-alternative/): Free alternative to Diggz
+- [Roomi Alternative](https://findmyroomy.com/roomi-alternative/): Free alternative to Roomi
 
-## City Pages (Roommate Search)
+## City Pages (Shared Apartments & Roommate Search)
 
 - [San Francisco, CA](https://findmyroomy.com/roommates/san-francisco-ca/)
 - [San Jose, CA](https://findmyroomy.com/roommates/san-jose-ca/)

@@ -26,8 +26,8 @@
 
 import fs from 'fs';
 import path from 'path';
+import crypto from 'crypto';
 import { fileURLToPath } from 'url';
-import { GoogleAuth } from 'google-auth-library';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -92,18 +92,76 @@ async function pingSitemap(): Promise<void> {
   console.log(`[INFO] Google no longer supports sitemap ping — using Indexing API for URL submission`);
 }
 
+function base64url(data: Buffer | string): string {
+  const buf = typeof data === 'string' ? Buffer.from(data) : data;
+  return buf.toString('base64').replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+
+async function getGoogleServerTime(): Promise<number> {
+  // Fetch Google's server time to compensate for local clock skew
+  try {
+    const resp = await fetch('https://oauth2.googleapis.com/token', { method: 'POST' });
+    const dateHeader = resp.headers.get('date');
+    if (dateHeader) {
+      const serverTime = Math.floor(new Date(dateHeader).getTime() / 1000);
+      const localTime = Math.floor(Date.now() / 1000);
+      const skew = localTime - serverTime;
+      if (Math.abs(skew) > 30) {
+        console.log(`[INFO] Clock skew detected: local is ${skew > 0 ? '+' : ''}${skew}s vs Google. Compensating.`);
+      }
+      return serverTime;
+    }
+  } catch {}
+  return Math.floor(Date.now() / 1000);
+}
+
+async function getAccessToken(): Promise<string | null> {
+  const keyData = JSON.parse(fs.readFileSync(KEY_FILE, 'utf-8'));
+  const now = await getGoogleServerTime();
+
+  // Build JWT header + claims
+  const header = base64url(JSON.stringify({ alg: 'RS256', typ: 'JWT' }));
+  const claims = base64url(JSON.stringify({
+    iss: keyData.client_email,
+    scope: 'https://www.googleapis.com/auth/indexing',
+    aud: 'https://oauth2.googleapis.com/token',
+    iat: now,
+    exp: now + 3600,
+  }));
+
+  // Sign with the service account private key
+  const signInput = `${header}.${claims}`;
+  const sign = crypto.createSign('RSA-SHA256');
+  sign.update(signInput);
+  const signature = base64url(sign.sign(keyData.private_key));
+  const jwt = `${signInput}.${signature}`;
+
+  // Exchange JWT for access token
+  const resp = await fetch('https://oauth2.googleapis.com/token', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: `grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer&assertion=${jwt}`,
+  });
+
+  if (!resp.ok) {
+    const body = await resp.text();
+    console.error(`[ERROR] Token exchange failed: ${body.slice(0, 300)}`);
+    return null;
+  }
+
+  const data = await resp.json() as { access_token?: string };
+  return data.access_token || null;
+}
+
 async function submitUrl(
-  auth: GoogleAuth,
+  accessToken: string,
   url: string
 ): Promise<{ ok: boolean; error?: string }> {
   try {
-    const client = await auth.getClient();
-    const token = await client.getAccessToken();
-
     const resp = await fetch(INDEXING_API, {
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${token.token}`,
+        Authorization: `Bearer ${accessToken}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
@@ -196,18 +254,21 @@ async function main() {
     return;
   }
 
-  // Step 5: Authenticate and submit
-  const auth = new GoogleAuth({
-    keyFile: KEY_FILE,
-    scopes: ['https://www.googleapis.com/auth/indexing'],
-  });
+  // Step 5: Authenticate and submit (manual JWT to handle clock skew)
+  console.log('Authenticating with Google...');
+  const accessToken = await getAccessToken();
+  if (!accessToken) {
+    console.error('[ERROR] Failed to get access token from Google.');
+    return;
+  }
+  console.log(`[OK] Got access token (${accessToken.slice(0, 20)}...)\n`);
 
   let success = 0;
   let failed = 0;
   const now = new Date().toISOString();
 
   for (const url of urlsToSubmit) {
-    const result = await submitUrl(auth, url);
+    const result = await submitUrl(accessToken, url);
     if (result.ok) {
       console.log(`  [OK] ${url}`);
       cache.submittedUrls[url] = now;

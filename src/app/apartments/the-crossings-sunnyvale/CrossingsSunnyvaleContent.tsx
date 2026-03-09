@@ -37,6 +37,7 @@ const HONEST_REVIEW = [
 
 export default function CrossingsSunnyvaleContent() {
   const [isOpen, setIsOpen] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
     <>
@@ -46,37 +47,18 @@ export default function CrossingsSunnyvaleContent() {
       <main className="min-h-screen bg-[#FDFBF7] text-gray-900">
 
         {/* ── Hero ── */}
-        <section className="pt-28 pb-12 px-4 bg-white border-b border-gray-100">
-          <div className="max-w-2xl mx-auto">
-            <p className="text-sm text-gray-400 mb-3">Sunnyvale, CA · Updated March 2026</p>
+        <section className="pt-28 pb-16 px-4 bg-white border-b border-gray-100">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-50 border border-yellow-200 rounded-full mb-6">
+              <span className="w-2 h-2 bg-yellow-500 rounded-full" />
+              <span className="text-sm font-semibold text-yellow-700">Mid-Tier · 1.2 Miles from LinkedIn HQ</span>
+            </div>
             <h1 className="text-4xl md:text-5xl font-extrabold mb-5 leading-tight">
               The Crossings Sunnyvale — What Renters Say vs What the Listing Shows
             </h1>
-            <p className="text-xl text-gray-600 mb-6">
-              1.2 miles from LinkedIn HQ. 2BR at $3,600–$4,200/month. A roommate split brings that to
-              $1,800–$2,100/person — reasonable for the LinkedIn corridor. Here's the honest breakdown.
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              A mid-tier complex near LinkedIn and Yahoo with honest tradeoffs. Here is what residents actually report — and whether the roommate math makes it worth it.
             </p>
-            <div className="grid grid-cols-2 gap-3 mb-6">
-              {[
-                ["2BR total", "$3,600–$4,200/mo"],
-                ["Your share (2BR split)", "$1,800–$2,100/mo"],
-                ["Distance to LinkedIn HQ", "1.2 miles"],
-                ["Find a roommate here", "$0 — free on Find MyRoomie"],
-              ].map(([label, val], i) => (
-                <div key={i} className={`rounded-xl p-4 border ${i === 3 ? 'bg-green-50 border-green-200' : 'bg-gray-50 border-gray-200'}`}>
-                  <div className={`text-lg font-extrabold ${i === 3 ? 'text-green-700' : 'text-gray-900'}`}>{val}</div>
-                  <div className="text-xs text-gray-500 mt-1">{label}</div>
-                </div>
-              ))}
-            </div>
-            <a
-              href={BETA_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-purple-700 text-white font-bold px-8 py-4 rounded-lg text-lg hover:bg-purple-800 transition-colors"
-            >
-              Find a Crossings Roommate Free →
-            </a>
           </div>
         </section>
 
@@ -101,28 +83,65 @@ export default function CrossingsSunnyvaleContent() {
           </div>
         </section>
 
-        {/* ── FAQ ── */}
-        <section className="py-12 px-4 bg-white border-t border-gray-100">
-          <div className="max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold mb-8">Frequently Asked Questions</h2>
-            <div className="space-y-6">
-              {FAQS.map((faq, i) => (
-                <div key={i}>
-                  <h3 className="font-bold text-lg mb-2">{faq.q}</h3>
-                  <p className="text-gray-600 text-sm">{faq.a}</p>
-                </div>
-              ))}
+        {/* ── Fact box ── */}
+        <section className="py-10 px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-6">
+              <p className="text-amber-900 font-semibold text-lg leading-relaxed">
+                The Crossings at 450 West Maude Ave, Sunnyvale — mid-tier complex, 1.2 miles from LinkedIn HQ, 0.8 miles from Yahoo. 2BR: $3,600-$4,200/month. Roommate split: $1,800-$2,100/person. No central AC in some units — confirm before signing.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* ── Related ── */}
-        <section className="py-8 px-4 bg-gray-50 border-t border-gray-200">
-          <div className="max-w-2xl mx-auto">
-            <p className="text-sm font-semibold text-gray-500 mb-3">Related pages</p>
-            <div className="flex flex-wrap gap-3">
-              <Link href="/apartments/sunnyvale-ca/" className="text-purple-700 border border-purple-200 bg-white px-4 py-2 rounded-lg text-sm hover:bg-purple-50 transition-colors">Sunnyvale roommate guide →</Link>
-              <Link href="/apartments/mission-pointe-sunnyvale/" className="text-gray-700 border border-gray-200 bg-white px-4 py-2 rounded-lg text-sm hover:bg-gray-100 transition-colors">Mission Pointe Sunnyvale</Link>
+        {/* ── Roommate math ── */}
+        <section className="py-12 px-4 bg-white border-y border-gray-100">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold mb-6">The Roommate Math at The Crossings</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-red-50 border border-red-200 rounded-xl p-6">
+                <h3 className="font-bold text-red-900 mb-4 text-lg">Solo — 1BR</h3>
+                <div className="space-y-2 text-red-800">
+                  <div className="flex justify-between"><span>Monthly rent</span><span className="font-bold">$2,800–$3,200</span></div>
+                  <div className="flex justify-between"><span>Annual</span><span className="font-bold">$33,600–$38,400</span></div>
+                  <div className="flex justify-between"><span>Income required</span><span className="font-bold">$112K–$128K/yr</span></div>
+                </div>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-xl p-6">
+                <h3 className="font-bold text-green-900 mb-4 text-lg">Shared — 2BR split</h3>
+                <div className="space-y-2 text-green-800">
+                  <div className="flex justify-between"><span>Per-person monthly</span><span className="font-bold">$1,800–$2,100</span></div>
+                  <div className="flex justify-between"><span>Per-person annual</span><span className="font-bold">$21,600–$25,200</span></div>
+                  <div className="flex justify-between"><span>Income required</span><span className="font-bold">$72K–$84K/yr</span></div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-green-50 border border-green-200 rounded-xl p-5 text-center">
+              <p className="text-green-900 font-bold text-xl">Save $8,400–$15,600 per year with a roommate</p>
+              <p className="text-green-700 mt-1">The LinkedIn corridor is manageable at the right price point.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── FAQ ── */}
+        <section className="py-16 px-4 bg-[#FDFBF7] border-t border-gray-100">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              {FAQS.map((faq, i) => (
+                <div key={i} className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button
+                    className="w-full text-left p-5 font-semibold text-gray-900 hover:bg-gray-50 transition-colors flex justify-between items-center"
+                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  >
+                    <span>{faq.q}</span>
+                    <span className="text-gray-400 ml-4">{openFaq === i ? '−' : '+'}</span>
+                  </button>
+                  {openFaq === i && (
+                    <div className="px-5 pb-5 text-gray-600">{faq.a}</div>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -130,10 +149,9 @@ export default function CrossingsSunnyvaleContent() {
         {/* ── Bottom CTA ── */}
         <section className="py-20 px-4 bg-purple-700 text-white text-center">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">Find a Crossings Roommate — Free</h2>
+            <h2 className="text-3xl font-bold mb-4">Find a Verified Roommate Near The Crossings</h2>
             <p className="text-purple-200 mb-8">
-              LinkedIn corridor, $1,800–$2,100/person. Find MyRoomie connects you with verified
-              Sunnyvale roommates at no cost — no paywall, no subscription.
+              LinkedIn corridor, $1,800–$2,100/person with a roommate. Find MyRoomie connects you with verified Sunnyvale roommates at no cost — no paywall, no subscription.
             </p>
             <a
               href={BETA_URL}
@@ -143,7 +161,7 @@ export default function CrossingsSunnyvaleContent() {
             >
               Find Sunnyvale Roommates Free →
             </a>
-            <p className="text-sm text-purple-300 mt-3">No credit card · No subscription · Verified profiles</p>
+            <p className="text-purple-300 mt-4 text-sm">Free messaging. No subscription. Ever.</p>
           </div>
         </section>
 

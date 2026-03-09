@@ -7,48 +7,44 @@ import ContactUs from '@/components/ContactUs';
 
 const BETA_URL = "https://forms.gle/qJQXtqEgHb45Y2Y8A";
 
-const EMPLOYERS = [
-  { name: "Intel HQ", detail: "Robert Noyce Blvd, Santa Clara. Still one of the largest single-site tech employers in the country." },
-  { name: "Nvidia HQ", detail: "Voyager campus, Santa Clara. 12,000+ employees and expanding." },
-  { name: "AMD", detail: "Santa Clara HQ, a few miles from Intel." },
-  { name: "Palo Alto Networks", detail: "Santa Clara campus. One of the fastest-growing security companies in the world." },
-  { name: "Santa Clara University", detail: "5,500+ undergraduates plus grad school, all competing for the same rental stock." },
-];
-
-const COMMUTE_OPTIONS = [
-  { route: "Lawrence Caltrain station", time: "SF 55 min · Mountain View 8 min · Sunnyvale 5 min · San Jose 12 min" },
-  { route: "Great America / Levi's Stadium area", time: "Walkable neighborhoods with newer apartment stock" },
-  { route: "Highway 101/280/237", time: "Most major campuses 10–20 minutes by car in light traffic" },
-  { route: "VTA light rail", time: "Connects to downtown San Jose; useful for SCU students" },
+const NEIGHBORHOODS = [
+  { name: "Central Santa Clara / Intel Campus", desc: "1BR $3,000–$3,400/mo", detail: "Closest residential area to Intel HQ. Walking/biking distance for Intel and Applied Materials employees. Highest demand in the city — roommate turnover is consistent and fast." },
+  { name: "Rivermark", desc: "1BR $3,100–$3,600/mo", detail: "Newer development near Great America Pkwy. Popular with Nvidia employees (HQ is nearby). More modern apartment stock, slightly higher prices. Active roommate community." },
+  { name: "Diridon / Downtown Santa Clara", desc: "Transit-forward pricing", detail: "Best public transit access in the South Bay. Caltrain, ACE, and Amtrak at Diridon Station. Walking distance to Santa Clara University. Future BART connection will make this neighborhood even more valuable." },
+  { name: "Old Quad / Santa Clara University Area", desc: "Student-adjacent pricing", detail: "SCU's student population creates a consistent roommate market. Prices are lower than tech-adjacent zones. Good for renters who prioritize walkability and community over proximity to tech campuses." },
+  { name: "Lawrence Expressway Corridor", desc: "1BR $2,900–$3,300/mo", detail: "Central access corridor connecting Santa Clara to Sunnyvale and San Jose. Car-dependent but well-positioned for multiple employer hubs. Lower rents than campus-adjacent areas." },
 ];
 
 const RENT_TABLE = [
-  { scenario: "2BR apartment, total", monthly: "$2,800–$3,400", annual: "$33,600–$40,800" },
-  { scenario: "2BR split with roommate", monthly: "$1,400–$1,700/person", annual: "$16,800–$20,400/person" },
-  { scenario: "1BR solo", monthly: "$2,000–$2,500", annual: "$24,000–$30,000" },
-  { scenario: "Savings vs. 1BR solo", monthly: "$600–$800", annual: "$7,200–$9,600" },
+  { scenario: "1BR in Santa Clara, alone", monthly: "$2,900–$3,400", annual: "$34,800–$40,800" },
+  { scenario: "Share a 2BR, split evenly", monthly: "$1,600–$1,900", annual: "$19,200–$22,800" },
+  { scenario: "Annual savings", monthly: "—", annual: "$12,000–$18,000" },
 ];
 
 const FAQS = [
   {
-    q: "What tech companies are in Santa Clara?",
-    a: "Santa Clara hosts Intel HQ (Robert Noyce Blvd), Nvidia HQ (Voyager campus, 12,000+ employees), AMD headquarters, Palo Alto Networks, and Santa Clara University — all within five miles of each other. No other city in Silicon Valley has this density of major employer campuses in such a compact footprint.",
-  },
-  {
-    q: "How does Santa Clara compare to San Jose for renters?",
-    a: "Santa Clara is typically $200–$400/month more expensive than comparable San Jose neighborhoods, but offers better proximity to the major tech campuses on the 101/280 corridor. The Lawrence Caltrain station provides access to San Francisco (55 min), Mountain View (8 min), and Sunnyvale (5 min) — making it one of the most commute-flexible bases in the valley.",
+    q: "Why is Santa Clara a good location for tech workers?",
+    a: "Santa Clara has the highest concentration of major chip company headquarters of any city in the world. Intel HQ, Nvidia HQ, and AMD HQ are all within a two-mile radius. Add in Applied Materials, Palo Alto Networks, and ServiceNow, and Santa Clara is effectively the semiconductor capital of Silicon Valley.",
   },
   {
     q: "How much can I save with a roommate in Santa Clara?",
-    a: "Santa Clara 2BR apartments run $2,800–$3,400/month. Split with one roommate: $1,400–$1,700/person versus $2,000–$2,500 for a 1BR solo. Savings: $600–$800/month. Over a two-year H-1B stint or new hire contract, that's $14,400–$19,200 back in your pocket.",
+    a: "Santa Clara 1BR runs $2,900–$3,400/month. A 2BR split brings your cost to $1,600–$1,900/person — saving $1,000–$1,500/month versus living alone. Over a year, that's $12,000–$18,000 in additional take-home.",
+  },
+  {
+    q: "Is Diridon Station useful for commuters in Santa Clara?",
+    a: "Yes. Diridon is Santa Clara's main transit hub — Caltrain, ACE (Altamont Corridor Express), and Amtrak Capitol Corridor all converge there. Future BART extension will add direct connections to San Jose, Oakland, and San Francisco. Living near Diridon is the smartest commuter decision in the South Bay for anyone who doesn't drive.",
+  },
+  {
+    q: "How much does Find MyRoomie cost?",
+    a: "Find MyRoomie is completely free. No subscription, no credit card, no paywall to message anyone. Unlike Roomster, which charges $29.99/month to access messaging, Find MyRoomie is free to browse, post, and contact verified roommates.",
   },
 ];
 
 const RELATED_CITIES = [
-  { name: "Cupertino, CA", slug: "cupertino-ca", desc: "Near Apple Park. Majority Asian-American. 2BR $3,200–$3,800/mo." },
-  { name: "Sunnyvale, CA", slug: "sunnyvale-ca", desc: "LinkedIn HQ, Apple/Google access. The quiet achiever of Silicon Valley." },
-  { name: "Fremont, CA", slug: "fremont-ca", desc: "The Bay Area's largest South Asian community. Warm Springs BART to Silicon Valley." },
-  { name: "Palo Alto, CA", slug: "palo-alto-ca", desc: "Stanford, Sand Hill Road, Caltrain. The most expensive South Bay zip." },
+  { name: "Sunnyvale, CA", slug: "sunnyvale-ca", desc: "LinkedIn HQ corridor. Caltrain access. Adjacent to Santa Clara." },
+  { name: "Cupertino, CA", slug: "cupertino-ca", desc: "Apple Park. Higher rents but two miles from Intel/Nvidia." },
+  { name: "Palo Alto, CA", slug: "palo-alto-ca", desc: "Stanford, Sand Hill Road. The most expensive Peninsula zip." },
+  { name: "Fremont, CA", slug: "fremont-ca", desc: "South Asian community hub. Tesla Gigafactory. Warm Springs BART." },
 ];
 
 export default function SantaClaraContent() {
@@ -65,15 +61,15 @@ export default function SantaClaraContent() {
         {/* Hero */}
         <section className="pt-28 pb-16 px-4 bg-white border-b border-gray-100">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-200 rounded-full mb-6">
-              <span className="w-2 h-2 bg-blue-600 rounded-full" />
-              <span className="text-sm font-semibold text-blue-700">Intel · Nvidia · AMD · Palo Alto Networks — all within 5 miles</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-50 border border-amber-200 rounded-full mb-6">
+              <span className="w-2 h-2 bg-amber-500 rounded-full" />
+              <span className="text-sm font-semibold text-amber-700">Intel, Nvidia, AMD — three chip giants, one city</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-extrabold mb-5 leading-tight">
-              Santa Clara Roommate Finder — Find Verified Roommates in Silicon Valley's Tech Corridor
+              Find a Roommate in Santa Clara — Intel, Nvidia, AMD Hub
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Santa Clara has more Fortune 500 tech HQs per square mile than anywhere in the US. 2BR apartments run $2,800–$3,400/month — split to <strong>$1,400–$1,700/person</strong>. Free messaging. No subscription. No scammers.
+              Santa Clara's 1BR averages $2,900–$3,400/month. Split a 2BR with a verified roommate and you're paying <strong>$1,600–$1,900/month</strong> — saving $12,000–$18,000/year while living minutes from the three largest semiconductor companies in the world.
             </p>
             <a
               href={BETA_URL}
@@ -87,31 +83,72 @@ export default function SantaClaraContent() {
           </div>
         </section>
 
-        {/* Employer concentration */}
+        {/* Santa Clara Rental Reality */}
         <section className="py-16 px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">The Employer Concentration That Changes the Math</h2>
+            <h2 className="text-3xl font-bold mb-4">The Santa Clara Rental Reality</h2>
             <p className="text-gray-600 mb-6">
-              No other city in Silicon Valley has this density of major employer campuses in such a compact footprint. This concentration means Santa Clara has no soft rental season. Every spring brings a new cohort of interns, new hires, and international transfers. Every fall brings another wave of SCU students. Vacancy sits low. Prices don't drop.
+              Santa Clara is the semiconductor capital of the world. Intel's global headquarters, Nvidia's global headquarters, and AMD's global headquarters are all located within a two-mile radius of each other in central Santa Clara. Add in Applied Materials, Palo Alto Networks, ServiceNow, and Broadcom — and you have the highest concentration of chip and infrastructure software companies of any city on earth.
             </p>
-            <div className="space-y-3 mb-8">
-              {EMPLOYERS.map((e, i) => (
-                <div key={i} className="bg-white border border-gray-200 rounded-lg p-4">
-                  <div className="font-bold mb-1">{e.name}</div>
-                  <div className="text-gray-600 text-sm">{e.detail}</div>
+            <p className="text-gray-600 mb-6">
+              That density of employers means a high-density, high-turnover roommate market. Engineers arrive for new-hire cohorts in January and September. Teams relocate when projects move. The roommate search cycle in Santa Clara is faster and more competitive than in most Bay Area cities.
+            </p>
+            <p className="text-gray-600 mb-8">
+              Diridon Station — Santa Clara's main transit hub — is undergoing one of the largest transit infrastructure investments in California. Caltrain, ACE, and Amtrak already converge there. Future BART connection will add direct service to San Jose, Oakland, and San Francisco. For car-free or car-light commuters, the area around Diridon is the best-value transit location in the South Bay.
+            </p>
+
+            <h3 className="text-2xl font-bold mb-6">Santa Clara Neighborhoods</h3>
+            <div className="space-y-4">
+              {NEIGHBORHOODS.map((n, i) => (
+                <div key={i} className="border border-gray-200 rounded-xl p-5 bg-white">
+                  <div className="flex items-center justify-between mb-2">
+                    <h4 className="font-bold text-lg">{n.name}</h4>
+                    <span className="text-sm font-semibold text-purple-700 bg-purple-50 px-3 py-1 rounded-full">{n.desc}</span>
+                  </div>
+                  <p className="text-gray-600 text-sm">{n.detail}</p>
                 </div>
               ))}
             </div>
+          </div>
+        </section>
 
-            {/* Rent table */}
-            <h3 className="text-2xl font-bold mb-4">Rent Reality: What the Split Changes</h3>
+        {/* Why platforms are failing SC renters */}
+        <section className="py-16 px-4 bg-white border-y border-gray-100">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4">Why Roomster and Craigslist Fail Santa Clara Renters</h2>
+            <p className="text-gray-600 mb-6">
+              The Santa Clara roommate market moves fast. By the time you've paid Roomster's $29.99/month to access messaging — a platform the FTC and New York AG fined $1.6M in 2023 for fake listings — the unit you were targeting has already been rented. Craigslist South Bay is plagued by scam listings specifically designed to catch newly relocated tech workers unfamiliar with local market pricing.
+            </p>
+            <p className="text-gray-600 mb-6">
+              Intel, Nvidia, and AMD bring large incoming cohorts of engineers from abroad every quarter. These renters — often on H-1B visas, often without a US credit history — are primary targets for fraudulent listing operations on unverified platforms. Wire-transfer deposit requests, phantom apartments, and identity-harvesting contact forms are documented problems on both Craigslist and unvetted Facebook roommate groups.
+            </p>
+            <div className="bg-purple-50 border border-purple-200 rounded-xl p-6">
+              <p className="font-semibold text-purple-900">Find MyRoomie is free — no $29/month Roomster paywall.</p>
+              <ul className="mt-4 space-y-2 text-sm text-purple-800">
+                <li>✓ Profile verification — real identity, real photo, confirmed contact information</li>
+                <li>✓ Free messaging — contact any verified member without a subscription or credit card</li>
+                <li>✓ No auto-renew traps — we do not charge you without consent</li>
+                <li>✓ Background-check ready — available at transparent, flat-rate pricing</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Rent math */}
+        <section className="py-16 px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4">Santa Clara Rent Math</h2>
+            <p className="text-gray-600 mb-8">
+              What a verified roommate is worth near Intel, Nvidia, and AMD.
+            </p>
+
             <div className="overflow-x-auto mb-8">
               <table className="w-full text-sm border-collapse">
                 <thead>
                   <tr className="bg-gray-50">
-                    <th className="text-left p-3 border border-gray-200 font-semibold">Scenario</th>
-                    <th className="text-left p-3 border border-gray-200 font-semibold">Monthly</th>
-                    <th className="text-left p-3 border border-gray-200 font-semibold">Annual</th>
+                    <th className="text-left p-3 border border-gray-200 font-semibold">Living situation</th>
+                    <th className="text-left p-3 border border-gray-200 font-semibold">Monthly cost</th>
+                    <th className="text-left p-3 border border-gray-200 font-semibold">Annual cost</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -125,69 +162,34 @@ export default function SantaClaraContent() {
                 </tbody>
               </table>
             </div>
-            <p className="text-gray-600 text-sm">Tech salary doesn't mean you want to pay $3,000/month to live alone in a city you're barely awake to enjoy. Most people who do the math choose a roommate.</p>
-          </div>
-        </section>
 
-        {/* International workers */}
-        <section className="py-16 px-4 bg-white border-y border-gray-100">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">International Tech Workers: Your First Bay Area Housing Is the Hardest</h2>
-            <p className="text-gray-600 mb-6">
-              A significant share of Santa Clara's tech workforce arrives on L-1 or H-1B visas, transferred from international offices or hired directly from abroad. For these workers, the first Bay Area housing search is the hardest: no credit history, no local network, unfamiliar with neighborhood quality differences, and under pressure to get settled before the first day of work.
+            <p className="text-gray-600">
+              $12,000–$18,000/year. For an engineer in the early vesting years of an RSU grant, keeping that capital in-hand rather than in rent has compounding value. Santa Clara's roommate market is one of the most cost-effective decisions available to incoming tech workers.
             </p>
-            <p className="text-gray-600 mb-8">
-              National platforms don't help. They have listings in Santa Clara, but they don't know the difference between the Caltrain-accessible blocks near Lawrence Expressway and the car-dependent complexes that will add 40 minutes to your commute. They don't verify the people you're about to meet. And most charge you before you can even send a message.
-            </p>
-
-            {/* Commute hub */}
-            <h3 className="text-2xl font-bold mb-4">Santa Clara as a Commute Hub</h3>
-            <div className="space-y-3">
-              {COMMUTE_OPTIONS.map((c, i) => (
-                <div key={i} className="bg-gray-50 border border-gray-200 rounded-lg p-4">
-                  <div className="font-semibold mb-1">{c.route}</div>
-                  <div className="text-gray-600 text-sm">{c.time}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Verification section */}
-        <section className="py-16 px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">Verified Roommates, Not Listings</h2>
-            <p className="text-gray-600 mb-6">
-              The roommate search in Santa Clara runs through the usual broken channels: Craigslist (active scam risk for the South Asian community in particular), generic national platforms with no Bay Area context, and informal internal channels at major employers. None of these verify anyone. None let you filter for cultural compatibility, dietary preferences, or schedule alignment before you invest time in a showing.
-            </p>
-            <div className="bg-purple-50 border border-purple-200 rounded-xl p-6">
-              <p className="font-semibold text-purple-900 mb-2">Find MyRoomie is the verification layer that Santa Clara's roommate market is missing.</p>
-              <ul className="space-y-2 text-sm text-purple-800">
-                <li>✓ Real profiles, verified identities</li>
-                <li>✓ Cultural compatibility and dietary preference filters</li>
-                <li>✓ Free messaging — no paywall to contact anyone</li>
-                <li>✓ Built for Bay Area tech corridor renters, not national generic use</li>
-              </ul>
-            </div>
           </div>
         </section>
 
         {/* CTA */}
         <section className="py-20 px-4 bg-purple-700 text-white text-center">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">Find Your Verified Roommate in the Heart of Silicon Valley</h2>
-            <p className="text-purple-200 mb-8">
-              Before launch, before everyone else. Free to use. Always.
+            <h2 className="text-3xl font-bold mb-4">Get Early Access — Free</h2>
+            <p className="text-purple-200 mb-4">
+              Find MyRoomie is pre-launch. Members who join now get first access to verified roommate listings in Santa Clara — near Intel, Nvidia, AMD, Diridon Station, and SCU — before the platform opens to the public.
             </p>
+            <ul className="text-purple-200 text-sm mb-8 space-y-1">
+              <li>✓ Priority matching before the platform goes public</li>
+              <li>✓ Free messaging — permanently, no subscription tier required</li>
+              <li>✓ Set employer proximity and compatibility filters now</li>
+            </ul>
             <a
               href={BETA_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white text-purple-700 font-bold px-8 py-4 rounded-lg text-lg hover:bg-purple-50 transition-colors"
             >
-              Join the Santa Clara Waitlist — Free →
+              Join the Verified Santa Clara Waitlist — Free →
             </a>
-            <p className="text-purple-300 text-sm mt-3">No subscription · No paywall · Ever</p>
+            <p className="text-purple-300 text-sm mt-3">Free messaging · Verified profiles · No subscription · No fake listings</p>
           </div>
         </section>
 
@@ -214,10 +216,10 @@ export default function SantaClaraContent() {
           </div>
         </section>
 
-        {/* Related cities */}
+        {/* Related city links */}
         <section className="py-16 px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold mb-6">Find Roommates Across the Bay Area Tech Corridor</h2>
+            <h2 className="text-2xl font-bold mb-6">Find Roommates Across Silicon Valley</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {RELATED_CITIES.map((c, i) => (
                 <Link

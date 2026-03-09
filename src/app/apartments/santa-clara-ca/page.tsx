@@ -2,16 +2,16 @@ import type { Metadata } from 'next';
 import SantaClaraContent from './SantaClaraContent';
 
 export const metadata: Metadata = {
-  title: 'Find a Roommate in Santa Clara — Near Intel, Nvidia & Silicon Valley Tech Corridor | Find MyRoomie',
+  title: 'Find a Roommate in Santa Clara — Intel, Nvidia, AMD Hub | Find MyRoomie',
   description:
-    'Santa Clara hosts Intel HQ, Nvidia HQ, and the largest tech employer concentration in the valley. Find verified roommates — free, no paywall.',
+    'Santa Clara hosts Intel HQ, Nvidia HQ, and AMD HQ within 2 miles. Find verified roommates near Diridon Station and the tech corridor — free messaging, no subscription.',
   alternates: {
     canonical: 'https://findmyroomy.com/apartments/santa-clara-ca/',
   },
   openGraph: {
-    title: 'Find a Roommate in Santa Clara — Near Intel, Nvidia & Silicon Valley Tech Corridor | Find MyRoomie',
+    title: 'Find a Roommate in Santa Clara — Intel, Nvidia, AMD Hub | Find MyRoomie',
     description:
-      'Santa Clara: Intel HQ, Nvidia HQ, AMD, Palo Alto Networks. Find verified roommates — free messaging, no subscription.',
+      'Intel, Nvidia, AMD HQs all within 2 miles. Find verified roommates in Santa Clara — free messaging, no subscription.',
     url: 'https://findmyroomy.com/apartments/santa-clara-ca/',
     type: 'website',
   },
@@ -23,18 +23,10 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What tech companies are in Santa Clara?",
+      name: "Why is Santa Clara a good location for tech workers?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Santa Clara hosts Intel HQ (Robert Noyce Blvd), Nvidia HQ (Voyager campus, 12,000+ employees), AMD headquarters, Palo Alto Networks, and Santa Clara University — all within five miles of each other. No other city in Silicon Valley has this density of major employer campuses in such a compact footprint.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How does Santa Clara compare to San Jose for renters?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Santa Clara is typically $200–$400/month more expensive than comparable San Jose neighborhoods, but offers better proximity to the major tech campuses on the 101/280 corridor. The Lawrence Caltrain station provides access to San Francisco (55 min), Mountain View (8 min), and Sunnyvale (5 min) — making it one of the most commute-flexible bases in the valley.",
+        text: "Santa Clara has the highest concentration of major chip company headquarters of any city in the world. Intel HQ, Nvidia HQ, and AMD HQ are all within a two-mile radius. Add in Applied Materials, Palo Alto Networks, and ServiceNow, and Santa Clara is effectively the semiconductor capital of Silicon Valley.",
       },
     },
     {
@@ -42,7 +34,23 @@ const faqSchema = {
       name: "How much can I save with a roommate in Santa Clara?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Santa Clara 2BR apartments run $2,800–$3,400/month. Split with one roommate: $1,400–$1,700/person versus $2,000–$2,500 for a 1BR solo. Savings: $600–$800/month. Over a two-year H-1B stint or new hire contract, that's $14,400–$19,200 back in your pocket.",
+        text: "Santa Clara 1BR runs $2,900–$3,400/month. A 2BR split brings your cost to $1,600–$1,900/person — saving $1,000–$1,500/month versus living alone. Over a year, that's $12,000–$18,000 in additional take-home.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is Diridon Station useful for commuters in Santa Clara?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Diridon is Santa Clara's main transit hub — Caltrain, ACE (Altamont Corridor Express), and Amtrak Capitol Corridor all converge there. Future BART extension will add direct connections to San Jose, Oakland, and San Francisco. Living near Diridon is the smartest commuter decision in the South Bay for anyone who doesn't drive.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does Find MyRoomie cost?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Find MyRoomie is completely free. No subscription, no credit card, no paywall to message anyone. Unlike Roomster, which charges $29.99/month to access messaging, Find MyRoomie is free to browse, post, and contact verified roommates.",
       },
     },
   ],

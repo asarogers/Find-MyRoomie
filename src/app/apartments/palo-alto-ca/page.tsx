@@ -2,16 +2,16 @@ import type { Metadata } from 'next';
 import PaloAltoContent from './PaloAltoContent';
 
 export const metadata: Metadata = {
-  title: 'Find a Roommate in Palo Alto — Stanford, High Rents, Verified & Free | Find MyRoomie',
+  title: 'Find a Roommate in Palo Alto — Stanford Proximity, Tech Money & Verified Roommates | Find MyRoomie',
   description:
-    'Palo Alto 1BR averages $4,200+/month. Find verified roommates near Stanford, Sand Hill Road, and Caltrain — free messaging, no subscription, no fake listings.',
+    'Palo Alto has the highest 1BR rents in the Bay Area outside San Francisco. Find verified roommates near Stanford, Sand Hill Road, and Caltrain — free, no subscription.',
   alternates: {
     canonical: 'https://findmyroomy.com/apartments/palo-alto-ca/',
   },
   openGraph: {
-    title: 'Find a Roommate in Palo Alto — Stanford, High Rents, Verified & Free | Find MyRoomie',
+    title: 'Find a Roommate in Palo Alto — Stanford Proximity, Tech Money & Verified Roommates | Find MyRoomie',
     description:
-      'Palo Alto 1BR averages $4,200+/month. Find verified roommates near Stanford and Sand Hill Road — free messaging, no subscription.',
+      'Palo Alto median 2BR $3,800–$4,800. Find verified roommates near Stanford, Sand Hill Road, Caltrain — free messaging, no subscription.',
     url: 'https://findmyroomy.com/apartments/palo-alto-ca/',
     type: 'website',
   },
@@ -23,34 +23,26 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "How expensive is Palo Alto rent?",
+      name: "Is Palo Alto affordable for Stanford students?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "$4,200+/month for a 1BR. A 2BR split brings your cost to $2,300–2,600/person — saving $1,600–1,900/month vs living alone.",
+        text: "Not solo. Stanford PhD students on $38,000–$45,000 stipends cannot survive Palo Alto alone — the cheapest livable 1BR rents for $2,800/month. Most Stanford graduate students share. A 2BR split runs $1,900–$2,400/person versus $2,800–$3,500 solo. Even GSB students with larger budgets typically share to preserve optionality.",
       },
     },
     {
       "@type": "Question",
-      name: "Is Palo Alto good for Stanford students looking for roommates?",
+      name: "What neighborhoods are most affordable in Palo Alto?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Stanford graduate students — especially PhD students and post-docs on stipends that don't match Palo Alto rents — are the most active roommate seekers in the city. A 2BR split at $2,400/person is the standard way to afford Palo Alto on an academic salary or first-job tech compensation.",
+        text: "East Palo Alto (technically a separate city on the border) is significantly more affordable. Within Palo Alto proper, Midtown and College Terrace are more affordable than Downtown or Professorville. The Caltrain station is walkable from downtown and College Terrace — making those neighborhoods the best value for non-car commuters.",
       },
     },
     {
       "@type": "Question",
-      name: "How is the Caltrain commute from Palo Alto to San Francisco?",
+      name: "How much can I save with a roommate in Palo Alto?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The Palo Alto Caltrain station runs Baby Bullet express trains to San Francisco in approximately 55 minutes. It's one of the fastest Caltrain commutes on the Peninsula. Most tech workers in SF who value the Palo Alto lifestyle use this route daily.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How much does Find MyRoomie cost?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Find MyRoomie is completely free. No subscription, no credit card, no paywall to message anyone. Unlike Roomster, which charges $29.99/month to access messaging, Find MyRoomie is free to browse, post, and contact verified roommates.",
+        text: "Solo 2BR in Palo Alto: $4,300/month = $51,600/year. Split with one roommate: $2,150/month = $25,800/year. Annual savings: $25,800. Over a two-year Stanford program or early-stage startup stint, that's $51,600 — enough to meaningfully impact runway or investment capacity.",
       },
     },
   ],

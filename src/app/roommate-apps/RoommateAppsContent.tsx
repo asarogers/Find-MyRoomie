@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { Events } from '@/lib/analytics';
 
 const APPS = [
   {
@@ -260,6 +261,7 @@ export default function RoommateAppsContent() {
               href="https://forms.gle/qJQXtqEgHb45Y2Y8A"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => Events.formStart('roommate_apps')}
               className="inline-flex items-center gap-2 bg-white text-purple-700 font-bold px-8 py-4 rounded-lg text-lg hover:bg-purple-50 transition-colors"
             >
               Get Free Beta Access →

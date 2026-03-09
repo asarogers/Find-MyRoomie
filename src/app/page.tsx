@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 import HomepageClient from './HomepageClient';
 
 export const metadata: Metadata = {
@@ -24,6 +25,23 @@ export const metadata: Metadata = {
   },
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'FindMyRoomy — Free Roommate Finder',
+  description: 'The only verified roommate finder with free messaging — forever. Browse verified profiles across 30+ U.S. cities. No paywall, no subscription.',
+  url: 'https://findmyroomy.com/',
+  areaServed: 'Bay Area, CA',
+});
+
 export default function Page() {
-  return <HomepageClient />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }} />
+      <HomepageClient />
+    </>
+  );
 }

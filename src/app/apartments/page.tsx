@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 import ApartmentsIndexContent from './ApartmentsIndexContent';
 
 export const metadata: Metadata = {
@@ -17,6 +18,24 @@ export const metadata: Metadata = {
   },
 };
 
+const crumbSchema = breadcrumbSchema([
+  { name: 'Home', url: 'https://findmyroomy.com/' },
+  { name: 'Apartments & Roommate Guides', url: 'https://findmyroomy.com/apartments/' },
+]);
+
+const svcSchema = serviceSchema({
+  name: 'Bay Area Apartments & Roommate Guides',
+  description: 'Verified roommate guides for every Bay Area city, neighborhood, and apartment complex. Free to contact — no paywall.',
+  url: 'https://findmyroomy.com/apartments/',
+  areaServed: 'Bay Area, CA',
+});
+
 export default function ApartmentsIndexPage() {
-  return <ApartmentsIndexContent />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(svcSchema) }} />
+      <ApartmentsIndexContent />
+    </>
+  );
 }

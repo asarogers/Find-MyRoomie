@@ -11,12 +11,25 @@
 //   public/og-images/roommates-{slug}.jpg         (77 city roommate pages)
 //   public/og-images/apartment-{slug}.jpg         (77 city apartment pages)
 //   public/og-images/pets-{slug}.jpg              (77 city pet pages)
+//   public/og-images/neighborhood-{slug}.jpg      (neighborhood guide pages)
 
 const sharp = require('sharp')
 const fs = require('fs')
 const path = require('path')
 
 const cities = require('../src/components/_data/cities.json')
+
+// Load neighborhood slugs via require — strip TS and pull the export
+// neighborhoods.ts exports getAllNeighborhoods() but we need plain JS slugs.
+// Easier: hardcode the 6 current slugs (update when new neighborhoods added).
+const neighborhoodSlugs = [
+  { slug: 'soma-san-francisco',           neighborhood: 'SoMa',            city: 'San Francisco' },
+  { slug: 'mission-district-san-francisco', neighborhood: 'Mission District', city: 'San Francisco' },
+  { slug: 'hayes-valley-san-francisco',   neighborhood: 'Hayes Valley',     city: 'San Francisco' },
+  { slug: 'rockridge-oakland',            neighborhood: 'Rockridge',        city: 'Oakland' },
+  { slug: 'temescal-oakland',             neighborhood: 'Temescal',         city: 'Oakland' },
+  { slug: 'north-san-jose',               neighborhood: 'North San Jose',   city: 'San Jose' },
+]
 
 // ── Brand tokens ─────────────────────────────────────────────────────────────
 const BG        = '#FDFBF7'   // cream background
@@ -224,6 +237,56 @@ function svgBlog({ title = 'Roommate Guide', cityName = '', isAdvice = false } =
 </svg>`
 }
 
+// ── Template: Neighborhood guide ─────────────────────────────────────────────
+
+function svgNeighborhood({ neighborhood, city, slug }) {
+  const lines = wrapText(`${neighborhood}, ${city}`, 24)
+  const nameFontSize = (neighborhood + city).length > 24 ? 56 : 66
+
+  return `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F0FDF4"/>
+      <stop offset="100%" stop-color="${BG}"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="${W}" height="${H}" fill="url(#bg)"/>
+  <rect width="${W}" height="8" fill="${GREEN}"/>
+
+  <!-- Badge -->
+  <rect x="60" y="60" width="280" height="40" rx="20" fill="${GREEN_LIGHT}" stroke="#BBF7D0" stroke-width="1.5"/>
+  <text x="80" y="86" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="${GREEN}">🗺  Neighborhood Guide · 2026</text>
+
+  <!-- "Roommate Finder in" -->
+  <text x="60" y="175" font-family="system-ui, -apple-system, sans-serif" font-size="30" fill="${GRAY}" font-weight="400">Roommate Finder in</text>
+
+  <!-- Neighborhood + city name -->
+  ${lines.map((line, i) =>
+    `<text x="60" y="${232 + i * (nameFontSize + 8)}" font-family="system-ui, -apple-system, sans-serif" font-size="${nameFontSize}" font-weight="800" fill="${BLACK}" letter-spacing="-1">${esc(line)}</text>`
+  ).join('\n  ')}
+
+  <!-- Stats row -->
+  <text x="60" y="${232 + lines.length * (nameFontSize + 8) + 24}" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="${GRAY}">Rent · Transit · Employers · Verified Matches</text>
+
+  <!-- Divider -->
+  <rect x="60" y="${232 + lines.length * (nameFontSize + 8) + 54}" width="90" height="5" rx="2.5" fill="${GREEN}"/>
+
+  <!-- Free badge pill -->
+  <rect x="60" y="${232 + lines.length * (nameFontSize + 8) + 76}" width="270" height="48" rx="24" fill="${BLACK}"/>
+  <text x="195" y="${232 + lines.length * (nameFontSize + 8) + 108}" font-family="system-ui, -apple-system, sans-serif" font-size="21" font-weight="700" fill="${WHITE}" text-anchor="middle">Free · No Credit Card</text>
+
+  <!-- URL -->
+  <text x="60" y="592" font-family="system-ui, -apple-system, sans-serif" font-size="19" fill="${GRAY}">findmyroomy.com/neighborhoods/${esc(slug)}/</text>
+
+  <!-- Right accent -->
+  <circle cx="985" cy="315" r="250" fill="${GREEN}" opacity="0.06"/>
+  <circle cx="985" cy="315" r="165" fill="${GREEN}" opacity="0.08"/>
+  <circle cx="985" cy="315" r="80"  fill="${GREEN}" opacity="0.10"/>
+  <text x="985" y="345" font-family="system-ui, -apple-system, sans-serif" font-size="110" text-anchor="middle" opacity="0.15">📍</text>
+</svg>`
+}
+
 // ── Write helpers ─────────────────────────────────────────────────────────────
 
 async function writeSvgAsJpg(svgStr, outPath, quality = 90) {
@@ -283,7 +346,18 @@ async function main() {
   }
 
   console.log(`\n✓ ${cities.length * 3} city images (roommates + apartments + pets)`)
-  console.log(`\nDone. Total: ${3 + cities.length * 3} images in public/ and public/og-images/`)
+
+  // 5. Neighborhood guide pages
+  for (const n of neighborhoodSlugs) {
+    await writeSvgAsJpg(
+      svgNeighborhood({ neighborhood: n.neighborhood, city: n.city, slug: n.slug }),
+      path.join(ogImagesDir, `neighborhood-${n.slug}.jpg`)
+    )
+    process.stdout.write(`  ✓ neighborhood-${n.slug}\r`)
+  }
+
+  console.log(`\n✓ ${neighborhoodSlugs.length} neighborhood images`)
+  console.log(`\nDone. Total: ${3 + cities.length * 3 + neighborhoodSlugs.length} images in public/ and public/og-images/`)
 }
 
 main().catch(err => {

@@ -38,6 +38,20 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       description: `Connect with pet-friendly roommates and find apartments that welcome your pets in ${city.name}.`,
       type: 'website',
       url: `https://findmyroomy.com/pets/${city.slug}/`,
+      images: [
+        {
+          url: `https://findmyroomy.com/og-images/pets-${city.slug}.jpg`,
+          width: 1200,
+          height: 630,
+          alt: `Pet-friendly roommates in ${city.name}`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `Pet-Friendly Housing in ${city.name} | MyRoomie`,
+      description: `Connect with pet-friendly roommates and find apartments that welcome your pets in ${city.name}.`,
+      images: [`https://findmyroomy.com/og-images/pets-${city.slug}.jpg`],
     },
   };
 }

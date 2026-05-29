@@ -150,7 +150,7 @@ export default function RoommateAppsContent() {
                 </thead>
                 <tbody>
                   {[
-                    ["Find MyRoomy", "✅ Yes — always free", "None needed", "✅ Pre-verified", "⭐ Recommended"],
+                    ["Find MyRoomy", "✅ Yes — always free", "None needed", "✅ Pre-verified", " Recommended"],
                     ["Diggz", "⚠️ 5/day only", "$23.99/mo", "Social account only", "✅ Legit"],
                     ["SpareRoom", "⚠️ Old listings only", "$14–$28/mo", "Email/phone", "✅ Mostly"],
                     ["Roomi", "⚠️ 5/day only", "$29.99/mo", "GlobalID (when working)", "❌ 88% 1-star"],
